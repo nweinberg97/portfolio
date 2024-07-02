@@ -19,12 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         emailjs.send("service_wrnbapd", "template_vc7abxh", formData)
             .then(function(response) {
                 console.log("SUCCESS!", response.status, response.text);
-                // Provide user feedback
                 alert("Your message has been sent successfully!");
-                // Optionally, clear the form fields
-                document.querySelector("#name").value = '';
-                document.querySelector("#email").value = '';
-                document.querySelector("#message").value = '';
             }, function(error) {
                 console.log("FAILED...", error);
                 alert("There was an error sending your message. Please try again.");
