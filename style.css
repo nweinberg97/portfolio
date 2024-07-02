@@ -1,0 +1,450 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Top Panel */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Home Page Video Background */
+#home {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#home video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#home .overlay-text1 {
+    position: absolute;
+    top: 50%; /* Centered vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-size: 60px; /* Fixed font size */
+    text-align: center;
+    z-index: 10;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+#home .overlay-text2 {
+    position: absolute;
+    top: 60%; /* Positioned below overlay-text1 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px; /* Fixed font size */
+    font-family: "Parisienne", cursive;
+    font-weight: 400;
+    text-align: center;
+    z-index: 10;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    #home .overlay-text1,
+    #home .overlay-text2 {
+        white-space: normal; /* Allows text wrapping on smaller screens */
+    }
+
+    #home .overlay-text1 {
+        top: 40%; /* Adjusted top position for smaller screens */
+        font-size: 36px; /* Adjusted font size for smaller screens */
+    }
+
+    #home .overlay-text2 {
+        top: 50%; /* Adjusted top position for smaller screens */
+        font-size: 24px; /* Adjusted font size for smaller screens */
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 100px 20px;
+    flex: 1;
+}
+
+.mystory {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    text-align: center;
+}
+
+#story, #projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#story div, #projects div {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.story-block:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.story-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.story-block .story-content,
+.story-block .story-image {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.story-block h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.story-block p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Ensure consistent image sizes in the story section */
+.story-block img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Responsive Design for Story Section */
+@media (max-width: 768px) {
+    .story-block {
+        flex-direction: column;
+    }
+
+    .story-block .story-image,
+    .story-block .story-content {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+
+    .story-block .story-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-block .story-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Projects */
+#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+
+.project-block .project-content,
+.project-block .project-media {
+    flex: 1 1 50%;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+/* Even blocks: media first, then content */
+.project-block:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-block img,
+.project-block video,
+.project-block iframe {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-block h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.project-block p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.project-block .project-media {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 125%; /* 4:3 Aspect Ratio */
+    height: 0;
+}
+
+/* Ensure the Instagram embed has a fixed height and is properly centered */
+.instagram-media {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.instagram-media iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-block {
+        flex-direction: column;
+    }
+
+    .project-block .project-content,
+    .project-block .project-media {
+        flex: 1 1 100%;
+        padding: 20px;
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    }
+
+    .project-block:nth-child(even) {
+        flex-direction: column;
+    }
+}
+
+.myprojects {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 40px; /* Add some space below the header */
+}
+
+/* Photo Gallery */
+.photoheader {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 20px;
+    white-space: nowrap;
+}
+
+#photos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.photo-container img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+@media (max-width: 768px) {
+    .photo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact form input, #contact form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact form button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#contact form button:hover {
+    background: #555;
+}
+
+.contactheader {
+    text-align: center;
+}
+
+.partnerships {
+    margin-top: 30px;
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: white;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.footer-social-links {
+    margin-top: 10px;
+}
+
+.footer-social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    width: 30px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+}
+
+.footer-social-links a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    transition: transform 0.3s;
+}
+
+.footer-social-links a img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .story-block {
+        flex-direction: column;
+    }
+
+    .story-block .story-content,
+    .story-block .story-image {
+        flex: 1 1 100%;
+    }
+
+    .story-block.reverse .story-content,
+    .story-block.reverse .story-image {
+        order: initial;
+    }
+}
