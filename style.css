@@ -326,7 +326,6 @@ section {
     position: relative;
     overflow: hidden; /* Ensures the overlay doesn't extend beyond the photo */
     border-radius: 8px; /* Ensures the overlay has rounded corners like the image */
-    transition: transform 0.3s, filter 0.3s; /* Add transition for smooth hover effect */
 }
 
 .photo-container img {
@@ -335,11 +334,12 @@ section {
     object-fit: cover;
     border-radius: 8px;
     display: block; /* Ensure the image behaves correctly in the wrapper */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for smooth hover effect */
 }
 
-.photo-wrapper:hover {
-    transform: scale(1.05); /* Scale the wrapper slightly */
-    filter: brightness(0.7); /* Slightly darken the wrapper */
+.photo-wrapper:hover img {
+    transform: scale(1.05); /* Scale the image slightly */
+    filter: brightness(0.7); /* Slightly darken the image */
 }
 
 @media (max-width: 768px) {
