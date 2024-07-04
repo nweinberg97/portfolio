@@ -294,6 +294,8 @@ section {
 
 /* Existing CSS */
 
+/* Existing CSS */
+
 /* Photo Gallery */
 .photoheader {
     color: black;
@@ -324,6 +326,10 @@ section {
     margin: 0 auto;
 }
 
+.photo-wrapper {
+    position: relative;
+}
+
 .photo-container img {
     width: 100%;
     height: 200px; /* Fixed height for all images */
@@ -350,11 +356,6 @@ section {
 }
 
 /* New CSS for overlay effect */
-
-.photo-wrapper {
-    position: relative;
-    display: inline-block;
-}
 
 .photo-wrapper .overlay {
     position: absolute;
