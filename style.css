@@ -292,6 +292,49 @@ section {
     margin-bottom: 40px; /* Add some space below the header */
 }
 
+#pdf-carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-y: hidden;
+    height: 200px; /* Set a height to enable scrolling */
+}
+
+#pdf-carousel-container .pdf-page {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pdf-carousel-container .slick-prev:before, 
+#pdf-carousel-container .slick-next:before {
+    color: black;
+}
+
+#pdf-carousel-container .slick-prev,
+#pdf-carousel-container .slick-next {
+    z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .pdf-carousel {
+        max-width: 100%;
+        padding: 0 10px; /* Add padding for better mobile view */
+    }
+}
+
+@media (max-width: 768px) {
+    #pdf-carousel-container {
+        max-width: 100%;
+        padding: 0 10px; /* Add padding for better mobile view */
+    }
+}
+
 /* Photo Gallery */
 .photoheader {
     color: black;
@@ -355,7 +398,6 @@ section {
 }
 
 /* New CSS for overlay effect */
-
 .photo-wrapper .overlay {
     position: absolute;
     top: 0;
@@ -373,112 +415,19 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
+    pointer-events: none; /* Prevent overlay from blocking hover effect on the image */
 }
 
 .photo-wrapper:hover .overlay {
     opacity: 1; /* Make the overlay visible on hover */
 }
 
-
-
-/* Contact Form */
-#contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
+/* Additional transitions for pop effect */
+.photo-wrapper img {
+    transition: transform 0.3s, filter 0.3s;
 }
 
-#contact form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-#contact form input, #contact form textarea {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact form button {
-    padding: 10px;
-    background: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#contact form button:hover {
-    background: #555;
-}
-
-.contactheader {
-    text-align: center;
-}
-
-.partnerships {
-    margin-top: 30px;
-    color: black;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
-    text-align: center;
-}
-
-footer {
-    background-color: white;
-    color: #333;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-content p {
-    margin: 10px 0;
-}
-
-.footer-social-links {
-    margin-top: 10px;
-}
-
-.footer-social-links a {
-    margin: 0 10px;
-    display: inline-block;
-    width: 30px; /* Set the desired width */
-    height: 30px; /* Set the desired height */
-}
-
-.footer-social-links a img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Ensure the image maintains its aspect ratio */
-    transition: transform 0.3s;
-}
-
-.footer-social-links a img:hover {
-    transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-    .story-block {
-        flex-direction: column;
-    }
-
-    .story-block .story-content,
-    .story-block .story-image {
-        flex: 1 1 100%;
-    }
-
-    .story-block.reverse .story-content,
-    .story-block.reverse .story-image {
-        order: initial;
-    }
+.photo-wrapper:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.7);
 }
