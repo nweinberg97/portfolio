@@ -292,8 +292,6 @@ section {
     margin-bottom: 40px; /* Add some space below the header */
 }
 
-/* Existing CSS */
-
 /* Photo Gallery */
 .photoheader {
     color: black;
@@ -328,6 +326,7 @@ section {
     position: relative;
     overflow: hidden; /* Ensures the overlay doesn't extend beyond the photo */
     border-radius: 8px; /* Ensures the overlay has rounded corners like the image */
+    transition: transform 0.3s, filter 0.3s; /* Add transition for smooth hover effect */
 }
 
 .photo-container img {
@@ -335,12 +334,12 @@ section {
     height: 200px; /* Fixed height for all images */
     object-fit: cover;
     border-radius: 8px;
-    transition: transform 0.3s, filter 0.3s; /* Add transition for smooth hover effect */
+    display: block; /* Ensure the image behaves correctly in the wrapper */
 }
 
-.photo-container img:hover {
-    transform: scale(1.05); /* Scale the image slightly */
-    filter: brightness(0.7); /* Slightly darken the image */
+.photo-wrapper:hover {
+    transform: scale(1.05); /* Scale the wrapper slightly */
+    filter: brightness(0.7); /* Slightly darken the wrapper */
 }
 
 @media (max-width: 768px) {
@@ -380,11 +379,6 @@ section {
     opacity: 1; /* Make the overlay visible on hover */
 }
 
-/* Ensure the pop-out effect and overlay effect work together */
-.photo-wrapper:hover img {
-    transform: scale(1.05); /* Ensure the image scales on hover */
-    filter: brightness(0.7); /* Ensure the image darkens on hover */
-}
 
 
 /* Contact Form */
