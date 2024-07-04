@@ -292,6 +292,8 @@ section {
     margin-bottom: 40px; /* Add some space below the header */
 }
 
+/* Existing CSS */
+
 /* Photo Gallery */
 .photoheader {
     color: black;
@@ -345,6 +347,36 @@ section {
     .photo-container {
         grid-template-columns: 1fr;
     }
+}
+
+/* New CSS for overlay effect */
+
+.photo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.photo-wrapper .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.photo-wrapper:hover .overlay {
+    opacity: 1;
 }
 
 /* Contact Form */
