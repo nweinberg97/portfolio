@@ -140,7 +140,7 @@ header nav ul li a:hover {
 
 #waitlist-overlay p {
     font-size: 16px;
-    margin-bottom: 5px; /* Reduce the margin-bottom to move the copy closer to the button */
+    margin-bottom: 0px; /* Reduce the margin-bottom to move the copy closer to the button */
 }
 
 #waitlist-overlay button {
@@ -151,7 +151,7 @@ header nav ul li a:hover {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px; /* Ensure there is a small gap between the text and the button */
+    margin-top: 5px; /* Ensure there is a small gap between the text and the button */
 }
 
 #waitlist-overlay button:hover {
