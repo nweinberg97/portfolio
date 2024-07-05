@@ -28,6 +28,11 @@ header .logo {
     font-size: 24px;
 }
 
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 18px; /* Adjust the size as needed */
+    }
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -101,12 +106,14 @@ header nav ul li a:hover {
 
     #home .overlay-text1 {
         top: 40%; /* Adjusted top position for smaller screens */
-        font-size: 36px; /* Adjusted font size for smaller screens */
+        font-size: 24px; /* Adjusted font size for smaller screens */
+        white-space: nowrap; /* Prevents text wrapping */
     }
 
     #home .overlay-text2 {
         top: 50%; /* Adjusted top position for smaller screens */
-        font-size: 24px; /* Adjusted font size for smaller screens */
+        font-size: 20px; /* Adjusted font size for smaller screens */
+        margin-top: 10px; /* Added margin to improve spacing */
     }
 }
 
