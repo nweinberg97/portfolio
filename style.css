@@ -97,26 +97,6 @@ header nav ul li a:hover {
     white-space: nowrap; /* Prevents text wrapping */
 }
 
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
-    #home .overlay-text1,
-    #home .overlay-text2 {
-        white-space: normal; /* Allows text wrapping on smaller screens */
-    }
-
-    #home .overlay-text1 {
-        top: 40%; /* Adjusted top position for smaller screens */
-        font-size: 24px; /* Adjusted font size for smaller screens */
-        white-space: nowrap; /* Prevents text wrapping */
-    }
-
-    #home .overlay-text2 {
-        top: 50%; /* Adjusted top position for smaller screens */
-        font-size: 20px; /* Adjusted font size for smaller screens */
-        margin-top: 10px; /* Added margin to improve spacing */
-    }
-}
-
 /* Section Styling */
 section {
     padding: 100px 20px;
