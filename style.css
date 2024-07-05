@@ -192,25 +192,42 @@ section {
 /* Responsive Design for Story Section */
 @media (max-width: 768px) {
     .story-block {
-        flex-direction: column;
+        flex-direction: column; /* Stack elements vertically */
     }
 
     .story-block .story-image,
     .story-block .story-content {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Full width for each element */
         padding: 10px;
     }
 
     .story-block .story-image img {
         width: 100%;
         height: auto;
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .story-block .story-content {
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .story-block .story-content h2 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .story-block .story-content p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        line-height: 1.4;
     }
 }
 
 @media (max-width: 480px) {
-    .story-block .story-image img {
-        width: 100%;
-        height: auto;
+    .story-block .story-content h2 {
+        font-size: 20px; /* Further adjust font size for very small screens */
+    }
+
+    .story-block .story-content p {
+        font-size: 12px; /* Further adjust font size for very small screens */
     }
 }
 
