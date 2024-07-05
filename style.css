@@ -117,6 +117,26 @@ header nav ul li a:hover {
     }
 }
 
+
+/* Adjust logo text size for mobile screens */
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 16px; /* Adjust the size as needed */
+    }
+
+    #home .overlay-text1 {
+        top: 40%; /* Adjusted top position for smaller screens */
+        font-size: 20px; /* Adjusted font size to keep it on one line */
+        white-space: nowrap; /* Prevents text wrapping */
+    }
+
+    #home .overlay-text2 {
+        top: 50%; /* Adjusted top position for smaller screens */
+        font-size: 16px; /* Adjusted font size for better spacing */
+        margin-top: 10px; /* Added margin to improve spacing */
+    }
+}    
+
 /* Section Styling */
 section {
     padding: 100px 20px;
