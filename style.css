@@ -247,6 +247,7 @@ header nav ul li a:hover {
     font-size: 48px;
     color: #333;
     margin-bottom: 40px;
+    text-align: center;
     font-family: "Raleway", sans-serif; /* Match the font with other headers */
 }
 
