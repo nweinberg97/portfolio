@@ -262,6 +262,10 @@ header nav ul li a:hover {
     font-family: Arial, sans-serif; /* Match the font with body text */
 }
 
+.bookh3b{
+    text-align:center;
+}
+
 .book-content p {
     margin-bottom: 20px;
 }
