@@ -293,32 +293,6 @@ header nav ul li a:hover {
     }
 }
 
-/* Ensure consistent image sizes in the story section */
-.book-content img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Responsive Design for Story Section */
-@media (max-width: 768px) {
-    .book-content {
-        flex-direction: column; /* Stack elements vertically */
-    }
-
-    .book-content .book-image,
-    .book-content {
-        flex: 1 1 100%; /* Full width for each element */
-        padding: 10px;
-    }
-
-    .book-content .book-image img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px; /* Add spacing below the image */
-    }
     
 /* Section Styling */
 section {
