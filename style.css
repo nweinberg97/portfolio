@@ -254,7 +254,7 @@ header nav ul li a:hover {
 .book-image {
     display: block; /* Ensures the div is a block-level element */
     margin: 50px auto; /* Centers horizontally and adds some space above and below */
-    width: 80%; /* Adjust width as needed */
+    width: 100%; /* Adjust width as needed */
     max-width: 500px; /* Set a maximum width */
     text-align: center; /* Center any text or inline elements inside the div */
 }
