@@ -452,6 +452,16 @@ section {
     flex-direction: column;
 }
 
+  .myprojects{
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    text-align: center;
+}  
+
 .project-block {
     display: flex;
     flex-wrap: wrap;
