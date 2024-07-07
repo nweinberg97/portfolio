@@ -92,41 +92,6 @@ header nav ul li a:hover {
     white-space: nowrap; /* Prevents text wrapping */
 }
 
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
-    header .logo {
-        font-size: 18px; /* Adjust the size as needed */
-    }
-
-    #home .overlay-text1 {
-        top: 40%; /* Adjusted top position for smaller screens */
-        font-size: 40px; /* Adjusted font size to keep it on one line */
-        white-space: normal; /* Allows text wrapping */
-    }
-
-    #home .overlay-text2 {
-        top: 50%; /* Adjusted top position for smaller screens */
-        font-size: 20px; /* Adjusted font size for better spacing */
-    }
-}
-
-@media (max-width: 480px) {
-    header .logo {
-        font-size: 16px; /* Adjust the size as needed */
-    }
-
-    #home .overlay-text1 {
-        top: 40%; /* Adjusted top position for smaller screens */
-        font-size: 26px; /* Adjusted font size to keep it on one line */
-        white-space: normal; /* Allows text wrapping */
-    }
-
-    #home .overlay-text2 {
-        top: 40%; /* Adjusted top position for smaller screens */
-        font-size: 10px; /* Adjusted font size for better spacing */
-    }
-}
-
 /* Waitlist Section */
 #waitlist-overlay {
     position: absolute;
@@ -224,18 +189,6 @@ header nav ul li a:hover {
     background: #555;
 }
 
-/* Additional styles for responsiveness */
-@media (max-width: 768px) {
-    #waitlist-overlay {
-        top: 75%; /* Adjust position for mobile devices */
-    }
-
-    #waitlist-overlay button {
-        font-size: 18px; /* Adjust font size for mobile devices */
-        padding: 8px 16px; /* Adjust padding for mobile devices */
-    }
-}
-
 /* Book Section */
 #book {
     padding: 100px 20px;
@@ -289,19 +242,6 @@ header nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .book-header {
-        font-size: 36px;
-    }
-
-    .book-content {
-        font-size: 16px;
-        padding: 0 10px; /* Adjust padding for smaller screens */
-    }
-}
-
-    
 /* Section Styling */
 section {
     padding: 100px 20px;
@@ -362,48 +302,6 @@ section {
     max-width: 100%;
     object-fit: cover;
     border-radius: 8px;
-}
-
-/* Responsive Design for Story Section */
-@media (max-width: 768px) {
-    .story-block {
-        flex-direction: column; /* Stack elements vertically */
-    }
-
-    .story-block .story-image,
-    .story-block .story-content {
-        flex: 1 1 100%; /* Full width for each element */
-        padding: 10px;
-    }
-
-    .story-block .story-image img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px; /* Add spacing below the image */
-    }
-
-    .story-block .story-content {
-        text-align: center; /* Center text on smaller screens */
-    }
-
-    .story-block .story-content h2 {
-        font-size: 24px; /* Adjust font size for smaller screens */
-    }
-
-    .story-block .story-content p {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        line-height: 1.4;
-    }
-}
-
-@media (max-width: 480px) {
-    .story-block .story-content h2 {
-        font-size: 20px; /* Further adjust font size for very small screens */
-    }
-
-    .story-block .story-content p {
-        font-size: 12px; /* Further adjust font size for very small screens */
-    }
 }
 
 /* Projects */
@@ -472,78 +370,6 @@ section {
     border: 0;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .project-block {
-        flex-direction: column;
-    }
-
-    .project-block .project-content,
-    .project-block .project-media {
-        flex: 1 1 100%;
-        padding: 20px;
-        box-sizing: border-box; /* Ensure padding is included in the width calculation */
-    }
-
-    .project-block:nth-child(even) {
-        flex-direction: column;
-    }
-}
-
-.myprojects {
-    color: black;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 40px; /* Add some space below the header */
-}
-
-#pdf-carousel-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    overflow-y: hidden;
-    height: 200px; /* Set a height to enable scrolling */
-}
-
-#pdf-carousel-container .pdf-page {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#pdf-carousel-container .slick-prev:before, 
-#pdf-carousel-container .slick-next:before {
-    color: black;
-}
-
-#pdf-carousel-container .slick-prev,
-#pdf-carousel-container .slick-next {
-    z-index: 1;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .pdf-carousel {
-        max-width: 100%;
-        padding: 0 10px; /* Add padding for better mobile view */
-    }
-}
-
-@media (max-width: 768px) {
-    #pdf-carousel-container {
-        max-width: 100%;
-        padding: 0 10px; /* Add padding for better mobile view */
-    }
-}
-
 /* Photo Gallery */
 .photoheader {
     color: black;
@@ -592,18 +418,6 @@ section {
 .photo-wrapper:hover img {
     transform: scale(1.05); /* Scale the image slightly */
     filter: brightness(0.7); /* Slightly darken the image */
-}
-
-@media (max-width: 768px) {
-    .photo-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .photo-container {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* New CSS for overlay effect */
@@ -727,18 +541,111 @@ footer {
     transform: scale(1.1);
 }
 
+/* Media Queries for smaller screens */
 @media (max-width: 768px) {
-    .story-block {
-        flex-direction: column;
+    header .logo {
+        font-size: 18px; /* Adjust the size as needed */
     }
 
-    .story-block .story-content,
-    .story-block .story-image {
-        flex: 1 1 100%;
+    #home .overlay-text1 {
+        top: 40%; /* Adjusted top position for smaller screens */
+        font-size: 40px; /* Adjusted font size to keep it on one line */
+        white-space: normal; /* Allows text wrapping */
     }
 
-    .story-block.reverse .story-content,
-    .story-block.reverse .story-image {
-        order: initial;
+    #home .overlay-text2 {
+        top: 50%; /* Adjusted top position for smaller screens */
+        font-size: 20px; /* Adjusted font size for better spacing */
+    }
+
+    section {
+        padding: 50px 10px; /* Reduced padding for better spacing on smaller screens */
+    }
+
+    .mystory, .myprojects, .book-header {
+        font-size: 36px; /* Adjusted font size for smaller screens */
+        padding: 0 10px; /* Ensure text does not touch the edges */
+    }
+
+    .story-block, .project-block, .book-content {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        padding: 10px; /* Adjust padding for better spacing */
+    }
+
+    .story-block .story-content, 
+    .project-block .project-content, 
+    .book-content {
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .story-block .story-image img,
+    .project-block img, 
+    .project-block video, 
+    .project-block iframe {
+        width: 100%; /* Ensure images and media take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .story-block .story-content h2, 
+    .project-block .project-content h2, 
+    .book-content h2 {
+        font-size: 24px; /* Adjust font size for headings */
+    }
+
+    .story-block .story-content p, 
+    .project-block .project-content p, 
+    .book-content p {
+        font-size: 14px; /* Adjust font size for paragraphs */
+        line-height: 1.4;
+    }
+
+    .book-content ul {
+        padding-left: 20px; /* Reduce padding for list items */
+    }
+
+    #waitlist-overlay {
+        top: 75%; /* Adjust position for mobile devices */
+    }
+
+    #waitlist-overlay button {
+        font-size: 18px; /* Adjust font size for mobile devices */
+        padding: 8px 16px; /* Adjust padding for mobile devices */
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 16px; /* Adjust the size as needed */
+    }
+
+    #home .overlay-text1 {
+        top: 40%; /* Adjusted top position for smaller screens */
+        font-size: 26px; /* Adjusted font size to keep it on one line */
+        white-space: normal; /* Allows text wrapping */
+    }
+
+    #home .overlay-text2 {
+        top: 40%; /* Adjusted top position for smaller screens */
+        font-size: 10px; /* Adjusted font size for better spacing */
+    }
+
+    section {
+        padding: 30px 5px; /* Further reduced padding for very small screens */
+    }
+
+    .mystory, .myprojects, .book-header {
+        font-size: 28px; /* Further adjusted font size */
+    }
+
+    .story-block .story-content h2, 
+    .project-block .project-content h2, 
+    .book-content h2 {
+        font-size: 20px; /* Further adjusted font size for headings */
+    }
+
+    .story-block .story-content p, 
+    .project-block .project-content p, 
+    .book-content p {
+        font-size: 12px; /* Further adjusted font size for paragraphs */
     }
 }
