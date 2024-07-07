@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelector(".nav-links");
 
     hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("active");
     });
 });
