@@ -92,12 +92,13 @@ header nav ul li a:hover {
     z-index: 10;
     white-space: nowrap; /* Prevents text wrapping */
     margin-top: 10px; 
+    margin-bottom: 10px;
 }
 
 /* Waitlist Section */
 #waitlist-overlay {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
