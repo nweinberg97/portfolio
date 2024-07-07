@@ -47,6 +47,44 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.nav-links.open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 20px 0;
+}
+
+.nav-links.open li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.nav-links.open a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
 /* Home Page Video Background */
 #home {
     position: relative;
@@ -611,6 +649,34 @@ footer {
     #waitlist-overlay button {
         font-size: 18px; /* Adjust font size for mobile devices */
         padding: 8px 16px; /* Adjust padding for mobile devices */
+    }
+
+     .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        font-size: 18px;
     }
 }
 
