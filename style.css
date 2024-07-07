@@ -76,6 +76,7 @@ header nav ul li a:hover {
     text-align: center;
     z-index: 10;
     white-space: nowrap; /* Prevents text wrapping */
+    margin-bottom: 20px;
 }
 
 #home .overlay-text2 {
@@ -90,6 +91,7 @@ header nav ul li a:hover {
     text-align: center;
     z-index: 10;
     white-space: nowrap; /* Prevents text wrapping */
+    margin-top: 10px; 
 }
 
 /* Waitlist Section */
@@ -575,7 +577,7 @@ footer {
     .story-block .story-content, 
     .project-block .project-content, 
     .book-content {
-        text-align: center; /* Center text on smaller screens */
+        text-align: left; /* Center text on smaller screens */
     }
 
     .story-block .story-image img,
@@ -615,7 +617,7 @@ footer {
 
 @media (max-width: 480px) {
     header .logo {
-        font-size: 16px; /* Adjust the size as needed */
+        font-size: 12px; /* Adjust the size as needed */
     }
 
     #home .overlay-text1 {
@@ -625,7 +627,7 @@ footer {
     }
 
     #home .overlay-text2 {
-        top: 40%; /* Adjusted top position for smaller screens */
+        top: 50%; /* Adjusted top position for smaller screens */
         font-size: 10px; /* Adjusted font size for better spacing */
     }
 
