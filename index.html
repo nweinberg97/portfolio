@@ -17,37 +17,32 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Include Slick Carousel library -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
     (function(){
         emailjs.init("qZCMk0yO7Rwu_EXe2");
     })();
-</script>
-
+    </script>
     <!-- Your custom script -->
     <script src="scripts.js"></script>
 </head>
-
 <body>
     <header>
         <div class="logo">Nitai Weinberg</div>
         <nav>
-            <ul>
-                <li><a href="#book">Book</a></li> <!-- New navigation link -->
+            <ul class="nav-links">
+                <li><a href="#book">Book</a></li>
                 <li><a href="#story">Story</a></li>
                 <li><a href="#photos">Photos</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-            <div class="hamburger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-            </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
 
     <section id="home">
@@ -57,53 +52,51 @@
         <div class="overlay-text1">Changing Tides</div>
         <div class="overlay-text2">The ways the waves take us</div>
 
-            <!-- Waitlist Section -->
+        <!-- Waitlist Section -->
         <div id="waitlist-overlay">
             <p>Click below to get early access & updates for Nitai's Book</p>
             <button id="join-waitlist-btn">Join Waitlist</button>
         </div>
-         </section>
+    </section>
 
-         <!-- Popup Form -->
-                <div id="waitlist-form-popup" class="popup-form">
-                    <div class="popup-content">
-                        <span class="close-btn">&times;</span>
-                        <h2>Join the Waitlist</h2>
-                        <form id="waitlist-form">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                            <button type="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
+    <!-- Popup Form -->
+    <div id="waitlist-form-popup" class="popup-form">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Join the Waitlist</h2>
+            <form id="waitlist-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 
-
-     <section id="book">
+    <section id="book">
         <h1 class="book-header">Changing Tides</h1>
         <div class="book-content">
-              <div class="book-image">
+            <div class="book-image">
                 <img src="changingtidescover.png" alt="Book Cover Page" class="photo">
             </div>
             <p>Welcome to the page about my upcoming book, "Changing Tides: The Ways the Waves Take Us." 
                 Here, you'll find updates, exclusive previews, and more information about the book's release.</p>
             <h3 class="bookh3a">Summary:</h3> 
-                <p>Changing Tides is a story of triumph, as a young 18-year-old, goes on an unimaginable journey to chase 
+            <p>Changing Tides is a story of triumph, as a young 18-year-old, goes on an unimaginable journey to chase 
                 his dream of surfing in the Gold Coast. Surviving a stroke, overcoming obstacles, and the unpredictable 
                 and ever-changing waves that life brings him. </p>
-                <p>Changing Tides is also a reflection on life, a metaphor for change and an homage to the main character's 
+            <p>Changing Tides is also a reflection on life, a metaphor for change and an homage to the main character's 
                 love for surfing. Each chapter takes the reader on a roller coaster ride of emotion and shows us all the 
                 ways the waves of life can take us, while sharing key lessons learned throughout the journey. Using personal 
                 surfing analogies, and references to the ocean, the author illustrates key themes like change, overcoming 
                 challenges, growth, letting go, self-love, freedom, and more throughout the book. </p>
-                <p>However, this unconventional story has a twist ending… At 26-years of age, his story is not yet over. The 
+            <p>However, this unconventional story has a twist ending… At 26-years of age, his story is not yet over. The 
                 last chapter, unfinished, outlines what the main character dreams of creating in what he calls the “deep blue”, 
                 a metaphor for the ocean of opportunity in the world. He shares the ripples he’d like to leave to make the world 
                 a better place and outlines how readers can join him in making this happen. 
             </p>
             <h3 class="bookh3b">Chapters:</h3>
-            <p>
             <ul>
                 <li><strong>Chapter 01: </strong> Change - watching the waves </li>
                 <li><strong>Chapter 02: </strong> Challenge - learning to surf </li>
@@ -117,7 +110,6 @@
                 <li><strong>Chapter 10: </strong> Inspiration - the moon and the tide </li>
                 <li><strong>Chapter 11: </strong> Unfinished - there will always be more waves</li>
             </ul>
-            </p>
             <p>Stay tuned for more updates and the official release date!</p>
         </div>
     </section>
@@ -210,7 +202,6 @@
     </div>
 </section>
 
-
     <section id="projects">
         <h1 class="myprojects">Projects: My Crazy Ideas Brought to Life</h1>
 
@@ -290,8 +281,5 @@
             </div>
         </div>
     </footer>
-    
-<script src="scripts.js"></script>
-
 </body>
 </html>
