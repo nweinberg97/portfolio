@@ -76,7 +76,6 @@ header nav ul li a:hover {
     text-align: center;
     z-index: 10;
     white-space: nowrap; /* Prevents text wrapping */
-    margin-bottom: 20px;
 }
 
 #home .overlay-text2 {
@@ -91,7 +90,6 @@ header nav ul li a:hover {
     text-align: center;
     z-index: 10;
     white-space: nowrap; /* Prevents text wrapping */
-    margin-top: 10px; 
     margin-bottom: 10px;
 }
 
