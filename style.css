@@ -691,20 +691,44 @@ section {
     filter: brightness(0.7);
 }
 
-/* Contact Form */
-#contact form {
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+}
+
+.contact-container {
     display: flex;
-    flex-direction: column;
-    max-width: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
+.contact-text {
+    flex: 1 1 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#contact form {
+    flex: 1 1 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 #contact form label {
+    display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-#contact form input, #contact form textarea {
+#contact form input,
+#contact form textarea {
+    width: 100%;
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -712,6 +736,7 @@ section {
 }
 
 #contact form button {
+    width: 100%;
     padding: 10px;
     background: #333;
     color: white;
@@ -724,11 +749,17 @@ section {
     background: #555;
 }
 
-.contactheader {
-    text-align: center;
+/* Responsive Design */
+@media (min-width: 768px) {
+    .contact-text,
+    #contact form {
+        flex: 1;
+        max-width: 48%; /* Adjust max-width to create space between elements */
+    }
 }
 
 .partnerships {
+    text-align: center;
     margin-top: 30px;
     color: black;
     font-family: "Raleway", sans-serif;
@@ -738,6 +769,7 @@ section {
     font-size: 20px;
     text-align: center;
 }
+
 
 footer {
     background-color: white;
