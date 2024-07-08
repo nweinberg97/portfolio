@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("form").addEventListener("submit", function(event) {
         event.preventDefault();
 
+        console.log("Contact form submitted");
+
         // Collect form data
         var formData = {
             from_name: document.querySelector("#name").value,
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("There was an error sending your message. Please try again.");
                 submitButton.disabled = false; // Re-enable the submit button
             });
-    });
+    }, { once: true });
 
     // Waitlist button and popup form
     const waitlistButton = document.getElementById("join-waitlist-btn");
@@ -59,6 +61,8 @@ document.addEventListener("DOMContentLoaded", function() {
     waitlistForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
+        console.log("Waitlist form submitted");
+
         const formData = {
             from_name: document.getElementById("name").value,
             reply_to: document.getElementById("email").value,
@@ -79,5 +83,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("There was an error sending your message. Please try again.");
                 submitButton.disabled = false; // Re-enable the submit button
             });
+    }, { once: true });
+
+    // Hamburger menu functionality
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
+
+    hamburger.addEventListener("click", function() {
+        navMenu.classList.toggle("show");
+    });
+
+    navMenu.querySelectorAll("li a").forEach(function(link) {
+        link.addEventListener("click", function() {
+            navMenu.classList.remove("show");
+        });
     });
 });
