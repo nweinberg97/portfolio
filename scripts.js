@@ -15,14 +15,20 @@ document.addEventListener("DOMContentLoaded", function() {
             reply_to: document.querySelector("#email").value,
         };
 
+        // Disable submit button to prevent multiple submissions
+        const submitButton = event.target.querySelector("button[type='submit']");
+        submitButton.disabled = true;
+
         // Send email
         emailjs.send("service_wrnbapd", "template_vc7abxh", formData)
             .then(function(response) {
                 console.log("SUCCESS!", response.status, response.text);
                 alert("Your message has been sent successfully!");
+                submitButton.disabled = false; // Re-enable the submit button
             }, function(error) {
                 console.log("FAILED...", error);
                 alert("There was an error sending your message. Please try again.");
+                submitButton.disabled = false; // Re-enable the submit button
             });
     });
 
@@ -58,23 +64,20 @@ document.addEventListener("DOMContentLoaded", function() {
             reply_to: document.getElementById("email").value,
         };
 
+        // Disable submit button to prevent multiple submissions
+        const submitButton = event.target.querySelector("button[type='submit']");
+        submitButton.disabled = true;
+
         emailjs.send("service_wrnbapd", "template_vc7abxh", formData)
             .then(function(response) {
                 console.log("SUCCESS!", response.status, response.text);
                 alert("Your message has been sent successfully!");
-                waitlistFormPopup.style.display = "none";
+                submitButton.disabled = false; // Re-enable the submit button
+                waitlistFormPopup.style.display = "none"; // Close the popup
             }, function(error) {
                 console.log("FAILED...", error);
                 alert("There was an error sending your message. Please try again.");
+                submitButton.disabled = false; // Re-enable the submit button
             });
-    });
-
-    // Hamburger menu functionality
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        hamburger.classList.toggle("active");
     });
 });
