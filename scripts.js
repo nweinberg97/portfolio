@@ -5,10 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     emailjs.init("qZCMk0yO7Rwu_EXe2"); // Replace with your EmailJS user ID
 
     // Handle contact form submission
-    document.querySelector("form").addEventListener("submit", function(event) {
+    document.querySelector("#contact form").addEventListener("submit", function(event) {
         event.preventDefault();
-
-        console.log("Contact form submitted");
 
         // Collect form data
         var formData = {
@@ -17,22 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
             reply_to: document.querySelector("#email").value,
         };
 
-        // Disable submit button to prevent multiple submissions
-        const submitButton = event.target.querySelector("button[type='submit']");
-        submitButton.disabled = true;
-
         // Send email
         emailjs.send("service_wrnbapd", "template_vc7abxh", formData)
             .then(function(response) {
                 console.log("SUCCESS!", response.status, response.text);
                 alert("Your message has been sent successfully!");
-                submitButton.disabled = false; // Re-enable the submit button
             }, function(error) {
                 console.log("FAILED...", error);
                 alert("There was an error sending your message. Please try again.");
-                submitButton.disabled = false; // Re-enable the submit button
             });
-    }, { once: true });
+    });
 
     // Waitlist button and popup form
     const waitlistButton = document.getElementById("join-waitlist-btn");
@@ -61,41 +53,37 @@ document.addEventListener("DOMContentLoaded", function() {
     waitlistForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        console.log("Waitlist form submitted");
-
         const formData = {
             from_name: document.getElementById("name").value,
             reply_to: document.getElementById("email").value,
         };
 
-        // Disable submit button to prevent multiple submissions
-        const submitButton = event.target.querySelector("button[type='submit']");
-        submitButton.disabled = true;
-
         emailjs.send("service_wrnbapd", "template_vc7abxh", formData)
             .then(function(response) {
                 console.log("SUCCESS!", response.status, response.text);
                 alert("Your message has been sent successfully!");
-                submitButton.disabled = false; // Re-enable the submit button
-                waitlistFormPopup.style.display = "none"; // Close the popup
+                waitlistFormPopup.style.display = "none";
+                waitlistForm.reset(); // Reset the form after successful submission
             }, function(error) {
                 console.log("FAILED...", error);
                 alert("There was an error sending your message. Please try again.");
-                submitButton.disabled = false; // Re-enable the submit button
             });
-    }, { once: true });
+    }, { once: true }); // Attach the event listener only once
 
-    // Hamburger menu functionality
+    // Hamburger menu
     const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("nav ul");
+    const navMenu = document.querySelector("header nav ul");
 
     hamburger.addEventListener("click", function() {
-        navMenu.classList.toggle("show");
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
     });
 
-    navMenu.querySelectorAll("li a").forEach(function(link) {
-        link.addEventListener("click", function() {
-            navMenu.classList.remove("show");
-        });
+    // Close the menu when clicking outside of it
+    window.addEventListener("click", function(event) {
+        if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("active");
+        }
     });
 });
