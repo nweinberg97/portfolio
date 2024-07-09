@@ -777,11 +777,9 @@ section {
     margin-top: 30px;
     color: black;
     font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
-    text-align: center;
+    font-size: 18px; /* Same font size as other paragraph text */
+    line-height: 1.6; /* Same line height as other paragraph text */
+    font-style: italic; /* Italicize the text */
 }
 
 /* Responsive Design */
