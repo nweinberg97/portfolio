@@ -177,7 +177,7 @@ nav ul li a:hover {
     }
 
     #home .overlay-text2 {
-        top: 45%; /* Adjusted top position for smaller screens */
+        top: 48%; /* Adjusted top position for smaller screens */
         font-size: 14px; /* Adjusted font size for better spacing */
         margin-top: 5px; /* Reduced margin-top for closer spacing */
     }
