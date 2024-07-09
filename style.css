@@ -261,6 +261,7 @@ nav ul li a:hover {
     height: auto;
     border-radius: 8px;
     display: block;
+    margin: 0 auto; /* Center the image */
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -330,14 +331,15 @@ nav ul li a:hover {
 
 .story-image img {
     width: 100%;
-    height: auto; /* Adjusted height to auto for proper scaling */
+    height: 300px;
     object-fit: cover;
+    object-position: top;
     border-radius: 8px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .story-image img.portrait {
-    height: 300px; /* Set a fixed height for portrait images */
+    height: 300px;
     object-fit: cover;
     object-position: top; /* Ensures the top of the image is visible */
 }
@@ -384,11 +386,11 @@ nav ul li a:hover {
     margin-bottom: 40px;
 }
 
-.project-block.reverse {
+.project-block:nth-child(even) {
     direction: rtl;
 }
 
-.project-block.reverse .project-content {
+.project-block:nth-child(even) .project-content {
     text-align: right;
 }
 
@@ -401,13 +403,15 @@ nav ul li a:hover {
 
 .project-image img {
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
     border-radius: 8px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .project-image img.portrait {
-    height: 300px; /* Set a fixed height for portrait images */
+    height: 300px;
     object-fit: cover;
     object-position: top; /* Ensures the top of the image is visible */
 }
