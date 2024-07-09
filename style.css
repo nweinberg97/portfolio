@@ -107,13 +107,13 @@ nav ul li a:hover {
 
 #home .overlay-text1 {
     position: absolute;
-    top: 50%; /* Centered vertically */
+    top: 40%; /* Adjusted top position */
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-family: "Raleway", sans-serif;
     font-weight: normal;
-    font-size: 60px; /* Fixed font size */
+    font-size: 50px; /* Adjusted font size */
     text-align: center;
     z-index: 10;
     white-space: nowrap; /* Prevents text wrapping */
@@ -121,11 +121,11 @@ nav ul li a:hover {
 
 #home .overlay-text2 {
     position: absolute;
-    top: 60%; /* Positioned below overlay-text1 */
+    top: 55%; /* Adjusted top position */
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 28px; /* Fixed font size */
+    font-size: 22px; /* Adjusted font size */
     font-family: "Parisienne", cursive;
     font-weight: 400;
     text-align: center;
@@ -140,14 +140,14 @@ nav ul li a:hover {
     }
 
     #home .overlay-text1 {
-        top: 40%; /* Adjusted top position for smaller screens */
-        font-size: 40px; /* Adjusted font size to keep it on one line */
+        top: 35%; /* Adjusted top position for smaller screens */
+        font-size: 35px; /* Adjusted font size to keep it on one line */
         white-space: normal; /* Allows text wrapping */
     }
 
     #home .overlay-text2 {
-        top: 50%; /* Adjusted top position for smaller screens */
-        font-size: 20px; /* Adjusted font size for better spacing */
+        top: 45%; /* Adjusted top position for smaller screens */
+        font-size: 18px; /* Adjusted font size for better spacing */
     }
 }
 
@@ -157,14 +157,14 @@ nav ul li a:hover {
     }
 
     #home .overlay-text1 {
-        top: 40%; /* Adjusted top position for smaller screens */
-        font-size: 26px; /* Adjusted font size to keep it on one line */
+        top: 30%; /* Adjusted top position for smaller screens */
+        font-size: 24px; /* Adjusted font size to keep it on one line */
         white-space: normal; /* Allows text wrapping */
     }
 
     #home .overlay-text2 {
-        top: 40%; /* Adjusted top position for smaller screens */
-        font-size: 10px; /* Adjusted font size for better spacing */
+        top: 35%; /* Adjusted top position for smaller screens */
+        font-size: 14px; /* Adjusted font size for better spacing */
     }
 }
 
@@ -180,12 +180,13 @@ nav ul li a:hover {
 }
 
 #waitlist-overlay p {
-    font-size: 16px;
+    font-size: 14px; /* Adjusted font size */
     margin-bottom: 0px; /* Reduce the margin-bottom to move the copy closer to the button */
+    white-space: normal; /* Allows text wrapping */
 }
 
 #waitlist-overlay button {
-    font-size: 20px;
+    font-size: 16px; /* Adjusted font size */
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0.7);
     color: white;
@@ -272,7 +273,7 @@ nav ul li a:hover {
     }
 
     #waitlist-overlay button {
-        font-size: 18px; /* Adjust font size for mobile devices */
+        font-size: 14px; /* Adjust font size for mobile devices */
         padding: 8px 16px; /* Adjust padding for mobile devices */
     }
 }
