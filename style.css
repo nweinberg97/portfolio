@@ -122,7 +122,7 @@ nav ul li a:hover {
 
 #home .overlay-text2 {
     position: absolute;
-    top: 55%; /* Adjusted top position */
+    top: 50%; /* Adjusted top position */
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -142,14 +142,14 @@ nav ul li a:hover {
     }
 
     #home .overlay-text1 {
-        top: 35%; /* Adjusted top position for smaller screens */
+        top: 40%; /* Adjusted top position for smaller screens */
         font-size: 35px; /* Adjusted font size to keep it on one line */
-        white-space: normal; /* Allows text wrapping */
+        white-space: nowrap;
         margin-bottom: 5px; /* Reduced margin-bottom for closer spacing */
     }
 
     #home .overlay-text2 {
-        top: 45%; /* Adjusted top position for smaller screens */
+        top: 50%; /* Adjusted top position for smaller screens */
         font-size: 18px; /* Adjusted font size for better spacing */
         margin-top: 5px; /* Reduced margin-top for closer spacing */
     }
@@ -170,14 +170,14 @@ nav ul li a:hover {
     }
 
     #home .overlay-text1 {
-        top: 30%; /* Adjusted top position for smaller screens */
+        top: 40%; /* Adjusted top position for smaller screens */
         font-size: 24px; /* Adjusted font size to keep it on one line */
-        white-space: normal; /* Allows text wrapping */
+        white-space: nowrap; 
         margin-bottom: 5px; /* Reduced margin-bottom for closer spacing */
     }
 
     #home .overlay-text2 {
-        top: 35%; /* Adjusted top position for smaller screens */
+        top: 45%; /* Adjusted top position for smaller screens */
         font-size: 14px; /* Adjusted font size for better spacing */
         margin-top: 5px; /* Reduced margin-top for closer spacing */
     }
