@@ -695,8 +695,6 @@ section {
 #contact {
     padding: 50px 20px;
     background-color: #f9f9f9; /* Light background color for contrast */
-    display: flex;
-    justify-content: center;
 }
 
 .contact-container {
@@ -708,14 +706,6 @@ section {
     border-radius: 8px; /* Rounded corners */
 }
 
-.contact-container p {
-    text-align: left;
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-}
-
 .contactheader { 
     text-align: center;
     font-size: 32px;
@@ -724,6 +714,7 @@ section {
 
 .contact-text {
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .contact-text ul {
