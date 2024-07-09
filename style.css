@@ -117,6 +117,7 @@ nav ul li a:hover {
     text-align: center;
     z-index: 10;
     white-space: nowrap; /* Prevents text wrapping */
+    margin-bottom: 10px; /* Added margin-bottom for closer spacing */
 }
 
 #home .overlay-text2 {
@@ -131,6 +132,7 @@ nav ul li a:hover {
     text-align: center;
     z-index: 10;
     white-space: nowrap; /* Prevents text wrapping */
+    margin-top: 10px; /* Added margin-top for closer spacing */
 }
 
 /* Media Queries for smaller screens */
@@ -143,11 +145,22 @@ nav ul li a:hover {
         top: 35%; /* Adjusted top position for smaller screens */
         font-size: 35px; /* Adjusted font size to keep it on one line */
         white-space: normal; /* Allows text wrapping */
+        margin-bottom: 5px; /* Reduced margin-bottom for closer spacing */
     }
 
     #home .overlay-text2 {
         top: 45%; /* Adjusted top position for smaller screens */
         font-size: 18px; /* Adjusted font size for better spacing */
+        margin-top: 5px; /* Reduced margin-top for closer spacing */
+    }
+
+    #waitlist-overlay {
+        top: 55%; /* Adjust position for mobile devices */
+    }
+
+    #waitlist-overlay button {
+        font-size: 14px; /* Adjust font size for mobile devices */
+        padding: 8px 16px; /* Adjust padding for mobile devices */
     }
 }
 
@@ -160,18 +173,29 @@ nav ul li a:hover {
         top: 30%; /* Adjusted top position for smaller screens */
         font-size: 24px; /* Adjusted font size to keep it on one line */
         white-space: normal; /* Allows text wrapping */
+        margin-bottom: 5px; /* Reduced margin-bottom for closer spacing */
     }
 
     #home .overlay-text2 {
         top: 35%; /* Adjusted top position for smaller screens */
         font-size: 14px; /* Adjusted font size for better spacing */
+        margin-top: 5px; /* Reduced margin-top for closer spacing */
+    }
+
+    #waitlist-overlay {
+        top: 50%; /* Adjust position for mobile devices */
+    }
+
+    #waitlist-overlay button {
+        font-size: 16px; /* Adjust font size for mobile devices */
+        padding: 6px 12px; /* Adjust padding for mobile devices */
     }
 }
 
 /* Waitlist Section */
 #waitlist-overlay {
     position: absolute;
-    top: 70%;
+    top: 65%; /* Adjusted top position */
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
