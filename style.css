@@ -459,6 +459,17 @@ section {
         font-size: 14px; /* Adjust font size for smaller screens */
         line-height: 1.4;
     }
+    
+    .mystory {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 38px;
+    text-align: center;
+}
+    
 }
 
 @media (max-width: 480px) {
@@ -469,6 +480,17 @@ section {
     .story-block .story-content p {
         font-size: 12px; /* Further adjust font size for very small screens */
     }
+    
+   .mystory {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+    }
+    
 }
 
 /* Projects */
@@ -534,20 +556,9 @@ section {
     height: 0;
 }
 
-/* Ensure the Instagram embed has a fixed height and is properly centered */
-.instagram-media {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.instagram-media iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
 /* Responsive Adjustments */
+
+
 @media (max-width: 768px) {
     .project-block {
         flex-direction: column;
@@ -563,61 +574,49 @@ section {
     .project-block:nth-child(even) {
         flex-direction: column;
     }
+    
+    .myprojects {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 40px; /* Add some space below the header */
+}
+    
 }
 
+@media (max-width: 480px) {
+    .project-block {
+        flex-direction: column;
+    }
+
+    .project-block .project-content,
+    .project-block .project-media {
+        flex: 1 1 100%;
+        padding: 20px;
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    }
+
+    .project-block:nth-child(even) {
+        flex-direction: column;
+    }
+    
 .myprojects {
     color: black;
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-size: 48px;
+    font-size: 28px;
     text-align: center;
     margin-bottom: 40px; /* Add some space below the header */
 }
-
-#pdf-carousel-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    overflow-y: hidden;
-    height: 200px; /* Set a height to enable scrolling */
+    
 }
 
-#pdf-carousel-container .pdf-page {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#pdf-carousel-container .slick-prev:before, 
-#pdf-carousel-container .slick-next:before {
-    color: black;
-}
-
-#pdf-carousel-container .slick-prev,
-#pdf-carousel-container .slick-next {
-    z-index: 1;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .pdf-carousel {
-        max-width: 100%;
-        padding: 0 10px; /* Add padding for better mobile view */
-    }
-}
-
-@media (max-width: 768px) {
-    #pdf-carousel-container {
-        max-width: 100%;
-        padding: 0 10px; /* Add padding for better mobile view */
-    }
-}
 
 /* Photo Gallery */
 .photoheader {
