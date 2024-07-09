@@ -714,6 +714,10 @@ section {
     color: #333;
 }
 
+.contactheader { 
+    text-align: center;
+}
+
 .contact-text {
     margin-bottom: 20px;
 }
