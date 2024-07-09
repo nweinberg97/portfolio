@@ -258,6 +258,7 @@ nav ul li a:hover {
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
+    text-align: left; /* Left align text */
 }
 
 .book-image {
@@ -265,15 +266,14 @@ nav ul li a:hover {
     overflow: hidden;
     border-radius: 8px;
     display: block; /* Ensures the div is a block-level element */
-    margin: 50px auto; /* Centers horizontally and adds some space above and below */
+    margin: 0 auto; /* Centers horizontally */
     width: 100%; /* Adjust width as needed */
     max-width: 500px; /* Set a maximum width */
-    text-align: center; /* Center any text or inline elements inside the div */
 }
 
 .book-image img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     display: block;
@@ -290,7 +290,6 @@ nav ul li a:hover {
     line-height: 1.6;
     color: #555;
     padding: 0 20px; /* Adds padding to ensure text doesn't touch the edges */
-    text-align: left; /* Left align text for better readability */
     font-family: Arial, sans-serif; /* Match the font with body text */
     margin-bottom: 20px;
 }
@@ -311,7 +310,7 @@ nav ul li a:hover {
 }
 
 /* Story Section */
-#mystory {
+.mystory {
     font-size: 40px;
     color: #333;
     margin-bottom: 40px;
@@ -334,6 +333,7 @@ nav ul li a:hover {
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
+    text-align: left; /* Left align text */
 }
 
 .story-block.reverse {
@@ -353,7 +353,7 @@ nav ul li a:hover {
 
 .story-image img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     display: block;
@@ -368,11 +368,13 @@ nav ul li a:hover {
 .story-content h2 {
     margin-bottom: 20px;
     font-size: 36px;
+    text-align: left; /* Left align h2 */
 }
 
 .story-content p {
     font-size: 24px;
     line-height: 1.6;
+    text-align: left; /* Left align p */
 }
 
 /* Projects Section */
@@ -399,6 +401,7 @@ nav ul li a:hover {
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
+    text-align: left; /* Left align text */
 }
 
 .project-block.reverse {
@@ -418,7 +421,7 @@ nav ul li a:hover {
 
 .project-image img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     display: block;
@@ -433,11 +436,13 @@ nav ul li a:hover {
 .project-content h2 {
     margin-bottom: 20px;
     font-size: 36px;
+    text-align: left; /* Left align h2 */
 }
 
 .project-content p {
     font-size: 24px;
     line-height: 1.6;
+    text-align: left; /* Left align p */
 }
 
 /* Photo Gallery */
@@ -474,7 +479,7 @@ nav ul li a:hover {
 
 .photo-container img {
     width: 100%;
-    height: 200px; /* Fixed height for all images */
+    height: auto; /* Adjusted height to auto for proper scaling */
     object-fit: cover;
     border-radius: 8px;
     display: block; /* Ensure the image behaves correctly in the wrapper */
@@ -727,16 +732,18 @@ footer {
     }
 
     .story-block .story-content {
-        text-align: left; /* Center text on smaller screens */
+        text-align: left; /* Left align text */
     }
 
     .story-block .story-content h2 {
         font-size: 28px; /* Adjust font size for smaller screens */
+        text-align: left; /* Left align h2 */
     }
 
     .story-block .story-content p {
         font-size: 18px; /* Adjust font size for smaller screens */
         line-height: 1.4;
+        text-align: left; /* Left align p */
     }
 
     .mystory {
@@ -764,11 +771,13 @@ footer {
 
     .project-block h2 {
         font-size: 28px;
+        text-align: left; /* Left align h2 */
     }
 
     .project-block p {
         font-size: 18px;
         line-height: 1.6;
+        text-align: left; /* Left align p */
     }
 
     .myprojects {
@@ -862,10 +871,12 @@ footer {
 
     .story-block .story-content h2 {
         font-size: 20px; /* Further adjust font size for very small screens */
+        text-align: left; /* Left align h2 */
     }
 
     .story-block .story-content p {
         font-size: 16px; /* Further adjust font size for very small screens */
+        text-align: left; /* Left align p */
     }
 
     .mystory {
@@ -893,11 +904,13 @@ footer {
 
     .project-block h2 {
         font-size: 24px;
+        text-align: left; /* Left align h2 */
     }
 
     .project-block p {
         font-size: 16px;
         line-height: 1.6;
+        text-align: left; /* Left align p */
     }
 
     .myprojects {
