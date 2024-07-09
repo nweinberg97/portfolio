@@ -310,7 +310,7 @@ nav ul li a:hover {
 }
 
 .book-header {
-    font-size: 48px;
+    font-size: 40px;
     color: #333;
     margin-bottom: 40px;
     text-align: center;
@@ -328,7 +328,7 @@ nav ul li a:hover {
 .book-content {
     max-width: 800px; /* Ensures content is centered and doesn't stretch to edges */
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     color: #555;
     padding: 0 20px; /* Adds padding to ensure text doesn't touch the edges */
@@ -358,12 +358,16 @@ nav ul li a:hover {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .book-header {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .book-content {
-        font-size: 16px;
+        font-size: 18px;
         padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+    .book-content h3 {
+        font-size: 24px;
     }
 
     .book-image {
@@ -378,12 +382,16 @@ nav ul li a:hover {
 /* Responsive Adjustments */
 @media (max-width: 480px) {
     .book-header {
-        font-size: 28px;
+        font-size: 24px;
     }
 
-    .book-content {
+    .book-content p {
         font-size: 16px;
         padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+      .book-content h3 {
+        font-size: 18px;
     }
 
     .book-image {
@@ -402,7 +410,7 @@ section {
 }
 
 .mystory {
-    font-size: 48px;
+    font-size: 40px;
     color: #333;
     margin-bottom: 40px;
     text-align: center;
@@ -438,11 +446,11 @@ section {
 
 .story-block h2 {
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size:36px;
 }
 
 .story-block p {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1.6;
 }
 
@@ -478,22 +486,20 @@ section {
     }
 
     .story-block .story-content h2 {
-        font-size: 24px; /* Adjust font size for smaller screens */
+        font-size: 28px; /* Adjust font size for smaller screens */
     }
 
     .story-block .story-content p {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 18px; /* Adjust font size for smaller screens */
         line-height: 1.4;
     }
 
     .mystory {
-        color: black;
-        font-family: "Raleway", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: normal;
-        font-style: normal;
-        font-size: 38px;
-        text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Raleway", sans-serif; /* Match the font with other headers */
     }
 }
 
@@ -503,17 +509,15 @@ section {
     }
 
     .story-block .story-content p {
-        font-size: 12px; /* Further adjust font size for very small screens */
+        font-size: 16px; /* Further adjust font size for very small screens */
     }
 
     .mystory {
-        color: black;
-        font-family: "Raleway", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: normal;
-        font-style: normal;
-        font-size: 28px;
-        text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Raleway", sans-serif; /* Match the font with other headers */
     }
 }
 
@@ -524,13 +528,11 @@ section {
 }
 
 .myprojects {
-    color: black;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 48px;
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 40px;
     text-align: center;
+    font-family: "Raleway", sans-serif; /* Match the font with other headers */
 }
 
 .project-block {
@@ -567,7 +569,7 @@ section {
 }
 
 .project-block p {
-    font-size: 16px;
+    font-size: 22px;
     line-height: 1.6;
 }
 
@@ -597,16 +599,23 @@ section {
         flex-direction: column;
     }
 
-    .myprojects {
-        color: black;
-        font-family: "Raleway", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: normal;
-        font-style: normal;
-        font-size: 38px;
-        text-align: center;
-        margin-bottom: 40px; /* Add some space below the header */
-    }
+    .project-block h2 {
+    font-size: 28px;
+}
+
+.project-block p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.myprojects {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Raleway", sans-serif; /* Match the font with other headers */
+}
+
 }
 
 @media (max-width: 480px) {
@@ -625,29 +634,32 @@ section {
         flex-direction: column;
     }
 
-    .myprojects {
-        color: black;
-        font-family: "Raleway", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: normal;
-        font-style: normal;
-        font-size: 28px;
-        text-align: center;
-        margin-bottom: 40px; /* Add some space below the header */
-    }
+.project-block h2 {
+    font-size: 24px;
+}
+
+.project-block p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+    
+ .myprojects {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Raleway", sans-serif; /* Match the font with other headers */
+}
+
 }
 
 /* Photo Gallery */
 .photoheader {
-    color: black;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 28px;
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 40px;
     text-align: center;
-    padding-bottom: 20px;
-    white-space: nowrap;
+    font-family: "Raleway", sans-serif; /* Match the font with other headers */
 }
 
 #photos {
@@ -691,12 +703,28 @@ section {
     .photo-container {
         grid-template-columns: repeat(2, 1fr);
     }
+    .photoheader {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Raleway", sans-serif; /* Match the font with other headers */
+}
 }
 
 @media (max-width: 480px) {
     .photo-container {
         grid-template-columns: 1fr;
     }
+    
+ .photoheader {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: "Raleway", sans-serif; /* Match the font with other headers */
+}
+    
 }
 
 /* New CSS for overlay effect */
