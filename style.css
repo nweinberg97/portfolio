@@ -330,10 +330,16 @@ nav ul li a:hover {
 
 .story-image img {
     width: 100%;
-    height: 300px;
+    height: auto; /* Adjusted height to auto for proper scaling */
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.story-image img.portrait {
+    height: 300px; /* Set a fixed height for portrait images */
+    object-fit: cover;
+    object-position: top; /* Ensures the top of the image is visible */
 }
 
 .story-image:hover img {
@@ -395,10 +401,15 @@ nav ul li a:hover {
 
 .project-image img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-image img.portrait {
+    height: 300px; /* Set a fixed height for portrait images */
+    object-fit: cover;
+    object-position: top; /* Ensures the top of the image is visible */
 }
 
 .project-image:hover img {
