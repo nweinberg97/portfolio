@@ -8,87 +8,6 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    font-size: 16px; /* Base font size */
-}
-
-/* Responsive Typography */
-h1 {
-    font-size: 2.5rem; /* 40px */
-    line-height: 1.2;
-}
-
-h2 {
-    font-size: 2rem; /* 32px */
-    line-height: 1.3;
-}
-
-h3 {
-    font-size: 1.75rem; /* 28px */
-    line-height: 1.4;
-}
-
-p {
-    font-size: 1rem; /* 16px */
-    line-height: 1.6;
-}
-
-/* Tablet adjustments */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem; /* 32px */
-    }
-    h2 {
-        font-size: 1.75rem; /* 28px */
-    }
-    h3 {
-        font-size: 1.5rem; /* 24px */
-    }
-    p {
-        font-size: 0.9375rem; /* 15px */
-    }
-}
-
-/* Mobile adjustments */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.75rem; /* 28px */
-    }
-    h2 {
-        font-size: 1.5rem; /* 24px */
-    }
-    h3 {
-        font-size: 1.25rem; /* 20px */
-    }
-    p {
-        font-size: 0.875rem; /* 14px */
-    }
-}
-
-/* Responsive Images */
-img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%;
-    display: block; /* Remove bottom space */
-}
-
-.image-class {
-    max-width: 600px; /* Example specific max-width */
-    margin: 0 auto; /* Center image */
-}
-
-/* Media Queries for Tablet */
-@media (max-width: 768px) {
-    .image-class {
-        max-width: 80%; /* Example adjustment for tablet */
-    }
-}
-
-/* Media Queries for Mobile */
-@media (max-width: 480px) {
-    .image-class {
-        max-width: 100%; /* Full width on mobile */
-    }
 }
 
 /* Top Panel */
@@ -483,13 +402,11 @@ section {
 }
 
 .mystory {
-    color: black;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
     font-size: 48px;
+    color: #333;
+    margin-bottom: 40px;
     text-align: center;
+    font-family: "Raleway", sans-serif;
 }
 
 #story, #projects {
