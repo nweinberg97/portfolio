@@ -135,63 +135,6 @@ nav ul li a:hover {
     margin-top: 10px; /* Added margin-top for closer spacing */
 }
 
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
-    header .logo {
-        font-size: 18px; /* Adjust the size as needed */
-    }
-
-    #home .overlay-text1 {
-        top: 40%; /* Adjusted top position for smaller screens */
-        font-size: 35px; /* Adjusted font size to keep it on one line */
-        white-space: nowrap;
-        margin-bottom: 5px; /* Reduced margin-bottom for closer spacing */
-    }
-
-    #home .overlay-text2 {
-        top: 45%; /* Adjusted top position for smaller screens */
-        font-size: 18px; /* Adjusted font size for better spacing */
-        margin-top: 5px; /* Reduced margin-top for closer spacing */
-    }
-
-    #waitlist-overlay {
-        top: 55%; /* Adjust position for mobile devices */
-    }
-
-    #waitlist-overlay button {
-        font-size: 14px; /* Adjust font size for mobile devices */
-        padding: 8px 16px; /* Adjust padding for mobile devices */
-    }
-}
-
-@media (max-width: 480px) {
-    header .logo {
-        font-size: 16px; /* Adjust the size as needed */
-    }
-
-    #home .overlay-text1 {
-        top: 40%; /* Adjusted top position for smaller screens */
-        font-size: 24px; /* Adjusted font size to keep it on one line */
-        white-space: nowrap; 
-        margin-bottom: 5px; /* Reduced margin-bottom for closer spacing */
-    }
-
-    #home .overlay-text2 {
-        top: 48%; /* Adjusted top position for smaller screens */
-        font-size: 14px; /* Adjusted font size for better spacing */
-        margin-top: 5px; /* Reduced margin-top for closer spacing */
-    }
-
-    #waitlist-overlay {
-        top: 55%; /* Adjust position for mobile devices */
-    }
-
-    #waitlist-overlay button {
-        font-size: 16px; /* Adjust font size for mobile devices */
-        padding: 6px 12px; /* Adjust padding for mobile devices */
-    }
-}
-
 /* Waitlist Section */
 #waitlist-overlay {
     position: absolute;
@@ -290,23 +233,14 @@ nav ul li a:hover {
     background: #555;
 }
 
-/* Additional styles for responsiveness */
-@media (max-width: 768px) {
-    #waitlist-overlay {
-        top: 75%; /* Adjust position for mobile devices */
-    }
-
-    #waitlist-overlay button {
-        font-size: 14px; /* Adjust font size for mobile devices */
-        padding: 8px 16px; /* Adjust padding for mobile devices */
-    }
-}
-
 /* Book Section */
 #book {
-    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
     background-color: #f9f9f9;
-    text-align: left;
 }
 
 .book-header {
@@ -317,7 +251,19 @@ nav ul li a:hover {
     font-family: "Raleway", sans-serif; /* Match the font with other headers */
 }
 
+.book-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
 .book-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
     display: block; /* Ensures the div is a block-level element */
     margin: 50px auto; /* Centers horizontally and adds some space above and below */
     width: 100%; /* Adjust width as needed */
@@ -325,22 +271,27 @@ nav ul li a:hover {
     text-align: center; /* Center any text or inline elements inside the div */
 }
 
-.book-content {
-    max-width: 800px; /* Ensures content is centered and doesn't stretch to edges */
-    margin: 0 auto;
+.book-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.book-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+.book-content p {
     font-size: 20px;
     line-height: 1.6;
     color: #555;
     padding: 0 20px; /* Adds padding to ensure text doesn't touch the edges */
     text-align: left; /* Left align text for better readability */
     font-family: Arial, sans-serif; /* Match the font with body text */
-}
-
-.bookh3b {
-    text-align: center;
-}
-
-.book-content p {
     margin-bottom: 20px;
 }
 
@@ -355,61 +306,12 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .book-header {
-        font-size: 32px;
-    }
-
-    .book-content {
-        font-size: 18px;
-        padding: 0 10px; /* Adjust padding for smaller screens */
-    }
-
-    .book-content h3 {
-        font-size: 24px;
-    }
-
-    .book-image {
-        display: block; /* Ensures the div is a block-level element */
-        margin: 40px auto; /* Centers horizontally and adds some space above and below */
-        width: 100%; /* Adjust width as needed */
-        max-width: 400px; /* Set a maximum width */
-        text-align: center; /* Center any text or inline elements inside the div */
-    }
+.bookh3b {
+    text-align: center;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 480px) {
-    .book-header {
-        font-size: 24px;
-    }
-
-    .book-content p {
-        font-size: 16px;
-        padding: 0 10px; /* Adjust padding for smaller screens */
-    }
-
-      .book-content h3 {
-        font-size: 18px;
-    }
-
-    .book-image {
-        display: block; /* Ensures the div is a block-level element */
-        margin: 25px auto; /* Centers horizontally and adds some space above and below */
-        width: 100%; /* Adjust width as needed */
-        max-width: 300px; /* Set a maximum width */
-        text-align: center; /* Center any text or inline elements inside the div */
-    }
-}
-
-/* Section Styling */
-section {
-    padding: 100px 20px;
-    flex: 1;
-}
-
-.mystory {
+/* Story Section */
+#mystory {
     font-size: 40px;
     color: #333;
     margin-bottom: 40px;
@@ -417,116 +319,63 @@ section {
     font-family: "Raleway", sans-serif;
 }
 
-#story, #projects {
+#story {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-}
-
-#story div, #projects div {
-    flex: 1 1 50%;
-    padding: 20px;
-}
-
-.story-block:nth-child(even) {
-    flex-direction: row-reverse;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
 }
 
 .story-block {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-.story-block .story-content,
-.story-block .story-image {
-    flex: 1 1 50%;
-    padding: 20px;
+.story-block.reverse {
+    direction: rtl; /* This will reverse the order of the grid items */
 }
 
-.story-block h2 {
+.story-block.reverse .story-content {
+    text-align: right;
+}
+
+.story-content,
+.story-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.story-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.story-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+.story-content h2 {
     margin-bottom: 20px;
-    font-size:36px;
+    font-size: 36px;
 }
 
-.story-block p {
+.story-content p {
     font-size: 24px;
     line-height: 1.6;
 }
 
-/* Ensure consistent image sizes in the story section */
-.story-block img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Responsive Design for Story Section */
-@media (max-width: 768px) {
-    .story-block {
-        flex-direction: column; /* Stack elements vertically */
-    }
-
-    .story-block .story-image,
-    .story-block .story-content {
-        flex: 1 1 100%; /* Full width for each element */
-        padding: 10px;
-    }
-
-    .story-block .story-image img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px; /* Add spacing below the image */
-    }
-
-    .story-block .story-content {
-        text-align: left; /* Center text on smaller screens */
-    }
-
-    .story-block .story-content h2 {
-        font-size: 28px; /* Adjust font size for smaller screens */
-    }
-
-    .story-block .story-content p {
-        font-size: 18px; /* Adjust font size for smaller screens */
-        line-height: 1.4;
-    }
-
-    .mystory {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: "Raleway", sans-serif; /* Match the font with other headers */
-    }
-}
-
-@media (max-width: 480px) {
-    .story-block .story-content h2 {
-        font-size: 20px; /* Further adjust font size for very small screens */
-    }
-
-    .story-block .story-content p {
-        font-size: 16px; /* Further adjust font size for very small screens */
-    }
-
-    .mystory {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: "Raleway", sans-serif; /* Match the font with other headers */
-    }
-}
-
-/* Projects */
-#projects {
-    display: flex;
-    flex-direction: column;
-}
-
+/* Projects Section */
 .myprojects {
     font-size: 40px;
     color: #333;
@@ -535,122 +384,60 @@ section {
     font-family: "Raleway", sans-serif; /* Match the font with other headers */
 }
 
-.project-block {
+#projects {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
 }
 
-.project-block .project-content,
-.project-block .project-media {
-    flex: 1 1 50%;
-    padding: 20px;
-    box-sizing: border-box; /* Ensure padding is included in the width calculation */
-}
-
-/* Even blocks: media first, then content */
-.project-block:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.project-block img,
-.project-block video,
-.project-block iframe {
+.project-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.project-block.reverse {
+    direction: rtl; /* This will reverse the order of the grid items */
+}
+
+.project-block.reverse .project-content {
+    text-align: right;
+}
+
+.project-content,
+.project-image {
+    position: relative;
+    overflow: hidden;
     border-radius: 8px;
 }
 
-.project-block h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-}
-
-.project-block p {
-    font-size: 22px;
-    line-height: 1.6;
-}
-
-.project-block .project-media {
-    position: relative;
+.project-image img {
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding-top: 125%; /* 4:3 Aspect Ratio */
-    height: 0;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .project-block {
-        flex-direction: column;
-    }
-
-    .project-block .project-content,
-    .project-block .project-media {
-        flex: 1 1 100%;
-        padding: 20px;
-        box-sizing: border-box; /* Ensure padding is included in the width calculation */
-    }
-
-    .project-block:nth-child(even) {
-        flex-direction: column;
-    }
-
-    .project-block h2 {
-    font-size: 28px;
+.project-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.7);
 }
 
-.project-block p {
-    font-size: 18px;
-    line-height: 1.6;
+.project-content h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
 }
 
-.myprojects {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: "Raleway", sans-serif; /* Match the font with other headers */
-}
-
-}
-
-@media (max-width: 480px) {
-    .project-block {
-        flex-direction: column;
-    }
-
-    .project-block .project-content,
-    .project-block .project-media {
-        flex: 1 1 100%;
-        padding: 20px;
-        box-sizing: border-box; /* Ensure padding is included in the width calculation */
-    }
-
-    .project-block:nth-child(even) {
-        flex-direction: column;
-    }
-
-.project-block h2 {
+.project-content p {
     font-size: 24px;
-}
-
-.project-block p {
-    font-size: 16px;
     line-height: 1.6;
-}
-    
- .myprojects {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: "Raleway", sans-serif; /* Match the font with other headers */
-}
-
 }
 
 /* Photo Gallery */
@@ -697,34 +484,6 @@ section {
 .photo-wrapper:hover img {
     transform: scale(1.05); /* Scale the image slightly */
     filter: brightness(0.7); /* Slightly darken the image */
-}
-
-@media (max-width: 768px) {
-    .photo-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .photoheader {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: "Raleway", sans-serif; /* Match the font with other headers */
-}
-}
-
-@media (max-width: 480px) {
-    .photo-container {
-        grid-template-columns: 1fr;
-    }
-    
- .photoheader {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: "Raleway", sans-serif; /* Match the font with other headers */
-}
-    
 }
 
 /* New CSS for overlay effect */
@@ -854,42 +613,7 @@ section {
     color: #333;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-container,
-    #contact form {
-        width: 100%;
-        padding: 0 10px; /* Add some padding for smaller screens */
-    }
-    
-    .contactheader { 
-        text-align: center;
-        font-size: 32px;
-}
-    .partnerships {
-    font-size: 16px; 
-}
-
-}
-
-@media (max-width: 480px) {
-    .contact-container,
-    #contact form {
-        width: 100%;
-        padding: 0 10px; /* Add some padding for smaller screens */
-    }
-    
-.contactheader { 
-    text-align: center;
-    font-size: 24px;
-}
-
-.partnerships {
-    font-size: 14px; 
-}
-    
-}
-
+/* Footer Section */
 footer {
     background-color: white;
     color: #333;
@@ -928,18 +652,286 @@ footer {
     transform: scale(1.1);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+    header .logo {
+        font-size: 18px; /* Adjust the size as needed */
+    }
+
+    #home .overlay-text1 {
+        top: 40%; /* Adjusted top position for smaller screens */
+        font-size: 35px; /* Adjusted font size to keep it on one line */
+        white-space: nowrap;
+        margin-bottom: 5px; /* Reduced margin-bottom for closer spacing */
+    }
+
+    #home .overlay-text2 {
+        top: 45%; /* Adjusted top position for smaller screens */
+        font-size: 18px; /* Adjusted font size for better spacing */
+        margin-top: 5px; /* Reduced margin-top for closer spacing */
+    }
+
+    #waitlist-overlay {
+        top: 55%; /* Adjust position for mobile devices */
+    }
+
+    #waitlist-overlay button {
+        font-size: 14px; /* Adjust font size for mobile devices */
+        padding: 8px 16px; /* Adjust padding for mobile devices */
+    }
+
+    #waitlist-form-popup {
+        width: 90%;
+    }
+
+    .popup-content {
+        width: 90%;
+        padding: 10px;
+    }
+
+    #book .book-header {
+        font-size: 32px;
+    }
+
+    #book .book-content {
+        font-size: 18px;
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+    #book .book-content h3 {
+        font-size: 24px;
+    }
+
+    #book .book-image {
+        display: block; /* Ensures the div is a block-level element */
+        margin: 40px auto; /* Centers horizontally and adds some space above and below */
+        width: 100%; /* Adjust width as needed */
+        max-width: 400px; /* Set a maximum width */
+        text-align: center; /* Center any text or inline elements inside the div */
+    }
+
     .story-block {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .story-block .story-image,
+    .story-block .story-content {
+        flex: 1 1 100%; /* Full width for each element */
+        padding: 10px;
+    }
+
+    .story-block .story-image img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .story-block .story-content {
+        text-align: left; /* Center text on smaller screens */
+    }
+
+    .story-block .story-content h2 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    .story-block .story-content p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        line-height: 1.4;
+    }
+
+    .mystory {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 40px;
+        text-align: center;
+        font-family: "Raleway", sans-serif; /* Match the font with other headers */
+    }
+
+    .project-block {
         flex-direction: column;
     }
 
-    .story-block .story-content,
-    .story-block .story-image {
+    .project-block .project-content,
+    .project-block .project-media {
         flex: 1 1 100%;
+        padding: 20px;
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
     }
 
-    .story-block.reverse .story-content,
-    .story-block.reverse .story-image {
-        order: initial;
+    .project-block:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .project-block h2 {
+        font-size: 28px;
+    }
+
+    .project-block p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .myprojects {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 40px;
+        text-align: center;
+        font-family: "Raleway", sans-serif; /* Match the font with other headers */
+    }
+
+    .photo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photoheader {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 40px;
+        text-align: center;
+        font-family: "Raleway", sans-serif; /* Match the font with other headers */
+    }
+
+    .contact-container,
+    #contact form {
+        width: 100%;
+        padding: 0 10px; /* Add some padding for smaller screens */
+    }
+
+    .contactheader { 
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .partnerships {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 16px; /* Adjust the size as needed */
+    }
+
+    #home .overlay-text1 {
+        top: 40%; /* Adjusted top position for smaller screens */
+        font-size: 24px; /* Adjusted font size to keep it on one line */
+        white-space: nowrap; 
+        margin-bottom: 5px; /* Reduced margin-bottom for closer spacing */
+    }
+
+    #home .overlay-text2 {
+        top: 48%; /* Adjusted top position for smaller screens */
+        font-size: 14px; /* Adjusted font size for better spacing */
+        margin-top: 5px; /* Reduced margin-top for closer spacing */
+    }
+
+    #waitlist-overlay {
+        top: 55%; /* Adjust position for mobile devices */
+    }
+
+    #waitlist-overlay button {
+        font-size: 16px; /* Adjust font size for mobile devices */
+        padding: 6px 12px; /* Adjust padding for mobile devices */
+    }
+
+    .popup-content {
+        width: 80%;
+        padding: 5px;
+    }
+
+    #book .book-header {
+        font-size: 24px;
+    }
+
+    #book .book-content p {
+        font-size: 16px;
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+    #book .book-content h3 {
+        font-size: 18px;
+    }
+
+    #book .book-image {
+        display: block; /* Ensures the div is a block-level element */
+        margin: 25px auto; /* Centers horizontally and adds some space above and below */
+        width: 100%; /* Adjust width as needed */
+        max-width: 300px; /* Set a maximum width */
+        text-align: center; /* Center any text or inline elements inside the div */
+    }
+
+    .story-block .story-content h2 {
+        font-size: 20px; /* Further adjust font size for very small screens */
+    }
+
+    .story-block .story-content p {
+        font-size: 16px; /* Further adjust font size for very small screens */
+    }
+
+    .mystory {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 40px;
+        text-align: center;
+        font-family: "Raleway", sans-serif; /* Match the font with other headers */
+    }
+
+    .project-block {
+        flex-direction: column;
+    }
+
+    .project-block .project-content,
+    .project-block .project-media {
+        flex: 1 1 100%;
+        padding: 20px;
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    }
+
+    .project-block:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .project-block h2 {
+        font-size: 24px;
+    }
+
+    .project-block p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .myprojects {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 40px;
+        text-align: center;
+        font-family: "Raleway", sans-serif; /* Match the font with other headers */
+    }
+
+    .photo-container {
+        grid-template-columns: 1fr;
+    }
+
+    .photoheader {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 40px;
+        text-align: center;
+        font-family: "Raleway", sans-serif; /* Match the font with other headers */
+    }
+
+    .contact-container,
+    #contact form {
+        width: 100%;
+        padding: 0 10px; /* Add some padding for smaller screens */
+    }
+
+    .contactheader { 
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .partnerships {
+        font-size: 14px; 
     }
 }
