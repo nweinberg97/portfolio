@@ -693,13 +693,12 @@ section {
 
 /* Contact Section */
 #contact {
-    padding: 20px;
-    text-align: center;
-    max-width: 800px; /* Ensures content is centered and doesn't stretch to edges */
-    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light background color for contrast */
+    display: flex;
+    justify-content: center;
 }
 
-/* Removed redundant styles */
 .contact-container {
     max-width: 600px;
     margin: 0 auto;
@@ -718,28 +717,29 @@ section {
 }
 
 .contactheader { 
+    text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
 .contact-text {
-    text-align: left;
-    margin-bottom: 20px; /* Adds spacing below the contact text */
+    margin-bottom: 20px;
 }
 
 .contact-text ul {
     list-style-type: disc;
     padding-left: 20px; /* Ensures list is indented properly */
+    margin-bottom: 20px; /* Space below the list */
 }
 
 .contact-text li {
-    margin-bottom: 10px; /* Adds space between list items */
+    margin-bottom: 10px;
 }
 
 #contact form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Ensures alignment */
+    align-items: flex-start;
 }
 
 #contact form label {
@@ -756,6 +756,12 @@ section {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #007BFF; /* Highlight border color on focus */
+    outline: none; /* Remove default focus outline */
 }
 
 #contact form button {
@@ -776,6 +782,7 @@ section {
 }
 
 .partnerships {
+    text-align: center;
     margin-top: 30px;
     color: black;
     font-family: "Raleway", sans-serif;
@@ -794,7 +801,6 @@ section {
         padding: 0 10px; /* Add some padding for smaller screens */
     }
 }
-
 
 
 footer {
