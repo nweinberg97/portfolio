@@ -358,13 +358,42 @@ nav ul li a:hover {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .book-header {
-        font-size: 36px;
+        font-size: 38px;
     }
 
     .book-content {
         font-size: 16px;
         padding: 0 10px; /* Adjust padding for smaller screens */
     }
+    
+    .book-image {
+    display: block; /* Ensures the div is a block-level element */
+    margin: 40px auto; /* Centers horizontally and adds some space above and below */
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Set a maximum width */
+    text-align: center; /* Center any text or inline elements inside the div */
+}
+
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .book-header {
+        font-size: 28px;
+    }
+
+    .book-content {
+        font-size: 16px;
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+
+    .book-image {
+    display: block; /* Ensures the div is a block-level element */
+    margin: 25px auto; /* Centers horizontally and adds some space above and below */
+    width: 100%; /* Adjust width as needed */
+    max-width: 300px; /* Set a maximum width */
+    text-align: center; /* Center any text or inline elements inside the div */
+}
 }
 
 /* Section Styling */
