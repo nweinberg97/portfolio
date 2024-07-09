@@ -122,7 +122,7 @@ nav ul li a:hover {
 
 #home .overlay-text2 {
     position: absolute;
-    top: 50%; /* Adjusted top position */
+    top: 45%; /* Adjusted top position */
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -149,7 +149,7 @@ nav ul li a:hover {
     }
 
     #home .overlay-text2 {
-        top: 50%; /* Adjusted top position for smaller screens */
+        top: 45%; /* Adjusted top position for smaller screens */
         font-size: 18px; /* Adjusted font size for better spacing */
         margin-top: 5px; /* Reduced margin-top for closer spacing */
     }
@@ -183,7 +183,7 @@ nav ul li a:hover {
     }
 
     #waitlist-overlay {
-        top: 50%; /* Adjust position for mobile devices */
+        top: 55%; /* Adjust position for mobile devices */
     }
 
     #waitlist-overlay button {
@@ -448,7 +448,7 @@ section {
     }
 
     .story-block .story-content {
-        text-align: center; /* Center text on smaller screens */
+        text-align: left; /* Center text on smaller screens */
     }
 
     .story-block .story-content h2 {
