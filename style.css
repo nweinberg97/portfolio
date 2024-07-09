@@ -694,16 +694,16 @@ section {
 /* Contact Section */
 #contact {
     padding: 50px 20px;
+    background-color: #f9f9f9; /* Light background color for contrast */
 }
 
 .contact-container {
     max-width: 600px;
     margin: 0 auto;
-    text-align: center;
-}
-
-.contactheader {
-    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
 }
 
 .contact-container p {
@@ -714,17 +714,26 @@ section {
     color: #333;
 }
 
+.contact-text {
+    margin-bottom: 20px;
+}
+
+#contact h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 #contact form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 #contact form label {
     margin-bottom: 5px;
     font-weight: bold;
+    color: #555;
 }
 
 #contact form input,
@@ -737,19 +746,27 @@ section {
     box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
 
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #007BFF; /* Highlight border color on focus */
+    outline: none; /* Remove default focus outline */
+}
+
 #contact form button {
     width: 100%;
-    padding: 10px;
-    background: #333;
+    padding: 12px;
+    background: #007BFF; /* Button background color */
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    font-size: 18px; /* Increase button font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 #contact form button:hover {
-    background: #555;
+    background: #0056b3; /* Darker background on hover */
 }
 
 .partnerships {
@@ -772,6 +789,7 @@ section {
         padding: 0 10px; /* Add some padding for smaller screens */
     }
 }
+
 
 
 footer {
