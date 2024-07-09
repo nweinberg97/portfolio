@@ -846,12 +846,12 @@ section {
 .partnerships {
     text-align: center;
     margin-top: 30px;
-    color: black;
     font-family: "Raleway", sans-serif;
     font-size: 18px; /* Same font size as other paragraph text */
     line-height: 1.6; /* Same line height as other paragraph text */
     font-style: italic; /* Italicize the text */
     white-space: wrap; 
+    color: #333;
 }
 
 /* Responsive Design */
@@ -861,6 +861,33 @@ section {
         width: 100%;
         padding: 0 10px; /* Add some padding for smaller screens */
     }
+    
+    .contactheader { 
+        text-align: center;
+        font-size: 32px;
+}
+    .partnerships {
+    font-size: 16px; 
+}
+
+}
+
+@media (max-width: 480px) {
+    .contact-container,
+    #contact form {
+        width: 100%;
+        padding: 0 10px; /* Add some padding for smaller screens */
+    }
+    
+.contactheader { 
+    text-align: center;
+    font-size: 24px;
+}
+
+.partnerships {
+    font-size: 14px; 
+}
+    
 }
 
 footer {
