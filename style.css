@@ -299,7 +299,7 @@ nav ul li a:hover {
 .mystory {
     font-size: 40px;
     color: #333;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
     font-family: "Raleway", sans-serif;
 }
@@ -352,7 +352,7 @@ nav ul li a:hover {
 }
 
 .story-image{ 
-    padding-top: 5px;
+    margin-top: 10px;
 }
     
 
@@ -362,7 +362,7 @@ nav ul li a:hover {
 }
 
 .story-content h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 36px;
     text-align: left;
 }
@@ -377,7 +377,7 @@ nav ul li a:hover {
 .myprojects {
     font-size: 40px;
     color: #333;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
     font-family: "Raleway", sans-serif;
 }
@@ -434,12 +434,12 @@ nav ul li a:hover {
 }
 
 .project-image{ 
-    padding-top: 5px;
+    margin-top: 10px;
 }
     
 
 .project-content h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 36px;
     text-align: left;
 }
