@@ -345,7 +345,8 @@ nav ul li a:hover {
 }
 
 .story-image img.portrait {
-    height: 300px;
+    height: 500px;
+    width: 500px;
     object-fit: cover;
     object-position: top; /* Ensures the top of the image is visible */
 }
@@ -698,8 +699,8 @@ footer {
         max-width: 400px;
     }
 
-    .story-block {
-        flex-direction: column;
+     .story-block {
+        grid-template-columns: 1fr; /* Stack items vertically */
     }
 
     .story-block .story-image,
@@ -736,10 +737,11 @@ footer {
         text-align: center;
         font-family: "Raleway", sans-serif;
     }
-
+    
     .project-block {
-        flex-direction: column;
+        grid-template-columns: 1fr; /* Stack items vertically */
     }
+    
 
     .project-block .project-content,
     .project-block .project-media {
@@ -861,6 +863,10 @@ footer {
         text-align: left;
     }
 
+       .story-block {
+        grid-template-columns: 1fr; /* Stack items vertically */
+    }
+
     .mystory {
         font-size: 24px;
         color: #333;
@@ -869,8 +875,8 @@ footer {
         font-family: "Raleway", sans-serif;
     }
 
-    .project-block {
-        flex-direction: column;
+   .project-block {
+        grid-template-columns: 1fr; /* Stack items vertically */
     }
 
     .project-block .project-content,
