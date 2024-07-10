@@ -666,11 +666,12 @@ footer {
     }
     
     #waitlist-overlay p {
-    font-size: 14px;
-    margin-bottom: 0px;
-    max-width: 200px;
-    white-space: wrap;
-}
+        font-size: 14px;
+        margin-bottom: 0px;
+        max-width: 200px;
+        white-space: wrap;
+    }
+
     #waitlist-overlay button {
         font-size: 16px;
         padding: 8px 16px;
@@ -706,8 +707,10 @@ footer {
         max-width: 400px;
     }
 
-     .story-block {
+    .story-block {
+        display: grid;
         grid-template-columns: 1fr; /* Stack items vertically */
+        grid-template-rows: auto auto auto; /* Define rows for each item */
     }
 
     .story-block .story-image,
@@ -737,19 +740,18 @@ footer {
         text-align: left;
     }
 
-    .story-content h2{
-        order: 1; /* Ensure header is before image */
+    .story-content h2 {
+        order: 1; /* Ensure header is first */
     }
     
     .story-image {
-        order: 2 ; /* Display image before text */
+        order: 2; /* Display image second */
         padding-top: 10px;
     }
 
-    .story-content p{
-        order: 3; /* Ensure text is after the image */
+    .story-content p {
+        order: 3; /* Ensure text is last */
     }
-
 
     .mystory {
         font-size: 32px;
@@ -760,45 +762,24 @@ footer {
     }
     
     .project-block {
+        display: grid;
         grid-template-columns: 1fr; /* Stack items vertically */
-    }
-    
-
-    .project-block .project-content,
-    .project-block .project-media {
-        flex: 1 1 100%;
-        padding: 20px;
-        box-sizing: border-box;
+        grid-template-rows: auto auto auto; /* Define rows for each item */
     }
 
-    .project-block:nth-child(even) {
-        flex-direction: column;
-    }
-
-    .project-block h2 {
-        font-size: 28px;
-        text-align: left;
-    }
-
-    .project-block p {
-        font-size: 18px;
-        line-height: 1.6;
-        text-align: left;
-    }
-  
-    .project-content h2{
-        order: 1; /* Ensure text is before the image */
+    .project-content h2 {
+        order: 1; /* Ensure header is first */
     }
     
     .project-image {
-        order: 2 ; /* Display image before text */
+        order: 2; /* Display image second */
         padding-top: 10px;
     }
 
-    .project-content p{
-        order: 3; /* Ensure text is after the image */
+    .project-content p {
+        order: 3; /* Ensure text is last */
     }
-    
+
     .myprojects {
         font-size: 32px;
         color: #333;
@@ -857,18 +838,18 @@ footer {
         top: 65%;
     }
 
+    #waitlist-overlay p {
+        font-size: 12px;
+        margin-bottom: 0px;
+        max-width: 175px;
+        white-space: wrap;
+    }
+
     #waitlist-overlay button {
         font-size: 14px;
         padding: 6px 12px;
     }
 
-    #waitlist-overlay p {
-    font-size: 12px;
-    margin-bottom: 0px;
-    max-width: 175px;
-    white-space: wrap;
-    }
-    
     .popup-content {
         width: 80%;
         padding: 5px;
@@ -895,31 +876,23 @@ footer {
         max-width: 300px;
     }
 
-    .story-block .story-content h2 {
-        font-size: 20px;
-        text-align: left;
-    }
-
-    .story-block .story-content p {
-        font-size: 16px;
-        text-align: left;
-    }
-
     .story-block {
+        display: grid;
         grid-template-columns: 1fr; /* Stack items vertically */
+        grid-template-rows: auto auto auto; /* Define rows for each item */
     }
 
-    .story-content h2{
-        order: 1; /* Ensure header is before image */
+    .story-content h2 {
+        order: 1; /* Ensure header is first */
     }
     
     .story-image {
-        order: 2 ; /* Display image before text */
+        order: 2; /* Display image second */
         padding-top: 10px;
     }
 
-    .story-content p{
-        order: 3; /* Ensure text is after the image */
+    .story-content p {
+        order: 3; /* Ensure text is last */
     }
 
     .story-block .story-image img {
@@ -927,7 +900,7 @@ footer {
         height: auto;
         margin-bottom: 10px;
     }
-    
+
     .mystory {
         font-size: 24px;
         color: #333;
@@ -936,43 +909,23 @@ footer {
         font-family: "Raleway", sans-serif;
     }
 
-   .project-block {
+    .project-block {
+        display: grid;
         grid-template-columns: 1fr; /* Stack items vertically */
+        grid-template-rows: auto auto auto; /* Define rows for each item */
     }
 
-    .project-block .project-content,
-    .project-block .project-media {
-        flex: 1 1 100%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .project-block:nth-child(even) {
-        flex-direction: column;
-    }
-
-    .project-block h2 {
-        font-size: 24px;
-        text-align: left;
-    }
-
-    .project-block p {
-        font-size: 16px;
-        line-height: 1.6;
-        text-align: left;
-    }
-
-   .project-content {
-        order: 1; /* Ensure header is before image */
+    .project-content h2 {
+        order: 1; /* Ensure header is first */
     }
     
-    .project-image h2{
-        order: 2 ; /* Display image before text */
+    .project-image {
+        order: 2; /* Display image second */
         padding-top: 10px;
     }
 
-    .project-content p{
-        order: 3; /* Ensure text is after the image */
+    .project-content p {
+        order: 3; /* Ensure text is last */
     }
 
     .myprojects {
