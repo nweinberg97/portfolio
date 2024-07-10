@@ -258,12 +258,17 @@ nav ul li a:hover {
 
 .book-image img {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
     border-radius: 8px;
     display: block;
     margin: 0 auto; /* Center the image */
     transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.book-image:hover img {
+    transform: scale(1.05); /* Scale the image slightly */
+    filter: brightness(0.7); /* Slightly darken the image */
 }
 
 .book-content {
