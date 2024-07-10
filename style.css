@@ -692,8 +692,9 @@ footer {
     }
 
     #book .book-content {
-        font-size: 18px;
+        font-size: 20px;
         padding: 0 10px;
+        max-width: 670px;
     }
 
     #book .book-content h3 {
@@ -704,7 +705,7 @@ footer {
         display: block;
         margin: 20px auto;
         width: 100%;
-        max-width: 400px;
+        max-width: 500px;
     }
 
     .story-block {
@@ -803,7 +804,11 @@ footer {
     .contact-container,
     #contact form {
         width: 100%;
-        padding: 15px 10px 10px 10px;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .contact-container p{
+        padding-left: 5px;
     }
 
     .contactheader { 
@@ -951,9 +956,14 @@ footer {
     .contact-container,
     #contact form {
         width: 100%;
-        padding: 15px 10px 10px 10px;
+        padding: 10px 10px 10px 10px;
     }
 
+   .contact-container p{
+        padding-left: 5px;
+    }
+
+    
     .contactheader { 
         text-align: center;
         font-size: 24px;
