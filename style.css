@@ -731,7 +731,7 @@ footer {
         text-align: left;
     }
 
-    .story-content {
+    .story-content h2{
         order: 1; /* Ensure header is before image */
     }
     
@@ -780,7 +780,7 @@ footer {
         text-align: left;
     }
   
-    .project-content {
+    .project-content h2{
         order: 1; /* Ensure text is before the image */
     }
     
@@ -896,7 +896,7 @@ footer {
         grid-template-columns: 1fr; /* Stack items vertically */
     }
 
-    .story-content {
+    .story-content h2{
         order: 1; /* Ensure header is before image */
     }
     
@@ -953,7 +953,7 @@ footer {
         order: 1; /* Ensure header is before image */
     }
     
-    .project-image {
+    .project-image h2{
         order: 2 ; /* Display image before text */
         padding-top: 10px;
     }
