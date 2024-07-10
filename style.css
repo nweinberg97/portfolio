@@ -122,7 +122,7 @@ nav ul li a:hover {
 
 #home .overlay-text2 {
     position: absolute;
-    top: 45%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -656,13 +656,13 @@ footer {
     }
 
     #home .overlay-text2 {
-        top: 45%;
+        top: 48%;
         font-size: 18px;
         margin-top: 5px;
     }
 
     #waitlist-overlay {
-        top: 55%;
+        top: 62%;
     }
 
     #waitlist-overlay button {
@@ -814,13 +814,13 @@ footer {
     }
 
     #home .overlay-text2 {
-        top: 48%;
+        top: 52%;
         font-size: 14px;
         margin-top: 5px;
     }
 
     #waitlist-overlay {
-        top: 55%;
+        top: 65%;
     }
 
     #waitlist-overlay button {
