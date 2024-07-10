@@ -737,6 +737,7 @@ footer {
     
     .story-image {
         order: 2 ; /* Display image before text */
+        padding-top: 10px;
     }
 
     .story-content p{
@@ -785,6 +786,7 @@ footer {
     
     .project-image {
         order: 2 ; /* Display image before text */
+        padding-top: 10px;
     }
 
     .project-content p{
@@ -814,7 +816,7 @@ footer {
     .contact-container,
     #contact form {
         width: 100%;
-        padding: 10px 10px 10px 10px;
+        padding: 15px 10px 10px 10px;
     }
 
     .contactheader { 
@@ -900,6 +902,7 @@ footer {
     
     .story-image {
         order: 2 ; /* Display image before text */
+        padding-top: 10px;
     }
 
     .story-content p{
@@ -952,6 +955,7 @@ footer {
     
     .project-image {
         order: 2 ; /* Display image before text */
+        padding-top: 10px;
     }
 
     .project-content p{
@@ -981,7 +985,7 @@ footer {
     .contact-container,
     #contact form {
         width: 100%;
-        padding: 10px 10px 10px 10px;
+        padding: 15px 10px 10px 10px;
     }
 
     .contactheader { 
