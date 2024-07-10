@@ -730,13 +730,18 @@ footer {
         text-align: left;
     }
 
+    .story-content {
+        order: 1; /* Ensure header is before image */
+    }
+    
     .story-image {
-        order: -1; /* Display image before text */
+        order: 2 ; /* Display image before text */
     }
 
-    .story-content {
-        order: 1; /* Ensure text is after the image */
+    .story-content p{
+        order: 3; /* Ensure text is after the image */
     }
+
 
     .mystory {
         font-size: 32px;
@@ -772,13 +777,17 @@ footer {
         line-height: 1.6;
         text-align: left;
     }
-
+  
+    .project-content {
+        order: 1; /* Ensure text is before the image */
+    }
+    
     .project-image {
-        order: -1; /* Display image before text */
+        order: 2 ; /* Display image before text */
     }
 
-    .project-content {
-        order: 1; /* Ensure text is after the image */
+    .project-content p{
+        order: 3; /* Ensure text is after the image */
     }
     
     .myprojects {
@@ -883,12 +892,16 @@ footer {
         grid-template-columns: 1fr; /* Stack items vertically */
     }
 
+    .story-content {
+        order: 1; /* Ensure header is before image */
+    }
+    
     .story-image {
-        order: -1; /* Display image before text */
+        order: 2 ; /* Display image before text */
     }
 
-    .story-content {
-        order: 1; /* Ensure text is after the image */
+    .story-content p{
+        order: 3; /* Ensure text is after the image */
     }
 
     .story-block .story-image img {
@@ -931,12 +944,16 @@ footer {
         text-align: left;
     }
 
+   .project-content {
+        order: 1; /* Ensure header is before image */
+    }
+    
     .project-image {
-        order: -1; /* Display image before text */
+        order: 2 ; /* Display image before text */
     }
 
-    .project-content {
-        order: 1; /* Ensure text is after the image */
+    .project-content p{
+        order: 3; /* Ensure text is after the image */
     }
 
     .myprojects {
