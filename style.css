@@ -253,6 +253,7 @@ nav ul li a:hover {
 .book-image {
     margin-bottom: 20px;
     text-align: center;
+    align-items: center;
 }
 
 .book-image img {
