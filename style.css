@@ -712,7 +712,7 @@ footer {
     .story-block .story-image img {
         width: 100%;
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .story-block .story-content {
@@ -730,10 +730,18 @@ footer {
         text-align: left;
     }
 
+    .story-image {
+        order: -1; /* Display image before text */
+    }
+
+    .story-content {
+        order: 1; /* Ensure text is after the image */
+    }
+
     .mystory {
         font-size: 32px;
         color: #333;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         text-align: center;
         font-family: "Raleway", sans-serif;
     }
@@ -765,10 +773,18 @@ footer {
         text-align: left;
     }
 
+    .project-image {
+        order: -1; /* Display image before text */
+    }
+
+    .project-content {
+        order: 1; /* Ensure text is after the image */
+    }
+    
     .myprojects {
         font-size: 32px;
         color: #333;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         text-align: center;
         font-family: "Raleway", sans-serif;
     }
@@ -780,7 +796,7 @@ footer {
     .photoheader {
         font-size: 32px;
         color: #333;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         text-align: center;
         font-family: "Raleway", sans-serif;
     }
@@ -788,7 +804,7 @@ footer {
     .contact-container,
     #contact form {
         width: 100%;
-        padding: 0 10px;
+        padding: 10px 10px 10px 10px;
     }
 
     .contactheader { 
@@ -863,14 +879,28 @@ footer {
         text-align: left;
     }
 
-       .story-block {
+    .story-block {
         grid-template-columns: 1fr; /* Stack items vertically */
     }
 
+    .story-image {
+        order: -1; /* Display image before text */
+    }
+
+    .story-content {
+        order: 1; /* Ensure text is after the image */
+    }
+
+    .story-block .story-image img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
     .mystory {
         font-size: 24px;
         color: #333;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         text-align: center;
         font-family: "Raleway", sans-serif;
     }
@@ -882,7 +912,7 @@ footer {
     .project-block .project-content,
     .project-block .project-media {
         flex: 1 1 100%;
-        padding: 20px;
+        padding: 10px;
         box-sizing: border-box;
     }
 
@@ -901,10 +931,18 @@ footer {
         text-align: left;
     }
 
+    .project-image {
+        order: -1; /* Display image before text */
+    }
+
+    .project-content {
+        order: 1; /* Ensure text is after the image */
+    }
+
     .myprojects {
         font-size: 24px;
         color: #333;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         text-align: center;
         font-family: "Raleway", sans-serif;
     }
@@ -916,7 +954,7 @@ footer {
     .photoheader {
         font-size: 24px;
         color: #333;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         text-align: center;
         font-family: "Raleway", sans-serif;
     }
@@ -924,7 +962,7 @@ footer {
     .contact-container,
     #contact form {
         width: 100%;
-        padding: 0 10px;
+        padding: 10px 10px 10px 10px;
     }
 
     .contactheader { 
