@@ -764,20 +764,8 @@ footer {
         order: 3; /* Ensure text is last */
     }
 
-    .story-image img {
-        width: 100%;
+    .story-image, .story-image img.portrait {
         height: 500px;
-        object-fit: cover;
-        object-position: top;
-        border-radius: 8px;
-        transition: transform 0.3s ease, filter 0.3s ease;
-    }
-    
-    .story-image img.portrait {
-        height: 500px;
-        width: 500px;
-        object-fit: cover;
-        object-position: top; /* Ensures the top of the image is visible */
     }
     
     .mystory {
@@ -810,7 +798,7 @@ footer {
 
     .project-image img {
         width: 100%;
-        height: 300px;
+        height: 400px;
         object-fit: cover;
         object-position: top;
         border-radius: 8px;
@@ -818,11 +806,10 @@ footer {
     }
     
     .project-image img.portrait {
-        height: 300px;
+        height: 400px;
         object-fit: cover;
         object-position: top; /* Ensures the top of the image is visible */
     }
-
     
     .myprojects {
         font-size: 32px;
@@ -948,6 +935,10 @@ footer {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
+    }
+
+    .story-image, .story-image img.portrait {
+        height: 400px;
     }
 
     .mystory {
