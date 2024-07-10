@@ -746,7 +746,7 @@ footer {
     }
 
     .story-block .story-content p {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 1.4;
         text-align: left;
     }
@@ -805,6 +805,7 @@ footer {
 
     .project-content p {
         order: 3; /* Ensure text is last */
+        font-size: 22;
     }
 
     .project-image img {
@@ -850,7 +851,7 @@ footer {
     }
 
     .contact-container p{
-        padding-left: 5px;
+        padding-left: 10px;
     }
 
     .contactheader { 
@@ -940,6 +941,7 @@ footer {
 
     .story-content p {
         order: 3; /* Ensure text is last */
+        
     }
 
     .story-block .story-image img {
@@ -973,6 +975,7 @@ footer {
 
     .project-content p {
         order: 3; /* Ensure text is last */
+        font-size: 20px;
     }
 
     .project-image img {
@@ -1017,7 +1020,7 @@ footer {
     }
 
    .contact-container p{
-        padding-left: 5px;
+        padding-left: 10px;
     }
 
     
