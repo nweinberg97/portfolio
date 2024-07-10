@@ -975,7 +975,7 @@ footer {
 
     .project-content p {
         order: 3; /* Ensure text is last */
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .project-image img {
