@@ -656,7 +656,7 @@ footer {
     }
 
     #home .overlay-text2 {
-        top: 46%;
+        top: 45%;
         font-size: 18px;
         margin-top: 5px;
     }
@@ -664,7 +664,13 @@ footer {
     #waitlist-overlay {
         top: 64%;
     }
-
+    
+    #waitlist-overlay p {
+    font-size: 14px;
+    margin-bottom: 0px;
+    max-width: 200px;
+    white-space: wrap;
+}
     #waitlist-overlay button {
         font-size: 16px;
         padding: 8px 16px;
@@ -842,7 +848,7 @@ footer {
     }
 
     #home .overlay-text2 {
-        top: 52%;
+        top: 46%;
         font-size: 14px;
         margin-top: 5px;
     }
@@ -852,10 +858,17 @@ footer {
     }
 
     #waitlist-overlay button {
-        font-size: 16px;
+        font-size: 14px;
         padding: 6px 12px;
     }
 
+    #waitlist-overlay p {
+    font-size: 12px;
+    margin-bottom: 0px;
+    max-width: 175px;
+    white-space: wrap;
+    }
+    
     .popup-content {
         width: 80%;
         padding: 5px;
