@@ -351,6 +351,11 @@ nav ul li a:hover {
     object-position: top; /* Ensures the top of the image is visible */
 }
 
+.story-image{ 
+    padding-top: 5px;
+}
+    
+
 .story-image:hover img {
     transform: scale(1.05);
     filter: brightness(0.7);
@@ -427,6 +432,11 @@ nav ul li a:hover {
     transform: scale(1.05);
     filter: brightness(0.7);
 }
+
+.project-image{ 
+    padding-top: 5px;
+}
+    
 
 .project-content h2 {
     margin-bottom: 20px;
@@ -754,6 +764,22 @@ footer {
         order: 3; /* Ensure text is last */
     }
 
+    .story-image img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 8px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    .story-image img.portrait {
+        height: 500px;
+        width: 500px;
+        object-fit: cover;
+        object-position: top; /* Ensures the top of the image is visible */
+    }
+    
     .mystory {
         font-size: 32px;
         color: #333;
@@ -781,6 +807,22 @@ footer {
         order: 3; /* Ensure text is last */
     }
 
+    .project-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 8px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    .project-image img.portrait {
+        height: 300px;
+        object-fit: cover;
+        object-position: top; /* Ensures the top of the image is visible */
+    }
+
+    
     .myprojects {
         font-size: 32px;
         color: #333;
@@ -933,6 +975,21 @@ footer {
         order: 3; /* Ensure text is last */
     }
 
+    .project-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 8px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    
+    .project-image img.portrait {
+        height: 300px;
+        object-fit: cover;
+        object-position: top; /* Ensures the top of the image is visible */
+    }
+    
     .myprojects {
         font-size: 24px;
         color: #333;
