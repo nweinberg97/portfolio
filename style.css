@@ -138,7 +138,7 @@ nav ul li a:hover {
 /* Waitlist Section */
 #waitlist-overlay {
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -147,13 +147,13 @@ nav ul li a:hover {
 }
 
 #waitlist-overlay p {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0px;
     white-space: normal;
 }
 
 #waitlist-overlay button {
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0.7);
     color: white;
@@ -656,17 +656,17 @@ footer {
     }
 
     #home .overlay-text2 {
-        top: 48%;
+        top: 46%;
         font-size: 18px;
         margin-top: 5px;
     }
 
     #waitlist-overlay {
-        top: 62%;
+        top: 64%;
     }
 
     #waitlist-overlay button {
-        font-size: 14px;
+        font-size: 16px;
         padding: 8px 16px;
     }
 
@@ -681,6 +681,7 @@ footer {
 
     #book .book-header {
         font-size: 32px;
+        margin-bottom: 10px;
     }
 
     #book .book-content {
@@ -694,7 +695,7 @@ footer {
 
     #book .book-image {
         display: block;
-        margin: 40px auto;
+        margin: 20px auto;
         width: 100%;
         max-width: 400px;
     }
@@ -860,6 +861,7 @@ footer {
 
     #book .book-header {
         font-size: 24px;
+        margin-bottom: 0px;
     }
 
     #book .book-content p {
@@ -873,7 +875,7 @@ footer {
 
     #book .book-image {
         display: block;
-        margin: 25px auto;
+        margin: 15px auto;
         width: 100%;
         max-width: 300px;
     }
