@@ -26,9 +26,6 @@ header {
 
 header .logo {
     font-size: 24px;
-    color: white;
-    text-decoration: none;
-    transition: transform 0.3s ease;
 }
 
 /* Navbar Styling */
@@ -45,6 +42,12 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+}
+
+header .logo a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 nav ul li a:hover {
