@@ -48,6 +48,7 @@ header .logo a {
     color: white;
     text-decoration: none;
     transition: transform 0.3s ease;
+    display: inline-block;
 }
 
 nav ul li a:hover {
