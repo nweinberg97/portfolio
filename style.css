@@ -642,6 +642,11 @@ footer {
     margin: 10px 0;
 }
 
+.footer-icon[alt="LinkedIn"] {
+    border-radius: 8px;
+}
+
+
 .footer-social-links {
     margin-top: 10px;
 }
