@@ -28,7 +28,6 @@ header .logo {
     font-size: 24px;
 }
 
-/* Navbar Styling */
 nav ul {
     list-style: none;
     display: flex;
@@ -147,23 +146,6 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
-/* Background Image for Other Sections */
-.section-content {
-    background-image: url('ocean.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Parallax effect */
-}
-
-.section-content > .content-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 /* Waitlist Section */
 #waitlist-overlay {
     position: absolute;
@@ -262,29 +244,38 @@ nav ul li a:hover {
     background: #555;
 }
 
-/* Book Section */
-#book {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Section Background and Content Styling */
+.background-section {
+    background-image: url('ocean.png');
+    background-size: cover;
+    background-attachment: fixed;
     padding: 80px 20px;
-    text-align: center;
 }
 
-.book-header {
+.section-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Section */
+#book .book-header {
     font-size: 40px;
     color: #333;
     margin-bottom: 20px;
     font-family: "Raleway", sans-serif;
 }
 
-.book-image {
+#book .book-image {
     margin-bottom: 20px;
     text-align: center;
     align-items: center;
 }
 
-.book-image img {
+#book .book-image img {
     width: 100%;
     max-width: 650px;
     height: auto;
@@ -294,32 +285,32 @@ nav ul li a:hover {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.book-image:hover img {
+#book .book-image:hover img {
     transform: scale(1.05); /* Scale the image slightly */
     filter: brightness(0.7); /* Slightly darken the image */
 }
 
-.book-content {
+#book .book-content {
     max-width: 800px;
     text-align: left;
     color: #555;
     font-family: Arial, sans-serif;
 }
 
-.book-content p {
+#book .book-content p {
     margin-bottom: 20px;
 }
 
-.book-content ul {
+#book .book-content ul {
     list-style-type: disc;
     padding-left: 40px;
 }
 
-.book-content li {
+#book .book-content li {
     margin-bottom: 10px;
 }
 
-.book-content h3 {
+#book .book-content h3 {
     text-align: left;
 }
 
@@ -332,14 +323,7 @@ nav ul li a:hover {
     font-family: "Raleway", sans-serif;
 }
 
-#story {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 20px;
-}
-
-.story-block {
+#story .story-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -348,22 +332,22 @@ nav ul li a:hover {
     margin-bottom: 40px;
 }
 
-.story-block.reverse {
+#story .story-block.reverse {
     direction: rtl;
 }
 
-.story-block.reverse .story-content {
+#story .story-block.reverse .story-content {
     text-align: right;
 }
 
-.story-content,
-.story-image {
+#story .story-content,
+#story .story-image {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
 }
 
-.story-image img {
+#story .story-image img {
     width: 100%;
     height: 500px;
     object-fit: cover;
@@ -372,30 +356,30 @@ nav ul li a:hover {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.story-image img.portrait {
+#story .story-image img.portrait {
     height: 500px;
     width: 500px;
     object-fit: cover;
     object-position: top; /* Ensures the top of the image is visible */
 }
 
-.story-image{ 
+#story .story-image{ 
     margin-top: 10px;
 }
     
 
-.story-image:hover img {
+#story .story-image:hover img {
     transform: scale(1.05);
     filter: brightness(0.7);
 }
 
-.story-content h2 {
+#story .story-content h2 {
     margin-bottom: 10px;
     font-size: 36px;
     text-align: left;
 }
 
-.story-content p {
+#story .story-content p {
     font-size: 24px;
     line-height: 1.6;
     text-align: left;
@@ -410,14 +394,7 @@ nav ul li a:hover {
     font-family: "Raleway", sans-serif;
 }
 
-#projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 20px;
-}
-
-.project-block {
+#projects .project-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -426,22 +403,22 @@ nav ul li a:hover {
     margin-bottom: 40px;
 }
 
-.project-block:nth-child(even) {
+#projects .project-block:nth-child(even) {
     direction: rtl;
 }
 
-.project-block:nth-child(even) .project-content {
+#projects .project-block:nth-child(even) .project-content {
     text-align: right;
 }
 
-.project-content,
-.project-image {
+#projects .project-content,
+#projects .project-image {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
 }
 
-.project-image img {
+#projects .project-image img {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -450,29 +427,29 @@ nav ul li a:hover {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.project-image img.portrait {
+#projects .project-image img.portrait {
     height: 300px;
     object-fit: cover;
     object-position: top; /* Ensures the top of the image is visible */
 }
 
-.project-image:hover img {
+#projects .project-image:hover img {
     transform: scale(1.05);
     filter: brightness(0.7);
 }
 
-.project-image{ 
+#projects .project-image{ 
     margin-top: 10px;
 }
     
 
-.project-content h2 {
+#projects .project-content h2 {
     margin-bottom: 10px;
     font-size: 36px;
     text-align: left;
 }
 
-.project-content p {
+#projects .project-content p {
     font-size: 24px;
     line-height: 1.6;
     text-align: left;
@@ -487,15 +464,11 @@ nav ul li a:hover {
     font-family: "Raleway", sans-serif;
 }
 
-#photos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#photos .photo-gallery-container {
     text-align: center;
-    padding: 80px 20px;
 }
 
-.photo-container {
+#photos .photo-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -504,13 +477,13 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-.photo-wrapper {
+#photos .photo-wrapper {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
 }
 
-.photo-container img {
+#photos .photo-container img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -519,13 +492,13 @@ nav ul li a:hover {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.photo-wrapper:hover img {
+#photos .photo-wrapper:hover img {
     transform: scale(1.05);
     filter: brightness(0.7);
 }
 
 /* New CSS for overlay effect */
-.photo-wrapper .overlay {
+#photos .photo-wrapper .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -545,17 +518,12 @@ nav ul li a:hover {
     pointer-events: none;
 }
 
-.photo-wrapper:hover .overlay {
+#photos .photo-wrapper:hover .overlay {
     opacity: 1;
 }
 
 /* Contact Section */
-#contact {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-}
-
-.contact-container {
+#contact .contact-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -662,7 +630,6 @@ footer {
     border-radius: 5px;
 }
 
-
 .footer-social-links {
     margin-top: 10px;
 }
@@ -751,53 +718,53 @@ footer {
         max-width: 500px;
     }
 
-    .story-block {
+    #story .story-block {
         display: grid;
         grid-template-columns: 1fr; /* Stack items vertically */
         grid-template-rows: auto auto auto; /* Define rows for each item */
     }
 
-    .story-block .story-image,
-    .story-block .story-content {
+    #story .story-block .story-image,
+    #story .story-block .story-content {
         flex: 1 1 100%;
         padding: 10px;
     }
 
-    .story-block .story-image img {
+    #story .story-block .story-image img {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
     }
 
-    .story-block .story-content {
+    #story .story-block .story-content {
         text-align: left;
     }
 
-    .story-block .story-content h2 {
+    #story .story-block .story-content h2 {
         font-size: 28px;
         text-align: left;
     }
 
-    .story-block .story-content p {
+    #story .story-block .story-content p {
         font-size: 20px;
         line-height: 1.4;
         text-align: left;
     }
 
-    .story-content h2 {
+    #story .story-content h2 {
         order: 1; /* Ensure header is first */
     }
     
-    .story-image {
+    #story .story-image {
         order: 2; /* Display image second */
         padding-top: 10px;
     }
 
-    .story-content p {
+    #story .story-content p {
         order: 3; /* Ensure text is last */
     }
 
-    .story-image, .story-image img.portrait {
+    #story .story-image, #story .story-image img.portrait {
         height: 650px;
     }
     
@@ -809,28 +776,28 @@ footer {
         font-family: "Raleway", sans-serif;
     }
     
-    .project-block {
+    #projects .project-block {
         display: grid;
         grid-template-columns: 1fr; /* Stack items vertically */
         grid-template-rows: auto auto auto; /* Define rows for each item */
     }
 
-    .project-content h2 {
+    #projects .project-content h2 {
         order: 1; /* Ensure header is first */
         font-size: 28px;
     }
     
-    .project-image {
+    #projects .project-image {
         order: 2; /* Display image second */
         padding-top: 10px;
     }
 
-    .project-content p {
+    #projects .project-content p {
         order: 3; /* Ensure text is last */
         font-size: 20px;
     }
 
-    .project-image img {
+    #projects .project-image img {
         width: 100%;
         height: 500px;
         object-fit: cover;
@@ -839,7 +806,7 @@ footer {
         transition: transform 0.3s ease, filter 0.3s ease;
     }
     
-    .project-image img.portrait {
+    #projects .project-image img.portrait {
         height: 500px;
         object-fit: cover;
         object-position: top; /* Ensures the top of the image is visible */
@@ -853,7 +820,7 @@ footer {
         font-family: "Raleway", sans-serif;
     }
 
-    .photo-container {
+    #photos .photo-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -865,13 +832,13 @@ footer {
         font-family: "Raleway", sans-serif;
     }
 
-    .contact-container,
+    #contact .contact-container,
     #contact form {
         width: 100%;
         padding: 10px 10px 10px 10px;
     }
 
-    .contact-container p{
+    #contact .contact-container p{
         padding-left: 10px;
     }
 
@@ -949,34 +916,34 @@ footer {
         max-width: 300px;
     }
 
-    .story-block {
+    #story .story-block {
         display: grid;
         grid-template-columns: 1fr; /* Stack items vertically */
         grid-template-rows: auto auto auto; /* Define rows for each item */
     }
 
-    .story-content h2 {
+    #story .story-content h2 {
         order: 1; /* Ensure header is first */
         font-size: 22px;
     }
     
-    .story-image {
+    #story .story-image {
         order: 2; /* Display image second */
         padding-top: 10px;
     }
 
-    .story-content p {
+    #story .story-content p {
         order: 3; /* Ensure text is last */
         font-size: 18px;
     }
 
-    .story-block .story-image img {
+    #story .story-block .story-image img {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
     }
 
-    .story-image, .story-image img.portrait {
+    #story .story-image, #story .story-image img.portrait {
         height: 470px;
     }
 
@@ -988,28 +955,28 @@ footer {
         font-family: "Raleway", sans-serif;
     }
 
-    .project-block {
+    #projects .project-block {
         display: grid;
         grid-template-columns: 1fr; /* Stack items vertically */
         grid-template-rows: auto auto auto; /* Define rows for each item */
     }
 
-    .project-content h2 {
+    #projects .project-content h2 {
         order: 1; /* Ensure header is first */
         font-size: 22px;
     }
     
-    .project-image {
+    #projects .project-image {
         order: 2; /* Display image second */
         padding-top: 10px;
     }
 
-    .project-content p {
+    #projects .project-content p {
         order: 3; /* Ensure text is last */
         font-size: 18px;
     }
 
-    .project-image img {
+    #projects .project-image img {
         width: 100%;
         height: 400px;
         object-fit: cover;
@@ -1018,7 +985,7 @@ footer {
         transition: transform 0.3s ease, filter 0.3s ease;
     }
     
-    .project-image img.portrait {
+    #projects .project-image img.portrait {
         height: 400px;
         object-fit: cover;
         object-position: top; /* Ensures the top of the image is visible */
@@ -1032,7 +999,7 @@ footer {
         font-family: "Raleway", sans-serif;
     }
 
-    .photo-container {
+    #photos .photo-container {
         grid-template-columns: 1fr;
     }
 
@@ -1044,13 +1011,13 @@ footer {
         font-family: "Raleway", sans-serif;
     }
 
-    .contact-container,
+    #contact .contact-container,
     #contact form {
         width: 100%;
         padding: 10px 10px 10px 10px;
     }
 
-   .contact-container p{
+   #contact .contact-container p{
         padding-left: 10px;
     }
 
