@@ -246,8 +246,9 @@ nav ul li a:hover {
 
 /* Section Background and Content Styling */
 .background-section {
-    background-image: url('ocean.png');
+    background-image: url("ocean.png");
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     padding: 80px 20px;
 }
