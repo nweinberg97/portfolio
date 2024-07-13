@@ -254,12 +254,8 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Ensure it covers at least the full viewport height */
-    height: auto; /* Adjust as needed */
     width: 100%;
-    max-width: 1000px; /* Standardize max width */
-    margin: 0 auto; /* Center the section */
-    padding-top: 75px; /* Add padding to ensure background image is visible */
-    padding-bottom: 75px; /* Add padding to ensure background image is visible */
+    margin: 75px auto; /* Create space between sections */
 }
 
 .section-content {
@@ -276,13 +272,12 @@ nav ul li a:hover {
 #story,
 #photo,
 #projects {
-    margin-top: 75px;
-    margin-bottom: 75px;
     max-width: 1000px; /* Standardize max width */
     margin-left: auto;
     margin-right: auto;
     padding: 20px 40px; /* Ensure consistent padding */
 }
+
 
 /* Book Section */
 #book .book-header {
