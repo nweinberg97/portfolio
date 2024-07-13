@@ -324,12 +324,14 @@ nav ul li a:hover {
 }
 
 .bookh3b {
-    text-align: center;
+   text-align: center;
+   justify-content: center;
 }
 
 #book .book-content li {
     margin-bottom: 10px;
-    text-align: center;
+    justify-content: center;
+    text-align: left;
 }
 
 .bookh3a {
