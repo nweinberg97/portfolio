@@ -271,6 +271,7 @@ nav ul li a:hover {
     color: #333;
     margin-bottom: 20px;
     font-family: "Raleway", sans-serif;
+    text-align: center;
 }
 
 #book .book-image {
