@@ -566,7 +566,7 @@ nav ul li a:hover {
     margin: 0 auto;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow values */
     border-radius: 8px;
 }
 
