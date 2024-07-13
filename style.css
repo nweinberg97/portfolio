@@ -246,7 +246,7 @@ nav ul li a:hover {
 
 /* Section Background and Content Styling */
 .background-section {
-    background-image: url("ocean.png");
+    background-image: url("https://via.placeholder.com/1500");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
