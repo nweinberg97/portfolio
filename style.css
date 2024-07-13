@@ -265,6 +265,11 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.section-content .book-section .story-section .photo-section .project-section {
+    padding: 20px 40px 20px 40px;
+    margin: 114.5px;
+}
+
 /* Book Section */
 #book .book-header {
     font-size: 40px;
