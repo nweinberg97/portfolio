@@ -564,7 +564,7 @@ nav ul li a:hover {
 #contact .contact-container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow values */
     border-radius: 8px;
