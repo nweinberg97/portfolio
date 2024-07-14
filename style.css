@@ -306,9 +306,10 @@ nav ul li a:hover {
 
 #book .book-content {
     max-width: 1000px;
-    text-align: left;
+    text-align: center; /* Center the text within the container */
     color: #555;
     font-family: Arial, sans-serif;
+    margin: 0 auto; /* Center the container */
 }
 
 #book .book-content p {
@@ -316,18 +317,24 @@ nav ul li a:hover {
 }
 
 #book .book-content ul {
-    list-style-type: disc;
-    padding-left: 40px;
-}
-
-.bookh3b {
-   text-align: center;
-   justify-content: center;
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center the list */
 }
 
 #book .book-content li {
-    margin-bottom: 10px;
     margin: 10px 0;
+    text-align: center; /* Center the text within each list item */
+    position: relative; /* Allow pseudo-element positioning */
+}
+
+#book .book-content li::before {
+    content: "\2022"; /* Unicode for bullet point */
+    position: absolute; /* Position it absolutely */
+    left: -20px; /* Position it to the left of the text */
+    top: 0;
+    color: #555; /* Bullet color */
 }
 
 /* Centered List */
@@ -347,6 +354,10 @@ nav ul li a:hover {
     margin-bottom: 10px; /* Space between items */
 }
 
+.bookh3b {
+    text-align: center;
+    justify-content: center;
+}
 
 .bookh3a {
     text-align: left;
