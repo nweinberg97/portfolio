@@ -267,7 +267,7 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 115px 135px; /* Standardize padding */
+    padding: 75px 95px; /* Standardize padding */
 }
 
 /* Apply consistent margins and padding to each section */
@@ -275,7 +275,7 @@ nav ul li a:hover {
 #story,
 #photo,
 #projects {
-    padding: 80px 100px; /* Ensure consistent padding */
+    padding: 50px 70px; /* Ensure consistent padding */
 }
 
 /* Book Section */
