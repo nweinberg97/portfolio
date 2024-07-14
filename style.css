@@ -267,8 +267,7 @@ nav ul li a:hover {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px 60px; /* Standardize padding */
-    margin: 75px 75px; /* Center the content horizontally */ 
+    padding: 115px 135px; /* Standardize padding */
 }
 
 /* Apply consistent margins and padding to each section */
@@ -276,7 +275,7 @@ nav ul li a:hover {
 #story,
 #photo,
 #projects {
-    padding: 40px 60px; /* Ensure consistent padding */
+    padding: 80px 100px; /* Ensure consistent padding */
 }
 
 /* Book Section */
@@ -328,6 +327,7 @@ nav ul li a:hover {
     margin: 0;
     align-items: center; /* Center items horizontally */
     justify-content: center; /* Center items vertically */
+    text-align: left;
 }
 
 #book .book-content li {
@@ -348,6 +348,7 @@ nav ul li a:hover {
     padding: 0;
     margin: 0;
     list-style-type: none; /* Remove bullet points */
+    text-align: left;
 }
 
 .bookh3b {
