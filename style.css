@@ -270,7 +270,6 @@ nav ul li a:hover {
 #story,
 #photo,
 #projects {
-    max-width: 1000px; /* Standardize max width */
     margin: 75px auto; /* Standardize top and bottom margin, and center horizontally */
     padding: 20px 40px; /* Ensure consistent padding */
 }
