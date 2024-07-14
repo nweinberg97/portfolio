@@ -255,7 +255,6 @@ nav ul li a:hover {
     align-items: center;
     min-height: 100vh; /* Ensure it covers at least the full viewport height */
     width: 100%;
-    margin: 0 auto; /* Center the section horizontally */
 }
 
 .section-content {
