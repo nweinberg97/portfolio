@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -305,7 +311,7 @@ nav ul li a:hover {
 
 #book .book-content {
     max-width: 1000px;
-    text-align: center; /* Center the text within the container */
+    text-align: left; /* Left-align the text */
     color: #555;
     font-family: Arial, sans-serif;
     margin: 0 auto; /* Center the container */
@@ -319,11 +325,12 @@ nav ul li a:hover {
     list-style-type: none; /* Remove default bullets */
     padding: 0;
     margin: 0;
+    text-align: center; /* Center the list */
 }
 
 #book .book-content li {
     margin: 10px 0;
-    text-align: center; /* Center the text within each list item */
+    text-align: left; /* Left-align the text within each list item */
     position: relative; /* Allow pseudo-element positioning */
     padding-left: 20px; /* Add padding to make space for the bullet */
 }
@@ -332,10 +339,10 @@ nav ul li a:hover {
     content: "\2022"; /* Unicode for bullet point */
     position: absolute; /* Position it absolutely */
     left: 0; /* Position it to the left of the text */
-    top: 0;
+    top: 50%; /* Align bullet vertically with text */
+    transform: translateY(-50%); /* Center the bullet vertically */
     color: #555; /* Bullet color */
     font-size: 20px; /* Adjust bullet size */
-    line-height: 1; /* Align bullet vertically with text */
 }
 
 /* Centered List */
@@ -351,7 +358,7 @@ nav ul li a:hover {
 
 .centered-list li {
     width: 100%; /* Ensure each list item takes the full width */
-    text-align: center; /* Center the text within each list item */
+    text-align: left; /* Left-align the text within each list item */
     margin-bottom: 10px; /* Space between items */
 }
 
