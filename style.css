@@ -262,7 +262,7 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px 40px; /* Standardize padding */
-    margin: 0 auto; /* Center the content horizontally */
+    margin: 0 auto; /* Center the content horizontally */ 
 }
 
 /* Apply consistent margins and padding to each section */
@@ -273,8 +273,6 @@ nav ul li a:hover {
     margin: 75px auto; /* Standardize top and bottom margin, and center horizontally */
     padding: 20px 40px; /* Ensure consistent padding */
 }
-
-
 
 /* Book Section */
 #book .book-header {
@@ -329,22 +327,24 @@ nav ul li a:hover {
 
 #book .book-content li {
     margin-bottom: 10px;
+    margin: 10px 0;
 }
 
+/* Centered List */
 .centered-list {
+    display: flex; /* Use flexbox to center the list */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     padding: 0;
     margin: 0;
-    list-style-position: inside;
-    align-items: center;
-    justify-content: center;
+    list-style-type: none; /* Remove bullet points */
 }
 
 .centered-list li {
-    display: inline-block;
-    text-align: left; /* To keep the text of each list item aligned properly */
-    width: 100%; /* Adjust this width as needed */
-    align-items: center;
-    justify-content: center;
+    width: 100%; /* Ensure each list item takes the full width */
+    text-align: center; /* Center the text within each list item */
+    margin-bottom: 10px; /* Space between items */
 }
 
 
