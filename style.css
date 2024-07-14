@@ -270,7 +270,6 @@ nav ul li a:hover {
 #story,
 #photo,
 #projects {
-    margin: 75px auto; /* Standardize top and bottom margin, and center horizontally */
     padding: 20px 40px; /* Ensure consistent padding */
 }
 
@@ -320,21 +319,23 @@ nav ul li a:hover {
     list-style-type: none; /* Remove default bullets */
     padding: 0;
     margin: 0;
-    text-align: center; /* Center the list */
 }
 
 #book .book-content li {
     margin: 10px 0;
     text-align: center; /* Center the text within each list item */
     position: relative; /* Allow pseudo-element positioning */
+    padding-left: 20px; /* Add padding to make space for the bullet */
 }
 
 #book .book-content li::before {
     content: "\2022"; /* Unicode for bullet point */
     position: absolute; /* Position it absolutely */
-    left: -20px; /* Position it to the left of the text */
+    left: 0; /* Position it to the left of the text */
     top: 0;
     color: #555; /* Bullet color */
+    font-size: 20px; /* Adjust bullet size */
+    line-height: 1; /* Align bullet vertically with text */
 }
 
 /* Centered List */
@@ -362,6 +363,7 @@ nav ul li a:hover {
 .bookh3a {
     text-align: left;
 }
+
 
 /* Story Section */
 .mystory {
