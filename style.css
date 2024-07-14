@@ -325,8 +325,6 @@ nav ul li a:hover {
     list-style-type: none; /* Remove default bullets */
     padding: 0;
     margin: 0;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
     text-align: left;
 }
 
@@ -335,25 +333,17 @@ nav ul li a:hover {
     text-align: left; /* Left-align the text within each list item */
     position: relative; /* Allow pseudo-element positioning */
     padding-left: 20px; /* Add padding to make space for the bullet */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
 }
 
 /* Centered List */
 .centered-list {
     display: flex; /* Use flexbox to center the list */
     flex-direction: column; /* Align items in a column */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    padding: 0;
-    margin: 0;
-    list-style-type: none; /* Remove bullet points */
     text-align: left;
 }
 
 .bookh3b {
-    text-align: center;
-    justify-content: center;
+    text-align: left;
 }
 
 .bookh3a {
