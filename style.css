@@ -260,7 +260,6 @@ nav ul li a:hover {
 .section-content {
     background-color: white;
     border-radius: 8px;
-    max-width: 1000px; /* Standardize max width */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px 40px; /* Standardize padding */
     margin: 0 auto; /* Center the content horizontally */
