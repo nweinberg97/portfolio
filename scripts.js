@@ -1,8 +1,11 @@
 console.log("scripts.js file is loaded");
 
+
 document.addEventListener("DOMContentLoaded", function() {
+        console.log("DOM fully loaded and parsed");
     // EmailJS configuration
     emailjs.init("qZCMk0yO7Rwu_EXe2"); // Replace with your EmailJS user ID
+    console.log("EmailJS initialized");
 
     // Handle contact form submission
     document.querySelector("#contact form").addEventListener("submit", function(event) {
