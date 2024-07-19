@@ -335,6 +335,29 @@ nav ul li a:hover {
     padding-left: 20px; /* Add padding to make space for the bullet */
 }
 
+#book .cta2 p {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+#book button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+    justify-content: center;
+    text-align: center;
+}
+
+#book button:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
 /* Centered List */
 .centered-list {
     display: flex; /* Use flexbox to center the list */
