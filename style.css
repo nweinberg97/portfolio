@@ -352,6 +352,7 @@ nav ul li a:hover {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 5px;
+    display: inline-block;
     justify-content: center;
     text-align: center;
 }
