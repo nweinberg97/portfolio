@@ -340,7 +340,6 @@ nav ul li a:hover {
     font-size: 16px;
     color: #333;
     justify-content: center;
-    align-items: center; 
 }
 
 #book button {
@@ -352,9 +351,8 @@ nav ul li a:hover {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 5px;
-    display: inline-block;
+    display: flex;
     justify-content: center;
-    text-align: center;
 }
 
 #book button:hover {
