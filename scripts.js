@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     });
 
-    // Waitlist button and popup form
+    // Waitlist button and popup form (Home Page)
     const waitlistButton = document.getElementById("join-waitlist-btn");
     const waitlistFormPopup = document.getElementById("waitlist-form-popup");
     const closeBtn = document.querySelector(".close-btn");
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Handle waitlist form submission
+    // Handle waitlist form submission (Home Page)
     waitlistForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
@@ -69,6 +69,56 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("There was an error sending your message. Please try again.");
             });
     }, { once: true }); // Attach the event listener only once
+
+    // Book Waitlist form handling
+    const bookWaitlistButton = document.getElementById("book-join-waitlist-btn"); // Ensure this ID matches your HTML
+    const bookWaitlistFormPopup = document.getElementById("book-waitlist-form-popup");
+    const bookCloseBtn = document.querySelector(".book-close-btn");
+    const bookWaitlistForm = document.getElementById("book-waitlist-form");
+
+    // Show book waitlist popup form
+    if (bookWaitlistButton) {
+        bookWaitlistButton.addEventListener("click", function() {
+            bookWaitlistFormPopup.style.display = "block";
+        });
+    }
+
+    // Close book waitlist popup form
+    if (bookCloseBtn) {
+        bookCloseBtn.addEventListener("click", function() {
+            bookWaitlistFormPopup.style.display = "none";
+        });
+    }
+
+    // Close book waitlist popup form when clicking outside of the form
+    window.addEventListener("click", function(event) {
+        if (event.target === bookWaitlistFormPopup) {
+            bookWaitlistFormPopup.style.display = "none";
+        }
+    });
+
+    // Handle book waitlist form submission
+    if (bookWaitlistForm) {
+        bookWaitlistForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const formData = {
+                from_name: document.getElementById("book-name").value,
+                reply_to: document.getElementById("book-email").value,
+            };
+
+            emailjs.send("service_wrnbapd", "template_vc7abxh", formData)
+                .then(function(response) {
+                    console.log("SUCCESS!", response.status, response.text);
+                    alert("Your message has been sent successfully!");
+                    bookWaitlistFormPopup.style.display = "none";
+                    bookWaitlistForm.reset(); // Reset the form after successful submission
+                }, function(error) {
+                    console.log("FAILED...", error);
+                    alert("There was an error sending your message. Please try again.");
+                });
+        }, { once: true });
+    }
 
     // Hamburger menu
     const hamburger = document.querySelector(".hamburger");
