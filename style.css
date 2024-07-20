@@ -208,7 +208,7 @@ nav ul li a:hover {
     position: relative;
 }
 
-.close-btn, .book-close-btn {
+.close-btn {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -360,6 +360,72 @@ nav ul li a:hover {
 
 #book button:hover {
     background: rgba(0, 0, 0, 0.9);
+}
+
+/* Popup Form for Book Section */
+#book-waitlist-popup {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#book-waitlist-popup .popup-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#book-waitlist-popup .book-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#book-waitlist-popup .popup-content h2 {
+    text-align: center;
+}
+
+#book-waitlist-popup .popup-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+#book-waitlist-popup .popup-content label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#book-waitlist-popup .popup-content input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#book-waitlist-popup .popup-content button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#book-waitlist-popup .popup-content button:hover {
+    background: #555;
 }
 
 /* Centered List */
