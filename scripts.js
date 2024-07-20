@@ -1,13 +1,11 @@
 console.log("scripts.js file is loaded");
 
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("DOM fully loaded and parsed");
     // EmailJS configuration
     emailjs.init("qZCMk0yO7Rwu_EXe2"); // Replace with your EmailJS user ID
-    console.log("EmailJS initialized");
 
     // Handle contact form submission
-    document.querySelector("#contact-form").addEventListener("submit", function(event) {
+    document.querySelector("#contact form").addEventListener("submit", function(event) {
         event.preventDefault();
 
         // Collect form data
@@ -28,41 +26,31 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     });
 
-    // Waitlist buttons and popup forms
-    const waitlistButtons = document.querySelectorAll(".waitlist-button");
-    const popupForms = document.querySelectorAll(".popup-form");
-    const closeBtns = document.querySelectorAll(".close-btn");
+    // Waitlist button and popup form
+    const waitlistButton = document.getElementById("join-waitlist-btn");
+    const waitlistFormPopup = document.getElementById("waitlist-form-popup");
+    const closeBtn = document.querySelector(".close-btn");
+    const waitlistForm = document.getElementById("waitlist-form");
 
-    // Show popup form when any waitlist button is clicked
-    waitlistButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            const isBookButton = button.closest('#book');
-            if (isBookButton) {
-                document.querySelector("#book-waitlist-form-popup").style.display = "block";
-            } else {
-                document.querySelector("#waitlist-form-popup").style.display = "block";
-            }
-        });
+    // Show popup form
+    waitlistButton.addEventListener("click", function() {
+        waitlistFormPopup.style.display = "block";
     });
 
-    // Close popup forms
-    closeBtns.forEach(btn => {
-        btn.addEventListener("click", function() {
-            btn.closest('.popup-form').style.display = "none";
-        });
+    // Close popup form
+    closeBtn.addEventListener("click", function() {
+        waitlistFormPopup.style.display = "none";
     });
 
-    // Close popup forms when clicking outside of them
+    // Close popup form when clicking outside of the form
     window.addEventListener("click", function(event) {
-        popupForms.forEach(form => {
-            if (event.target === form) {
-                form.style.display = "none";
-            }
-        });
+        if (event.target === waitlistFormPopup) {
+            waitlistFormPopup.style.display = "none";
+        }
     });
 
-    // Handle waitlist form submission for the first form
-    document.getElementById("waitlist-form").addEventListener("submit", function(event) {
+    // Handle waitlist form submission
+    waitlistForm.addEventListener("submit", function(event) {
         event.preventDefault();
 
         const formData = {
@@ -74,29 +62,8 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(function(response) {
                 console.log("SUCCESS!", response.status, response.text);
                 alert("Your message has been sent successfully!");
-                document.querySelector("#waitlist-form-popup").style.display = "none";
-                document.getElementById("waitlist-form").reset(); // Reset the form after successful submission
-            }, function(error) {
-                console.log("FAILED...", error);
-                alert("There was an error sending your message. Please try again.");
-            });
-    }, { once: true }); // Attach the event listener only once
-
-    // Handle waitlist form submission for the second form
-    document.getElementById("book-waitlist-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const formData = {
-            from_name: document.getElementById("name").value,
-            reply_to: document.getElementById("email").value,
-        };
-
-        emailjs.send("service_wrnbapd", "template_vc7abxh", formData)
-            .then(function(response) {
-                console.log("SUCCESS!", response.status, response.text);
-                alert("Your message has been sent successfully!");
-                document.querySelector("#book-waitlist-form-popup").style.display = "none";
-                document.getElementById("book-waitlist-form").reset(); // Reset the form after successful submission
+                waitlistFormPopup.style.display = "none";
+                waitlistForm.reset(); // Reset the form after successful submission
             }, function(error) {
                 console.log("FAILED...", error);
                 alert("There was an error sending your message. Please try again.");
