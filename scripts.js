@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Collect form data
         var formData = {
-            from_name: document.querySelector("#contact-form #name").value,
-            message: document.querySelector("#contact-form #message").value,
-            reply_to: document.querySelector("#contact-form #email").value,
+            from_name: document.querySelector("#name").value,
+            message: document.querySelector("#message").value,
+            reply_to: document.querySelector("#email").value,
         };
 
         // Send email
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Show popup form when any waitlist button is clicked
     waitlistButtons.forEach(button => {
         button.addEventListener("click", function() {
-            console.log("Waitlist button clicked");
             const isBookButton = button.closest('#book');
             if (isBookButton) {
                 document.querySelector("#book-waitlist-form-popup").style.display = "block";
@@ -49,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Close popup forms
     closeBtns.forEach(btn => {
         btn.addEventListener("click", function() {
-            console.log("Close button clicked");
             btn.closest('.popup-form').style.display = "none";
         });
     });
@@ -68,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         const formData = {
-            from_name: document.getElementById("waitlist-form #name").value,
-            reply_to: document.getElementById("waitlist-form #email").value,
+            from_name: document.getElementById("name").value,
+            reply_to: document.getElementById("email").value,
         };
 
         emailjs.send("service_wrnbapd", "template_vc7abxh", formData)
@@ -89,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         const formData = {
-            from_name: document.getElementById("book-waitlist-form #name").value,
-            reply_to: document.getElementById("book-waitlist-form #email").value,
+            from_name: document.getElementById("name").value,
+            reply_to: document.getElementById("email").value,
         };
 
         emailjs.send("service_wrnbapd", "template_vc7abxh", formData)
