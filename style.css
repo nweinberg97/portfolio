@@ -250,6 +250,55 @@ nav ul li a:hover {
     background: #555;
 }
 
+/* Arrow Container */
+#arrow-overlay {
+    position: absolute;
+    top: calc(70% + 80px); /* Adjust the top position to be below the waitlist section */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.chevron-link {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.chevron {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.chevron::before,
+.chevron::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background: white; /* White arrow */
+}
+
+.chevron::before {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+}
+
+.chevron::after {
+    top: 20px;
+    left: -40px;
+    transform: rotate(90deg);
+}
+
 /* Section Background and Content Styling */
 .background-section {
     background-image: url("ocean.png");
