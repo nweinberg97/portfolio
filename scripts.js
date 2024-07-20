@@ -2,20 +2,18 @@ console.log("scripts.js file is loaded");
 
 document.addEventListener("DOMContentLoaded", function() {
     // EmailJS configuration
-    emailjs.init("qZCMk0yO7Rwu_EXe2"); // Replace with your EmailJS user ID
+    emailjs.init("qZCMk0yO7Rwu_EXe2");
 
     // Handle contact form submission
     document.querySelector("#contact form").addEventListener("submit", function(event) {
         event.preventDefault();
 
-        // Collect form data
         var formData = {
             from_name: document.querySelector("#name").value,
             message: document.querySelector("#message").value,
             reply_to: document.querySelector("#email").value,
         };
 
-        // Send email
         emailjs.send("service_wrnbapd", "template_vc7abxh", formData)
             .then(function(response) {
                 console.log("SUCCESS!", response.status, response.text);
@@ -68,10 +66,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.log("FAILED...", error);
                 alert("There was an error sending your message. Please try again.");
             });
-    }, { once: true }); // Attach the event listener only once
+    }, { once: true });
 
     // Book Waitlist form handling
-    const bookWaitlistButton = document.getElementById("book-join-waitlist-btn"); // Ensure this ID matches your HTML
+    const bookWaitlistButton = document.getElementById("join-waitlist-btn2"); // Updated to match HTML ID
     const bookWaitlistFormPopup = document.getElementById("book-waitlist-form-popup");
     const bookCloseBtn = document.querySelector(".book-close-btn");
     const bookWaitlistForm = document.getElementById("book-waitlist-form");
