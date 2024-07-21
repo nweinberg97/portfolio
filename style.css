@@ -288,6 +288,25 @@ nav ul li a:hover {
     }
 }
 
+@media (max-width: 768px) {
+    #arrow-overlay {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #arrow-overlay {
+        bottom: 15px;
+    }
+
+    .chevron {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid white;
+    }
+}
+
+
 /* Section Background and Content Styling */
 .background-section {
     background-image: url("ocean.png");
