@@ -118,6 +118,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }, { once: true });
     }
 
+    // Smooth scroll to book section
+    document.getElementById("scroll-to-book").addEventListener("click", function(event) {
+        event.preventDefault();
+        document.getElementById("book").scrollIntoView({ behavior: 'smooth' });
+    });
+
     // Hamburger menu
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector("header nav ul");
