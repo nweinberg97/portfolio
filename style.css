@@ -276,6 +276,12 @@ nav ul li a:hover {
     animation: pulse 2s infinite;
 }
 
+.learn-more-text {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
 @keyframes pulse {
     0% {
         transform: translateY(0);
@@ -303,6 +309,10 @@ nav ul li a:hover {
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
         border-top: 20px solid white;
+    }
+
+    .learn-more-text {
+        font-size: 16px; /* Adjust as needed for smaller screens */
     }
 }
 
