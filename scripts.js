@@ -169,6 +169,10 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlide(currentIndex - 1);
     }
 
+    // Add event listeners for carousel buttons
+    document.getElementById("next-slide").addEventListener("click", nextSlide);
+    document.getElementById("prev-slide").addEventListener("click", prevSlide);
+
     // Initialize the first slide
     showSlide(currentIndex);
 });
