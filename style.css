@@ -388,21 +388,25 @@ nav ul li a:hover {
     text-align: left; 
 }
 
+/* Carousel container */
 .carousel {
     position: relative;
-    width: 80%;
+    width: 100%;
     max-width: 800px;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
 }
 
+/* Carousel inner container */
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
 }
 
+/* Carousel item */
 .carousel-item {
     min-width: 100%;
     box-sizing: border-box;
@@ -410,23 +414,26 @@ nav ul li a:hover {
     padding: 20px;
 }
 
+/* Carousel item image */
 .carousel-item img {
     width: 100%;
     border-radius: 10px;
 }
 
+/* Caption */
 .caption {
     margin-top: 10px;
     font-size: 16px;
     color: #333;
 }
 
+/* Carousel controls */
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
