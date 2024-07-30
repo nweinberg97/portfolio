@@ -398,7 +398,6 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
-    height: 600px; /* Default height for larger screens */
 }
 
 /* Carousel inner container */
@@ -426,7 +425,7 @@ nav ul li a:hover {
     margin-top: 10px;
     font-size: 16px;
     color: #333;
-
+}
 
 /* Carousel controls */
 .carousel-control-prev,
@@ -448,38 +447,6 @@ nav ul li a:hover {
 
 .carousel-control-next {
     right: 10px;
-}
-
-/* Responsive Design */
-/* Tablets */
-@media (max-width: 768px) {
-    .carousel {
-        height: 500px; /* Adjusted height for tablets */
-    }
-
-    .caption {
-        font-size: 14px; /* Slightly smaller font for captions */
-    }
-}
-
-/* Mobile Devices */
-@media (max-width: 480px) {
-    .carousel {
-        height: 400px; /* Adjusted height for mobile devices */
-    }
-
-    .carousel-item {
-        padding: 10px; /* Reduce padding for smaller screens */
-    }
-
-    .caption {
-        font-size: 12px; /* Smaller font for mobile devices */
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        padding: 5px; /* Smaller control buttons for mobile */
-    }
 }
 
 
