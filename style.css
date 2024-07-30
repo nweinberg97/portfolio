@@ -398,6 +398,7 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
+    height: 600px; /* Default height for larger screens */
 }
 
 /* Carousel inner container */
@@ -412,11 +413,17 @@ nav ul li a:hover {
     box-sizing: border-box;
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out image and caption */
+    height: 100%;
 }
 
 /* Carousel item image */
 .carousel-item img {
     width: 100%;
+    height: 60%; /* Adjust height percentage as needed */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
     border-radius: 10px;
 }
 
@@ -425,6 +432,8 @@ nav ul li a:hover {
     margin-top: 10px;
     font-size: 16px;
     color: #333;
+    overflow: auto; /* Add if the text might be too long */
+    height: 30%; /* Adjust height percentage as needed */
 }
 
 /* Carousel controls */
@@ -447,6 +456,38 @@ nav ul li a:hover {
 
 .carousel-control-next {
     right: 10px;
+}
+
+/* Responsive Design */
+/* Tablets */
+@media (max-width: 768px) {
+    .carousel {
+        height: 500px; /* Adjusted height for tablets */
+    }
+
+    .caption {
+        font-size: 14px; /* Slightly smaller font for captions */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .carousel {
+        height: 400px; /* Adjusted height for mobile devices */
+    }
+
+    .carousel-item {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .caption {
+        font-size: 12px; /* Smaller font for mobile devices */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        padding: 5px; /* Smaller control buttons for mobile */
+    }
 }
 
 
