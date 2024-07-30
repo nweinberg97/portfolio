@@ -407,25 +407,25 @@ nav ul li a:hover {
     transition: transform 0.5s ease;
 }
 
+/* Carousel item */
 .carousel-item {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Ensures the item takes full height of the container */
-    /* overflow: hidden; Removing this to allow full visibility of content */
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
 }
 
+/* Carousel item image */
 .carousel-item img {
-    flex: 1; /* The image will take available space proportionally */
-    object-fit: contain; /* Ensures the entire image is visible, might leave space around */
-    max-height: 70%; /* Optional: Limit image height to leave space for caption */
+    width: 100%;
+    border-radius: 10px;
 }
 
+/* Caption */
 .caption {
-    flex: 0 1 auto; /* Caption will take only as much space as it needs */
-    padding: 10px;
-    overflow: auto; /* Allows scrolling if the caption is too long */
-    background-color: white; /* Ensure the caption is readable */
-}
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
 
 
 /* Carousel controls */
