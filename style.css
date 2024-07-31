@@ -392,7 +392,7 @@ nav ul li a:hover {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 500px; /* Adjusted to be narrower */
+    max-width: 900px; /* Adjusted to be narrower */
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
@@ -437,7 +437,7 @@ nav ul li a:hover {
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 50%;
+    top: 33%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
