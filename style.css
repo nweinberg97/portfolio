@@ -417,7 +417,7 @@ nav ul li a:hover {
 /* Carousel item image */
 .carousel-item img {
     width: 100%;
-    max-height: 300px; /* Set a maximum height for the images */
+    max-height: 450px; /* Set a maximum height for the images */
     height: auto; /* Allow images to scale proportionally */
     object-fit: contain; /* Ensure the entire image is visible */
     border-radius: 10px;
@@ -586,7 +586,7 @@ nav ul li a:hover {
 
 .bookh3b {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .bookh3a {
