@@ -421,7 +421,7 @@ nav ul li a:hover {
     max-height: 500px; /* Maintain max-height at 500px */
     height: auto;
     object-fit: cover;
-    object-position: center; /* Show more of the bottom of the image */
+    object-position: center 80%; /* Show more of the bottom of the image */
     border-radius: 10px;
 }
 
@@ -430,9 +430,7 @@ nav ul li a:hover {
     margin-top: 10px;
     font-size: 16px;
     color: #333;
-    padding: 10px;
     background-color: white;
-    margin-bottom: -40px; /* Further tighten space below the caption */
 }
 
 /* Carousel controls */
