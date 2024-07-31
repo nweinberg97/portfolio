@@ -585,7 +585,8 @@ nav ul li a:hover {
 }
 
 .bookh3b {
-    text-align: left;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
 .bookh3a {
