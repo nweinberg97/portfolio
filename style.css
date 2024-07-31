@@ -414,12 +414,14 @@ nav ul li a:hover {
     padding: 20px;
 }
 
+
 /* Carousel item image */
 .carousel-item img {
     width: 100%;
     max-height: 500px; /* Maintain max-height at 500px */
     height: auto;
-    object-fit: cover; /* Fill the container width while maintaining aspect ratio */
+    object-fit: cover;
+    object-position: bottom; /* Show more of the bottom of the image */
     border-radius: 10px;
 }
 
@@ -430,7 +432,7 @@ nav ul li a:hover {
     color: #333;
     padding: 10px;
     background-color: white;
-    margin-bottom: -10px; /* Tighten space below the caption */
+    margin-bottom: -20px; /* Further tighten space below the caption */
 }
 
 /* Carousel controls */
