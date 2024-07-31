@@ -164,13 +164,13 @@ nav ul li a:hover {
 }
 
 #waitlist-overlay p {
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 0px;
     white-space: normal;
 }
 
 #waitlist-overlay button {
-    font-size: 20px;
+    font-size: 19px;
     padding: 10px 20px;
     background: rgba(0, 0, 0, 0.7);
     color: white;
@@ -278,7 +278,7 @@ nav ul li a:hover {
 
 .learn-more-text {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 10px; /* Adjust as needed */
 }
 
