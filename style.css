@@ -392,7 +392,7 @@ nav ul li a:hover {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 600px; /* Adjusted to be narrower */
+    max-width: 500px; /* Adjusted to be narrower */
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
@@ -587,7 +587,7 @@ nav ul li a:hover {
 
 .bookh3b {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .bookh3a {
