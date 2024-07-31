@@ -437,7 +437,7 @@ nav ul li a:hover {
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 40%;
+    top: 38%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
