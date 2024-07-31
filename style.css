@@ -417,8 +417,9 @@ nav ul li a:hover {
 /* Carousel item image */
 .carousel-item img {
     width: 100%;
-    height: auto; /* Allow images to scale naturally */
-    object-fit: contain; /* Ensures the entire image is visible within the container */
+    max-height: 300px; /* Set a maximum height for the images */
+    height: auto; /* Allow images to scale proportionally */
+    object-fit: contain; /* Ensure the entire image is visible */
     border-radius: 10px;
 }
 
