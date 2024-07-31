@@ -124,7 +124,7 @@ nav ul li a:hover {
 
 #home .overlay-text1 {
     position: absolute;
-    top: 40%;
+    top: 36%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -134,16 +134,16 @@ nav ul li a:hover {
     text-align: center;
     z-index: 10;
     white-space: nowrap;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 #home .overlay-text2 {
     position: absolute;
-    top: 47%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 35px;
+    font-size: 40px;
     font-family: "Parisienne", cursive;
     font-weight: 400;
     text-align: center;
