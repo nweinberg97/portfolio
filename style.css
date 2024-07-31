@@ -392,13 +392,14 @@ nav ul li a:hover {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 600px; /* Adjusted max-width for a smaller, more compact carousel */
+    max-width: 90%; /* Adjust max-width to bring the image closer to the controls */
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
 }
+
 
 /* Carousel inner container */
 .carousel-inner {
@@ -414,11 +415,12 @@ nav ul li a:hover {
     padding: 20px;
 }
 
+
 /* Carousel item image */
 .carousel-item img {
     width: 100%;
-    max-height: 500px; /* Set a maximum height for the images */
-    height: auto; /* Allow images to scale proportionally */
+    max-height: 500px; /* Updated max-height to 500px */
+    height: auto;
     object-fit: contain; /* Ensure the entire image is visible */
     border-radius: 20px;
 }
@@ -428,8 +430,9 @@ nav ul li a:hover {
     margin-top: 10px;
     font-size: 16px;
     color: #333;
-    padding: 10px; /* Add padding for better separation from the image */
-    background-color: white; /* Ensures the caption is distinct and readable */
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 0px; /* Reduce space below the caption */
 }
 
 /* Carousel controls */
