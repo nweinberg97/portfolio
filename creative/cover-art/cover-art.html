@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Art</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="#home">Nitai Weinberg</a></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="#creative">Creative</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Cover Art Projects Section -->
+    <section id="cover-art-projects">
+        <!-- Home Section -->
+        <div class="project">
+            <h2>Home</h2>
+            <img src="home-cover.jpg" alt="Home Cover Art" class="centered-image">
+            <audio controls>
+                <source src="home-audio.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <hr class="divider">
+
+        <!-- Let Go Section -->
+        <div class="project">
+            <h2>Let Go</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yourVideoLink" title="Let Go Video" frameborder="0"></iframe>
+        </div>
+        <hr class="divider">
+
+        <!-- Changing Tides Section -->
+        <div class="project">
+            <h2>Changing Tides</h2>
+            <div class="carousel">
+                <img src="chapter1.jpg" alt="Chapter 1 Cover">
+                <img src="chapter2.jpg" alt="Chapter 2 Cover">
+                <img src="chapter3.jpg" alt="Chapter 3 Cover">
+                <img src="chapter4.jpg" alt="Chapter 4 Cover">
+                <img src="chapter5.jpg" alt="Chapter 5 Cover">
+                <img src="chapter6.jpg" alt="Chapter 6 Cover">
+                <img src="chapter7.jpg" alt="Chapter 7 Cover">
+                <img src="chapter8.jpg" alt="Chapter 8 Cover">
+                <img src="chapter9.jpg" alt="Chapter 9 Cover">
+                <img src="chapter10.jpg" alt="Chapter 10 Cover">
+                <img src="chapter11.jpg" alt="Chapter 11 Cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
+            <div class="footer-nav-links">
+                <a href="index.html#projects">Projects</a> |
+                <a href="#creative">Creative</a> |
+                <a href="about.html">About</a> |
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu and Carousel -->
+    <script>
+        $(document).ready(function() {
+            $('.hamburger').on('click', function() {
+                $('.nav-links').toggleClass('open');
+            });
+
+            // Initialize carousel for Changing Tides
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+        });
+    </script>
+
+</body>
+</html>
