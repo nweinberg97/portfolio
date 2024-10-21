@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps + Web Projects</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="#home">Nitai Weinberg</a></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="#creative">Creative</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Apps + Web Projects Section -->
+    <section id="apps-web-projects">
+
+        <!-- Trybe -->
+        <div class="project">
+            <h2>Trybe</h2>
+            <img src="trybe-image1.jpg" alt="Trybe Image 1" class="centered-image">
+            <img src="trybe-image2.jpg" alt="Trybe Image 2" class="centered-image">
+            <img src="trybe-image3.jpg" alt="Trybe Image 3" class="centered-image">
+            <img src="trybe-image4.jpg" alt="Trybe Image 4" class="centered-image">
+        </div>
+        <hr class="divider">
+
+        <!-- Taskly -->
+        <div class="project">
+            <h2>Taskly</h2>
+            <img src="taskly-image.jpg" alt="Taskly Image" class="centered-image">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/video1" title="Taskly Video 1" frameborder="0"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/video2" title="Taskly Video 2" frameborder="0"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/video3" title="Taskly Video 3" frameborder="0"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/video4" title="Taskly Video 4" frameborder="0"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/video5" title="Taskly Video 5" frameborder="0"></iframe>
+        </div>
+        <hr class="divider">
+
+        <!-- Search for the Good -->
+        <div class="project">
+            <h2>Search for the Good</h2>
+            <img src="search-for-the-good-image.jpg" alt="Search for the Good Image" class="centered-image">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/video6" title="Search for the Good Video" frameborder="0"></iframe>
+        </div>
+        <hr class="divider">
+
+        <!-- Knit -->
+        <div class="project">
+            <h2>Knit</h2>
+            <img src="knit-image.jpg" alt="Knit Image" class="centered-image">
+            <a href="https://www.figma.com/file/yourFigmaLink" target="_blank" class="figma-link">View Figma Design</a>
+            <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/yourFigmaDeckLink" 
+                allowfullscreen style="border:none;width:100%;height:500px;"></iframe>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
+            <div class="footer-nav-links">
+                <a href="index.html#projects">Projects</a> |
+                <a href="#creative">Creative</a> |
+                <a href="about.html">About</a> |
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript (hamburger menu functionality) -->
+    <script>
+        $(document).ready(function() {
+            $('.hamburger').on('click', function() {
+                $('.nav-links').toggleClass('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
