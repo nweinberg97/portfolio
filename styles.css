@@ -27,7 +27,7 @@ header .logo a {
 }
 
 header .logo a:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
     color: #3498db; /* Change to blue on hover */
 }
 
@@ -68,7 +68,7 @@ nav ul li a:hover {
 .section-image {
     width: 60%; /* Adjust the size of the image */
     max-width: 800px;
-    height: auto;
+    height: 60%;
     margin-bottom: 20px;
     align-items: center;
 }
