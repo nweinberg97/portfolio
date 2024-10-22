@@ -1,68 +1,61 @@
-/* Global Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+/* Body Styling */
 body {
     font-family: 'Raleway', sans-serif;
     background-color: white;
     color: black;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
 }
 
-/* Nav Bar */
+/* Navbar */
 header {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Transparent Black */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black */
+    padding: 10px 30px;
     position: fixed;
     top: 0;
-    z-index: 100;
-    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.logo {
-    float: left;
-    margin-left: 15px;
-}
-
-.logo a {
+header .logo a {
     color: white;
     font-size: 1.5rem;
+    font-weight: 700;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+    transition: color 0.3s, font-size 0.3s;
 }
 
-.logo a:hover {
-    color: #3498db;
-    transform: scale(1.1);
+header .logo a:hover {
+    color: blue;
+    font-size: 1.6rem;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
 }
 
-nav ul li {
-    margin: 0 15px;
+header nav ul li {
+    margin-left: 30px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #3498db;
-    transform: scale(1.1);
+header nav ul li a:hover {
+    color: blue;
 }
 
 /* Hero Section */
@@ -71,17 +64,11 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(80vh - 60px); /* Leave room for navbar and footer */
-    padding-top: 60px; /* Fixed navbar space */
+    height: calc(100vh - 60px); /* Height adjusted to screen */
     text-align: center;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
     position: relative;
-}
-
-.section-image {
-    max-width: 60%;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 20px;
 }
 
 .hero-text {
@@ -89,34 +76,78 @@ nav ul li a:hover {
     top: 50%;
     transform: translateY(-50%);
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* You can adjust this */
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .hero-text p {
     font-size: 1.5rem;
+    margin-top: 10px;
 }
 
-/* Footer */
+/* Image Styling */
+.section-image {
+    max-width: 60%; /* Adjust this size if needed */
+    height: auto;
+    object-fit: cover;
+    margin: 0; /* Remove margins */
+}
+
+/* Footer Styling */
 footer {
-    text-align: center;
-    padding: 10px;
     background-color: white;
-    position: relative;
+    padding: 20px 0;
+    text-align: center;
 }
 
-.footer-links a {
+footer .footer-nav-links {
+    margin-bottom: 10px;
+}
+
+footer .footer-nav-links a {
     color: black;
+    margin: 0 15px;
     text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    transition: color 0.3s, font-size 0.3s;
 }
 
-.footer-links a:hover {
-    color: #3498db;
-    transform: scale(1.1);
+footer .footer-nav-links a:hover {
+    color: blue;
+    font-size: 1.1rem;
 }
 
 footer p {
+    color: gray;
+    font-size: 0.9rem;
     margin-top: 10px;
-    color: black;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header .logo a {
+        font-size: 1.3rem;
+    }
+
+    header nav ul li {
+        margin-left: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .hero-text {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .section-image {
+        max-width: 90%;
+    }
 }
