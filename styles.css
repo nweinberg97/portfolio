@@ -110,8 +110,6 @@ footer .footer-links a {
     border-radius: 5px; /* Rounded corners to make it more button-like */
     transition: background-color 0.3s, transform 0.3s;
     border: 1px solid transparent; /* Smooth hover effect */
-    color: black;
-    margin: 0 5px;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
 }
