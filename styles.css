@@ -75,11 +75,12 @@ nav ul li a:hover {
     text-align: left;
 }
 
-/* Center the image and reduce its width */
+/* Center the image and crop it to show desired part */
 .section-image {
-    width: 50%; /* Smaller image size */
+    width: 45%; /* Make the image slightly smaller */
     height: auto;
     object-fit: cover;
+    object-position: top center; /* Focus on the top part of the image */
     display: block;
     margin: 0 auto;
 }
@@ -92,6 +93,8 @@ nav ul li a:hover {
     color: white;
     font-size: 1.8rem; /* Adjust font size */
     text-align: left;
+    z-index: 100; /* Ensure text appears over the image */
+    display: block;
 }
 
 .hero-text p {
