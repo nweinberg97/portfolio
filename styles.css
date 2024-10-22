@@ -26,6 +26,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border to define the edge */
 }
 
 header .logo a {
@@ -78,6 +80,7 @@ header nav ul li a:hover {
     margin-bottom: -60px;
 }
 
+
 /* Image Styling */
 .section-image {
     width: 100%;
@@ -97,19 +100,28 @@ footer {
     border-top: 1px solid #ddd;
 }
 
+
 /* Correct class name updated to match HTML */
 footer .footer-links a {
+    color: white; /* Change text color to white for contrast */
+    background-color: #5A9BD5; /* Soft blue background */
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px; /* Rounded corners to make it more button-like */
+    transition: background-color 0.3s, transform 0.3s;
+    border: 1px solid transparent; /* Smooth hover effect */
     color: black;
     margin: 0 15px;
     text-decoration: none;
-    font-size: 1rem;
     transition: color 0.3s, transform 0.3s;
 }
 
 footer .footer-links a:hover {
-    color: #5A9BD5; /* Softer blue */
     transform: scale(1.1); /* Grows slightly on hover */
+    background-color: #4178a9; /* Darker blue on hover */
+    border: 1px solid #5A9BD5; /* Add border on hover */
 }
+
 
 footer p {
     color: gray;
