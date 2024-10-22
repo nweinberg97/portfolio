@@ -1,1 +1,113 @@
+/* Contact Section */
+#contact .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow values */
+    border-radius: 8px;
+}
+
+.contactheader { 
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-text {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-text li {
+    margin-bottom: 10px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#contact form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#contact form button {
+    width: 100%;
+    padding: 12px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+    #contact .contact-container,
+    #contact form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #contact .contact-container p {
+        padding-left: 10px;
+    }
+
+    .contactheader {
+        text-align: center;
+        font-size: 32px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    #contact .contact-container,
+    #contact form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #contact .contact-container p {
+        padding-left: 10px;
+    }
+
+    .contactheader {
+        text-align: center;
+        font-size: 24px;
+    }
+
+}
 
