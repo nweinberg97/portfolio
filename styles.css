@@ -75,15 +75,17 @@ header nav ul li a:hover {
     top: 50%;
     transform: translateY(-50%);
     color: white;
-    font-size: 2.5rem; /* You can adjust this */
+    font-size: 1.5rem; /* You can adjust this */
     padding: 0;
     margin: 0;
     line-height: 1.2;
+    text-align: left;
 }
 
 .hero-text p {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     margin-top: 10px;
+    text-align: left;
 }
 
 /* Image Styling */
