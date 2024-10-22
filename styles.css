@@ -69,26 +69,27 @@ nav ul li a:hover {
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 100px; /* Padding for navbar */
-    padding-bottom: 30px; /* Padding for footer */
-    height: 70vh; /* Fit the image between navbar and footer */
+    padding-bottom: 50px; /* Padding for footer */
+    height: 70vh; /* Adjust height to fit between navbar and footer */
     background-color: white;
     position: relative;
 }
 
 .section-image {
-    width: 60%; /* Adjust width to fit the section */
+    width: 60%; /* Adjust width of image */
     height: auto;
+    max-height: calc(100vh - 160px); /* Ensure it doesn't go past footer and navbar */
     object-fit: cover;
-    margin-bottom: 20px;
+    margin: 0 auto; /* Center the image */
 }
 
 .hero-text {
     position: absolute;
-    top: 20px; /* Align text to top left */
+    top: 20px; /* Move text to top left */
     left: 20px;
     color: white;
     text-align: left;
-    background-color: none; /* Remove background */
+    background-color: none;
     padding: 10px;
 }
 
@@ -132,7 +133,7 @@ footer p {
     color: black;
 }
 
-/* Responsive Design for smaller screens */
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero-text h1 {
         font-size: 1.6rem;
@@ -143,7 +144,7 @@ footer p {
     }
 
     .section-image {
-        width: 70%;
+        width: 80%;
     }
 }
 
