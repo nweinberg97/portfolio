@@ -22,11 +22,12 @@ header .logo a {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    transition: transform 0.3s;
+    transition: transform 0.3s, color 0.3s; /* Add smooth hover transitions */
 }
 
 header .logo a:hover {
     transform: scale(1.1);
+    color: #3498db; /* Change to blue on hover */
 }
 
 nav ul {
@@ -43,45 +44,43 @@ nav ul li a {
     color: white;
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: transform 0.3s, color 0.3s; /* Add smooth hover transitions */
 }
 
-/* Hover Effect: Change color from white to blue */
+/* Hover Effect: Change color from white to blue and grow */
 nav ul li a:hover {
     color: #3498db; /* Blue color on hover */
+    transform: scale(1.1); /* Grow in size */
 }
 
-/* Hero Section */
+/* Hero Section with white background */
 #home {
-    position: relative;
-    width: 100%;
-    height: 90vh; /* Take up most of the homepage */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0;
     background-color: white;
 }
 
 .section-image {
-    width: 100%;
-    height: 100%;
+    width: 60%; /* Adjust the size of the image */
+    max-width: 800px;
+    height: auto;
     object-fit: cover;
-    position: relative;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: black;
     margin: 0;
 }
 
 .hero-text p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: black;
     margin-top: 10px;
 }
 
@@ -89,56 +88,38 @@ nav ul li a:hover {
 footer {
     background-color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0; /* Added more padding to give more space above "All rights reserved" */
 }
 
 footer a {
     color: black;
     text-decoration: none;
     margin: 0 15px;
+    transition: transform 0.3s, color 0.3s; /* Add smooth hover transitions */
+}
+
+/* Footer link hover effect: change color to blue and grow */
+footer a:hover {
+    color: #3498db; /* Blue color on hover */
+    transform: scale(1.1); /* Grow in size */
 }
 
 footer p {
-    margin-top: 10px;
+    margin-top: 20px;
     color: black;
 }
 
 /* ---------- Responsive Design (Mobile) ---------- */
 @media (max-width: 768px) {
-    /* Navbar for mobile */
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    /* Hero section text size for smaller screens */
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text p {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Smaller mobile screen adjustments */
     .hero-text h1 {
         font-size: 2rem;
     }
 
     .hero-text p {
         font-size: 1rem;
+    }
+
+    .section-image {
+        width: 80%; /* Image size for mobile */
     }
 }
