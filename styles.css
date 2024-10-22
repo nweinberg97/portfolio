@@ -1,37 +1,102 @@
+/* Reset default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General page styling */
+body, html {
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    background-color: white;
+}
+
+/* Fixed Navbar */
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+header .logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navbar links */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.nav-links li a:hover {
+    color: #3498db;
+}
+
 /* Hero Section */
 #home {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full height of the screen */
-    background-color: white;
-    padding: 0; /* Removed all padding */
-    margin: 0; /* Remove margin */
+    height: 100vh;
     position: relative;
     text-align: center;
+    padding-top: 80px; /* To avoid overlapping with navbar */
 }
 
-/* Center the image and make it full scale */
+/* Center the image and make it full-scale */
 .section-image {
-    width: 100%; /* Full width */
-    height: 100vh; /* Full height of viewport */
-    object-fit: cover; /* Ensures the image covers the section without distortion */
+    width: 80%;
+    height: auto;
+    object-fit: cover;
     margin: 0 auto;
-    display: block;
 }
 
-/* Hero Text Overlay */
+/* Hero Text */
 .hero-text {
     position: absolute;
-    top: 10%; /* Position the text properly */
+    top: 20%;
     left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
+    transform: translateX(-50%);
     color: white;
     font-size: 2rem;
-    z-index: 10;
 }
 
-.hero-text p {
-    font-size: 1.5rem;
-    margin-top: 10px;
+/* Footer styling */
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+footer p {
+    margin-top: 20px;
 }
