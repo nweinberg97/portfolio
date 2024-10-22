@@ -17,7 +17,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Ensure the navbar is above other elements */
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,41 +66,43 @@ nav ul li a:hover {
 /* Hero Section */
 #home {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center; /* Center the image and text vertically */
     padding-top: 100px; /* Padding for navbar */
     padding-bottom: 50px; /* Padding for footer */
-    height: 70vh; /* Adjust height to fit between navbar and footer */
+    height: 70vh; /* Fit the image between navbar and footer */
     background-color: white;
     position: relative;
 }
 
+/* Center the image */
 .section-image {
     width: 60%; /* Adjust width of image */
     height: auto;
     max-height: calc(100vh - 160px); /* Ensure it doesn't go past footer and navbar */
     object-fit: cover;
+    display: block;
     margin: 0 auto; /* Center the image */
 }
 
+/* Hero Text Overlay (Top Left) */
 .hero-text {
     position: absolute;
-    top: 20px; /* Move text to top left */
+    top: 20px;
     left: 20px;
     color: white;
+    font-size: 1.5rem;
     text-align: left;
-    background-color: none;
-    padding: 10px;
 }
 
 .hero-text h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 0;
 }
 
 .hero-text p {
-    font-size: 1rem;
-    margin-top: 5px;
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
 /* Footer styling */
@@ -144,7 +146,7 @@ footer p {
     }
 
     .section-image {
-        width: 80%;
+        width: 70%;
     }
 }
 
