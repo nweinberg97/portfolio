@@ -1,95 +1,31 @@
-/* General page styling */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Raleway', sans-serif;
-    background-color: white;
-    box-sizing: border-box;
-}
-
-/* Transparent, Fixed Navbar */
-header {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 15px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Home logo styling */
-header .logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: transform 0.3s, color 0.3s ease;
-}
-
-header .logo a:hover {
-    transform: scale(1.1);
-    color: #3498db;
-}
-
-/* Nav links */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding-right: 40px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-    transition: transform 0.3s, color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #3498db;
-    transform: scale(1.1);
-}
-
 /* Hero Section */
 #home {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 120px; /* Space for the fixed navbar */
-    padding-bottom: 40px; /* Space for the footer */
-    height: calc(100vh - 160px); /* Dynamic height for the hero section */
+    height: 100vh; /* Full height of the screen */
     background-color: white;
+    padding: 0; /* Removed all padding */
+    margin: 0; /* Remove margin */
     position: relative;
     text-align: center;
 }
 
-/* Center the image and make it bigger */
+/* Center the image and make it full scale */
 .section-image {
-    width: 100%; /* Larger size */
-    max-height: 80vh; /* Ensure it fits the height */
-    object-fit: cover;
-    margin: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height of viewport */
+    object-fit: cover; /* Ensures the image covers the section without distortion */
+    margin: 0 auto;
     display: block;
 }
 
 /* Hero Text Overlay */
 .hero-text {
     position: absolute;
-    top: 10%; /* Adjusted to display text near the top */
+    top: 10%; /* Position the text properly */
     left: 50%;
-    transform: translateX(-50%); /* Center the text horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     color: white;
     font-size: 2rem;
     z-index: 10;
@@ -98,55 +34,4 @@ nav ul li a:hover {
 .hero-text p {
     font-size: 1.5rem;
     margin-top: 10px;
-}
-
-/* Footer styling */
-footer {
-    background-color: white;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    margin-top: auto;
-}
-
-footer .footer-links {
-    margin-bottom: 15px;
-}
-
-footer a {
-    color: black;
-    text-decoration: none;
-    margin: 0 15px;
-    transition: transform 0.3s, color 0.3s;
-}
-
-footer a:hover {
-    color: #3498db;
-    transform: scale(1.1);
-}
-
-footer p {
-    margin: 0;
-    color: black;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-text {
-        font-size: 1.6rem;
-    }
-
-    .section-image {
-        width: 75%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-text {
-        font-size: 1.4rem;
-    }
-
-    .section-image {
-        width: 85%;
-    }
 }
