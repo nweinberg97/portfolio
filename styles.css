@@ -89,7 +89,7 @@ header nav ul li a:hover {
 
 /* Image Styling */
 .section-image {
-    max-width: 60%; /* Adjust this size if needed */
+    max-width: 100%; /* Adjust this size if needed */
     height: auto;
     object-fit: cover;
     margin: 0; /* Remove margins */
