@@ -2,10 +2,12 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100%;
     font-family: 'Raleway', sans-serif;
     background-color: white;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Transparent, Fixed Navbar */
@@ -21,6 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 
 /* Home logo styling */
@@ -41,14 +44,14 @@ header .logo a:hover {
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding-right: 30px; /* Add space to right */
+    padding: 0 20px; /* Added padding for spacing */
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    width: auto;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px; /* More space between the links */
 }
 
 nav ul li a {
@@ -67,10 +70,10 @@ nav ul li a:hover {
 #home {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center the image and text */
-    padding-top: 100px; /* Padding for navbar */
+    align-items: center;
+    padding-top: 120px; /* Adjust for navbar */
     padding-bottom: 20px; /* Less padding for footer */
-    height: 85vh; /* Adjust height */
+    height: 70vh; /* Adjust height */
     background-color: white;
     position: relative;
     text-align: left;
@@ -82,18 +85,16 @@ nav ul li a:hover {
     height: auto;
     object-fit: cover;
     display: block;
-    margin: 0 auto; /* Center the image */
+    margin: 0 auto;
 }
 
 /* Hero Text Overlay (Top Left) */
 .hero-text {
     position: absolute;
-    top: 30px; /* Adjusted to top left of the image */
-    left: 30px;
+    top: 20px;
+    left: 20px; /* Text aligned top-left */
     color: white;
-    font-size: 2rem; /* Adjust font size */
-    font-weight: 700;
-    text-align: left;
+    font-size: 1.8rem; /* Adjust font size */
 }
 
 .hero-text p {
@@ -105,9 +106,10 @@ nav ul li a:hover {
 footer {
     background-color: white;
     text-align: center;
-    padding: 20px 0; /* Reduced padding */
-    position: relative;
+    padding: 20px 0;
     width: 100%;
+    position: absolute;
+    bottom: 0; /* Ensure footer stays at the bottom */
 }
 
 footer .footer-links {
@@ -134,7 +136,7 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-text {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .section-image {
@@ -144,7 +146,7 @@ footer p {
 
 @media (max-width: 480px) {
     .hero-text {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .section-image {
