@@ -41,7 +41,7 @@ header .logo a:hover {
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding-right: 30px; /* Add space to right */
+    padding-right: 40px; /* Added more padding to the right */
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -67,32 +67,32 @@ nav ul li a:hover {
 #home {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center the image and text vertically */
+    align-items: flex-start;
     padding-top: 100px; /* Padding for navbar */
-    padding-bottom: 50px; /* Padding for footer */
-    height: 70vh; /* Fit the image between navbar and footer */
+    padding-bottom: 30px; /* Padding for footer */
+    height: 80vh; /* Adjusted height to balance spacing */
     background-color: white;
     position: relative;
+    text-align: left;
 }
 
-/* Center the image */
+/* Center the image and increase its width */
 .section-image {
-    width: 60%; /* Adjust width of image */
+    width: 70%; /* Increased width to take up more space */
     height: auto;
     max-height: calc(100vh - 160px); /* Ensure it doesn't go past footer and navbar */
     object-fit: cover;
     display: block;
-    margin: 0 auto; /* Center the image */
+    margin: 0 auto;
 }
 
 /* Hero Text Overlay (Top Left) */
 .hero-text {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 40px; /* Padding on the left to balance */
     color: white;
     font-size: 1.5rem;
-    text-align: left;
 }
 
 .hero-text h1 {
@@ -109,13 +109,13 @@ nav ul li a:hover {
 footer {
     background-color: white;
     text-align: center;
-    padding: 30px 0;
+    padding: 20px 0; /* Reduced padding */
     position: relative;
     width: 100%;
 }
 
 footer .footer-links {
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduced space */
 }
 
 footer a {
@@ -146,7 +146,7 @@ footer p {
     }
 
     .section-image {
-        width: 70%;
+        width: 80%;
     }
 }
 
