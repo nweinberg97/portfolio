@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Raleway', sans-serif; /* Global font */
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #5A9BD5; /* Softer blue */
+    transform: scale(1.1); /* Slight growth on hover */
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header .logo a:hover {
+    color: #5A9BD5;
+    transform: scale(1.1);
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 2rem;
+}
+
+header nav ul li a {
+    font-size: 1rem;
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: auto;
+    background-color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+footer .footer-nav-links a {
+    margin: 0 15px;
+    color: black;
+}
+
+footer .footer-nav-links a:hover {
+    color: #5A9BD5;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+/* Containers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Styling */
+section {
+    padding: 2rem 0;
+}
+
+/* General Text Styles */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    color: black;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: black;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    header .logo a {
+        font-size: 1.3rem;
+    }
+
+    header nav ul li {
+        margin-left: 1rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    footer .footer-nav-links a {
+        font-size: 0.9rem;
+    }
+}
