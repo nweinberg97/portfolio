@@ -111,7 +111,7 @@ footer .footer-links a {
     transition: background-color 0.3s, transform 0.3s;
     border: 1px solid transparent; /* Smooth hover effect */
     color: black;
-    margin: 0 25px;
+    margin: 0 5px;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
 }
@@ -126,7 +126,7 @@ footer .footer-links a:hover {
 footer p {
     color: gray;
     font-size: 0.9rem;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 
