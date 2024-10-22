@@ -90,11 +90,8 @@ footer {
     border-top: 1px solid #ddd;
 }
 
-footer .footer-nav-links {
-    margin-bottom: 10px;
-}
-
-footer .footer-nav-links a {
+/* Correct class name updated to match HTML */
+footer .footer-links a {
     color: black;
     margin: 0 15px;
     text-decoration: none;
@@ -102,7 +99,7 @@ footer .footer-nav-links a {
     transition: color 0.3s, transform 0.3s;
 }
 
-footer .footer-nav-links a:hover {
+footer .footer-links a:hover {
     color: #5A9BD5; /* Softer blue */
     transform: scale(1.1); /* Grows slightly on hover */
 }
@@ -112,6 +109,7 @@ footer p {
     font-size: 0.9rem;
     margin-top: 10px;
 }
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
