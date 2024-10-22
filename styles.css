@@ -58,20 +58,22 @@ header nav ul li a:hover {
 /* Hero Section */
 #home {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: calc(100vh - 60px); /* Adjusted to account for navbar height */
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust for the navbar height */
+    width: 100%; /* Full width */
     position: relative;
+    text-align: center;
     padding-top: 28px;
     margin-bottom: -60px;
 }
 
 /* Image Styling */
 .section-image {
-    width: 100%;
+    width: 100%; /* Full width */
     height: auto;
-    object-fit: fill;
     max-height: 80vh; /* Ensures the image doesn't overwhelm the screen */
+    object-fit: cover; /* Ensures the image covers the entire container */
 }
 
 /* Footer Styling */
