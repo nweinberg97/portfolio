@@ -70,7 +70,7 @@ header nav ul li a:hover {
     height: calc(100vh - 60px); /* Adjusted to account for navbar height */
     position: relative;
     text-align: left;
-    padding-top: 35px;
+    padding-top: 30px;
     margin-bottom: -60px;
 }
 
