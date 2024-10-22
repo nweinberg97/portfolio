@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="#home">Nitai Weinberg</a></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="#creative">Creative</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Me</h1>
+
+        <div class="about-section">
+            <img src="about-image1.jpg" alt="About Image 1" class="centered-image">
+            <p>Text section 1: Brief description about me, my journey, and the passions that drive me.</p>
+        </div>
+        <hr class="divider">
+
+        <div class="about-section">
+            <img src="about-image2.jpg" alt="About Image 2" class="centered-image">
+            <p>Text section 2: More about my professional experience, work ethic, and core values.</p>
+        </div>
+        <hr class="divider">
+
+        <div class="about-section">
+            <img src="about-image3.jpg" alt="About Image 3" class="centered-image">
+            <p>Text section 3: Personal interests, hobbies, and what inspires me in life.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
+            <div class="footer-nav-links">
+                <a href="index.html#projects">Projects</a> |
+                <a href="#creative">Creative</a> |
+                <a href="about.html">About</a> |
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript (hamburger menu functionality) -->
+    <script>
+        $(document).ready(function() {
+            $('.hamburger').on('click', function() {
+                $('.nav-links').toggleClass('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
