@@ -68,8 +68,8 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     padding-top: 120px; /* Padding for navbar */
-    padding-bottom: 20px; /* Less padding for footer */
-    min-height: 70vh; /* Adjust height for better layout */
+    padding-bottom: 40px; /* Increased padding for footer */
+    min-height: 80vh; /* Adjust height for better layout */
     background-color: white;
     position: relative;
     text-align: left;
@@ -105,8 +105,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    position: absolute;
-    bottom: 0; /* Ensure footer stays at the bottom */
+    margin-top: auto; /* This will help push the footer to the bottom without fixing it */
 }
 
 footer .footer-links {
