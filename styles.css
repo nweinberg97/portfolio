@@ -41,7 +41,7 @@ header .logo a:hover {
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding-right: 40px; /* Added more padding to the right */
+    padding-right: 30px; /* Add space to right */
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -67,10 +67,10 @@ nav ul li a:hover {
 #home {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* Center the image and text */
     padding-top: 100px; /* Padding for navbar */
-    padding-bottom: 30px; /* Padding for footer */
-    height: 80vh; /* Adjusted height to balance spacing */
+    padding-bottom: 20px; /* Less padding for footer */
+    height: 85vh; /* Adjust height */
     background-color: white;
     position: relative;
     text-align: left;
@@ -78,26 +78,22 @@ nav ul li a:hover {
 
 /* Center the image and increase its width */
 .section-image {
-    width: 70%; /* Increased width to take up more space */
+    width: 80%; /* Increased width */
     height: auto;
-    max-height: calc(100vh - 160px); /* Ensure it doesn't go past footer and navbar */
     object-fit: cover;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the image */
 }
 
 /* Hero Text Overlay (Top Left) */
 .hero-text {
     position: absolute;
-    top: 20px;
-    left: 40px; /* Padding on the left to balance */
+    top: 30px; /* Adjusted to top left of the image */
+    left: 30px;
     color: white;
-    font-size: 1.5rem;
-}
-
-.hero-text h1 {
-    font-size: 2rem;
-    margin: 0;
+    font-size: 2rem; /* Adjust font size */
+    font-weight: 700;
+    text-align: left;
 }
 
 .hero-text p {
@@ -137,26 +133,18 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 1.6rem;
-    }
-
-    .hero-text p {
-        font-size: 0.9rem;
+    .hero-text {
+        font-size: 1.8rem;
     }
 
     .section-image {
-        width: 80%;
+        width: 85%;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 1.4rem;
-    }
-
-    .hero-text p {
-        font-size: 0.8rem;
+    .hero-text {
+        font-size: 1.5rem;
     }
 
     .section-image {
