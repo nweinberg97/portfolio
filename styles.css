@@ -15,31 +15,40 @@ body {
     min-height: 100vh;
 }
 
+/* Navbar */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(70, 130, 180, 0.8); /* Slate blue with transparency */
+    background-color: #333333; /* Charcoal Gray instead of Black */
     padding: 1rem 2rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    backdrop-filter: blur(5px); /* Adds a blur effect */
 }
 
 header .logo a {
     color: white;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
-    text-shadow: 0 1px 5px rgba(255, 255, 255, 0.3); /* Slight glow */
     transition: color 0.3s, font-size 0.3s, transform 0.3s;
 }
 
 header .logo a:hover {
-    color: #5A9BD5; /* Soft blue hover */
-    transform: scale(1.1); /* Grows slightly on hover */
+    color: #5A9BD5; /* Softer blue */
+    transform: scale(1.3); /* Grows on hover */
+}
+
+header nav ul {
+    list-style: none; /* Removes bullet points */
+    display: flex;
+    margin-right: 0; /* Adjust spacing for right alignment */
+}
+
+header nav ul li {
+    margin-left: 2rem; /* Adjusted for consistent spacing */
 }
 
 header nav ul li a {
@@ -50,24 +59,9 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #5A9BD5; /* Soft blue hover */
-    text-shadow: 0 1px 3px rgba(90, 155, 213, 0.7); /* Slight glow on hover */
-    transform: scale(1.05); /* Slight grow on hover */
+    color: #5A9BD5; /* Softer blue */
+    transform: scale(1.1); /* Grows slightly on hover */
 }
-
-/* Hero Section */
-#home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px); /* Adjust for the navbar height */
-    width: 100%; /* Full width */
-    position: relative;
-    text-align: center;
-    padding-top: 28px;
-    margin-bottom: -60px;
-}
-
 /* Image Styling */
 .section-image {
     width: 100%; /* Full width */
