@@ -1,17 +1,23 @@
 /* General page styling */
-body {
-    font-family: 'Raleway', sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Raleway', sans-serif; /* Only Raleway used */
     background-color: white;
+    box-sizing: border-box;
 }
 
-/* Header styling */
+/* Transparent, Fixed Navbar */
 header {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
     color: white;
     padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Navbar takes up full width */
+    z-index: 1000; /* Ensures it stays on top of all other content */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,20 +25,20 @@ header {
 
 header .logo a {
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    transition: transform 0.3s, color 0.3s; /* Add smooth hover transitions */
+    transition: transform 0.3s, color 0.3s;
 }
 
 header .logo a:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     color: #3498db; /* Change to blue on hover */
 }
 
 nav ul {
     list-style-type: none;
+    margin: 0;
 }
 
 nav ul li {
@@ -44,54 +50,57 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: 700;
-    font-family: 'Raleway', sans-serif;
-    transition: transform 0.3s, color 0.3s; /* Add smooth hover transitions */
+    transition: transform 0.3s, color 0.3s;
 }
 
-/* Hover Effect: Change color from white to blue and grow */
 nav ul li a:hover {
     color: #3498db; /* Blue color on hover */
     transform: scale(1.1); /* Grow in size */
 }
 
-/* Hero Section with a resized container */
+/* Hero Section */
 #home {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 50px 0;
+    align-items: center;
+    height: 85vh; /* Adjusted to fit the viewport */
     background-color: white;
-    height: 40vh; /* Resizing the container to take up less vertical space */
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-image {
-    width: 40%; /* Resize image width */
-    max-width: 500px;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Crop if necessary, but maintain proportions */
-    margin-bottom: 20px;
-}
-
-.section-image {
-    width: 60%; /* Adjust the size of the image */
-    max-width: 500px;
+    max-width: 60%; /* Resize the image */
     height: auto;
     object-fit: cover;
-    margin-bottom: 10px;
-    align-items: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .hero-text h1 {
     font-size: 2.5rem;
-    color: black;
     margin: 0;
 }
 
 .hero-text p {
     font-size: 1.2rem;
-    color: black;
     margin-top: 10px;
 }
 
@@ -99,29 +108,34 @@ nav ul li a:hover {
 footer {
     background-color: white;
     text-align: center;
-    padding: 40px 0; /* Added more padding to give more space above "All rights reserved" */
+    padding: 30px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer .footer-links {
+    margin-bottom: 20px; /* Space between links and "All rights reserved" */
 }
 
 footer a {
     color: black;
     text-decoration: none;
     margin: 0 15px;
-    transition: transform 0.3s, color 0.3s; /* Add smooth hover transitions */
+    transition: transform 0.3s, color 0.3s;
 }
 
-/* Footer link hover effect: change color to blue and grow */
 footer a:hover {
-    color: #3498db; /* Blue color on hover */
-    transform: scale(1.1); /* Grow in size */
+    color: #3498db;
+    transform: scale(1.1);
 }
 
 footer p {
-    margin-top: 20px;
-    margin-bottom:20px;
+    margin: 0;
     color: black;
 }
 
-/* ---------- Responsive Design (Mobile) ---------- */
+/* ---------- Responsive Design for Mobile ---------- */
 @media (max-width: 768px) {
     .hero-text h1 {
         font-size: 2rem;
@@ -132,6 +146,20 @@ footer p {
     }
 
     .section-image {
-        width: 80%; /* Image size for mobile */
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .section-image {
+        width: 90%;
     }
 }
