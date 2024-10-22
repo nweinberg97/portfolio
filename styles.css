@@ -75,12 +75,10 @@ nav ul li a:hover {
     text-align: left;
 }
 
-/* Center the image and crop it to show desired part */
+/* Center the image and make it bigger */
 .section-image {
-    width: 45%; /* Make the image slightly smaller */
+    width: 60%; /* Larger image size */
     height: auto;
-    object-fit: cover;
-    object-position: top center; /* Focus on the top part of the image */
     display: block;
     margin: 0 auto;
 }
@@ -88,17 +86,17 @@ nav ul li a:hover {
 /* Hero Text Overlay (Top Left) */
 .hero-text {
     position: absolute;
-    top: 10px; /* Adjusted to top-left of the image */
-    left: 20px;
+    top: 20%; /* Adjusted to top-left of the image */
+    left: 30px;
     color: white;
-    font-size: 1.8rem; /* Adjust font size */
+    font-size: 2rem; /* Larger font size */
     text-align: left;
     z-index: 100; /* Ensure text appears over the image */
     display: block;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Larger text */
     margin-top: 10px;
 }
 
