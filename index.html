@@ -3,39 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nitaiweinberg</title>
+    <title>Homepage</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <!-- Include jQuery library -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include Slick Carousel library -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
     (function(){
         emailjs.init("qZCMk0yO7Rwu_EXe2");
     })();
     </script>
-    <!-- Your custom script -->
     <script src="scripts.js"></script>
 </head>
 <body>
+    <!-- Header with Navbar -->
     <header>
-        <div class="logo"> <a href="#home">Home</a></div>
+        <div class="logo"><a href="#home">Nitai Weinberg</a></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#book">Book</a></li>
-                <li><a href="#story">Story</a></li>
-                <li><a href="#photos">Photos</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="hamburger">
@@ -45,535 +39,36 @@
         </div>
     </header>
 
+   <!-- Hero Section -->
     <section id="home">
-        <video autoplay loop muted>
-            <source src="waves.mov" type="video/mp4">
-        </video>
-        <div class="overlay-text1">Changing Tides</div>
-        <div class="overlay-text2">The ways the waves take us</div>
-
-        <!-- Waitlist Section -->
-        <div id="waitlist-overlay">
-            <p>Get early access & updates for Nitai's Book</p>
-            <button id="join-waitlist-btn" class="waitlist-button">Join Waitlist</button>
-        </div>
-
-     <!-- New Chevron Arrow Button -->
-        <div id="arrow-overlay">
-            <div class="learn-more-text">Learn more about the book</div>
-            <a href="#book" id="scroll-to-book" class="chevron-link">
-                <div class="chevron"></div>
-            </a>
+        <div class="hero-text">
+            <h1>Hi, I'm Nitai</h1>
+            <p>I'm a dreamer, community-builder, and creative that wants to build things that make the world a better place</p>
+            <img src="path/to/your/home-image.jpg" alt="Home Image" class="section-image">
         </div>
     </section>
-
-    <!-- Popup Form -->
-    <div id="waitlist-form-popup" class="popup-form">
-        <div class="popup-content">
-            <span class="close-btn">&times;</span>
-            <h2>Join the Waitlist</h2>
-            <form id="waitlist-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <section id="book" class="background-section"> 
-        <div class="section-content">
-        <h1 class="book-header">Changing Tides</h1>
-        <div class="book-image">
-            <img src="changingtides.png" alt="Book Cover Page" class="photo">
-        </div>
-        <div class="book-content">
-            <p>Welcome to the page about my upcoming book, "Changing Tides: The Ways the Waves Take Us." 
-                Here, you'll find updates, exclusive previews, and more information about the book's release.</p>
-            <h3 class="bookh3a">Summary:</h3> 
-            <p>Changing Tides is a story of triumph, as a young 18-year-old, goes on an unimaginable journey to chase 
-                his dream of surfing in the Gold Coast. Surviving a stroke, overcoming obstacles, and the unpredictable 
-                and ever-changing waves that life brings him. </p>
-            <p>Changing Tides is also a reflection on life, a metaphor for change and an homage to the main character's 
-                love for surfing. Each chapter takes the reader on a roller coaster ride of emotion and shows us all the 
-                ways the waves of life can take us, while sharing key lessons learned throughout the journey. Using personal 
-                surfing analogies, and references to the ocean, the author illustrates key themes like change, overcoming 
-                challenges, growth, letting go, self-love, freedom, and more throughout the book. </p>
-            <p>However, this unconventional story has a twist ending… At 26-years of age, his story is not yet over. The 
-                last chapter, unfinished, outlines what the main character dreams of creating in what he calls the “deep blue”, 
-                a metaphor for the ocean of opportunity in the world. He shares the ripples he’d like to leave to make the world 
-                a better place and outlines how readers can join him in making this happen. 
-            </p>
-            <h3 class="bookh3b">Chapters:</h3>
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="image1.jpg" alt="Image 1">
-                            <p class="caption">
-                                <strong>Chapter 01: </strong> Change - watching the waves 
-                                <br> 
-                                <i>Set on Bondi Beach in Sydney, the main character watches the sunrise as he reflects on the inevitable changes that come with life. 
-                                He looks back at the past 8 years of his life that have taken him to this moment, 
-                                the 8 years since he had his stroke.</i>
-                            </p>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="image2.jpg" alt="Image 2">
-                            <p class="caption">
-                                <strong>Chapter 02: </strong> Challenge - learning to surf
-                                <br>
-                                <i>Set in Long Beach in Tofino, the main character re-experiences a memory of learning how to surf for the first time. 
-                                It reminds him of the stark challenges he'd once overcome, all of the times he'd fallen that had taught 
-                                him to get back up. </i> 
-                            </p>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="image3.jpg" alt="Image 3">
-                            <p class="caption">
-                                <strong>Chapter 03: </strong> Growth - rising above the waves
-                                <br>
-                                <i>Set on a beach in San Diego, the main character re-experiences a memory of battling the waves. 
-                                    He reflects on times where he rose above waves that were no longer for him, times he'd chosen growth over ego.</i>
-                           </p>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="image4.jpg" alt="Image 4">
-                            <p class="caption">
-                                <strong>Chapter 04: </strong> Letting Go - swimming through waves
-                                <br>
-                                <i>Set on a surf trip in Santa Cruz, the main character re-experiences a memory in the water where he had to choose
-                                to catch a wave or to let it go. He reflects on learning to accept harsh truths and finding peace through letting go.</i>
-                            </p>
-                        </div>
-                         <div class="carousel-item">
-                            <img src="image5.jpg" alt="Image 5">
-                            <p class="caption">
-                                <strong>Chapter 05: </strong> Self-love - one with the waves
-                                <br>
-                                <i>Set in Snapper Rocks in the Gold Coast, the main character catches a perfect wave.
-                                He reflects on moments where he learned to make peace with his mind. </i>
-                            </p>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="image6.jpg" alt="Image 6">
-                            <p class="caption">
-                                <strong>Chapter 06: </strong> Freedom - open water
-                                <br>
-                                <i>Set on a ship out at sea, the main character looks out at a massive ocean of opportunity ahead of him. 
-                                He boards his plane to Australia, excited for the adventures and experiences that await.</i>   
-                            </p>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="image7.jpg" alt="Image 7">
-                            <p class="caption">
-                                <strong>Chapter 07: </strong> Redirection - taken by the tides
-                                <br>
-                                <i>Set in Melbourne, Australia in his new apartment, his future plans disintegrate before his eyes. 
-                                All his life plans shift abruptly, as his life path gets re-directed.</i> 
-                            </p>
-                        </div>
-                         <div class="carousel-item">
-                            <img src="image8.jpg" alt="Image 8">
-                            <p class="caption">
-                                <strong>Chapter 08: </strong> Life - going with the flow
-                                <br>
-                                <i>Set in Brisbane at the start of his backpacking trip, the main character watches the river flow under the bridge.
-                                He starts a journey of just living life spontaneously and going where the water takes him. </i>
-                            </p>
-                        </div>
-                          <div class="carousel-item">
-                            <img src="image9.jpg" alt="Image 9">
-                            <p class="caption">
-                                <strong>Chapter 09: </strong> Home - back to shore
-                                <br>
-                                <i>Set in his room in his childhood home, the main character leans back on his black leather chair and reflects
-                                on where he is now in his life. Grounded in humility, he gains a deeper appreciation for his roots and his
-                                responsibility here on Earth.</i>
-                            </p>
-                        </div>
-                          <div class="carousel-item">
-                            <img src="image10.jpg" alt="Image 10">
-                            <p class="caption">
-                                <strong>Chapter 10: </strong> Inspiration - the moon and the tide
-                                <br>
-                                <i>Set in Main Beach in Agnes Waters during the dark of night, the main character looks out at a meteor shower as 
-                                the moon and tide remind him of the things he looks up to. He reflects on his role models and values that have 
-                                inspired him and led him to the person he is today.</i>
-                            </p>
-                        </div>
-                          <div class="carousel-item">
-                            <img src="image11.jpg" alt="Image 11">
-                            <p class="caption">
-                                <strong>Chapter 11: </strong> Unfinished - there will always be more waves
-                                <br>
-                                <i>Set on White Haven Beach, the main character reflects on the future. He shares his thoughts, optimism, lessons 
-                                he's learned, ideas, and opportunities to make the world a better place.</i>
-                            </p>
-                        </div>
-                    </div>
-                       <button id="prev-slide" class="carousel-control-prev">‹</button>
-                       <button id="next-slide" class="carousel-control-next">›</button>
-                </div>
-            <br>
-        </div>
-            <div class="cta2">
-            <p>Stay tuned for more updates and the official release date by joining the waitlist!</p>
-            <br> 
-            <button id="join-waitlist-btn2" class="waitlist-button">Join Waitlist</button>
-            </div>
-        </div>
-    </section>
-
-                 <!-- Book Waitlist Popup Form -->
-        <div id="book-waitlist-form-popup" class="popup-form">
-            <div class="popup-content">
-                <span class="close-btn book-close-btn">&times;</span>
-                <h2>Join the Waitlist</h2>
-                <form id="book-waitlist-form">
-                    <label for="book-name">Name:</label>
-                    <input type="text" id="book-name" name="name" required>
-                    <label for="book-email">Email:</label>
-                    <input type="email" id="book-email" name="email" required>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
-
-
-    
-    <section id="story" class="background-section"> 
-        <div class="section-content">
-        <h1 class="mystory">My Story: From Stroke to Stoke 🤙</h1>
-
-        <div class="story-block">
-            <div class="story-content">
-                <h2>February 11, 2016</h2>
-                <p>Shockingly one day I wake up and have a stroke. Numbness. Can't hold a pen. Slurring my speech. Losing my balance. So I go to the hospital, and they tell me I had a brain hemorrhage in my left thalamus. Unfortunately had to drop out of uni. [A picture of me 6 days post-stroke]</p>
-            </div>
-            <div class="story-image">
-                <img src="hospitalpicturestroke.jpg" alt="Vancouver General Hospital 6 Days Post-Stroke" class="photo">
-            </div>
-        </div>
-            
-          <div class="story-block reverse">
-            <div class="story-content">
-                <h2>March 26, 2018</h2>
-                <p>After lot's of rehab, I started sharing my stroke survivor story at different events. I was invited to speak at some student clubs, at fundraiser events, and at a couple of elementary schools. [A picture of me speaking at a Heart & Stroke Club Event]</p>
-            </div>
-            <div class="story-image crop-top-half">
-                <img src="strokestoryspeech.png" alt="2018 Sharing My Stroke Survivor Story" class="photo">
-            </div>
-        </div>
-            
-        <div class="story-block">
-            <div class="story-content">
-                <h2> September 8, 2019</h2>
-                <p>I start a blog about mental health, sharing my struggles with social anxiety, depression, and suicidal thoughts post-stroke. It was the first time sharing about it publicly, but I thought it was important to spark a conversation about mental health. [A picture of the cover for my mental health blog]</p>
-            </div>
-            <div class="story-image">
-                <img src="silentwarrior.png" alt="2019 Sharing My Mental Health Blog" class="photo">
-            </div>
-        </div>
-
-        <div class="story-block reverse">
-            <div class="story-content">
-                <h2>June 10, 2021</h2>
-                <p>Eventually I graduate from my Kinesiology degree, despite many times wanting to give up. Crazy enough, the last 1.5 years of my degree were online because of COVID, but hey a degree is a degree. [A picture of me 6 years later posing for my grad picture during the pandemic]</p>
-            </div>
-            <div class="story-image crop-top-half">
-                <img src="kingraduation.jpg" alt="2021 Virtual Graduation During the Pandemic" class="photo">
-            </div>
-        </div>
-
-        <div class="story-block">
-            <div class="story-content">
-                <h2>June 10, 2022</h2>
-                <p>The redemption year. Life returns back to normal (sort of). I feel the most normal I'd felt since my stroke. Had the time of my life, and dare I say I absolutely smashed it. [a picture of me at my IRL master's graduation ceremony]</p>
-            </div>
-            <div class="story-image crop-top-half">
-                <img src="realgraduation.jpg" alt="2022 Masters' Graduation Post-Pandemic" class="photo">
-            </div>
-        </div>
-
-        <div class="story-block reverse">
-            <div class="story-content">
-                <h2>June 23, 2022</h2>
-                <p>Redemption year 2.0. COVID took away my Australia exchange dreams, so I took life into my own hands and went on a working holiday visa to the world of kangaroos and koalas. That's right it was time for a life of "no worries mate", surfing, and delaying "figuring out my life" as much as possible. [a picture right before I left for Australia]</p>
-            </div>
-            <div class="story-image crop-top-half">
-                <img src="vantoausairport.png" alt="2022 Post-Grad Aussie Adventure" class="photo">
-            </div>
-        </div>
-
-              <div class="story-block">
-            <div class="story-content">
-                <h2> March 26, 2023</h2>
-                <p> I'd always wanted to give a TED talk, but the application process seemed too long and complicated, so I had the crazy idea of just starting my own TED Talk series called YES Talks, which stood for Your Everyday Story. It was spontaneous. We recruited an audience, volunteers gave some speeches, and we hosted it in a public space called Fed Square in Melbourne. [a picture of me speaking to a crowd of 15-20 people giving my "YES Talk"]</p>
-            </div>
-            <div class="story-image crop-top-half">
-                <img src="yestalk.jpeg" alt="2023 YES Talk Speech" class="photo">
-            </div>
-        </div>
-            
-              <div class="story-block reverse">
-            <div class="story-content">
-                <h2> July 24, 2023</h2>
-                <p> After working four different jobs, saved up money to go on a solo-backpacking trip up the East Coast of Australia. The first time I'd travelled on my own in my life. It was crazy, it was fun, and it was life-changing. [a picture of me with a wild koala on Magnetic Island]</p>
-            </div>
-            <div class="story-image crop-top-half">
-                <img src="auskoala.jpg" alt="2023 Solo Bakcpacking in East Coast Australia" class="photo">
-            </div>
-        </div>
-
-            <div class="story-block">
-            <div class="story-content">
-                <h2> August 8, 2023</h2>
-                <p>I was surfing wherever I could. It didn't matter how many times I wiped out, all I wanted to do was to get back out there, as much as I could. The days on the water became a huge inspiration for parts of my book. [a picture of me catching a wave in Agnes Waters]</p>
-            </div>
-            <div class="story-image crop-top-half">
-                <img src="aussurf.png" alt="2023 Australia Surfing Trip" class="photo">
-            </div>
-        </div>
-
-            
-        </div>
-        </div>
-    </section>
-
-   <section id="photos" class="background-section"> 
-       <div class="section-content">
-    <div class="photo-gallery-container">
-        <h1 class="photoheader">Photo Gallery: All the Places Life's Taken Me</h1>
-        <div class="photo-container">
-            <div class="photo-wrapper">
-                <img src="ubc1.jpg" alt="UBC Rose Garden" class="photo">
-                <div class="overlay">UBC Rose Garden</div>
-            </div>
-            <div class="photo-wrapper">
-                <img src="WhistlerCanada.jpeg" alt="Hike in Whistler" class="photo">
-                <div class="overlay">Hike in Whistler</div>
-            </div>
-            <div class="photo-wrapper">
-                <img src="VancouverCanada.jpg" alt="Run in Vancouver" class="photo">
-                <div class="overlay">Run in Vancouver</div>
-            </div>
-            <div class="photo-wrapper">
-                <img src="GenovaItaly.jpg" alt="Genova, Italy 2019" class="photo">
-                <div class="overlay">Genova, Italy 2019</div>
-            </div>
-            <div class="photo-wrapper">
-                <img src="Gibraltar.jpg" alt="Gibraltar 2019" class="photo">
-                <div class="overlay">Gibraltar 2019</div>
-            </div>
-            <div class="photo-wrapper">
-                <img src="MarseilleFrance.jpg" alt="Marseille, France 2019" class="photo">
-                <div class="overlay">Marseille, France 2019</div>
-            </div>
-            <div class="photo-wrapper">
-                <img src="HaifaIsrael.jpg" alt="Haifa, Israel 2019" class="photo">
-                <div class="overlay">Haifa, Israel 2019</div>
-            </div>
-            <div class="photo-wrapper">
-                <img src="MagneticIsland.jpg" alt="Magnetic Island, Australia 2023" class="photo">
-                <div class="overlay">Magnetic Island, Australia 2023</div>
-            </div>
-            <div class="photo-wrapper">
-                <img src="AcropolisGreece.jpg" alt="Athens, Greece 2019" class="photo">
-                <div class="overlay">Athens, Greece 2019</div>
-            </div>
-            <div class="photo-wrapper">
-             <img src="Mykonos.jpg" alt="Mykonos, Greece 2019" class="photo">
-                <div class="overlay">Mykonos, Greece 2019</div>
-            </div>
-             <div class="photo-wrapper">
-             <img src="fraserisland.jpg" alt="Fraser Island, Australia 2023" class="photo">
-                <div class="overlay">Fraser Island, Australia 2023</div>
-            </div>
-              <div class="photo-wrapper">
-             <img src="palmsprings.jpg" alt="Palm Springs, USA 2019" class="photo">
-                <div class="overlay">Palm Springs, USA 2019</div>
-            </div>
-             <div class="photo-wrapper">
-             <img src="puertovallarta.jpg" alt="Puerto Vallarta, Mexico 2017" class="photo">
-                <div class="overlay">Puerto Vallarta, Mexico 2017</div>
-            </div>
-             <div class="photo-wrapper">
-             <img src="santacruzocean.jpg" alt="Santa Cruz, USA 2020" class="photo">
-                <div class="overlay">Santa Cruz, USA 2020</div>
-            </div>
-            <div class="photo-wrapper">
-             <img src="barcelona.jpg" alt="Barcelona, Spain 2019" class="photo">
-                <div class="overlay">Barcelona, Spain 2019</div>
-             </div>
-          <div class="photo-wrapper">
-             <img src="sanfrancisco.jpg" alt="San Francisco, California 2020" class="photo">
-                <div class="overlay">San Francisco, USA 2020</div>
-             </div>
-          <div class="photo-wrapper">
-             <img src="flinders.jpg" alt="Melbourne, Australia 2022" class="photo">
-                <div class="overlay">Melbourne, Australia 2022</div>
-             </div>
-            <div class="photo-wrapper">
-             <img src="banff.jpg" alt="Banff, Canada 2022" class="photo">
-                <div class="overlay">Banff, Canada 2022</div>
-              </div>
-         <div class="photo-wrapper">
-             <img src="UQ.jpg" alt="University of Queensland 2022" class="photo">
-                <div class="overlay">University of Queensland 2022</div>
-             </div>
-         <div class="photo-wrapper">
-             <img src="Santorini.jpg" alt="Santorini, Greece 2019" class="photo">
-                <div class="overlay">Santorini, Greece 2019</div>
-             </div>
-        <div class="photo-wrapper">
-             <img src="nanaimo.jpg" alt="Nanaimo, Canada 2019" class="photo">
-                <div class="overlay">Nanaimo, Canada 2019</div>
-            </div>
-        <div class="photo-wrapper">
-             <img src="noosaheads.jpg" alt="Noosa, Australia 2023" class="photo">
-                <div class="overlay">Noosa, Australia 2023</div>
-            </div>
-        <div class="photo-wrapper">
-             <img src="middleoftheocean.jpg" alt="Atlantic Ocean" class="photo">
-                <div class="overlay">Atlantic Ocean</div>
-            </div>
-          <div class="photo-wrapper">
-             <img src="burleighheads.jpg" alt="Burleigh Heads, Australia 2023" class="photo">
-                <div class="overlay">Burleigh Heads, Australia 2023</div>
-              </div>
-           <div class="photo-wrapper">
-             <img src="santacruz.jpg" alt="Santa Cruz, California 2019" class="photo">
-                <div class="overlay">Santa Cruz, California 2019</div>
-              </div>
-           <div class="photo-wrapper">
-             <img src="vancouversunset.jpg" alt="Kitsilano Beach Sunset" class="photo">
-                <div class="overlay">Kitsilano Beach Sunset</div>
-              </div>
-           <div class="photo-wrapper">
-             <img src="losangeles.png" alt="Los Angeles, USA 2019" class="photo">
-                <div class="overlay">Los Angeles, USA 2019</div>
-              </div>
-           <div class="photo-wrapper">
-             <img src="melbroyalbotanicalgardens.jpg" alt="Royal Botanical Gardens" class="photo">
-                <div class="overlay">Royal Botanical Gardens</div>
-              </div>
-           <div class="photo-wrapper">
-             <img src="sandiego.png" alt="San Diego, USA 2019" class="photo">
-                <div class="overlay">San Diego, USA 2019</div>
-              </div>
-            <div class="photo-wrapper">
-             <img src="tzfat.png" alt="Tzfat, Israel 2019" class="photo">
-                <div class="overlay">Tzfat, Israel 2019</div>
-              </div>
-            <div class="photo-wrapper">
-             <img src="masada.png" alt="Masada, Israel 2019" class="photo">
-                <div class="overlay">Masada, Israel 2019</div>
-              </div>
-             <div class="photo-wrapper">
-             <img src="bondibeach.png" alt="Bondi Beach Sunrise" class="photo">
-                <div class="overlay">Bondi Beach Sunrise</div>
-              </div>
-             <div class="photo-wrapper">
-             <img src="fortmyers.png" alt="Fort Myers, Florida" class="photo">
-                <div class="overlay">Fort Myers, Florida</div>
-                 
-              </div>
-            
-             </div>
-            </div>  
-    </div>
-    </div>
-</section>
-
-    <section id="projects" class="background-section">  
-        <div class="section-content">
-        <h1 class="myprojects">Projects: My Crazy Ideas Brought to Life</h1>
-
-        <div class="project-block">
-            <div class="project-content">
-                <h2>Hoops 4 Health</h2>
-                <p>Co-Founded Annual Basketball Tournament with the AEPi Fraternity to raise money for the Heart & Stroke Foundation for stroke research, to promote healthy lifestyles and to raise awareness for stroke. The event raised over $34K, secured 175+ donations, collaborated with 35+ sponsors, and attracted 1000+ attendees over the years. [This was one of our most hype videos our title sponsor made for us one of the years]</p>
-            </div>
-            <div class="project-media">
-                <div class="project-image">
-                    <img src="hoops4health.jpg" alt="hoops4health" class="photo">
-                </div>
-            </div>
-        </div>
-
-        <div class="project-block reverse">
-            <div class="project-content">
-                <h2>The Deep End</h2>
-                <p>An interview series I started to create a space on LinkedIn to have meaningful discussions beyond just career, and explore the deep end of life’s questions. Questions like: Can we achieve happiness if we're always chasing it? Why is it so hard to be vulnerable? What do you really want to do for the rest of your life? One calendly link later turned into 6 deep and thoughtful interviews. [This was one of my many takeaways]</p>
-            </div>
-            <div class="project-image">
-                <img src="thedeepend.jpg" alt="The Deep End takeaway 3" class="photo">
-            </div>
-        </div>
-
-        <div class="project-block">
-            <div class="project-content">
-                <h2>Mental Health Toolbox</h2>
-                <p>A bundle of tools, mindsets, frameworks, and resources that I've accumulated over the years that have helped me on my journey through life. Disclaimer: I'm not a mental health professional. Just because these things have helped me does not mean they will help you, but doesn't hurt to try. [These are 8 mindsets that have helped me with my mental health]</p>
-            </div>
-            <div class="project-image">
-                <img src="8mindset.png" alt="8 Mindsets" class="photo">
-            </div>
-        </div>
-
-        <div class="project-block reverse">
-            <div class="project-content">
-                <h2>Project Surfboard</h2>
-                <p>I tried to get Billabong, a billion-dollar surf brand to sponsor my book. I did a 7-day challenge where I did things out of my comfort zone, raised money for the Stroke Foundation (a fund that helps support stroke survivors with rehabilitation like speech therapy, physiotherapy, and occupational therapy), and somehow delivered a custom-designed surfboard to their headquarters in the Gold Coast of Australia. Definitely the craziest thing I've done in my life. [Here is my Project Surfboard IG Account]</p>
-            </div>
-            <div class="project-image">
-                <img src="projectsurfboard.jpg" alt="Project Surfboard" class="photo">
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section id="contact" class="background-section">   
-        <div class="contact-container">
-            <h1 class="contactheader">Contact Nitai</h1>
-            <div class="contact-text">
-               <p>I love connecting with people and hearing your thoughts, ideas, and questions. Whether 
-                   you have general inquiries, questions about my journey as a stroke survivor, podcast 
-                   invites, or project interests, I’d love to hear from you!
-               </p>
-            </div>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required autocomplete="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required autocomplete="off"></textarea>
-            <button type="submit">Submit</button>
-        </form>
-        <div class="partnerships">
-            <p>For All Partnership Or Collaboration Inquiries 
-                Please Reach Out On Social Media!</p>
-        </div>
-    </div>
-    </section>
-
-    <hr>
 
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
-            <div class="footer-social-links">
-                <a href="https://www.linkedin.com/in/nitaiweinberg/" target="_blank">
-                    <img src="linkedin.png" alt="LinkedIn" class="footer-icon">
-                </a>
-                <a href="https://www.instagram.com/taibuildsasite/" target="_blank">
-                    <img src="instagram.png" alt="Instagram" class="footer-icon">
-                </a>
+            <div class="footer-nav-links">
+                <a href="index1.html">Home</a> |
+                <a href="index.html#projects">Projects</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a>
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript (hamburger menu functionality) -->
+    <script>
+        $(document).ready(function() {
+            $('.hamburger').on('click', function() {
+                $('.nav-links').toggleClass('open');
+            });
+        });
+    </script>
+
 </body>
 </html>
