@@ -77,10 +77,10 @@ nav ul li a:hover {
 
 /* Center the image and make it bigger */
 .section-image {
-    width: 60%; /* Larger size */
+    width: 100%; /* Larger size */
     max-height: 80vh; /* Ensure it fits the height */
     object-fit: cover;
-    margin: 0 auto;
+    margin: 0;
     display: block;
 }
 
