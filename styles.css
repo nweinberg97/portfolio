@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Raleway', sans-serif; /* Only Raleway used */
+    font-family: 'Raleway', sans-serif;
     background-color: white;
     box-sizing: border-box;
 }
@@ -16,33 +16,37 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Navbar takes up full width */
-    z-index: 1000; /* Ensures it stays on top of all other content */
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other elements */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Home logo styling */
 header .logo a {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    transition: transform 0.3s, color 0.3s;
+    transition: transform 0.3s, color 0.3s ease;
 }
 
 header .logo a:hover {
     transform: scale(1.3);
-    color: #3498db; /* Change to blue on hover */
+    color: #3498db;
 }
 
+/* Nav links (hidden for mobile) */
 nav ul {
     list-style-type: none;
     margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 nav ul li {
-    display: inline-block;
     margin: 0 15px;
 }
 
@@ -50,58 +54,93 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: 700;
-    transition: transform 0.3s, color 0.3s;
+    transition: transform 0.3s, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #3498db; /* Blue color on hover */
-    transform: scale(1.1); /* Grow in size */
+    color: #3498db;
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu styling */
+.hamburger {
+    display: none; /* Hide the hamburger by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+/* For smaller screens, display the hamburger */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the nav links by default */
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9); /* Background for mobile nav */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex; /* Show nav links when toggled */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .hamburger .bar {
+        background-color: white;
+    }
 }
 
 /* Hero Section */
 #home {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 85vh; /* Adjusted to fit the viewport */
+    align-items: flex-start;
+    padding-top: 100px;
+    height: 70vh;
     background-color: white;
     position: relative;
-}
-
-.hero-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 .section-image {
-    max-width: 60%; /* Resize the image */
+    width: 50%;
     height: auto;
     object-fit: cover;
-    display: block;
-    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .hero-text {
     position: absolute;
+    top: 20px;
+    left: 20px;
     color: white;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 20px;
-    border-radius: 8px;
+    text-align: left;
+    background-color: none;
+    padding: 10px;
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin: 0;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-size: 1rem;
+    margin-top: 5px;
 }
 
 /* Footer styling */
@@ -109,13 +148,12 @@ footer {
     background-color: white;
     text-align: center;
     padding: 30px 0;
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: 0;
 }
 
 footer .footer-links {
-    margin-bottom: 20px; /* Space between links and "All rights reserved" */
+    margin-bottom: 20px;
 }
 
 footer a {
@@ -133,33 +171,4 @@ footer a:hover {
 footer p {
     margin: 0;
     color: black;
-}
-
-/* ---------- Responsive Design for Mobile ---------- */
-@media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-    }
-
-    .section-image {
-        width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-text p {
-        font-size: 0.9rem;
-    }
-
-    .section-image {
-        width: 90%;
-    }
 }
