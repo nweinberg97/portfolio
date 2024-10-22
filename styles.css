@@ -68,16 +68,16 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     padding-top: 120px; /* Padding for navbar */
-    padding-bottom: 40px; /* Increased padding for footer */
-    min-height: 80vh; /* Adjust height for better layout */
+    padding-bottom: 40px; /* Padding for footer */
+    min-height: 75vh; /* Slightly reduced height */
     background-color: white;
     position: relative;
     text-align: left;
 }
 
-/* Center the image and increase its width */
+/* Center the image and reduce its width */
 .section-image {
-    width: 60%; /* Wider image */
+    width: 50%; /* Smaller image size */
     height: auto;
     object-fit: cover;
     display: block;
@@ -103,13 +103,13 @@ nav ul li a:hover {
 footer {
     background-color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0; /* Increased padding */
     width: 100%;
     margin-top: auto; /* This will help push the footer to the bottom without fixing it */
 }
 
 footer .footer-links {
-    margin-bottom: 5px; /* Reduced space */
+    margin-bottom: 15px; /* Added more space between links and the text */
 }
 
 footer a {
@@ -136,7 +136,7 @@ footer p {
     }
 
     .section-image {
-        width: 75%;
+        width: 70%; /* Adjust for smaller screens */
     }
 }
 
@@ -146,6 +146,6 @@ footer p {
     }
 
     .section-image {
-        width: 90%;
+        width: 85%; /* Adjust for smaller screens */
     }
 }
