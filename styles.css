@@ -1,45 +1,104 @@
-/* Adjust the height of the hero section */
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Nav Bar */
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Transparent Black */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0;
+}
+
+.logo {
+    float: left;
+    margin-left: 15px;
+}
+
+.logo a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.logo a:hover {
+    color: #3498db;
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
 #home {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75vh; /* Adjusting the height dynamically */
-    padding-top: 15px; 
-    padding-bottom: 15px;
+    height: calc(85vh - 60px); /* Adjusting height */
+    padding-top: 60px; /* Adding padding for fixed nav */
 }
 
-/* Make the image larger */
 .section-image {
-    max-width: 100%; /* Full width scaling */
+    max-width: 60%;
     height: auto;
+    margin-bottom: 20px;
     object-fit: cover;
-    display: block;
-    margin: 0 auto;
 }
 
-/* Overlay Text */
 .hero-text {
-    position: absolute;
-    top: 40%; /* Adjusted for better positioning on a larger image */
-    left: 50%;
-    transform: translate(-50%, -40%);
     text-align: center;
     color: white;
     font-size: 2.5rem;
+    position: relative;
+    top: -150px;
 }
 
 .hero-text p {
-    font-size: 1.4rem; /* Slightly larger for better readability */
-    margin-top: 10px;
+    font-size: 1.5rem;
 }
 
-/* Footer */
+/* Footer Section */
 footer {
-    background-color: white;
     text-align: center;
-    padding: 15px 0;
-    position: relative; /* Ensure it's positioned properly */
+    padding: 15px;
+    background-color: white;
+    position: relative;
 }
 
 .footer-links a {
@@ -50,7 +109,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #3498db; /* Change from black to blue on hover */
+    color: #3498db;
     transform: scale(1.1);
 }
 
