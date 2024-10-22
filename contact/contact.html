@@ -32,23 +32,27 @@
             <div class="bar"></div>
         </div>
     </header>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h1>Contact Me</h1>
-
-        <form action="submit_contact.php" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Send Message</button>
+    
+     <section id="contact" class="background-section">   
+        <div class="contact-container">
+            <h1 class="contactheader">Contact Nitai</h1>
+            <div class="contact-text">
+               <p>I love connecting with people and hearing your thoughts, ideas, and questions. Whether 
+                   you have general inquiries, questions about my journey as a stroke survivor, podcast 
+                   invites, or project interests, I’d love to hear from you!
+               </p>
+            </div>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required autocomplete="off"></textarea>
+            <button type="submit">Submit</button>
         </form>
+    </div>
+    </section>
 
         <div class="linkedin-link">
             <a href="https://www.linkedin.com/in/nitaiweinberg" target="_blank">Connect on LinkedIn</a>
