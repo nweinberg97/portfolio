@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header>
+        <div class="logo"><a href="#home">Nitai Weinberg</a></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Main Hero Section with Image and One-liner -->
+    <section id="hero">
+        <img src="your-image.jpg" alt="Hero Image" id="hero-image">
+        <div id="overlay-text">
+            <h1>Aspiring to Create and Connect Through Technology</h1>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
+            <div class="footer-nav-links">
+                <a href="index1.html">Home</a> |
+                <a href="index.html#projects">Projects</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript (hamburger menu functionality) -->
+    <script>
+        $(document).ready(function() {
+            $('.hamburger').on('click', function() {
+                $('.nav-links').toggleClass('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
