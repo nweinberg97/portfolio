@@ -1,6 +1,6 @@
 /* General page styling */
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -54,7 +54,7 @@ nav ul li a:hover {
     transform: scale(1.1); /* Grow in size */
 }
 
-/* Hero Section with white background */
+/* Hero Section with a resized container */
 #home {
     display: flex;
     flex-direction: column;
@@ -63,13 +63,23 @@ nav ul li a:hover {
     text-align: center;
     padding: 50px 0;
     background-color: white;
+    height: 40vh; /* Resizing the container to take up less vertical space */
+}
+
+.section-image {
+    width: 40%; /* Resize image width */
+    max-width: 500px;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop if necessary, but maintain proportions */
+    margin-bottom: 20px;
 }
 
 .section-image {
     width: 60%; /* Adjust the size of the image */
-    max-width: 800px;
-    height: 60%;
-    margin-bottom: 20px;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
     align-items: center;
 }
 
