@@ -144,6 +144,19 @@ header nav ul li a:hover {
     margin-bottom: 60px; /* Space between sections */
 }
 
+/* Hide hover text by default */
+.hover-text {
+    display: none;
+    color: #007BFF; /* Highlight color for hover text */
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Show hover text when hovering over the project block */
+.project-block:hover .hover-text {
+    display: block;
+}
+
 /* Footer Styling */
 footer {
     margin-top: auto; /* Pushes the footer to the bottom */
