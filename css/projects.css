@@ -44,10 +44,16 @@ header .logo a:hover {
     transform: scale(1.3); /* Grows on hover */
 }
 
-header nav ul {
-    list-style: none; /* Removes bullet points */
+header nav {
     display: flex;
-    margin-right: 0; /* Adjust spacing for right alignment */
+    justify-content: flex-end; /* Pushes nav links to the right */
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    /* Removed margin-right: 0; */
 }
 
 header nav ul li {
