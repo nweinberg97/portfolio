@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apps + Web Projects</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="./styles.css">
+    <title>Apps + Web - Projects</title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/projects.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts.js"></script>
 </head>
 <body>
+
     <!-- Header -->
     <header>
-        <div class="logo"><a href="#home">Nitai Weinberg</a></div>
+        <div class="logo"><a href="../index.html">Nitai Weinberg</a></div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="#creative">Creative</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="apps+web.html">Projects</a></li>
+                <li><a href="../creative/creative.html">Creative</a></li>
+                <li><a href="../about/about.html">About</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="hamburger">
@@ -33,59 +32,152 @@
         </div>
     </header>
 
-    <!-- Apps + Web Projects Section -->
-    <section id="apps-web-projects">
+    <main class="projects-page">
 
-        <!-- Trybe -->
-        <div class="project">
-            <h2>Trybe</h2>
-            <img src="trybe-image1.jpg" alt="Trybe Image 1" class="centered-image">
-            <img src="trybe-image2.jpg" alt="Trybe Image 2" class="centered-image">
-            <img src="trybe-image3.jpg" alt="Trybe Image 3" class="centered-image">
-            <img src="trybe-image4.jpg" alt="Trybe Image 4" class="centered-image">
-        </div>
+        <!-- Main Project Header -->
+        <section class="main-project-header">
+            <h1>Apps + Web Projects</h1>
+        </section>
+
+        <!-- Trybe Section -->
+        <section id="trybe">
+            <h2>Trybe Social - Find Your People</h2>
+            <img src="projects-trybe-tile.png" alt="Trybe Image 1" class="centered-image">
+            <img src="projects-trybe-screenshot1.png" alt="Trybe Image 2" class="centered-image">
+            <img src="projects-trybe-screenshot2.png" alt="Trybe Image 3" class="centered-image">
+            <img src="projects-trybe-screenshot3.png" alt="Trybe Image 4" class="centered-image">
+
+            <!-- Trybe Content -->
+            <div class="section-content">
+                <h3>Project Overview</h3>
+                <p>Trybe Social is a platform designed to help individuals create close-knit groups of friends and connect with like-minded people...</p>
+                
+                <h3>Problem Identification</h3>
+                <p>In today’s digital age, young adults often find it challenging to build close, authentic friendships...</p>
+                
+                <h3>Research and Ideation</h3>
+                <p>The team explored social networking trends and conducted interviews with young adults...</p>
+                
+                <h3>Design Approach</h3>
+                <ul>
+                    <li><strong>Intentional Matching:</strong> Trybe Social uses an algorithm to connect users...</li>
+                    <li><strong>Community Building:</strong> Users can join or create “Trybes”...</li>
+                    <li><strong>Engagement Tools:</strong> Group chats for planning meetups and sharing experiences...</li>
+                    <li><strong>Event Planning:</strong> Users can plan private and public events within Trybes...</li>
+                </ul>
+
+                <h3>Implementation and Launch</h3>
+                <p>The team built prototypes using Flutterflow, and I helped launch Trybe Social on the US App Store...</p>
+
+                <h3>Current Status</h3>
+                <p>The team continues to work on the project and implement new features on the App Store...</p>
+            </div>
+        </section>
         <hr class="divider">
 
-        <!-- Taskly -->
-        <div class="project">
-            <h2>Taskly</h2>
-            <img src="taskly-image.jpg" alt="Taskly Image" class="centered-image">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/video1" title="Taskly Video 1" frameborder="0"></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/video2" title="Taskly Video 2" frameborder="0"></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/video3" title="Taskly Video 3" frameborder="0"></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/video4" title="Taskly Video 4" frameborder="0"></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/video5" title="Taskly Video 5" frameborder="0"></iframe>
-        </div>
+        <!-- Taskly Section -->
+        <section id="taskly">
+            <h2>Taskly - Minimalistic Task Management Tool</h2>
+            <img src="projects-taskly-slide.png" alt="Taskly Screenshot" class="centered-image">
+
+            <!-- Taskly Content -->
+            <div class="section-content">
+                <h3>Project Overview</h3>
+                <p><strong>Taskly</strong> is a live task management tool designed with simplicity and minimalism in mind. Users can organize and edit tasks without needing to create an account...</p>
+                
+                <h3>Purpose and Design Philosophy</h3>
+                <p>Taskly focuses on reducing distractions with a minimalistic interface, allowing users to concentrate solely on their tasks...</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Minimalistic UI:</strong> A clean, user-friendly layout inspired by popular interfaces...</li>
+                    <li><strong>Playful Task Management:</strong> Users can delete tasks by dragging them into a garbage can and move tasks across various containers...</li>
+                    <li><strong>Account-Free Management:</strong> Taskly uses local storage, allowing users to manage tasks directly...</li>
+                </ul>
+            </div>
+
+            <!-- Taskly YouTube Videos -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/e8QWw2BhNGA" title="Adding Tasks"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2xMT4nNqIrs" title="Prioritizing Tasks"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mcl_hV5IXEQ" title="Moving Tasks"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OpuE1x1hub8" title="Editing Tasks"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8_02lGyYOhQ" title="Deleting Tasks"></iframe>
+        </section>
         <hr class="divider">
 
-        <!-- Search for the Good -->
-        <div class="project">
-            <h2>Search for the Good</h2>
-            <img src="search-for-the-good-image.jpg" alt="Search for the Good Image" class="centered-image">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/video6" title="Search for the Good Video" frameborder="0"></iframe>
-        </div>
+        <!-- Search for the Good Section -->
+        <section id="search-for-the-good">
+            <h2>Search for the Good - Impactful Connections Platform</h2>
+            <img src="projects-s4g-tile.png" alt="Search for the Good Screenshot" class="centered-image">
+
+            <!-- Search for the Good Content -->
+            <div class="section-content">
+                <h3>Project Overview</h3>
+                <p><strong>Search for the Good</strong> is a platform under development that connects individuals, projects, and brands dedicated to making a positive impact in the world...</p>
+
+                <h3>Purpose and Solution</h3>
+                <p>The platform seeks to counteract the negative aspects of traditional social media by providing a space where people can connect over shared values...</p>
+
+                <h3>Current Progress</h3>
+                <p>I am actively building the platform and have started engaging with potential users...</p>
+
+                <h3>How It Works</h3>
+                <ul>
+                    <li><strong>Get an Interview:</strong> Prospective members undergo an interview to confirm their commitment to positive impact...</li>
+                    <li><strong>Create a Profile:</strong> Members share their values and intentions...</li>
+                    <li><strong>Use the Platform:</strong> Members can connect with others, explore projects, and discover brands aligned with their values...</li>
+                </ul>
+
+                <h3>Vision and Long-Term Goals</h3>
+                <p>The ultimate goal is to become a global hub for impact-driven connections and collaboration...</p>
+            </div>
+
+            <!-- Search for the Good YouTube Video -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/k0OV9LOuPR4" title="Search for the Good Prototype"></iframe>
+        </section>
         <hr class="divider">
 
-        <!-- Knit -->
-        <div class="project">
-            <h2>Knit</h2>
-            <img src="knit-image.jpg" alt="Knit Image" class="centered-image">
-            <a href="https://www.figma.com/file/yourFigmaLink" target="_blank" class="figma-link">View Figma Design</a>
-            <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/yourFigmaDeckLink" 
+        <!-- Knit Section -->
+        <section id="knit">
+            <h2>Knit - Community-Building Platform</h2>
+            <img src="projects-knit-slide.png" alt="Knit Screenshot" class="centered-image">
+
+            <!-- Knit Content -->
+            <div class="section-content">
+                <h3>Project Overview</h3>
+                <p><strong>Knit</strong> is a community-building platform aimed at enhancing the quality of life for residents in long-term care facilities...</p>
+
+                <h3>Purpose and Solution</h3>
+                <p>Knit addresses the issue of social isolation among older adults, especially those in long-term care homes...</p>
+
+                <h3>Key Features and Strategy</h3>
+                <ul>
+                    <li><strong>Subscription Model:</strong> Knit generates revenue through facility and provider subscriptions...</li>
+                    <li><strong>Targeted Approach:</strong> Focused on long-term care homes in Vancouver...</li>
+                    <li><strong>Collaborative Model:</strong> Knit partners with local businesses to offer engaging activities...</li>
+                </ul>
+
+                <h3>Market and Impact</h3>
+                <p>Knit taps into a market of older adults living in long-term care facilities in Vancouver, creating vibrant, supportive communities...</p>
+            </div>
+
+            <!-- Knit Figma Links -->
+            <a href="https://www.figma.com/proto/wCesbEYGhzgtf7ucHH16gb/Knit---Deck-Slides?node-id=147-32" target="_blank" class="figma-link">View Knit Slide Deck</a>
+            <iframe src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/LJhYhm0ZmeuB6iF7IQmQeL/Knit-Hack4Health-Prototype?node-id=10-493&starting-point-node-id=10%3A493" 
                 allowfullscreen style="border:none;width:100%;height:500px;"></iframe>
-        </div>
+        </section>
 
-    </section>
+    </main>
 
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
             <div class="footer-nav-links">
-                <a href="index.html#projects">Projects</a> |
-                <a href="#creative">Creative</a> |
-                <a href="about.html">About</a> |
-                <a href="#contact">Contact</a>
+                <a href="projects.html">Projects</a> |
+                <a href="../creative/creative.html">Creative</a> |
+                <a href="../about/about.html">About</a> |
+                <a href="../contact/contact.html">Contact</a>
             </div>
         </div>
     </footer>
