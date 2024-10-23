@@ -105,6 +105,7 @@ footer .footer-links a {
     background-color: #cce7ff; /* Softer pastel blue */
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
+    margin: 0 8px;
     border-radius: 5px; /* Rounded corners to make it more button-like */
     transition: background-color 0.3s, transform 0.3s;
     border: 1px solid transparent; /* Smooth hover effect */
