@@ -22,8 +22,8 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white; /* Charcoal Gray instead of Black */
-    padding-left: 4rem;
-    padding-right: 0rem;
+    padding-left: 3rem;
+    padding-right: 0.2rem;
     padding-top: 1rem;
     padding-bottom: 1rem; 
     position: fixed;
