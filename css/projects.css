@@ -48,6 +48,7 @@ header nav {
     display: flex;
     justify-content: flex-end; /* Pushes nav links to the right */
     align-items: center;
+    width: 100%;
 }
 
 header nav ul {
