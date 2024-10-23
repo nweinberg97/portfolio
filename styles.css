@@ -69,12 +69,11 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
-    height: calc(100vh - 60px); /* Adjusted to account for navbar height */
+    height: 100vw; /* Adjusted to account for navbar height */
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); /* Adjust for the navbar height */
     width: 100vw; /* Full width */
-    position: relative;
+    position: absolute;
     text-align: center;
     padding-top: 28px;
     margin-bottom: -60px;
@@ -84,7 +83,7 @@ header nav ul li a:hover {
 /* Image Styling */
 .section-image {
     width: 100vw;
-    height: auto;
+    height: 100vw;
     object-fit: fill;
     max-height: 80vh; /* Ensures the image doesn't overwhelm the screen */
     object-fit: cover; /* Ensures the image covers the entire container */
