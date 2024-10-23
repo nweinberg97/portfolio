@@ -102,13 +102,13 @@ footer {
 /* Correct class name updated to match HTML */
 footer .footer-links a {
     color: white; /* Change text color to white for contrast */
-    background-color: #cce7ff; /* Softer pastel blue */
+    background-color: transparent; /* Softer pastel blue */
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
     margin: 0 4px;
     border-radius: 5px; /* Rounded corners to make it more button-like */
-    transition: background-color 0.3s, transform 0.3s;
-    border: 1px solid transparent; /* Smooth hover effect */
+    transition: background-color 0.3s, font-size 0.3s, transform 0.3s;
+    border: 1px solid white; /* Smooth hover effect */
     text-decoration: none;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Light shadow */
 }
