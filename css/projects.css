@@ -66,11 +66,13 @@ header nav ul li a:hover {
     transform: scale(1.1); /* Grows slightly on hover */
 }
 
+main {
+    padding-top: 15px; /* Adjust this value depending on the height of your navbar */
+}
+
 #project-header {
-    margin-top: 15px;
     justify-content: center;
 }
-    
 
 /* Main Content Section */
 .projects-page {
