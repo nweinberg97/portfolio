@@ -20,7 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333333; /* Charcoal Gray instead of Black */
+    background-color: white; /* Charcoal Gray instead of Black */
     padding: 1rem 2rem;
     position: fixed;
     top: 0;
@@ -31,7 +31,7 @@ header {
 }
 
 header .logo a {
-    color: white;
+    color: #333333;
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
@@ -93,7 +93,7 @@ header nav ul li a:hover {
 /* Footer Styling */
 footer {
     margin-top: auto; /* Pushes the footer to the bottom */
-    background-color: white; /* Charcoal Gray instead of Black */
+    background-color: #333333; /* Charcoal Gray instead of Black */
     padding: 1.5rem 0;
     text-align: center;
     border-top: 1px solid #ddd;
@@ -121,7 +121,7 @@ footer .footer-links a:hover {
 }
 
 footer p {
-    color: gray;
+    color: white;
     font-size: 0.9rem;
     margin-top: 20px;
 }
