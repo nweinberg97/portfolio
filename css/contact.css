@@ -1,11 +1,10 @@
-/* Contact Section */
+
 #contact .contact-container {
     max-width: 600px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding: 80px 40px; /* Increased top padding to create more space */
+    margin: 100px auto 15px auto; /* Increased top margin to push the container down */
+    padding: 40px 40px;
     background-color: white;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow values */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
 
@@ -86,6 +85,7 @@
     text-align: center; /* Center the text */
     text-decoration: none; /* Remove underline from links */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 20px;
 }
 
 .linkedin-button:hover {
