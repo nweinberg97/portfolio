@@ -2,7 +2,7 @@
 #contact .contact-container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 80px 40px; /* Increased top padding to create more space */
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow values */
     border-radius: 8px;
@@ -91,6 +91,22 @@
         font-size: 32px;
     }
 
+}
+
+/* Center the LinkedIn Link */
+.linkedin-link {
+    text-align: center;
+    margin-top: 20px; /* Adjust the spacing as needed */
+}
+
+.linkedin-link a {
+    color: #007BFF;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link a:hover {
+    color: #0056b3;
 }
 
 @media (max-width: 480px) {
