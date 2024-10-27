@@ -74,6 +74,22 @@
     background: #0056b3;
 }
 
+/* Center the LinkedIn Link */
+.linkedin-link {
+    text-align: center;
+    margin-top: 20px; /* Adjust the spacing as needed */
+}
+
+.linkedin-link a {
+    color: #007BFF;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link a:hover {
+    color: #0056b3;
+}
+
 /* Responsive Design for Contact Section */
 @media (max-width: 768px) {
     #contact .contact-container,
@@ -91,22 +107,6 @@
         font-size: 32px;
     }
 
-}
-
-/* Center the LinkedIn Link */
-.linkedin-link {
-    text-align: center;
-    margin-top: 20px; /* Adjust the spacing as needed */
-}
-
-.linkedin-link a {
-    color: #007BFF;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.linkedin-link a:hover {
-    color: #0056b3;
 }
 
 @media (max-width: 480px) {
