@@ -2,12 +2,12 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding/margin don't affect element width */
 }
 
 /* Body Styling */
 body {
-    font-family: 'Raleway', sans-serif; /* Global font */
+    font-family: 'Raleway', sans-serif;
     background-color: white;
     color: black;
     display: flex;
@@ -15,119 +15,105 @@ body {
     min-height: 100vh;
 }
 
-/* Links */
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-    color: #5A9BD5; /* Softer blue */
-    transform: scale(1.1); /* Slight growth on hover */
-}
-
 /* Navbar */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
-    padding: 1rem 2rem;
+    background-color: white; /* Charcoal Gray instead of Black */
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border to define the edge */
 }
 
 header .logo a {
+    color: #333333;
     font-size: 1.5rem;
     font-weight: 700;
-    color: white;
-    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    transition: color 0.3s, font-size 0.3s, transform 0.3s;
+    margin-right: auto; /* Ensures logo stays on the left and pushes nav right */
 }
 
 header .logo a:hover {
-    color: #5A9BD5;
-    transform: scale(1.1);
+    color: #5A9BD5; /* Softer blue */
+    transform: scale(1.3); /* Grows on hover */
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end; /* Pushes nav links to the right */
+    align-items: center;
+    width: auto; /* Adjusted */
 }
 
 header nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
+    /* Removed margin-right: 0; */
 }
 
 header nav ul li {
-    margin-left: 2rem;
+    margin-left: 2rem; /* Adjusted for consistent spacing */
 }
 
 header nav ul li a {
+    color: #333333;
+    text-decoration: none;
     font-size: 1rem;
-    color: white;
+    transition: color 0.3s, transform 0.3s;
 }
 
-/* Footer Styling */
-footer {
-    margin-top: auto;
-    background-color: white;
-    padding: 1.5rem 0;
-    text-align: center;
-    border-top: 1px solid #ddd;
+header nav ul li a:hover {
+    color: #5A9BD5; /* Softer blue */
+    transform: scale(1.1); /* Grows slightly on hover */
 }
 
-footer .footer-nav-links a {
-    margin: 0 15px;
-    color: black;
+/* Correct class name updated to match HTML */
+footer .footer-links a {
+    color: white; /* Change text color to white for contrast */
+    background-color: transparent; /* Softer pastel blue */
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 5px; /* Rounded corners to make it more button-like */
+    transition: background-color 0.2s ease, font-size 0.2s ease, transform 0.2s ease;
+    border: 1px solid white; /* Smooth hover effect */
+    text-decoration: none;
 }
 
-footer .footer-nav-links a:hover {
-    color: #5A9BD5;
+footer .footer-links a:hover {
+    transform: scale(1.1); /* Grows slightly on hover */
+    background-color: #99c7ff; /* Slightly darker pastel blue on hover */
+    border: 1px solid #5A9BD5; /* Add border on hover */
 }
 
 footer p {
+    color: white;
     font-size: 0.9rem;
-    color: gray;
+    margin-top: 20px;
 }
 
-/* Containers */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
-/* Section Styling */
-section {
-    padding: 2rem 0;
-}
-
-/* General Text Styles */
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
-    color: black;
-}
-
-p {
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-    color: black;
-}
-
-/* Responsive Styling */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     header .logo a {
         font-size: 1.3rem;
     }
 
     header nav ul li {
-        margin-left: 1rem;
+        margin-left: 1rem; /* Reduced for smaller screens */
     }
 
     header nav ul li a {
         font-size: 0.9rem;
     }
 
-    footer .footer-nav-links a {
-        font-size: 0.9rem;
-    }
-}
+
