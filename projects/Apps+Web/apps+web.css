@@ -106,11 +106,20 @@ section {
     margin-bottom: 40px; /* Space between each project section */
 }
 
+.image-carousel-container {
+    display: flex;
+    align-items: center; /* Center aligns the buttons with the carousel */
+    position: relative;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
 .video-carousel-container {
     display: flex;
     align-items: center; /* Center aligns the buttons with the carousel */
     position: relative;
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
