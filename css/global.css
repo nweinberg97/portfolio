@@ -74,6 +74,15 @@ header nav ul li a:hover {
     transform: scale(1.1); /* Grows slightly on hover */
 }
 
+/* Footer Styling */
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    background-color: #333333; /* Charcoal Gray instead of Black */
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
 /* Correct class name updated to match HTML */
 footer .footer-links a {
     color: white; /* Change text color to white for contrast */
