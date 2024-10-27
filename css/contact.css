@@ -1,8 +1,9 @@
 /* Contact Section */
 #contact .contact-container {
     max-width: 600px;
-    margin: 0 auto;
-    padding: 120px 40px; /* Increased top padding to create more space */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 80px 40px; /* Increased top padding to create more space */
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow values */
     border-radius: 8px;
@@ -74,20 +75,21 @@
     background: #0056b3;
 }
 
-/* Center the LinkedIn Link */
-.linkedin-link {
-    text-align: center;
-    margin-top: 20px; /* Adjust the spacing as needed */
+.linkedin-button {
+    display: inline-block; /* Ensures the button takes up only as much space as it needs */
+    background-color: #0077B5; /* LinkedIn's blue color */
+    color: white; /* White text for contrast */
+    padding: 10px 20px; /* Space inside the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.linkedin-link a {
-    color: #007BFF;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.linkedin-link a:hover {
-    color: #0056b3;
+.linkedin-button:hover {
+    background-color: #005983; /* Darker shade of LinkedIn's color for hover */
 }
 
 /* Responsive Design for Contact Section */
