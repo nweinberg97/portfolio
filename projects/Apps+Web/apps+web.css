@@ -95,27 +95,32 @@ section {
     margin-bottom: 40px; /* Space between each project section */
 }
 
-/* Embed Styling (YouTube Videos, Figma) */
+/* Adjusting the video-item for better aspect ratio */
 .video-item {
-    max-width: 800px; /* Restrict width for consistency */
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Keeps the width consistent */
+    padding-bottom: 56.25%; /* This maintains a 16:9 aspect ratio */
+    height: 0;
     margin: 20px auto; /* Centers the video */
+}
+
+.video-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
     border-radius: 8px; /* Matches other elements */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Consistent shadow styling */
 }
+
 
 .video-carousel {
     display: flex;
     flex-direction: column; /* Stack videos vertically */
     gap: 20px; /* Space between each video */
     align-items: center; /* Centers video items within the carousel */
-}
-
-.video-item iframe {
-    width: 100%;
-    height: 450px; /* Consistent height for all videos */
-    border: none; /* Removes default iframe border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
 .video-item p {
@@ -135,13 +140,35 @@ section {
     padding: 20px 30px;
     max-width: 800px;
     margin: 0 auto;
+    line-height: 1.5; /* Slightly increased line height for better readability */
+}
+
+/* Paragraph Spacing */
+.section-content p {
+    margin-bottom: 10px; /* Adds a smaller space between paragraphs */
+}
+
+/* List Item Spacing */
+.section-content ul {
+    margin-bottom: 10px; /* Adds space below lists */
+}
+
+.section-content li {
+    margin-bottom: 6px; /* Adds subtle space between list items */
+}
+
+/* Header Spacing */
+.section-content h3 {
+    margin-top: 15px; /* Space above each header */
+    margin-bottom: 8px; /* Space below each header */
 }
 
 /* Centering Images */
 .centered-image {
     display: block;
     margin: 20px auto;
-    max-width: 100%;
+    width: 100%;
+    max-width: 800px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
