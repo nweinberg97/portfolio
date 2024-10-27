@@ -21,7 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white; 
-    padding: 1rem 2rem;
+    padding: 1rem 3rem; /* Adjusted right padding for even spacing */
     position: fixed;
     top: 0;
     width: 100%;
