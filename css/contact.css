@@ -2,7 +2,7 @@
 #contact .contact-container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 80px 40px; /* Increased top padding to create more space */
+    padding: 120px 40px; /* Increased top padding to create more space */
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjusted shadow values */
     border-radius: 8px;
