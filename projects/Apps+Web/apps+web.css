@@ -78,7 +78,7 @@ header nav ul li a:hover {
     text-align: center;
     margin-top: 100px; /* Space to account for the fixed header */
     margin-bottom: 20px;
-    font-size: 2.5rem; /* Larger font for the main title */
+    font-size: 1.7rem; /* Larger font for the main title */
 }
 
 /* Section Styling */
@@ -87,7 +87,7 @@ header nav ul li a:hover {
     background-color: #f9f9f9; /* Slightly off-white for subtle contrast */
 }
 
-h1 h2 h3 {
+.subproj-header {
     text-align: center;
 }
 
