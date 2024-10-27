@@ -21,8 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white; /* Charcoal Gray instead of Black */
-    padding-top: 1rem;
-    padding-bottom: 1rem; 
+    padding: 1rem 2rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -72,6 +71,18 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #5A9BD5; /* Softer blue */
     transform: scale(1.1); /* Grows slightly on hover */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem; /* Adjust gap to control spacing between links */
+    margin-left: auto; /* Pushes the links to the far right */
+}
+
+.nav-links a {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
 }
 
 /* Footer Styling */
