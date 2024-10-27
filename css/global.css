@@ -20,7 +20,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white; /* Charcoal Gray instead of Black */
+    background-color: white; 
+    color: #333333;
     padding: 1rem 2rem;
     position: fixed;
     top: 0;
