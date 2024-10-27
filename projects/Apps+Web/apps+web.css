@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's dimensions */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Raleway', sans-serif; /* Clean, modern font */
+    background-color: white; /* Bright background for a clean look */
+    color: #333; /* Dark gray for readability */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height to prevent layout issues */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between; /* Ensures space between logo and navigation links */
+    align-items: center;
+    background-color: white; /* Matches the general page background */
+    padding: 1rem 2rem; /* Adds space around the header content */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Logo Styling */
+header .logo a {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+header .logo a:hover {
+    transform: scale(1.1); /* Slightly enlarges logo on hover */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 2rem; /* Evenly space out links */
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #5A9BD5; /* Change color to blue on hover */
+}
+
+/* Main Project Header */
+.main-project-header {
+    text-align: center;
+    margin-top: 100px; /* Space to account for the fixed header */
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Larger font for the main title */
+}
+
+/* Section Styling */
+.projects-page {
+    padding: 20px; /* Space around the main content */
+    background-color: #f9f9f9; /* Slightly off-white for subtle contrast */
+}
+
+section {
+    margin-bottom: 40px; /* Space between each project section */
+}
+
+/* Section Containers */
+.section-content {
+    background: white; /* Clean, white background for content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    padding: 20px; /* Adds space inside the container */
+    max-width: 800px; /* Restricts width for better readability */
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Image Styling */
+.centered-image {
+    display: block;
+    margin: 20px auto; /* Centers the image */
+    max-width: 100%; /* Ensures responsiveness */
+    border-radius: 8px; /* Matches the section styling */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Embed Styling (YouTube Videos, Figma) */
+.video-item,
+.prototype-embed,
+.slide-deck {
+    width: 100%;
+    max-width: 800px; /* Keeps embeds at a consistent size */
+    height: 500px; /* Ensures consistent height */
+    display: block;
+    margin: 20px auto; /* Centers the embed */
+    border: none; /* Removes default iframe borders */
+    border-radius: 8px; /* Matches other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Consistent shadow styling */
+}
+
+/* Video Carousel */
+.video-carousel {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 20px; /* Space between videos */
+    justify-content: center; /* Centers the videos within the carousel */
+}
+
+.video-item p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem; /* Slightly smaller font for video captions */
+    color: #555; /* Softer color for captions */
+}
+
+/* Divider */
+.divider {
+    border: none;
+    border-top: 1px solid #ddd; /* Light border for separation */
+    margin: 40px 0; /* Space around the divider */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-project-header {
+        font-size: 2rem; /* Adjusts for smaller screens */
+    }
+
+    .section-content {
+        padding: 15px; /* Reduces padding on smaller screens */
+    }
+
+    .video-item,
+    .prototype-embed,
+    .slide-deck {
+        height: 300px; /* Adjust height for smaller devices */
+    }
+
+    .video-carousel {
+        flex-direction: column; /* Stacks videos vertically */
+    }
+}
