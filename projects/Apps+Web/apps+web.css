@@ -2,62 +2,77 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding and borders are included in the element's dimensions */
+    box-sizing: border-box; /* Ensure padding/margin don't affect element width */
 }
 
 /* Body Styling */
 body {
-    font-family: 'Raleway', sans-serif; /* Clean, modern font */
-    background-color: white; /* Bright background for a clean look */
-    color: #333; /* Dark gray for readability */
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    color: black;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Full viewport height to prevent layout issues */
+    min-height: 100vh;
 }
 
-/* Header */
+/* Navbar */
 header {
     display: flex;
-    justify-content: space-between; /* Ensures space between logo and navigation links */
+    justify-content: space-between;
     align-items: center;
-    background-color: white; /* Matches the general page background */
-    padding: 1rem 2rem; /* Adds space around the header content */
+    background-color: white; /* Charcoal Gray instead of Black */
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border to define the edge */
 }
 
-/* Logo Styling */
 header .logo a {
-    color: #333;
+    color: #333333;
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
-    transition: transform 0.3s ease; /* Smooth scaling effect */
+    transition: color 0.3s, font-size 0.3s, transform 0.3s;
+    margin-right: auto; /* Ensures logo stays on the left and pushes nav right */
 }
 
 header .logo a:hover {
-    transform: scale(1.1); /* Slightly enlarges logo on hover */
+    color: #5A9BD5; /* Softer blue */
+    transform: scale(1.3); /* Grows on hover */
 }
 
-/* Navigation Links */
-.nav-links {
+header nav {
     display: flex;
-    gap: 2rem; /* Evenly space out links */
+    justify-content: flex-end; /* Pushes nav links to the right */
+    align-items: center;
+    width: auto; /* Adjusted */
 }
 
-.nav-links a {
-    color: #333;
+header nav ul {
+    list-style: none;
+    display: flex;
+    /* Removed margin-right: 0; */
+}
+
+header nav ul li {
+    margin-left: 2rem; /* Adjusted for consistent spacing */
+}
+
+header nav ul li a {
+    color: #333333;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.nav-links a:hover {
-    color: #5A9BD5; /* Change color to blue on hover */
+header nav ul li a:hover {
+    color: #5A9BD5; /* Softer blue */
+    transform: scale(1.1); /* Grows slightly on hover */
 }
-
 /* Main Project Header */
 .main-project-header {
     text-align: center;
@@ -129,6 +144,43 @@ section {
     border: none;
     border-top: 1px solid #ddd; /* Light border for separation */
     margin: 40px 0; /* Space around the divider */
+}
+
+
+/* Footer Styling */
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    background-color: #333333; /* Charcoal Gray instead of Black */
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/* Correct class name updated to match HTML */
+footer .footer-links a {
+    color: white; /* Change text color to white for contrast */
+    background-color: transparent; /* Softer pastel blue */
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 5px; /* Rounded corners to make it more button-like */
+    transition: background-color 0.2s ease, font-size 0.2s ease, transform 0.2s ease;
+    border: 1px solid white; /* Smooth hover effect */
+    text-decoration: none;
+}
+
+footer .footer-links a:hover {
+    transform: scale(1.1); /* Grows slightly on hover */
+    background-color: #99c7ff; /* Slightly darker pastel blue on hover */
+    border: 1px solid #5A9BD5; /* Add border on hover */
+}
+
+footer p {
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 20px;
 }
 
 /* Responsive Design */
