@@ -89,6 +89,7 @@ header nav ul li a:hover {
 
 .subproj-header {
     text-align: center;
+    padding: 10px; 
 }
 
 .subproj-section {
