@@ -74,84 +74,105 @@ header nav ul li a:hover {
 }
 
 
-/* Styling for Cover Art Section */
-#graphic-design-projects {
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    background-color: white;
+}
+
+/* Page Title Styling */
+#surfboard-design-project h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 50px 0 20px;
+    color: #333;
+}
+
+/* Project Container */
+.project {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
     text-align: center;
 }
 
-.project {
-    margin-bottom: 40px;
-}
-
-.centered-image {
+/* Centered Images within Project Container */
+.project img.centered-image {
     width: 100%;
     max-width: 500px;
-    margin: 0 auto;
-}
-
-h2 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 24px;
-    margin: 20px 0 10px;
-    color: #333;
-}
-
-h3 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    margin: 15px 0;
-    color: #666;
-}
-
-.carousel-inner {
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-}
-
-/* Carousel Block Styling */
-.carousel-inner .carousel-block {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-}
-
-.carousel-inner img {
-    width: 100%;
-    max-width: 300px;
+    height: auto;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
 }
 
-.caption {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    margin-top: 10px;
+/* Project Image Captions */
+.project p {
+    font-size: 1rem;
     color: #555;
+    margin-top: 8px;
+    text-align: center;
 }
 
-button.carousel-control-prev,
-button.carousel-control-next {
-    font-size: 24px;
-    color: #333;
-    background-color: transparent;
+/* Divider */
+.divider {
     border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+    border-top: 1px solid #ddd;
+    margin: 40px 0; 
 }
 
-button.carousel-control-prev {
-    left: -20px;
+/* Text Content Container */
+.section {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: left;
 }
 
-button.carousel-control-next {
-    right: -20px;
+/* Section Headers */
+.section h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Section Paragraphs and Lists */
+.section p,
+.section ul {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+}
+
+/* Additional Project Images */
+.project img.centered-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
 }
 
 
