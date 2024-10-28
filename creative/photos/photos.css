@@ -73,6 +73,27 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
+#photos {
+    margin-top: 80px;
+    margin-bottom: 40px; 
+    margin-right: 20px;
+    margin-left: 20px; 
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 100px; 
+
+}
+
+p { 
+    text-align: center;
+    text-wrap: wrap;
+    margin: 10px 100px; 
+}
+    
+
+
 /* Photo Gallery Header */
 .photoheader {
     font-size: 40px;
