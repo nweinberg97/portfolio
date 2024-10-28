@@ -74,6 +74,50 @@ header nav ul li a:hover {
     transform: scale(1.1); /* Grows slightly on hover */
 }
 
+/* About Section */
+.about-page {
+    padding: 40px 20px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Alternating layout */
+.about-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.centered-image {
+    flex: 1;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+    margin: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-section p {
+    flex: 2;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 20px;
+    text-align: justify;
+}
+
+/* Divider Styling */
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
 /* Footer Styling */
 footer {
     margin-top: auto; /* Pushes the footer to the bottom */
@@ -124,3 +168,22 @@ footer p {
     header nav ul li a {
         font-size: 0.9rem;
     }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-section:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .centered-image {
+        margin: 20px 0;
+        max-width: 100%;
+    }
+
+    .about-section p {
+        margin: 0;
+    }
+}
