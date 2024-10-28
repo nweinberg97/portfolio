@@ -74,6 +74,11 @@ header nav ul li a:hover {
     transform: scale(1.1); /* Grows slightly on hover */
 }
 
+#about {
+    padding: 10px;
+    margin: 80px 20px;
+}
+
 /* About Section */
 .about-page {
     padding: 40px 20px;
