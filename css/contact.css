@@ -1,3 +1,20 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding/margin don't affect element width */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 
 #contact .contact-container {
     max-width: 600px;
