@@ -4,7 +4,7 @@ header {
     justify-content: space-between; /* Logo on the left, links on the right */
     align-items: center;
     background-color: white;
-    padding: 1rem; /* Uniform padding for consistent spacing */
+    padding: 1rem 2rem; /* Uniform padding for consistent spacing */
     position: fixed;
     top: 0;
     width: 100%;
