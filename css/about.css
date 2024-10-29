@@ -127,6 +127,7 @@ header nav ul li a:hover {
     text-align: center; /* Centers text inside the paragraph */
     width: 100%;
     margin: 20px 0;
+    color: white; 
 }
 
 .contact-text {
@@ -135,14 +136,24 @@ header nav ul li a:hover {
     margin-bottom: 10px; /* Space between paragraph and button */
 }
 
-.calendly-link, .linkedin-link a {
+.calendly-link {
     color: #0077B5; /* LinkedIn blue */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.calendly-link:hover, .linkedin-link a:hover {
+.linkedin-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.calendly-link:hover {
     color: #005983; /* Darker blue on hover */
+}
+
+.linkedin-link a:hover {
+    color: white;
 }
 
 .linkedin-button {
