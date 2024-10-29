@@ -85,6 +85,53 @@ header nav ul li a:hover {
     margin-bottom: 40px;
 }
 
+/* Styling for each project tile */
+.project {
+    background-color: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    margin-bottom: 20px; /* Space between tiles */
+    text-align: center;
+    transition: transform 0.3s ease; /* Optional: subtle scale effect on hover */
+}
+
+/* Optional: Hover effect to slightly lift the tile */
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Centering images within the tile */
+.project img {
+    border-radius: 8px; /* Rounded corners for images */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Styling for titles and descriptions */
+.project h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.project p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 10px;
+}
+
+
+/* Add subtle space around divider */
+.divider {
+    margin: 30px 0; /* Adjust to 30px or slightly more for a subtle increase in spacing */
+    border: none;
+    border-top: 1px solid #ddd; /* Optional styling for the divider */
+}
+
 .centered-image {
     width: 100%;
     max-width: 500px;
@@ -105,57 +152,104 @@ h3 {
     color: #666;
 }
 
-.carousel-inner {
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-}
-
-/* Carousel Block Styling */
-.carousel-inner .carousel-block {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ddd;
+/* Styling for the overall carousel container */
+.project-carousel {
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.carousel-inner img {
+/* Header for the carousel section */
+.project-carousel h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Container for the carousel items */
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+}
+
+/* Each carousel slide */
+.carousel-block {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styling the image within each carousel block */
+.carousel-block img {
     width: 100%;
     max-width: 300px;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-.caption {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    margin-top: 10px;
+/* Container for text in each carousel block */
+.carousel-item {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Caption styling */
+.carousel-item p.caption {
+    font-size: 0.9rem;
     color: #555;
+    margin: 0;
 }
 
-button.carousel-control-prev,
-button.carousel-control-next {
-    font-size: 24px;
-    color: #333;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+/* Carousel Controls Container */
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     top: 50%;
+    left: 0;
+    right: 0;
     transform: translateY(-50%);
+    padding: 0 10px;
     z-index: 10;
 }
 
-button.carousel-control-prev {
-    left: -20px;
+/* Carousel Button Styling */
+.carousel-control-prev,
+.carousel-control-next {
+    font-size: 18px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-button.carousel-control-next {
-    right: -20px;
+/* Hover Effect */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #5A9BD5; /* Subtle blue color on hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-
+/* Active Effect */
+.carousel-control-prev:active,
+.carousel-control-next:active {
+    transform: scale(0.95); /* Slight press-in effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 /* Footer Styling */
 footer {
     margin-top: auto;
