@@ -120,6 +120,30 @@ header nav ul li a:hover {
     text-align: justify;
 }
 
+.linkedin-link {
+    text-align: center;
+    width: 100%;
+}
+
+.linkedin-button {
+    display: inline-block; /* Ensures the button takes up only as much space as it needs */
+    background-color: #0077B5; /* LinkedIn's blue color */
+    color: white; /* White text for contrast */
+    padding: 10px 20px; /* Space inside the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 20px;
+}
+
+.linkedin-button:hover {
+    background-color: #005983; /* Darker shade of LinkedIn's color for hover */
+}
+
+
 /* Footer Styling */
 footer {
     margin-top: auto; /* Pushes the footer to the bottom */
