@@ -121,27 +121,56 @@ header nav ul li a:hover {
 }
 
 .linkedin-link {
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Centers text inside the paragraph */
     width: 100%;
+    margin: 20px 0;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px; /* Space between paragraph and button */
+}
+
+.calendly-link, .linkedin-link a {
+    color: #0077B5; /* LinkedIn blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.calendly-link:hover, .linkedin-link a:hover {
+    color: #005983; /* Darker blue on hover */
 }
 
 .linkedin-button {
-    display: inline-block; /* Ensures the button takes up only as much space as it needs */
-    background-color: #0077B5; /* LinkedIn's blue color */
-    color: white; /* White text for contrast */
-    padding: 10px 20px; /* Space inside the button */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Adjust the font size as needed */
-    font-weight: bold; /* Make the text bold */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline from links */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    margin-bottom: 20px;
+    display: inline-block;
+    background-color: #0077B5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 .linkedin-button:hover {
-    background-color: #005983; /* Darker shade of LinkedIn's color for hover */
+    background-color: #005983; /* Darker blue on hover */
 }
+
+/* Optional: Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .linkedin-button {
+        padding: 8px 16px;
+        font-size: 15px;
+    }
+}
+
 
 
 /* Footer Styling */
