@@ -74,6 +74,11 @@
     background: #0056b3;
 }
 
+.linkedin-link {
+    text-align: center;
+    width: 100%;
+}
+
 .linkedin-button {
     display: inline-block; /* Ensures the button takes up only as much space as it needs */
     background-color: #0077B5; /* LinkedIn's blue color */
