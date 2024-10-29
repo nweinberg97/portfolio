@@ -78,6 +78,7 @@ header nav ul li a:hover {
 #cover-art-projects {
     padding: 20px;
     text-align: center;
+    margin-top: 80px; /* Adjust this value as needed */
 }
 
 .project {
