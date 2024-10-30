@@ -100,9 +100,9 @@ header nav ul li a:hover {
 
 /* Project Grid Layout */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-    gap: 30px; /* Space between project tiles */
+    display: flex; /* Changed to flex layout for carousel compatibility */
+    gap: 20px; /* Reduced gap to better fit carousel spacing */
+    /* Removed grid-template-columns, as flex layout will handle the responsive alignment */
 }
 
 /* Individual Project Tiles */
@@ -112,11 +112,14 @@ header nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: box-shadow 0.3s ease; /* Smooth hover effect */
+    position: relative; /* Required for positioning hover overlay */
+    flex: 0 0 calc(33.333% - 20px); /* Ensures 3 items per row, compatible with carousel */
 }
 
 /* Hover Effect for Project Tiles */
 .project-block:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+    transform: scale(1.05); /* Adds gentle scale effect on hover */
 }
 
 /* Project Images */
@@ -124,6 +127,13 @@ header nav ul li a:hover {
     width: 100%; /* Makes the image fill the container */
     border-radius: 8px;
     object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Adds transition for zoom and brightness on hover */
+}
+
+/* Darken and Zoom Image on Hover */
+.project-block:hover img {
+    transform: scale(1.05); /* Slight zoom effect on image */
+    filter: brightness(0.8); /* Darkens image slightly on hover */
 }
 
 /* Project Descriptions */
@@ -132,6 +142,33 @@ header nav ul li a:hover {
     font-size: 1rem;
     text-align: center;
     color: #555; /* Slightly darker text for contrast */
+}
+
+/* Hover Overlay Text */
+.hover-text {
+    display: none;
+    position: absolute; /* Positioned over image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Centers text */
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Hidden by default */
+    border-radius: 8px; /* Matches project block's rounded corners */
+    transition: opacity 0.3s ease; /* Smooth fade-in on hover */
+}
+
+/* Show overlay text on hover */
+.project-block:hover .hover-text {
+    display: flex; /* Ensures display of overlay on hover */
+    opacity: 1; /* Fades in overlay text */
 }
 
 /* Link to Full Project Pages */
@@ -154,17 +191,50 @@ header nav ul li a:hover {
     margin-bottom: 60px; /* Space between sections */
 }
 
-/* Hide hover text by default */
-.hover-text {
-    display: none;
-    color: #007BFF; /* Highlight color for hover text */
-    font-size: 0.9rem;
-    margin-top: 10px;
+/* Carousel Container Styling */
+.carousel-container {
+    position: relative; /* Allows absolute positioning of buttons */
+    overflow: hidden; /* Hides overflow for carousel effect */
+    width: 100%; /* Full width of container */
+    max-width: 1000px; /* Sets maximum width for carousel */
+    margin: 0 auto; /* Centers carousel on page */
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Centers items vertically */
 }
 
-/* Show hover text when hovering over the project block */
-.project-block:hover .hover-text {
-    display: block;
+/* Carousel Items Styling */
+.carousel-items {
+    display: flex; /* Aligns project blocks horizontally */
+    gap: 20px; /* Spacing between each item */
+    transition: transform 0.5s ease; /* Smooth scrolling effect */
+}
+
+/* Carousel Control Buttons */
+.carousel-control {
+    position: absolute; /* Positions buttons within carousel */
+    top: 50%; /* Centers buttons vertically */
+    transform: translateY(-50%); /* Ensures exact centering */
+    font-size: 2rem; /* Large, easy-to-see buttons */
+    color: #333; /* Neutral color */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for visibility */
+    border: none; /* No button border */
+    cursor: pointer; /* Pointer cursor for interaction */
+    padding: 10px 15px; /* Padding for button size */
+    border-radius: 50%; /* Round buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.carousel-control.left {
+    left: -30px; /* Positions on the left side */
+}
+
+.carousel-control.right {
+    right: -30px; /* Positions on the right side */
+}
+
+.carousel-control:hover {
+    background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
 }
 
 /* Footer Styling */
