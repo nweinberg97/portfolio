@@ -113,14 +113,6 @@ header nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: box-shadow 0.3s ease; /* Smooth hover effect */
     position: relative; /* Required for positioning hover overlay */
-    flex: 0 0 calc(33.333% - 20px); /* Ensures 3 items per row, compatible with carousel */
-    max-width: calc(33.333% - 20px); /* Ensures consistent width */
-}
-
-/* Hover Effect for Project Tiles */
-.project-block:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
-    transform: scale(1.05); /* Adds gentle scale effect on hover */
 }
 
 /* Project Images */
@@ -217,14 +209,14 @@ header nav ul li a:hover {
     background-color: #007BFF; /* Soft blue background for better contrast */
     border: none;
     cursor: pointer;
-    padding: 12px; /* Adjusted padding for consistent sizing */
-    border-radius: 50%; /* Makes the buttons circular */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for prominence */
+    padding: 12px; /* Padding to create a circular shape */
+    border-radius: 50%; /* Makes the button circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for prominence */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 3; /* Ensures it sits above all carousel items */
+    z-index: 3; /* Ensures button sits above carousel items */
 }
 
 /* Left Control Button */
@@ -239,28 +231,10 @@ header nav ul li a:hover {
 
 /* Hover Effect */
 .carousel-control:hover {
-    background-color: #0056b3; /* Darker blue on hover for contrast */
+    background-color: #0056b3; /* Darker blue on hover */
     transform: scale(1.1); /* Slightly enlarges on hover */
 }
 
-/* Optional: Triangle Shape (Alternative to Circle) */
-.carousel-control::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-}
-
-.carousel-control.left::before {
-    border-width: 10px 15px 10px 0; /* Triangle pointing left */
-    border-color: transparent white transparent transparent;
-}
-
-.carousel-control.right::before {
-    border-width: 10px 0 10px 15px; /* Triangle pointing right */
-    border-color: transparent transparent transparent white;
-}
 
 /* Footer Styling */
 footer {
