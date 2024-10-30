@@ -72,7 +72,6 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
-
 /* Styling for Cover Art Section */
 #cover-art-projects {
     padding: 20px;
@@ -80,61 +79,77 @@ header nav ul li a:hover {
     margin-top: 80px; /* Adjust this value as needed */
 }
 
-.project {
-    margin-bottom: 40px;
+.creative-header {
+    text-align: center;
+    padding: 20px;
 }
 
 /* Styling for each project tile */
-.project {
-    background-color: white;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+.project-header {
+    background-color: #fff; /* White container */
     padding: 20px;
-    margin-bottom: 20px; /* Space between tiles */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease; /* Smooth hover effect */
     text-align: center;
-    transition: transform 0.3s ease; /* Optional: subtle scale effect on hover */
 }
 
+/* Styling for titles and descriptions */
+.project-header h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
 /* Optional: Hover effect to slightly lift the tile */
-.project:hover {
+.project-header:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 /* Centering images within the tile */
-.project img {
+.project-header img {
     border-radius: 8px; /* Rounded corners for images */
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
 
-/* Styling for titles and descriptions */
-.project h2 {
-    font-size: 1.2rem;
-    color: #333;
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-.project p {
+.project-content p {
     font-size: 0.9rem;
     color: #666;
     margin: 0 0 10px;
+    text-align: left;
 }
 
+.project-content img {
+    border-radius: 8px; /* Rounded corners for images */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project-content iframe {
+    border-radius: 8px; /* Rounded corners for images */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project-content {
+    background-color: #fff; /* White container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease; /* Smooth hover effect */
+    text-align: left;
+}
 
 /* Add subtle space around divider */
 .divider {
     margin: 30px 0; /* Adjust to 30px or slightly more for a subtle increase in spacing */
     border: none;
     border-top: 1px solid #ddd; /* Optional styling for the divider */
-}
-
-.centered-image {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
 }
 
 h2 {
@@ -179,6 +194,8 @@ h3 {
 .carousel-block {
     flex: 0 0 100%;
     text-align: center;
+    align-items: center;
+    justify-content: center; 
     padding: 10px;
     margin-bottom: 20px;
 }
