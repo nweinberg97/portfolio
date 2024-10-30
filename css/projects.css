@@ -126,18 +126,41 @@ header nav ul li a:hover {
 /* Project Images */
 .project-block img {
     width: 100%; /* Makes the image fill the container */
-    height: 100%
     border-radius: 8px;
     object-fit: cover;
     transition: transform 0.3s ease, filter 0.3s ease; /* Adds transition for zoom and brightness on hover */
-    z-index: 1; 
 }
 
 /* Darken and Zoom Image on Hover */
 .project-block:hover img {
     transform: scale(1.05); /* Slight zoom effect on image */
-    filter: brightness(0.7); /* Darkens image slightly on hover */
+    filter: brightness(0.6); /* Darkens image slightly on hover */
 }
+
+/* Hover Text Overlay */
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #FFFFFF; /* White text for contrast */
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background only over image */
+    border-radius: 8px; /* Matches the image’s rounded corners */
+    transition: opacity 0.3s ease; /* Smooth fade-in on hover */
+}
+
+/* Show overlay text on hover */
+.project-block:hover .hover-text {
+    opacity: 1; /* Fades in overlay text */
+}
+
 
 /* Project Descriptions */
 .project-block p {
@@ -146,38 +169,6 @@ header nav ul li a:hover {
     text-align: center;
     color: #555; /* Slightly darker text for contrast */
 }
-
-.hover-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: white;
-    font-size: 0.9rem;
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0; /* Hidden by default */
-    border-radius: 8px;
-    transition: opacity 0.3s ease;
-    z-index: 2; /* Ensures it sits above the image */
-}
-
-/* Show overlay text on hover */
-.project-block:hover .hover-text {
-    opacity: 1; /* Smooth fade-in */
-}
-
-/* Show overlay text on hover */
-.project-block:hover .hover-text {
-    display: flex; /* Ensures display of overlay on hover */
-    opacity: 1; /* Fades in overlay text */
-}
-
 /* Link to Full Project Pages */
 .arrow-link {
     display: block;
