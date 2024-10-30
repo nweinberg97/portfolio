@@ -216,32 +216,59 @@ header nav ul li a:hover {
     transition: transform 0.5s ease; /* Smooth scrolling effect */
 }
 
+/* Carousel Control Buttons */
 .carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2rem;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem; /* Adjusted font size */
+    color: white; /* White color for icon contrast */
+    background-color: #007BFF; /* Soft blue background for better contrast */
     border: none;
     cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    padding: 12px; /* Adjusted padding for consistent sizing */
+    border-radius: 50%; /* Makes the buttons circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for prominence */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 3; /* Ensures it sits above all carousel items */
 }
 
+/* Left Control Button */
 .carousel-control.left {
-    left: 10px; /* Adjusted to align inside the carousel */
+    left: 10px; /* Positions on the left side */
 }
 
+/* Right Control Button */
 .carousel-control.right {
-    right: 10px; /* Adjusted to align inside the carousel */
+    right: 10px; /* Positions on the right side */
 }
 
+/* Hover Effect */
 .carousel-control:hover {
-    background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
+    background-color: #0056b3; /* Darker blue on hover for contrast */
+    transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+/* Optional: Triangle Shape (Alternative to Circle) */
+.carousel-control::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.carousel-control.left::before {
+    border-width: 10px 15px 10px 0; /* Triangle pointing left */
+    border-color: transparent white transparent transparent;
+}
+
+.carousel-control.right::before {
+    border-width: 10px 0 10px 15px; /* Triangle pointing right */
+    border-color: transparent transparent transparent white;
 }
 
 /* Footer Styling */
