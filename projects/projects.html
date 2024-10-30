@@ -147,14 +147,47 @@
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript (hamburger menu functionality) -->
-    <script>
-        $(document).ready(function() {
-            $('.hamburger').on('click', function() {
-                $('.nav-links').toggleClass('open');
-            });
+  <!-- JavaScript (hamburger menu functionality + carousel functionality) -->
+<script>
+    $(document).ready(function() {
+        // Hamburger menu toggle
+        $('.hamburger').on('click', function() {
+            $('.nav-links').toggleClass('open');
         });
-    </script>
+
+        // Carousel Functionality
+        const carouselContainer = document.querySelector(".carousel-items");
+        const leftButton = document.querySelector(".carousel-control.left");
+        const rightButton = document.querySelector(".carousel-control.right");
+        const projectBlocks = document.querySelectorAll(".project-block");
+
+        let currentIndex = 0;
+        const visibleItems = 3; // Number of items to show at a time
+        const totalItems = projectBlocks.length;
+
+        // Update Carousel Display
+        function updateCarousel() {
+            const offset = -currentIndex * (100 / visibleItems);
+            carouselContainer.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Move Left
+        leftButton.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel();
+        });
+
+        // Move Right
+        rightButton.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        });
+
+        // Initial Display
+        updateCarousel();
+    });
+</script>
+
 
 </body>
 </html>
