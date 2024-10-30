@@ -100,11 +100,11 @@ header nav ul li a:hover {
 .project-header h2 {
     font-size: 1.2rem;
     color: #333;
-    margin: 10px 0;
+    margin: 0px
     font-weight: bold;
 }
 /* Optional: Hover effect to slightly lift the tile */
-.project-header:hover {
+.project-header .project-content:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
@@ -128,13 +128,16 @@ header nav ul li a:hover {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-content iframe {
     border-radius: 8px; /* Rounded corners for images */
     max-width: 100%;
-    height: auto;
     margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-content {
@@ -144,6 +147,7 @@ header nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: box-shadow 0.3s ease; /* Smooth hover effect */
     text-align: left;
+    margin: 0px 400px 20px 400px; 
 }
 
 /* Add subtle space around divider */
