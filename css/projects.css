@@ -110,9 +110,10 @@ header nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     position: relative;
+    flex: 0 0 calc(33.333% - 13.33px); /* Each project tile takes up one-third of the visible space */
     z-index: 1; /* Base layer */
-
 }
+
 /* Project Images */
 .project-block img {
     width: 100%;
@@ -184,9 +185,9 @@ header nav ul li a:hover {
 /* Carousel Container Styling */
 .carousel-container {
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Hides overflow for seamless rotation */
     width: 100%;
-    max-width: 1000px;
+    max-width: 1000px; /* Maximum width of the carousel */
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -196,7 +197,8 @@ header nav ul li a:hover {
 .carousel-items {
     display: flex;
     gap: 20px;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease; /* Smooth scrolling effect */
+    width: calc(300% + 40px); /* 3x visible width + gaps, ensuring three containers are visible */
 }
 
 /* Carousel Control Buttons */
@@ -213,7 +215,7 @@ header nav ul li a:hover {
     height: 40px; /* Fixed height for circle */
     border-radius: 50%; /* True circle shape */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Refined hover transition */
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Refined hover transition */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -233,7 +235,8 @@ header nav ul li a:hover {
 /* Subtle Hover Effect */
 .carousel-control:hover {
     background-color: #0056b3; /* Slightly darker blue on hover */
-    transform: scale(1.05); /* Subtle hover scaling for a professional look */
+    transform: translateY(-50%) scale(1.05); /* Adds translateY(-50%) to maintain vertical alignment */
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 /* Footer Styling */
