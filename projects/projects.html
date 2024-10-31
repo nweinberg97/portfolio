@@ -148,40 +148,49 @@
     </footer>
 
 <script>
+   <script>
     $(document).ready(function() {
         // Hamburger menu toggle
         $('.hamburger').on('click', function() {
             $('.nav-links').toggleClass('open');
         });
 
-        // Selectors and initial setup
+        // Carousel setup
         const carouselContainer = document.querySelector(".carousel-items");
         const projectBlocks = document.querySelectorAll(".project-block");
         const totalItems = projectBlocks.length;
-        const visibleItems = 3;  // Always show 3 containers
-        let currentIndex = 0;    // Start at the first container
+        const visibleItems = 3;  // Number of items visible at a time
+        let currentIndex = 0;
 
-        // Update Carousel Display
+        // Update Carousel Display Function
         function updateCarousel() {
-            const offset = -currentIndex * (100 / visibleItems); // Offset calculation for smooth shift
+            const offset = -currentIndex * (100 / visibleItems);
             carouselContainer.style.transform = `translateX(${offset}%)`;
         }
 
-        // Move Right (Next)
+        // Right (Next) button functionality
         document.querySelector(".carousel-control.right").addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % totalItems; // Increment index for right movement
+            currentIndex++;
+            if (currentIndex > totalItems - visibleItems) {
+                currentIndex = 0; // Wrap around to start for continuous loop
+            }
             updateCarousel();
         });
 
-        // Move Left (Previous)
+        // Left (Previous) button functionality
         document.querySelector(".carousel-control.left").addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Decrement index for left movement
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = totalItems - visibleItems; // Wrap around to end for continuous loop
+            }
             updateCarousel();
         });
 
-        // Initial display setup
+        // Initial setup
         updateCarousel();
     });
+</script>
+
 </script>
 
 
