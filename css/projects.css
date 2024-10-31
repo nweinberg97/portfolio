@@ -96,6 +96,13 @@ header nav ul li a:hover {
     color: #333;
 }
 
+.project-grid {
+    display: flex;
+    justify-content: center; /* Centers the items in the container */
+    gap: 20px; /* Consistent spacing between items */
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+}
+
 /* Individual Project Tiles */
 .project-block {
     background-color: #fff;
