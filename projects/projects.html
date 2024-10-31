@@ -161,15 +161,31 @@
     const visibleItems = 3;
     let currentIndex = 0;
 
-    // Clone the first and last few items to create a seamless loop
-    for (let i = 0; i < visibleItems; i++) {
-        const cloneStart = projectBlocks[i].cloneNode(true);
-        const cloneEnd = projectBlocks[totalItems - 1 - i].cloneNode(true);
-        carouselContainer.appendChild(cloneStart);
-        carouselContainer.insertBefore(cloneEnd, projectBlocks[0]);
-    }
+    // Clear any previous clones (if script re-runs or page refresh)
+    Array.from(carouselContainer.children).forEach(child => {
+        if (child.classList.contains("cloned")) {
+            carouselContainer.removeChild(child);
+        }
+    });
 
-    // Recalculate carousel width and position
+    // Clone the first and last items only of the current section
+    const clonesStart = Array.from(projectBlocks).slice(0, visibleItems).map(block => {
+        const clone = block.cloneNode(true);
+        clone.classList.add("cloned");
+        return clone;
+    });
+    
+    const clonesEnd = Array.from(projectBlocks).slice(-visibleItems).map(block => {
+        const clone = block.cloneNode(true);
+        clone.classList.add("cloned");
+        return clone;
+    });
+
+    // Add clones to carousel container for seamless loop
+    clonesStart.forEach(clone => carouselContainer.appendChild(clone));
+    clonesEnd.reverse().forEach(clone => carouselContainer.insertBefore(clone, projectBlocks[0]));
+
+    // Adjust width and position for seamless transition
     carouselContainer.style.width = `${(totalItems + visibleItems * 2) * 100 / visibleItems}%`;
     carouselContainer.style.transform = `translateX(-${100 / visibleItems}%)`;
 
