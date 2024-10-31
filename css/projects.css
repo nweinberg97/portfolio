@@ -120,7 +120,7 @@ header nav ul li a:hover {
 /* Darken and Zoom Image on Hover */
 .project-block:hover img {
     transform: scale(1.05);
-    filter: brightness(0.6); /* Applies darkening effect only to the image */
+    filter: brightness(0.4); /* Adjust the brightness value to make it darker */
 }
 
 /* Hover Text Overlay */
@@ -136,6 +136,7 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center; 
     opacity: 0;
     padding: 0px 40px 40px 40px;
     wrap: text-wrap; 
