@@ -199,7 +199,7 @@ header nav ul li a:hover {
     display: flex;
     gap: 20px;
     transition: transform 0.5s ease; /* Smooth scrolling effect */
-    width: calc(300% + 40px); /* 3x visible width + gaps, ensuring three containers are visible */
+    width: 100%
 }
 
 /* Carousel Control Buttons */
@@ -225,12 +225,12 @@ header nav ul li a:hover {
 
 /* Left Control Button */
 .carousel-control.left {
-    left: 10px;
+    left: -50px;
 }
 
 /* Right Control Button */
 .carousel-control.right {
-    right: 10px;
+    right: -50px;
 }
 
 /* Subtle Hover Effect */
