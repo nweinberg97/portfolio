@@ -137,6 +137,8 @@ header nav ul li a:hover {
     align-items: center;
     justify-content: center;
     opacity: 0;
+    padding: 0px 40px 40px 40px;
+    wrap: text-wrap; 
     border-radius: 8px;
     transition: opacity 0.3s ease;
     z-index: 3; /* Higher layer to ensure visibility over darkened image */
@@ -148,7 +150,7 @@ header nav ul li a:hover {
 }
 
 /* Project Descriptions */
-.project-block p {
+.project-text {
     margin-top: 15px;
     font-size: 1rem;
     text-align: center;
