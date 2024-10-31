@@ -134,6 +134,13 @@ header nav ul li a:hover {
     color: #555; /* Slightly darker text for contrast */
 }
 
+
+.project-image {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 /* Link to Full Project Pages */
 .arrow-link {
     display: block;
