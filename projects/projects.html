@@ -148,48 +148,71 @@
     </footer>
 
 <script>
-   <script>
-    $(document).ready(function() {
-        // Hamburger menu toggle
-        $('.hamburger').on('click', function() {
-            $('.nav-links').toggleClass('open');
-        });
-
-        // Carousel setup
-        const carouselContainer = document.querySelector(".carousel-items");
-        const projectBlocks = document.querySelectorAll(".project-block");
-        const totalItems = projectBlocks.length;
-        const visibleItems = 3;  // Number of items visible at a time
-        let currentIndex = 0;
-
-        // Update Carousel Display Function
-        function updateCarousel() {
-            const offset = -currentIndex * (100 / visibleItems);
-            carouselContainer.style.transform = `translateX(${offset}%)`;
-        }
-
-        // Right (Next) button functionality
-        document.querySelector(".carousel-control.right").addEventListener("click", () => {
-            currentIndex++;
-            if (currentIndex > totalItems - visibleItems) {
-                currentIndex = 0; // Wrap around to start for continuous loop
-            }
-            updateCarousel();
-        });
-
-        // Left (Previous) button functionality
-        document.querySelector(".carousel-control.left").addEventListener("click", () => {
-            currentIndex--;
-            if (currentIndex < 0) {
-                currentIndex = totalItems - visibleItems; // Wrap around to end for continuous loop
-            }
-            updateCarousel();
-        });
-
-        // Initial setup
-        updateCarousel();
+  $(document).ready(function() {
+    // Hamburger menu toggle
+    $('.hamburger').on('click', function() {
+        $('.nav-links').toggleClass('open');
     });
-</script>
+
+    // Carousel setup
+    const carouselContainer = document.querySelector(".carousel-items");
+    const projectBlocks = document.querySelectorAll(".project-block");
+    const totalItems = projectBlocks.length;
+    const visibleItems = 3;
+    let currentIndex = 0;
+
+    // Clone the first and last few items to create a seamless loop
+    for (let i = 0; i < visibleItems; i++) {
+        const cloneStart = projectBlocks[i].cloneNode(true);
+        const cloneEnd = projectBlocks[totalItems - 1 - i].cloneNode(true);
+        carouselContainer.appendChild(cloneStart);
+        carouselContainer.insertBefore(cloneEnd, projectBlocks[0]);
+    }
+
+    // Recalculate carousel width and position
+    carouselContainer.style.width = `${(totalItems + visibleItems * 2) * 100 / visibleItems}%`;
+    carouselContainer.style.transform = `translateX(-${100 / visibleItems}%)`;
+
+    // Update the carousel display
+    function updateCarousel() {
+        carouselContainer.style.transition = 'transform 0.5s ease';
+        const offset = -(currentIndex + visibleItems) * (100 / visibleItems);
+        carouselContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Reset carousel to create a loop effect
+    function resetCarousel() {
+        carouselContainer.style.transition = 'none';
+        if (currentIndex === totalItems) {
+            currentIndex = 0;
+        } else if (currentIndex < 0) {
+            currentIndex = totalItems - 1;
+        }
+        const offset = -(currentIndex + visibleItems) * (100 / visibleItems);
+        carouselContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Right (Next) button functionality
+    document.querySelector(".carousel-control.right").addEventListener("click", () => {
+        currentIndex++;
+        updateCarousel();
+        if (currentIndex >= totalItems) {
+            setTimeout(resetCarousel, 500); // Wait for transition to end before resetting
+        }
+    });
+
+    // Left (Previous) button functionality
+    document.querySelector(".carousel-control.left").addEventListener("click", () => {
+        currentIndex--;
+        updateCarousel();
+        if (currentIndex < 0) {
+            setTimeout(resetCarousel, 500); // Wait for transition to end before resetting
+        }
+    });
+
+    // Initial display setup
+    updateCarousel();
+});
 
 </script>
 
