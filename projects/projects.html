@@ -147,7 +147,6 @@
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
 
-  <!-- JavaScript (hamburger menu functionality + carousel functionality) -->
 <script>
     $(document).ready(function() {
         // Hamburger menu toggle
@@ -156,35 +155,35 @@
         });
 
         // Selectors and initial setup
-    const carouselContainer = document.querySelector(".carousel-items");
-    const projectBlocks = document.querySelectorAll(".project-block");
-    const totalItems = projectBlocks.length;
-    const visibleItems = 3;  // Always show 3 containers
-    let currentIndex = 0;    // Start at the first container
+        const carouselContainer = document.querySelector(".carousel-items");
+        const projectBlocks = document.querySelectorAll(".project-block");
+        const totalItems = projectBlocks.length;
+        const visibleItems = 3;  // Always show 3 containers
+        let currentIndex = 0;    // Start at the first container
 
-    // Calculate and update the position for carousel movement
-    function updateCarousel() {
-        const offset = -currentIndex * (100 / visibleItems); // Offset for smooth shift of 1 container
-        carouselContainer.style.transform = `translateX(${offset}%)`;
-    }
+        // Update Carousel Display
+        function updateCarousel() {
+            const offset = -currentIndex * (100 / visibleItems); // Offset calculation for smooth shift
+            carouselContainer.style.transform = `translateX(${offset}%)`;
+        }
 
-    // Move Right (Next)
-    document.querySelector(".carousel-control.right").addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % totalItems; // Loop back to start after last
+        // Move Right (Next)
+        document.querySelector(".carousel-control.right").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % totalItems; // Increment index for right movement
+            updateCarousel();
+        });
+
+        // Move Left (Previous)
+        document.querySelector(".carousel-control.left").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Decrement index for left movement
+            updateCarousel();
+        });
+
+        // Initial display setup
         updateCarousel();
     });
-
-    // Move Left (Previous)
-    document.querySelector(".carousel-control.left").addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Loop back to end before first
-        updateCarousel();
-    });
-
-    // Initial display setup
-    updateCarousel();
-});
-        
 </script>
+
 
 
 </body>
