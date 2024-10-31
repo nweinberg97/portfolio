@@ -155,37 +155,35 @@
             $('.nav-links').toggleClass('open');
         });
 
-        // Carousel Functionality
-        const carouselContainer = document.querySelector(".carousel-items");
-        const leftButton = document.querySelector(".carousel-control.left");
-        const rightButton = document.querySelector(".carousel-control.right");
-        const projectBlocks = document.querySelectorAll(".project-block");
+        // Selectors and initial setup
+    const carouselContainer = document.querySelector(".carousel-items");
+    const projectBlocks = document.querySelectorAll(".project-block");
+    const totalItems = projectBlocks.length;
+    const visibleItems = 3;  // Always show 3 containers
+    let currentIndex = 0;    // Start at the first container
 
-        let currentIndex = 0;
-        const visibleItems = 3; // Number of items to show at a time
-        const totalItems = projectBlocks.length;
+    // Calculate and update the position for carousel movement
+    function updateCarousel() {
+        const offset = -currentIndex * (100 / visibleItems); // Offset for smooth shift of 1 container
+        carouselContainer.style.transform = `translateX(${offset}%)`;
+    }
 
-        // Update Carousel Display
-        function updateCarousel() {
-            const offset = -currentIndex * (100 / visibleItems);
-            carouselContainer.style.transform = `translateX(${offset}%)`;
-        }
-
-        // Move Left
-        leftButton.addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-            updateCarousel();
-        });
-
-        // Move Right
-        rightButton.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % totalItems;
-            updateCarousel();
-        });
-
-        // Initial Display
+    // Move Right (Next)
+    document.querySelector(".carousel-control.right").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalItems; // Loop back to start after last
         updateCarousel();
     });
+
+    // Move Left (Previous)
+    document.querySelector(".carousel-control.left").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Loop back to end before first
+        updateCarousel();
+    });
+
+    // Initial display setup
+    updateCarousel();
+});
+        
 </script>
 
 
