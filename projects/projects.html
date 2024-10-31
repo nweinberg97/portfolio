@@ -148,41 +148,73 @@
     </footer>
 
 <script>
-  $(document).ready(function() {
+    
+$(document).ready(function() {
     // Hamburger menu toggle
     $('.hamburger').on('click', function() {
         $('.nav-links').toggleClass('open');
     });
 
-    // Selectors and initial setup for Apps + Web Carousel only
+    // Selectors and initial setup
     const carouselContainer = document.querySelector("#apps-web-carousel .carousel-items");
-    const projectBlocks = document.querySelectorAll("#apps-web-carousel .project-block");
-    const totalItems = projectBlocks.length;
-    const visibleItems = 3;  // Always show 3 containers
-    let currentIndex = 0;    // Start at the first container
+    const projectBlocks = Array.from(document.querySelectorAll("#apps-web-carousel .project-block"));
+    const visibleItems = 3; // Number of items visible at once
+    let currentIndex = visibleItems; // Start at the duplicated first item
+    let totalItems = projectBlocks.length;
 
-    // Calculate and update the position for carousel movement
+    // Clone first and last few elements for continuous loop
+    projectBlocks.slice(0, visibleItems).forEach(item => {
+        let clone = item.cloneNode(true);
+        carouselContainer.appendChild(clone);
+    });
+    projectBlocks.slice(-visibleItems).forEach(item => {
+        let clone = item.cloneNode(true);
+        carouselContainer.insertBefore(clone, carouselContainer.firstChild);
+    });
+
+    // Update total items after cloning
+    totalItems = carouselContainer.children.length;
+
+    // Set initial position to start from the actual first item (offset by clone count)
+    carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
+
+    // Update Carousel Display
     function updateCarousel() {
-        const offset = -currentIndex * (100 / visibleItems); // Offset for smooth shift of 1 container
+        const offset = -(100 / visibleItems) * currentIndex;
+        carouselContainer.style.transition = 'transform 0.5s ease';
         carouselContainer.style.transform = `translateX(${offset}%)`;
     }
 
     // Move Right (Next)
     document.querySelector("#apps-web-carousel .carousel-control.right").addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % totalItems; // Loop back to start after last
+        currentIndex++;
         updateCarousel();
+
+        // Reset to real start after last clone
+        if (currentIndex >= totalItems - visibleItems) {
+            setTimeout(() => {
+                carouselContainer.style.transition = 'none';
+                currentIndex = visibleItems;
+                carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
+            }, 500);
+        }
     });
 
     // Move Left (Previous)
     document.querySelector("#apps-web-carousel .carousel-control.left").addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Loop back to end before first
+        currentIndex--;
         updateCarousel();
+
+        // Reset to real end after first clone
+        if (currentIndex < visibleItems) {
+            setTimeout(() => {
+                carouselContainer.style.transition = 'none';
+                currentIndex = totalItems - visibleItems * 2;
+                carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
+            }, 500);
+        }
     });
-
-    // Initial display setup
-    updateCarousel();
 });
-
 
 </script>
 
