@@ -96,12 +96,6 @@ header nav ul li a:hover {
     color: #333;
 }
 
-/* Project Grid Layout */
-.project-grid {
-    display: flex;
-    gap: 20px;
-}
-
 /* Individual Project Tiles */
 .project-block {
     background-color: #fff;
@@ -119,14 +113,14 @@ header nav ul li a:hover {
     width: 100%;
     border-radius: 8px;
     object-fit: cover;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    z-index: 1; /* Next layer */
+    transition: transform 0.3s ease;
+    z-index: 2; /* Next layer */
 }
 
 /* Darken and Zoom Image on Hover */
 .project-block:hover img {
     transform: scale(1.05);
-    filter: brightness(0.6); /* Darkening effect applies only to image */
+    filter: brightness(0.6); /* Applies darkening effect only to the image */
 }
 
 /* Hover Text Overlay */
@@ -143,10 +137,9 @@ header nav ul li a:hover {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to improve legibility */
     border-radius: 8px;
     transition: opacity 0.3s ease;
-    z-index: 2; /* Higher layer to ensure visibility over darkened image */
+    z-index: 3; /* Higher layer to ensure visibility over darkened image */
 }
 
 /* Show overlay text on hover */
@@ -185,7 +178,7 @@ header nav ul li a:hover {
 /* Carousel Container Styling */
 .carousel-container {
     position: relative;
-    overflow: visible; /* Hides overflow for seamless rotation */
+    overflow: hidden; /* Hides overflow for seamless rotation */
     width: 100%;
     max-width: 1000px; /* Maximum width of the carousel */
     margin: 0 auto;
@@ -225,12 +218,12 @@ header nav ul li a:hover {
 
 /* Left Control Button */
 .carousel-control.left {
-    left: -25px;
+    left: 1px;
 }
 
 /* Right Control Button */
 .carousel-control.right {
-    right: -25px;
+    right: 1px;
 }
 
 /* Subtle Hover Effect */
