@@ -185,7 +185,7 @@ header nav ul li a:hover {
 /* Carousel Container Styling */
 .carousel-container {
     position: relative;
-    overflow: hidden; /* Hides overflow for seamless rotation */
+    overflow: visible; /* Hides overflow for seamless rotation */
     width: 100%;
     max-width: 1000px; /* Maximum width of the carousel */
     margin: 0 auto;
@@ -225,12 +225,12 @@ header nav ul li a:hover {
 
 /* Left Control Button */
 .carousel-control.left {
-    left: -50px;
+    left: -25px;
 }
 
 /* Right Control Button */
 .carousel-control.right {
-    right: -50px;
+    right: -25px;
 }
 
 /* Subtle Hover Effect */
