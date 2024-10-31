@@ -210,7 +210,7 @@ header nav ul li a:hover {
     height: 40px; /* Fixed height for circle */
     border-radius: 50%; /* True circle shape */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Refined hover transition */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,10 +227,10 @@ header nav ul li a:hover {
     right: 10px;
 }
 
-/* Hover Effect */
+/* Subtle Hover Effect */
 .carousel-control:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
+    background-color: #0056b3; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Subtle hover scaling for a professional look */
 }
 
 /* Footer Styling */
