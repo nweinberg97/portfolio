@@ -101,8 +101,11 @@ header nav ul li a:hover {
     justify-content: center; /* Centers the items in the container */
     gap: 20px; /* Consistent spacing between items */
     flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
-    margin: 10px 60px; 
+    max-width: 1000px; /* Match the carousel width */
+    margin: 0 auto; /* Centers the grid horizontally */
+    padding-bottom: 20px; /* Adjusts spacing under the grid */
 }
+
 
 /* Individual Project Tiles */
 .project-block {
