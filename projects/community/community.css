@@ -121,7 +121,7 @@ header nav ul li a:hover {
 }
 
 .project-section:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /*Community Page Video Content */
@@ -139,7 +139,7 @@ header nav ul li a:hover {
 }
 
 .project-content:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /*Community Page Written Content */
@@ -155,12 +155,12 @@ header nav ul li a:hover {
 }
 
 .project-chunk:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
     
 /* Community Page Singular Paragraph Headers */
 .project-text h3 {
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 1.4rem;
     text-align: left;
     color: #555;
@@ -168,7 +168,7 @@ header nav ul li a:hover {
 
 /* Community Page Singular Paragraph Headers */
 .project-text p {
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 1rem;
     text-align: left;
     color: #555;
