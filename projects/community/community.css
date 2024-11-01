@@ -95,11 +95,13 @@ header nav ul li a:hover {
 .project-section {
     background-color: #fff;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     transition: transform 0.3s ease;
+    max-width: 600px;
 }
 
 /* Section Titles (Hoops 4 Health, Helping Hearts, Health Day) */
@@ -115,6 +117,7 @@ header nav ul li a:hover {
     width: 100%;
     border-radius: 8px;
     object-fit: cover;
+    justify-content: center;
 }
 
 .project-section:hover {
@@ -125,11 +128,15 @@ header nav ul li a:hover {
 .project-content{
     background-color: #fff;
     padding: 20px;
+    margin-top: 10px
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     transition: transform 0.3s ease;
+    align-items: center;
+    justify-content: center; 
+    max-width: 600px; 
 }
 
 .project-content:hover {
@@ -140,11 +147,13 @@ header nav ul li a:hover {
 .project-chunk {
     background-color: #fff;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     transition: transform 0.3s ease;
+    max-width: 600px; 
 }
 
 .project-chunk:hover {
@@ -155,7 +164,7 @@ header nav ul li a:hover {
 .project-text h3 {
     margin-top: 15px;
     font-size: 1.4rem;
-    text-align: center;
+    text-align: left;
     color: #555;
 }
 
@@ -163,7 +172,7 @@ header nav ul li a:hover {
 .project-text p {
     margin-top: 15px;
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
     color: #555;
 }
 
@@ -172,7 +181,7 @@ header nav ul li a:hover {
     position: relative;
     overflow: hidden; /* Hides overflow for seamless rotation */
     width: 100%;
-    max-width: 1000px; /* Maximum width of the carousel */
+    max-width: 1200px; /* Maximum width of the carousel */
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -190,7 +199,7 @@ header nav ul li a:hover {
 /* Individual Image Styling within Carousel */
 .carousel-items img {
     width: calc((100% - 40px) / 3); /* Divides space for three images with 20px gaps */
-    height: 300px; /* Fixed height for uniformity */
+    height: 400px; /* Fixed height for uniformity */
     object-fit: cover; /* Ensures images fill the area without stretching */
     border-radius: 8px; /* Optional: rounds the corners */
 }
