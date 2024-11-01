@@ -98,42 +98,77 @@ header nav ul li a:hover {
     color: #333;
 }
 
-/* Project Grid Layout */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-    gap: 30px; /* Space between project tiles */
+    display: flex;
+    justify-content: center; /* Centers the items in the container */
+    gap: 20px; /* Consistent spacing between items */
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    max-width: 1000px; /* Match the carousel width */
+    margin: 0 auto; /* Centers the grid horizontally */
+    padding-bottom: 20px; /* Adjusts spacing under the grid */
 }
+
 
 /* Individual Project Tiles */
 .project-block {
-    background-color: #fff; /* White container */
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: box-shadow 0.3s ease; /* Smooth hover effect */
-}
-
-/* Hover Effect for Project Tiles */
-.project-block:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    flex: 0 0 calc(33.333% - 13.33px); /* Each project tile takes up one-third of the visible space */
+    z-index: 1; /* Base layer */
 }
 
 /* Project Images */
 .project-block img {
-    width: 100%; /* Makes the image fill the container */
+    width: 100%;
     border-radius: 8px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+    z-index: 2; /* Next layer */
+}
+
+/* Darken and Zoom Image on Hover */
+.project-block:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.2); /* Adjust the brightness value to make it darker */
+}
+
+/* Hover Text Overlay */
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    opacity: 0;
+    padding: 0px 40px 40px 40px;
+    wrap: text-wrap; 
+    border-radius: 8px;
+    z-index: 3; /* Higher layer to ensure visibility over darkened image */
+}
+
+/* Show overlay text on hover */
+.project-block:hover .hover-text {
+    opacity: 1;
 }
 
 /* Project Descriptions */
-.project-block p {
+.project-text {
     margin-top: 15px;
     font-size: 1rem;
     text-align: center;
-    color: #555; /* Slightly darker text for contrast */
+    color: #555;
 }
-
 
 .project-image {
     width: 100%;
@@ -161,18 +196,6 @@ header nav ul li a:hover {
     margin-bottom: 60px; /* Space between sections */
 }
 
-/* Hide hover text by default */
-.hover-text {
-    display: none;
-    color: #007BFF; /* Highlight color for hover text */
-    font-size: 0.9rem;
-    margin-top: 10px;
-}
-
-/* Show hover text when hovering over the project block */
-.project-block:hover .hover-text {
-    display: block;
-}
 
 /* Footer Styling */
 footer {
