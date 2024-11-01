@@ -196,8 +196,8 @@ header nav ul li a:hover {
 
 /* Individual Image Styling within Carousel */
 .carousel-items img {
-    width: calc((100% - 40px) / 2.8); /* Divides space for three images with 20px gaps */
-    height: 400px; /* Fixed height for uniformity */
+    width: calc((100% - 40px) / 2.5); /* Divides space for three images with 20px gaps */
+    height: 350px; /* Fixed height for uniformity */
     object-fit: cover; /* Ensures images fill the area without stretching */
     border-radius: 8px; /* Optional: rounds the corners */
 }
