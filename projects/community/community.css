@@ -74,120 +74,150 @@ header nav ul li a:hover {
     transform: scale(1.1); /* Grows slightly on hover */
 }
 
-/* Page Title Styling */
-#community-projects h1 {
+/* Main Content Section */
+.community-page {
+    margin-top: 62px;
+    margin-bottom: 10px;
+    padding: 0px 20px;
+    background-color: #f9f9f9;
+}
+
+/*Community Page Header */
+.community-header {
     text-align: center;
-    font-size: 2rem;
-    margin: 50px 0 20px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
     color: #333;
 }
 
-/* Project Section Container */
-.project {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 20px auto;
+/* Community Page Project Tiles */
+.project-section {
+    background-color: #fff;
     padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-/* Combined Header and Image Container */
-.project > .background-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Section Titles (Hoops 4 Health, Helping Hearts, Health Day) */
+.project-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
 }
-
-.project > .background-section img,
-.project > .background-section iframe {
+    
+/* Section Images */
+.project-section img {
     width: 100%;
-    max-width: 500px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
+    object-fit: cover;
 }
 
-/* Centering Project Header Text */
-.project h2 {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #333;
-    margin-top: 10px;
+.project-section:hover {
+    transform: scale(1.1);
 }
 
-/* Video Caption Styling */
-.project iframe + p {
+/*Community Page Video Content */
+.project-content{
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.project-content:hover {
+    transform: scale(1.1);
+}
+
+/*Community Page Written Content */
+.project-chunk {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.project-chunk:hover {
+    transform: scale(1.1);
+}
+    
+/* Community Page Singular Paragraph Headers */
+.project-text h3 {
+    margin-top: 15px;
+    font-size: 1.4rem;
     text-align: center;
-    font-size: 0.9rem;
     color: #555;
-    margin-top: 8px;
-    max-width: 500px;
 }
 
-/* Text Content Container */
-.section-content {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 15px 0;
-    line-height: 1.6;
-}
-
-.section-content h2 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-.section-content p, 
-.section-content ul {
+/* Community Page Singular Paragraph Headers */
+.project-text p {
+    margin-top: 15px;
     font-size: 1rem;
+    text-align: center;
     color: #555;
-    text-align: left;
 }
 
-/* Carousel Styling */
-.carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
+/* Carousel Container Styling */
+.carousel-container {
     position: relative;
-}
-
-.carousel img {
+    overflow: hidden; /* Hides overflow for seamless rotation */
     width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Maximum width of the carousel */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px; /* Adjust as needed to fit shadow */
 }
 
-/* Carousel Navigation Buttons */
-.slick-prev,
-.slick-next {
-    background-color: #555;
-    color: white;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 1.2rem;
+/* Carousel Items Styling */
+.carousel-items {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease; /* Smooth scrolling effect */
+    width: 100%
+}
+
+/* Carousel Control Buttons */
+.carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
     cursor: pointer;
+    width: 40px; /* Fixed width for circle */
+    height: 40px; /* Fixed height for circle */
+    border-radius: 50%; /* True circle shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Refined hover transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
 }
 
-.slick-prev {
-    left: -35px;
+/* Left Control Button */
+.carousel-control.left {
+    left: 1px;
 }
 
-.slick-next {
-    right: -35px;
+/* Right Control Button */
+.carousel-control.right {
+    right: 1px;
 }
+
 /* Footer Styling */
 footer {
     margin-top: auto; /* Pushes the footer to the bottom */
