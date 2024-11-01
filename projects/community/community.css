@@ -184,7 +184,15 @@ header nav ul li a:hover {
     display: flex;
     gap: 20px;
     transition: transform 0.5s ease; /* Smooth scrolling effect */
-    width: 100%
+    width: 100%;
+}
+
+/* Individual Image Styling within Carousel */
+.carousel-items img {
+    width: calc((100% - 40px) / 3); /* Divides space for three images with 20px gaps */
+    height: 300px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures images fill the area without stretching */
+    border-radius: 8px; /* Optional: rounds the corners */
 }
 
 /* Carousel Control Buttons */
@@ -217,6 +225,14 @@ header nav ul li a:hover {
 .carousel-control.right {
     right: 1px;
 }
+
+/* Subtle Hover Effect */
+.carousel-control:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+    transform: translateY(-50%) scale(1.05); /* Adds translateY(-50%) to maintain vertical alignment */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
 
 /* Footer Styling */
 footer {
