@@ -196,7 +196,7 @@ header nav ul li a:hover {
     max-width: 1000px; /* Maximum width of the carousel */
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    justify-content: center;
     padding-bottom: 20px; /* Adjust as needed to fit shadow */
 }
 
