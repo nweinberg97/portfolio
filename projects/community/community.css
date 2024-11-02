@@ -105,7 +105,7 @@ header nav ul li a:hover {
 
 /* Section Titles (Hoops 4 Health, Helping Hearts, Health Day) */
 .project-section h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -160,7 +160,7 @@ header nav ul li a:hover {
     
 /* Community Page Singular Paragraph Headers */
 .project-text h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: left;
     color: #555;
 }
@@ -169,15 +169,19 @@ header nav ul li a:hover {
 .project-text p {
     margin-top: 7px;
     margin-bottom: 10px; 
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: left;
     color: #555;
 }
 
 .project-text ul li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: left;
     color: #555;
+}
+
+.divider {
+    color: #E0E0E0;
 }
 
 /* Carousel Container Styling */
