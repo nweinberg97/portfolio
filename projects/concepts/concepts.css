@@ -137,6 +137,22 @@ header nav ul li a:hover {
     max-width: 600px; 
 }
 
+/* Section Images */
+.project-content img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    justify-content: center;
+}
+
+/* Section Images */
+.project-content iframe {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    justify-content: center;
+}
+
 .project-content:hover {
     transform: scale(1.05);
 }
@@ -177,6 +193,11 @@ header nav ul li a:hover {
     font-size: 0.9rem;
     text-align: left;
     color: #555;
+}
+
+.project-text ul {
+    margin-top: 7px;
+    margin-bottom: 7px; 
 }
 
 .divider {
