@@ -232,29 +232,35 @@ header nav ul li a:hover {
 
 /* Individual Image Styling within Image Carousel */
 .project-block-images {
-    min-width: 100%; /* Each image takes up the full carousel width */
-    flex: 0 0 100%; /* Prevents items from shrinking */
-    height: 350px;
+    min-width: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-block-images img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover; /* Ensures image fills the area */
     border-radius: 8px;
 }
 
 /* Individual Video Styling within Video Carousel */
 .project-block-videos {
-    min-width: 100%; /* Each video takes up the full carousel width */
-    flex: 0 0 100%; /* Prevents items from shrinking */
-    height: 350px;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .project-block-videos iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 8px;
 }
 
