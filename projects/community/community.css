@@ -87,7 +87,7 @@ header nav ul li a:hover {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 25px;
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     color: #333;
 }
 
@@ -105,7 +105,7 @@ header nav ul li a:hover {
 
 /* Section Titles (Hoops 4 Health, Helping Hearts, Health Day) */
 .project-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 15px;
@@ -160,7 +160,7 @@ header nav ul li a:hover {
     
 /* Community Page Singular Paragraph Headers */
 .project-text h3 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     text-align: left;
     color: #555;
 }
@@ -169,13 +169,13 @@ header nav ul li a:hover {
 .project-text p {
     margin-top: 7px;
     margin-bottom: 10px; 
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: left;
     color: #555;
 }
 
 .project-text ul li {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: left;
     color: #555;
 }
@@ -202,8 +202,8 @@ header nav ul li a:hover {
 
 /* Individual Image Styling within Carousel */
 .carousel-items img {
-    width: calc((100% - 40px) / 2.5); /* Divides space for three images with 20px gaps */
-    height: 350px; /* Fixed height for uniformity */
+    width: 100%; /* Divides space for three images with 20px gaps */
+    height: auto;
     object-fit: cover; /* Ensures images fill the area without stretching */
     border-radius: 8px; /* Optional: rounds the corners */
 }
