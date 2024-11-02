@@ -73,160 +73,119 @@ header nav ul li a:hover {
     color: #5A9BD5; /* Softer blue */
     transform: scale(1.1); /* Grows slightly on hover */
 }
-/* Main Project Header */
-.main-project-header {
+/* Main Content Section */
+.concepts-page {
+    margin-top: 62px;
+    margin-bottom: 10px;
+    padding: 0px 20px;
+    background-color: #f9f9f9;
+}
+
+/*Community Page Header */
+.concepts-header {
     text-align: center;
-    margin-top: 100px; /* Space to account for the fixed header */
-    margin-bottom: 20px;
-    font-size: 1.7rem; /* Larger font for the main title */
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    color: #333;
 }
 
-/* Section Styling */
-.projects-page {
-    padding: 20px; /* Space around the main content */
-    background-color: #f9f9f9; /* Slightly off-white for subtle contrast */
-}
-
-.subproj-header {
-    text-align: center;
-    padding: 10px; 
-}
-
-.subproj-section {
-    background: white;
+/* Community Page Project Tiles */
+.project-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto; /* Centers the div horizontally */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px 30px;
-    max-width: 800px;
-    margin: 10px auto;
-    line-height: 1.5; /* Slightly increased line height for better readability */
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    max-width: 600px;
+    align-items: center;
+    justify-content: center; 
 }
 
-section {
-    margin-bottom: 40px; /* Space between each project section */
-}
-
-.image-carousel-container {
-    display: flex;
-    align-items: center; /* Center aligns the buttons with the carousel */
-    position: relative;
-    max-width: 500px;
-    height: auto;
-    margin: 0 auto;
-}
-
-.video-carousel-container {
-    display: flex;
-    align-items: center; /* Center-aligns the buttons with the carousel */
-    position: relative;
-    max-width: 560px; /* Adjusted to fit video width comfortably */
-    margin: 0 auto; /* Centers the carousel on the page */
-}
-
-.video-carousel {
-    display: flex;
-    gap: 20px; /* Space between videos */
-    overflow: hidden; /* Hides any overflow for a clean look */
-    scroll-behavior: smooth; /* Smooth scrolling when using buttons */
-    width: 100%; /* Keeps the carousel within the container */
-}
-
-.video-item {
-    flex: 0 0 100%; /* Each video takes up the full width of the carousel container */
-    max-width: 100%; /* Ensures videos don't overflow their container */
-    position: relative;
-    display: flex;
-    justify-content: center; /* Centers the iframe within the item */
-}
-
-.video-item iframe {
-    width: 100%; /* Makes the iframe responsive */
-    height: auto; /* Automatically adjusts height to maintain aspect ratio */
-    aspect-ratio: 16/9; /* Ensures the videos maintain a 16:9 ratio */
-    border-radius: 8px; /* Rounds the corners for consistency with other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for depth */
-}
-
-.carousel-btn {
-    background: #007BFF;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-
-.prev {
-    left: -20px; /* Positions the 'prev' button to the left, adjusted for new container size */
-}
-
-.next {
-    right: -20px; /* Positions the 'next' button to the right, adjusted for new container size */
-}
-
-.video-item p {
+/* Section Titles (Hoops 4 Health, Helping Hearts, Health Day) */
+.project-section h2 {
+    font-size: 1.4rem;
     text-align: center;
-    font-size: 0.9rem; /* Adjusted font size for readability */
-    color: #555; /* Softer color for captions */
-    margin-top: 8px; /* Space between video and caption */
-    max-width: 560px; /* Aligns caption width with video width */
-    margin: 0 auto; /* Centers the caption */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #333;
 }
-
-
-/* Section Content Adjustment */
-.section-content {
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px 30px;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.5; /* Slightly increased line height for better readability */
-}
-
-/* Paragraph Spacing */
-.section-content p {
-    margin-bottom: 10px; /* Adds a smaller space between paragraphs */
-}
-
-/* List Item Spacing */
-.section-content ul {
-    margin-bottom: 10px; /* Adds space below lists */
-}
-
-.section-content li {
-    margin-bottom: 6px; /* Adds subtle space between list items */
-}
-
-/* Header Spacing */
-.section-content h3 {
-    margin-top: 15px; /* Space above each header */
-    margin-bottom: 8px; /* Space below each header */
-}
-
-/* Centering Images */
-.centered-image {
-    display: block;
-    margin: 20px auto;
+    
+/* Section Images */
+.project-section img {
     width: 100%;
-    max-width: 500px;
-    height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    justify-content: center;
 }
 
-/* Divider */
+.project-section:hover {
+    transform: scale(1.05);
+}
+
+/*Community Page Video Content */
+.project-content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto; /* Centers the div horizontally */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    align-items: center;
+    justify-content: center; 
+    max-width: 600px; 
+}
+
+.project-content:hover {
+    transform: scale(1.05);
+}
+
+/*Community Page Written Content */
+.project-chunk {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto; /* Centers the div horizontally */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    max-width: 600px; 
+    align-items: center;
+    justify-content: center; 
+}
+
+.project-chunk:hover {
+    transform: scale(1.05);
+}
+    
+/* Community Page Singular Paragraph Headers */
+.project-text h3 {
+    font-size: 1.2rem;
+    text-align: left;
+    color: #555;
+}
+
+/* Community Page Singular Paragraph Headers */
+.project-text p {
+    margin-top: 7px;
+    margin-bottom: 10px; 
+    font-size: 0.9rem;
+    text-align: left;
+    color: #555;
+}
+
+.project-text ul li {
+    font-size: 0.9rem;
+    text-align: left;
+    color: #555;
+}
+
 .divider {
-    border: none;
-    border-top: 1px solid #ddd; /* Light border for separation */
-    margin: 40px 0; /* Space around the divider */
+    color: #E0E0E0;
 }
-
 
 /* Footer Styling */
 footer {
