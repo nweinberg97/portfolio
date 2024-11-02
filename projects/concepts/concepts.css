@@ -100,8 +100,6 @@ header nav ul li a:hover {
     transition: box-shadow 0.3s ease;
     transition: transform 0.3s ease;
     max-width: 600px;
-    align-items: center;
-    justify-content: center; 
 }
 
 /* Section Titles (Hoops 4 Health, Helping Hearts, Health Day) */
@@ -134,8 +132,8 @@ header nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     transition: transform 0.3s ease;
+    justify-content: center;
     align-items: center;
-    justify-content: center; 
     max-width: 600px; 
 }
 
@@ -153,8 +151,6 @@ header nav ul li a:hover {
     transition: box-shadow 0.3s ease;
     transition: transform 0.3s ease;
     max-width: 600px; 
-    align-items: center;
-    justify-content: center; 
 }
 
 .project-chunk:hover {
