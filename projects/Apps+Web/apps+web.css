@@ -73,160 +73,216 @@ header nav ul li a:hover {
     color: #5A9BD5; /* Softer blue */
     transform: scale(1.1); /* Grows slightly on hover */
 }
-/* Main Project Header */
-.main-project-header {
+
+/* Main Content Section */
+.apps+web-page {
+    margin-top: 62px;
+    margin-bottom: 10px;
+    padding: 0px 20px;
+    background-color: #f9f9f9;
+}
+
+/*Apps+Web Page Header */
+.apps+web-header {
     text-align: center;
-    margin-top: 100px; /* Space to account for the fixed header */
-    margin-bottom: 20px;
-    font-size: 1.7rem; /* Larger font for the main title */
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    color: #333;
 }
 
-/* Section Styling */
-.projects-page {
-    padding: 20px; /* Space around the main content */
-    background-color: #f9f9f9; /* Slightly off-white for subtle contrast */
-}
-
-.subproj-header {
-    text-align: center;
-    padding: 10px; 
-}
-
-.subproj-section {
-    background: white;
+/* Apps+Web Page Project Tiles */
+.project-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto; /* Centers the div horizontally */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    max-width: 600px;
+}
+
+/* Section Titles (Hoops 4 Health, Helping Hearts, Health Day) */
+.project-section h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #333;
+}
+    
+/* Section Images */
+.project-section img {
+    width: 100%;
     border-radius: 8px;
-    padding: 20px 30px;
-    max-width: 800px;
-    margin: 10px auto;
-    line-height: 1.5; /* Slightly increased line height for better readability */
+    object-fit: cover;
+    justify-content: center;
 }
 
-section {
-    margin-bottom: 40px; /* Space between each project section */
+.project-section:hover {
+    transform: scale(1.05);
 }
 
-.image-carousel-container {
-    display: flex;
-    align-items: center; /* Center aligns the buttons with the carousel */
+/*Community Page Video Content */
+.project-content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto; /* Centers the div horizontally */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px; 
+}
+
+/* Section Images */
+.project-content img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    justify-content: center;
+}
+
+/* Section Images */
+.project-content h3 {
+    padding-bottom: 12px;
+}
+
+
+/* Section Images */
+.project-content iframe {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    justify-content: center;
+}
+
+.project-content:hover {
+    transform: scale(1.05);
+}
+
+/*Community Page Written Content */
+.project-chunk {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto; /* Centers the div horizontally */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    max-width: 600px; 
+}
+
+.project-chunk:hover {
+    transform: scale(1.05);
+}
+    
+/* Community Page Singular Paragraph Headers */
+.project-text h3 {
+    font-size: 1.2rem;
+    text-align: left;
+    color: #555;
+}
+
+/* Community Page Singular Paragraph Headers */
+.project-text p {
+    margin-top: 7px;
+    margin-bottom: 10px; 
+    font-size: 0.9rem;
+    text-align: left;
+    color: #555;
+}
+
+.project-text ul li {
+    font-size: 0.9rem;
+    text-align: left;
+    color: #555;
+}
+
+.project-text ul {
+    margin-top: 7px;
+    margin-bottom: 7px; 
+}
+
+.divider {
+    color: #E0E0E0;
+}
+
+/* Carousel Container Styling */
+.carousel-container {
     position: relative;
-    max-width: 500px;
-    height: auto;
+    overflow: hidden; /* Hides overflow for seamless rotation */
+    width: 100%;
+    max-width: 1000px; /* Maximum width of the carousel */
     margin: 0 auto;
-}
-
-.video-carousel-container {
     display: flex;
-    align-items: center; /* Center-aligns the buttons with the carousel */
-    position: relative;
-    max-width: 560px; /* Adjusted to fit video width comfortably */
-    margin: 0 auto; /* Centers the carousel on the page */
+    justify-content: center;
+    padding-bottom: 20px; /* Adjust as needed to fit shadow */
 }
 
-.video-carousel {
+/* Carousel Items Styling */
+.carousel-items {
     display: flex;
-    gap: 20px; /* Space between videos */
-    overflow: hidden; /* Hides any overflow for a clean look */
-    scroll-behavior: smooth; /* Smooth scrolling when using buttons */
-    width: 100%; /* Keeps the carousel within the container */
+    gap: 20px;
+    transition: transform 0.5s ease; /* Smooth scrolling effect */
+    width: 100%
 }
 
-.video-item {
-    flex: 0 0 100%; /* Each video takes up the full width of the carousel container */
-    max-width: 100%; /* Ensures videos don't overflow their container */
-    position: relative;
-    display: flex;
-    justify-content: center; /* Centers the iframe within the item */
+/* Individual Image Styling within Carousel */
+.project-block img {
+    width: calc((100% - 40px) / 3);
+    height: 350px;
+    object-fit: cover; /* Ensures images fill the area without stretching */
+    border-radius: 8px; /* Optional: rounds the corners */
 }
 
-.video-item iframe {
-    width: 100%; /* Makes the iframe responsive */
-    height: auto; /* Automatically adjusts height to maintain aspect ratio */
-    aspect-ratio: 16/9; /* Ensures the videos maintain a 16:9 ratio */
-    border-radius: 8px; /* Rounds the corners for consistency with other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for depth */
+.project-block iframe {
+    width: calc((100% - 40px) / 3);
+    height: 350px;
+    object-fit: cover; /* Ensures images fill the area without stretching */
+    border-radius: 8px; /* Optional: rounds the corners */
 }
 
-.carousel-btn {
-    background: #007BFF;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
+/* Carousel Control Buttons */
+.carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    cursor: pointer;
+    width: 40px; /* Fixed width for circle */
+    height: 40px; /* Fixed height for circle */
+    border-radius: 50%; /* True circle shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Refined hover transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
 }
 
-.prev {
-    left: -20px; /* Positions the 'prev' button to the left, adjusted for new container size */
+/* Left Control Button */
+.carousel-control.left {
+    left: 1px;
 }
 
-.next {
-    right: -20px; /* Positions the 'next' button to the right, adjusted for new container size */
+/* Right Control Button */
+.carousel-control.right {
+    right: 1px;
 }
 
-.video-item p {
-    text-align: center;
-    font-size: 0.9rem; /* Adjusted font size for readability */
-    color: #555; /* Softer color for captions */
-    margin-top: 8px; /* Space between video and caption */
-    max-width: 560px; /* Aligns caption width with video width */
-    margin: 0 auto; /* Centers the caption */
+/* Subtle Hover Effect */
+.carousel-control:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+    transform: translateY(-50%) scale(1.05); /* Adds translateY(-50%) to maintain vertical alignment */
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
-
-
-/* Section Content Adjustment */
-.section-content {
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px 30px;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.5; /* Slightly increased line height for better readability */
-}
-
-/* Paragraph Spacing */
-.section-content p {
-    margin-bottom: 10px; /* Adds a smaller space between paragraphs */
-}
-
-/* List Item Spacing */
-.section-content ul {
-    margin-bottom: 10px; /* Adds space below lists */
-}
-
-.section-content li {
-    margin-bottom: 6px; /* Adds subtle space between list items */
-}
-
-/* Header Spacing */
-.section-content h3 {
-    margin-top: 15px; /* Space above each header */
-    margin-bottom: 8px; /* Space below each header */
-}
-
-/* Centering Images */
-.centered-image {
-    display: block;
-    margin: 20px auto;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Divider */
-.divider {
-    border: none;
-    border-top: 1px solid #ddd; /* Light border for separation */
-    margin: 40px 0; /* Space around the divider */
-}
-
 
 /* Footer Styling */
 footer {
