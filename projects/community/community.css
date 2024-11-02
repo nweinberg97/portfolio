@@ -125,7 +125,7 @@ header nav ul li a:hover {
 }
 
 /*Community Page Video Content */
-.project-content{
+.project-content {
     background-color: #fff;
     padding: 20px;
     margin: 20px auto; /* Centers the div horizontally */
@@ -185,7 +185,7 @@ header nav ul li a:hover {
     position: relative;
     overflow: hidden; /* Hides overflow for seamless rotation */
     width: 100%;
-    max-width: 600px; /* Maximum width of the carousel */
+    max-width: 1000px; /* Maximum width of the carousel */
     margin: 0 auto;
     display: flex;
     justify-content: center;
