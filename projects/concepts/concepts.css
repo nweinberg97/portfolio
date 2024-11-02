@@ -146,6 +146,12 @@ header nav ul li a:hover {
 }
 
 /* Section Images */
+.project-content h3 {
+    padding-bottom: 12px;
+}
+
+
+/* Section Images */
 .project-content iframe {
     width: 100%;
     border-radius: 8px;
