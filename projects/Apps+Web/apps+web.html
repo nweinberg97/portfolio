@@ -305,77 +305,57 @@
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript (hamburger menu functionality) -->
- <script>
-    
+<script>
 $(document).ready(function() {
     // Hamburger menu toggle
     $('.hamburger').on('click', function() {
         $('.nav-links').toggleClass('open');
     });
 
-    // Selectors and initial setup
-    const carouselContainer = document.querySelector("#apps-web-carousel .carousel-items");
-    const projectBlocks = Array.from(document.querySelectorAll("#apps-web-carousel .project-block"));
-    const visibleItems = 3; // Number of items visible at once
-    let currentIndex = visibleItems; // Start at the duplicated first item
-    let totalItems = projectBlocks.length;
+    // Carousel logic for images
+    const imageCarousel = document.querySelector(".carousel-items-images");
+    const imageItems = Array.from(imageCarousel.children);
+    let imageIndex = 0;
 
-    // Clone first and last few elements for continuous loop
-    projectBlocks.slice(0, visibleItems).forEach(item => {
-        let clone = item.cloneNode(true);
-        carouselContainer.appendChild(clone);
-    });
-    projectBlocks.slice(-visibleItems).forEach(item => {
-        let clone = item.cloneNode(true);
-        carouselContainer.insertBefore(clone, carouselContainer.firstChild);
-    });
-
-    // Update total items after cloning
-    totalItems = carouselContainer.children.length;
-
-    // Set initial position to start from the actual first item (offset by clone count)
-    carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
-
-    // Update Carousel Display
-    function updateCarousel() {
-        const offset = -(100 / visibleItems) * currentIndex;
-        carouselContainer.style.transition = 'transform 0.5s ease';
-        carouselContainer.style.transform = `translateX(${offset}%)`;
+    function updateImageCarousel() {
+        const offset = -(100 * imageIndex); // Move by 100% each time
+        imageCarousel.style.transition = 'transform 0.5s ease';
+        imageCarousel.style.transform = `translateX(${offset}%)`;
     }
 
-    // Move Right (Next)
-    document.querySelector("#apps-web-carousel .carousel-control.right").addEventListener("click", () => {
-        currentIndex++;
-        updateCarousel();
-
-        // Reset to real start after last clone
-        if (currentIndex >= totalItems - visibleItems) {
-            setTimeout(() => {
-                carouselContainer.style.transition = 'none';
-                currentIndex = visibleItems;
-                carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
-            }, 500);
-        }
+    document.querySelector(".carousel-container-images .carousel-control.right").addEventListener("click", () => {
+        imageIndex = (imageIndex + 1) % imageItems.length; // Loop back to start if at the end
+        updateImageCarousel();
     });
 
-    // Move Left (Previous)
-    document.querySelector("#apps-web-carousel .carousel-control.left").addEventListener("click", () => {
-        currentIndex--;
-        updateCarousel();
+    document.querySelector(".carousel-container-images .carousel-control.left").addEventListener("click", () => {
+        imageIndex = (imageIndex - 1 + imageItems.length) % imageItems.length; // Loop to end if at the start
+        updateImageCarousel();
+    });
 
-        // Reset to real end after first clone
-        if (currentIndex < visibleItems) {
-            setTimeout(() => {
-                carouselContainer.style.transition = 'none';
-                currentIndex = totalItems - visibleItems * 2;
-                carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
-            }, 500);
-        }
+    // Carousel logic for videos
+    const videoCarousel = document.querySelector(".carousel-items-videos");
+    const videoItems = Array.from(videoCarousel.children);
+    let videoIndex = 0;
+
+    function updateVideoCarousel() {
+        const offset = -(100 * videoIndex); // Move by 100% each time
+        videoCarousel.style.transition = 'transform 0.5s ease';
+        videoCarousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    document.querySelector(".carousel-container-videos .carousel-control.right").addEventListener("click", () => {
+        videoIndex = (videoIndex + 1) % videoItems.length; // Loop back to start if at the end
+        updateVideoCarousel();
+    });
+
+    document.querySelector(".carousel-container-videos .carousel-control.left").addEventListener("click", () => {
+        videoIndex = (videoIndex - 1 + videoItems.length) % videoItems.length; // Loop to end if at the start
+        updateVideoCarousel();
     });
 });
-
 </script>
+
 
 </body>
 </html>
