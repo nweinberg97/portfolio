@@ -74,18 +74,31 @@ header nav ul li a:hover {
     transform: scale(1.1); /* Grows slightly on hover */
 }
 
-#about {
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin: 20px auto; 
+}
+
+.about-section.alternate .about-chunk {
+    flex-direction: row-reverse; 
+}
+
+.about-page {
     padding: 10px;
     margin: 80px 20px;
     text-align: center;
 }
 
 /* About Section */
-.about-page {
+.about-header {
     padding: 20px 20px;
+    margin: 20px auto;
 }
 
-.about-section {
+.about-chunk {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
@@ -97,9 +110,12 @@ header nav ul li a:hover {
     padding: 20px;
 }
 
-/* Alternating layout */
-.about-section:nth-child(even) {
-    flex-direction: row-reverse;
+.about-text p{
+    color: #333333;
+    font-size: 1rem;
+    text-align: left; 
+    flex: 2; 
+    line-height: 1.4;
 }
 
 .centered-image {
@@ -112,15 +128,7 @@ header nav ul li a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.about-section p {
-    flex: 2;
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin: 0 20px;
-    text-align: justify;
-}
-
-.linkedin-link {
+.about-content {
     display: flex;
     flex-direction: column; /* Stacks items vertically */
     align-items: center; /* Centers items horizontally */
@@ -131,7 +139,7 @@ header nav ul li a:hover {
 }
 
 .contact-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #333;
     margin-bottom: 10px; /* Space between paragraph and button */
 }
@@ -142,18 +150,8 @@ header nav ul li a:hover {
     transition: color 0.3s ease;
 }
 
-.linkedin-link {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
 .calendly-link:hover {
     color: #005983; /* Darker blue on hover */
-}
-
-.linkedin-link a:hover {
-    color: white;
 }
 
 .linkedin-button {
