@@ -78,7 +78,7 @@ header nav ul li a:hover {
 .about-section {
     display: flex;
     justify-content: center;
-    margin: 20px 400px; 
+    margin: 20px 250px; 
 }
 
 .about-section.alternate .about-chunk {
@@ -101,9 +101,6 @@ header nav ul li a:hover {
 .about-chunk {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
-    margin-left: 80px;
-    margin-right: 80px; 
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -117,7 +114,7 @@ header nav ul li a:hover {
     flex: 2; 
     line-height: 1.4;
     text-wrap: wrap; 
-    padding: 0px 20px; 
+    padding: 0px 10px; 
 }
 
 .centered-image {
