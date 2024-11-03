@@ -212,7 +212,7 @@ header nav ul li a:hover {
 }
 
 /* Carousel Container Styling */
-.carousel-container {
+.carousel-container-images {
     position: relative;
     overflow: hidden; /* Hides overflow for seamless rotation */
     width: 100%;
@@ -222,6 +222,20 @@ header nav ul li a:hover {
     justify-content: center;
     padding-bottom: 20px; /* Adjust as needed to fit shadow */
 }
+
+
+/* Carousel Container Styling */
+.carousel-container-videos {
+    position: relative;
+    overflow: hidden; /* Hides overflow for seamless rotation */
+    width: 100%;
+    max-width: 600px; /* Maximum width of the carousel */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px; /* Adjust as needed to fit shadow */
+}
+
 
 /* Carousel Items Styling for Videos */
 .carousel-items-videos, .carousel-items-images {
@@ -247,19 +261,16 @@ header nav ul li a:hover {
 
 /* Individual Video Styling within Video Carousel */
 .project-block-videos {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    overflow: hidden;
-    border-radius: 8px;
+    min-width: 100%; /* Each video takes up 100% of the container width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-block-videos iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
