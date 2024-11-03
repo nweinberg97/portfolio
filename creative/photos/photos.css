@@ -86,10 +86,11 @@ h1 {
 
 }
 
-h2 { 
+h3 { 
     text-align: center;
     text-wrap: wrap;
     margin: 10px 100px; 
+    color: #333333;
 }
     
 
