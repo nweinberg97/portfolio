@@ -112,10 +112,12 @@ header nav ul li a:hover {
 
 .about-text p{
     color: #333333;
-    font-size: 1rem;
+    font-size: 1.15rem;
     text-align: left; 
     flex: 2; 
     line-height: 1.4;
+    text-wrap: wrap; 
+    padding: 0px 20px; 
 }
 
 .centered-image {
@@ -124,6 +126,7 @@ header nav ul li a:hover {
     max-width: 400px;
     aspect-ratio: 4 / 3; /* Sets a 4:3 aspect ratio */
     object-fit: cover; /* Ensures the image covers the container */
+    object-position: 50% 20%; /* Centers horizontally, moves slightly up vertically */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -139,7 +142,7 @@ header nav ul li a:hover {
 }
 
 .contact-text {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: #333;
     margin-bottom: 10px; /* Space between paragraph and button */
 }
