@@ -78,7 +78,7 @@ header nav ul li a:hover {
 .about-section {
     display: flex;
     justify-content: center;
-    margin: 20px auto; 
+    margin: 20px 400px; 
 }
 
 .about-section.alternate .about-chunk {
@@ -87,7 +87,7 @@ header nav ul li a:hover {
 
 .about-page {
     padding: 10px;
-    margin: 80px 20px;
+    margin: 80px 20px 20px 20px;
     text-align: center;
 }
 
