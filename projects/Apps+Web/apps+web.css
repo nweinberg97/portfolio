@@ -216,7 +216,7 @@ header nav ul li a:hover {
     position: relative;
     overflow: hidden; /* Hides overflow for seamless rotation */
     width: 100%;
-    max-width: 1000px; /* Maximum width of the carousel */
+    max-width: 600px; /* Maximum width of the carousel */
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -227,12 +227,10 @@ header nav ul li a:hover {
 .carousel-items-videos, .carousel-items-images {
     display: flex;
     transition: transform 0.5s ease; /* Smooth scrolling effect */
-    width: 100%;
 }
 
 /* Individual Image Styling within Image Carousel */
 .project-block-images {
-    min-width: 100%;
     flex: 0 0 100%;
     display: flex;
     align-items: center;
@@ -240,8 +238,9 @@ header nav ul li a:hover {
 }
 
 .project-block-images img {
-    width: 100%;
+    width: 90%;
     height: auto;
+    width: auto;
     object-fit: cover; /* Ensures image fills the area */
     border-radius: 8px;
 }
