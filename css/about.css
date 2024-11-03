@@ -78,7 +78,6 @@ header nav ul li a:hover {
 .about-section {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
     margin: 20px auto; 
 }
 
@@ -96,6 +95,7 @@ header nav ul li a:hover {
 .about-header {
     padding: 20px 20px;
     margin: 20px auto;
+    font-size: 1.6rem; 
 }
 
 .about-chunk {
@@ -120,11 +120,11 @@ header nav ul li a:hover {
 
 .centered-image {
     flex: 1;
+    width: 100%; /* Ensures image fills available space */
     max-width: 400px;
-    width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3; /* Sets a 4:3 aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container */
     border-radius: 8px;
-    margin: 0 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -250,4 +250,19 @@ footer p {
     .about-section p {
         margin: 0;
     }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-section.alternate .about-chunk {
+        flex-direction: column;
+    }
+
+    .centered-image {
+        margin: 20px 0; /* Adds space around images on small screens */
+        max-width: 100%; /* Ensures full width on mobile */
+    }
 }
+
