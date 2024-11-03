@@ -83,7 +83,7 @@ header nav ul li a:hover {
 }
 
 /*Apps+Web Page Header */
-.apps+web-header {
+.apps+web-header h1 {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 25px;
