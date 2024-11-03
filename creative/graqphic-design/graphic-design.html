@@ -151,6 +151,7 @@ $(document).ready(function() {
         $('.nav-links').toggleClass('open');
     });
 
+$(document).ready(function() {
     // Loop through each carousel on the community page
     $('.carousel-container').each(function() {
         const carouselContainer = $(this).find('.carousel-items')[0];
@@ -193,7 +194,7 @@ $(document).ready(function() {
                     carouselContainer.style.transition = 'none';
                     currentIndex = visibleItems;
                     carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
-                }, 500);
+                }, 500); // Wait for transition to complete
             }
         });
 
@@ -208,12 +209,16 @@ $(document).ready(function() {
                     carouselContainer.style.transition = 'none';
                     currentIndex = totalItems - visibleItems * 2;
                     carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
-                }, 500);
+                }, 500); // Wait for transition to complete
             }
+        });
+
+        // Reset transition after the "jump" to make it smooth for subsequent animations
+        carouselContainer.addEventListener('transitionend', () => {
+            carouselContainer.style.transition = '';
         });
     });
 });
-    </script>
 
 </body>
 </html>
