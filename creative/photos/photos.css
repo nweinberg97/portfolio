@@ -125,6 +125,7 @@ h3 {
     border-radius: 8px;
 }
 
+
 /* Image Styling */
 .photo-container img {
     width: 100%;
@@ -133,6 +134,7 @@ h3 {
     border-radius: 8px;
     display: block;
     transition: transform 0.3s ease;
+    z-index: 1; 
 }
 
 /* Hover Effects */
@@ -155,10 +157,10 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Darkening color */
+    background-color: rgba(0, 0, 0, 0.5); /* Darkening color */
     border-radius: 8px; /* Matches image rounding */
     transition: transform 0.3s ease; /* Matches image scaling transition */
-    z-index: 1; /* Ensures it’s on top of the image */
+    z-index: 2; /* Ensures it’s on top of the image */
 }
 
 /* Overlay Effect */
@@ -179,6 +181,7 @@ h3 {
     justify-content: center;
     border-radius: 8px;
     pointer-events: none;
+    z-index: 3;
 }
 
 /* Overlay Visibility on Hover */
