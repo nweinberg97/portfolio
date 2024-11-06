@@ -165,66 +165,38 @@
             </div>
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
-    
-<script>
+
+    <script>
 $(document).ready(function() {
     $('.carousel-container').each(function() {
         const $carouselContainer = $(this);
         const $carouselItems = $carouselContainer.find('.carousel-items');
         const $images = $carouselItems.children('img');
-        const visibleItems = 3; // Number of items visible at a time
+        const visibleItems = 3; // Number of items visible at once
         const totalItems = $images.length;
         const itemWidth = 100 / visibleItems;
-
-        // Clone all items on both sides for infinite scrolling
-        $images.clone().appendTo($carouselItems);
-        $images.clone().prependTo($carouselItems);
-
-        // Calculate total number of items after cloning
-        const totalClonedItems = $carouselItems.children('img').length;
-        let currentIndex = totalItems; // Start at the beginning of the original set
-
+        
         // Set initial position
-        $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
+        let currentIndex = 0;
+        $carouselItems.css('transform', `translateX(0%)`);
 
-        // Function to update the carousel position smoothly
+        // Function to update carousel position with circular logic
         function updateCarouselPosition() {
+            const offset = -(itemWidth * (currentIndex % totalItems));
+            $carouselItems.css('transform', `translateX(${offset}%)`);
             $carouselItems.css('transition', 'transform 0.5s ease');
-            $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
-        }
-
-        // Function to reset position seamlessly
-        function resetPosition(newIndex) {
-            $carouselItems.css('transition', 'none'); // Temporarily disable transition
-            currentIndex = newIndex;
-            $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
-            setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50);
         }
 
         // Right button - move next
         $carouselContainer.find('.carousel-control.right').on("click", function() {
-            currentIndex++;
+            currentIndex = (currentIndex + 1) % totalItems; // Circular increment
             updateCarouselPosition();
-
-            // Reset seamlessly if reaching the end of the original images
-            if (currentIndex >= totalItems * 2) {
-                setTimeout(() => {
-                    resetPosition(totalItems); // Reset back to start of original set
-                }, 500);
-            }
         });
 
         // Left button - move previous
         $carouselContainer.find('.carousel-control.left').on("click", function() {
-            currentIndex--;
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Circular decrement
             updateCarouselPosition();
-
-            // Reset seamlessly if reaching the start of the original images
-            if (currentIndex < totalItems) {
-                setTimeout(() => {
-                    resetPosition(totalItems * 2 - visibleItems); // Reset to end of original set
-                }, 500);
-            }
         });
     });
 });
