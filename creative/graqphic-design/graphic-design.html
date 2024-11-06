@@ -173,42 +173,44 @@ $(document).ready(function() {
         const $carouselItems = $carouselContainer.find('.carousel-items');
         let currentOffset = 0;
 
-        // Function to move to the next image, considering variable widths
+        // Function to move to the next image
         function moveNext() {
             const $firstImage = $carouselItems.children('img').first();
-            const firstImageWidth = $firstImage.outerWidth(true); // Get exact width with margin
+            const firstImageWidth = $firstImage.outerWidth(true); // Get exact width
 
-            currentOffset -= firstImageWidth; // Move left by the width of the first image
+            // Move left by the width of the first image
+            currentOffset -= firstImageWidth;
             $carouselItems.css('transition', 'transform 0.5s ease');
             $carouselItems.css('transform', `translateX(${currentOffset}px)`);
 
-            // Move first image to the end after transition
-            $carouselItems.one('transitionend', function() {
-                $carouselItems.append($firstImage); // Move first image to end
-                currentOffset += firstImageWidth; // Adjust offset
-                $carouselItems.css('transition', 'none'); // Temporarily disable transition
+            // After transition, move first image to the end and reset position
+            setTimeout(() => {
+                $carouselItems.append($firstImage); // Move first image to the end
+                currentOffset += firstImageWidth; // Adjust offset back
+                $carouselItems.css('transition', 'none'); // Remove transition temporarily
                 $carouselItems.css('transform', `translateX(${currentOffset}px)`);
                 setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50);
-            });
+            }, 500);
         }
 
-        // Function to move to the previous image, considering variable widths
+        // Function to move to the previous image
         function movePrev() {
             const $lastImage = $carouselItems.children('img').last();
-            const lastImageWidth = $lastImage.outerWidth(true); // Get exact width with margin
+            const lastImageWidth = $lastImage.outerWidth(true); // Get exact width
 
-            currentOffset += lastImageWidth; // Move right by the width of the last image
+            // Move right by the width of the last image
+            currentOffset += lastImageWidth;
             $carouselItems.css('transition', 'transform 0.5s ease');
             $carouselItems.css('transform', `translateX(${currentOffset}px)`);
 
-            // Move last image to the beginning after transition
-            $carouselItems.one('transitionend', function() {
-                $carouselItems.prepend($lastImage); // Move last image to start
-                currentOffset -= lastImageWidth; // Adjust offset
-                $carouselItems.css('transition', 'none'); // Temporarily disable transition
+            // After transition, move last image to the start and reset position
+            setTimeout(() => {
+                $carouselItems.prepend($lastImage); // Move last image to the start
+                currentOffset -= lastImageWidth; // Adjust offset back
+                $carouselItems.css('transition', 'none'); // Remove transition temporarily
                 $carouselItems.css('transform', `translateX(${currentOffset}px)`);
                 setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50);
-            });
+            }, 500);
         }
 
         // Attach click events to control buttons
@@ -216,6 +218,7 @@ $(document).ready(function() {
         $carouselContainer.find('.carousel-control.left').on("click", movePrev);
     });
 });
+
 </script> 
 
 
