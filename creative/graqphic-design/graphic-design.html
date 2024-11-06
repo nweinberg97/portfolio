@@ -168,6 +168,7 @@
     </footer>
 
        <!-- JavaScript (hamburger menu and carousel functionality) -->
+
 <script>
 $(document).ready(function() {
     // Hamburger menu toggle
@@ -175,67 +176,60 @@ $(document).ready(function() {
         $('.nav-links').toggleClass('open');
     });
 
-    // Loop through each carousel on the community page
+    // Initialize each carousel
     $('.carousel-container').each(function() {
-        const carouselContainer = $(this).find('.carousel-items')[0];
-        const images = Array.from($(this).find('.carousel-items img'));
-        const visibleItems = 1; // Adjust this based on how many items you want visible at once
-        let currentIndex = visibleItems;
-        let totalItems = images.length;
+        const $carouselContainer = $(this);
+        const $carouselItems = $carouselContainer.find('.carousel-items');
+        const $images = $carouselItems.find('img');
+        const visibleItems = 1; // Number of images visible at once
+        let currentIndex = visibleItems; // Start at the duplicated first item
+        const originalItemCount = $images.length;
 
-        // Clone first and last few elements for continuous loop
-        images.slice(0, visibleItems).forEach(item => {
-            let clone = item.cloneNode(true);
-            carouselContainer.appendChild(clone);
-        });
-        images.slice(-visibleItems).forEach(item => {
-            let clone = item.cloneNode(true);
-            carouselContainer.insertBefore(clone, carouselContainer.firstChild);
-        });
+        // Clone first and last items for the looping effect
+        $images.slice(0, visibleItems).clone().appendTo($carouselItems);
+        $images.slice(-visibleItems).clone().prependTo($carouselItems);
 
-        // Update total items after cloning
-        totalItems = carouselContainer.children.length;
+        const totalItems = $carouselItems.children().length;
 
         // Set initial position
-        carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
+        $carouselItems.css('transform', `translateX(-${(100 / visibleItems) * currentIndex}%)`);
 
         function updateCarousel() {
-            const offset = -(100 / visibleItems) * currentIndex;
-            carouselContainer.style.transition = 'transform 0.5s ease';
-            carouselContainer.style.transform = `translateX(${offset}%)`;
+            $carouselItems.css('transition', 'transform 0.5s ease');
+            $carouselItems.css('transform', `translateX(-${(100 / visibleItems) * currentIndex}%)`);
         }
 
         // Move Right (Next)
-        $(this).find('.carousel-control.right').on("click", function() {
+        $carouselContainer.find('.carousel-control.right').on("click", function() {
             currentIndex++;
             updateCarousel();
 
             if (currentIndex >= totalItems - visibleItems) {
                 setTimeout(() => {
-                    carouselContainer.style.transition = 'none';
+                    $carouselItems.css('transition', 'none');
                     currentIndex = visibleItems;
-                    carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
-                }, 500);
+                    $carouselItems.css('transform', `translateX(-${(100 / visibleItems) * currentIndex}%)`);
+                }, 500); // Wait for the transition to complete
             }
         });
 
         // Move Left (Previous)
-        $(this).find('.carousel-control.left').on("click", function() {
+        $carouselContainer.find('.carousel-control.left').on("click", function() {
             currentIndex--;
             updateCarousel();
 
             if (currentIndex < visibleItems) {
                 setTimeout(() => {
-                    carouselContainer.style.transition = 'none';
+                    $carouselItems.css('transition', 'none');
                     currentIndex = totalItems - visibleItems * 2;
-                    carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
-                }, 500);
+                    $carouselItems.css('transform', `translateX(-${(100 / visibleItems) * currentIndex}%)`);
+                }, 500); // Wait for the transition to complete
             }
         });
 
-        // Reset transition after the "jump" for smooth animations
-        carouselContainer.addEventListener('transitionend', () => {
-            carouselContainer.style.transition = '';
+        // Remove transition after reset to avoid animation glitches
+        $carouselItems.on('transitionend', function() {
+            $carouselItems.css('transition', '');
         });
     });
 });
