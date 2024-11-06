@@ -252,9 +252,8 @@ header nav ul li a:hover {
 }
 
 .project-block-images img {
-    width: 90%;
+    width: 100%;
     height: auto;
-    width: auto;
     object-fit: cover; /* Ensures image fills the area */
     border-radius: 8px;
 }
