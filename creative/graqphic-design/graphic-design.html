@@ -176,26 +176,26 @@ $(document).ready(function() {
         const totalItems = $images.length;
         const itemWidth = 100 / visibleItems;
 
-        // Clone all items to create an infinite loop effect
+        // Clone all items on both sides for infinite scrolling
         $images.clone().appendTo($carouselItems);
         $images.clone().prependTo($carouselItems);
 
-        // Calculate the new total number of items after cloning
+        // Calculate total number of items after cloning
         const totalClonedItems = $carouselItems.children('img').length;
-        let currentIndex = totalItems; // Start at the beginning of original items
+        let currentIndex = totalItems; // Start at the beginning of the original set
 
-        // Set the initial position to center the original set among clones
+        // Set initial position
         $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
 
         // Function to update the carousel position smoothly
         function updateCarouselPosition() {
-            $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
             $carouselItems.css('transition', 'transform 0.5s ease');
+            $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
         }
 
-        // Reset the position without transition
+        // Function to reset position seamlessly
         function resetPosition(newIndex) {
-            $carouselItems.css('transition', 'none');
+            $carouselItems.css('transition', 'none'); // Temporarily disable transition
             currentIndex = newIndex;
             $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
             setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50);
@@ -206,11 +206,11 @@ $(document).ready(function() {
             currentIndex++;
             updateCarouselPosition();
 
-            // Reset seamlessly if reaching the end clone
+            // Reset seamlessly if reaching the end of the original images
             if (currentIndex >= totalItems * 2) {
                 setTimeout(() => {
-                    resetPosition(totalItems); // Reset to the start of original items
-                }, 500); // Wait for transition to complete
+                    resetPosition(totalItems); // Reset back to start of original set
+                }, 500);
             }
         });
 
@@ -219,16 +219,17 @@ $(document).ready(function() {
             currentIndex--;
             updateCarouselPosition();
 
-            // Reset seamlessly if reaching the beginning clone
+            // Reset seamlessly if reaching the start of the original images
             if (currentIndex < totalItems) {
                 setTimeout(() => {
-                    resetPosition(totalItems * 2 - visibleItems); // Reset to end of original items
-                }, 500); // Wait for transition to complete
+                    resetPosition(totalItems * 2 - visibleItems); // Reset to end of original set
+                }, 500);
             }
         });
     });
 });
 </script>
+
 
 
 </body>
