@@ -174,12 +174,12 @@ $(document).ready(function() {
         const visibleItems = 3; // Number of items visible at a time
         const totalItems = $images.length;
         const itemWidth = 100 / visibleItems;
-        
-        // Step 1: Clone all items for infinite loop effect
+
+        // Clone all items to create an infinite loop effect
         $images.clone().appendTo($carouselItems);
         $images.clone().prependTo($carouselItems);
 
-        // Step 2: Calculate the total number of items after cloning
+        // Calculate the new total number of items after cloning
         const totalClonedItems = $carouselItems.children('img').length;
         let currentIndex = totalItems; // Start at the beginning of original items
 
@@ -188,19 +188,17 @@ $(document).ready(function() {
 
         // Function to update the carousel position smoothly
         function updateCarouselPosition() {
-            const offset = -(itemWidth * currentIndex);
-            $carouselItems.css('transform', `translateX(${offset}%)`);
+            $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
+            $carouselItems.css('transition', 'transform 0.5s ease');
         }
 
-        // Function to reset the position seamlessly after reaching the end or beginning
+        // Reset the position without transition
         function resetPosition(newIndex) {
-            $carouselItems.css('transition', 'none'); // Temporarily disable transition
+            $carouselItems.css('transition', 'none');
             currentIndex = newIndex;
-            updateCarouselPosition();
-            setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50); // Re-enable transition
+            $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
+            setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50);
         }
-
-        // Step 3: Button Event Handlers for Looping
 
         // Right button - move next
         $carouselContainer.find('.carousel-control.right').on("click", function() {
@@ -211,7 +209,7 @@ $(document).ready(function() {
             if (currentIndex >= totalItems * 2) {
                 setTimeout(() => {
                     resetPosition(totalItems); // Reset to the start of original items
-                }, 500);
+                }, 500); // Wait for transition to complete
             }
         });
 
@@ -224,12 +222,13 @@ $(document).ready(function() {
             if (currentIndex < totalItems) {
                 setTimeout(() => {
                     resetPosition(totalItems * 2 - visibleItems); // Reset to end of original items
-                }, 500);
+                }, 500); // Wait for transition to complete
             }
         });
     });
 });
 </script>
+
 
 </body>
 </html>
