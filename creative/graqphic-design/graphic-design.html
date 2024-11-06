@@ -171,40 +171,35 @@
 
 <script>
 $(document).ready(function() {
-    // Hamburger menu toggle
-    $('.hamburger').on('click', function() {
-        $('.nav-links').toggleClass('open');
-    });
-
-// Initialize each carousel
     $('.carousel-container').each(function() {
         const $carouselContainer = $(this);
         const $carouselItems = $carouselContainer.find('.carousel-items');
         const $images = $carouselItems.children('img');
-        const visibleItems = 3; // Show three images at a time
+        const visibleItems = 3; // Number of items visible at a time
+        const itemWidth = 100 / visibleItems; // Width of each item as a percentage
         const totalItems = $images.length;
 
-        // Clone the first and last few images for looping
+        // Clone the first and last few images for smooth looping
         $images.slice(0, visibleItems).clone().appendTo($carouselItems);
         $images.slice(-visibleItems).clone().prependTo($carouselItems);
 
-        // Calculate total items including clones
+        // Update total items after cloning
         const totalClonedItems = $carouselItems.children('img').length;
-        let currentIndex = visibleItems; // Start at the first actual item
+        let currentIndex = visibleItems;
 
-        // Set initial position to show the first actual item
-        $carouselItems.css('transform', `translateX(-${(100 / visibleItems) * currentIndex}%)`);
+        // Set initial position to start with actual first item
+        $carouselItems.css('transform', `translateX(-${(itemWidth) * currentIndex}%)`);
 
         function updateCarousel() {
-            // Move carousel by updating transform
+            // Apply transition for smooth scrolling
             $carouselItems.css('transition', 'transform 0.5s ease');
-            $carouselItems.css('transform', `translateX(-${(100 / visibleItems) * currentIndex}%)`);
+            $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
         }
 
-        function resetTransition() {
-            // Immediately reset the transition for seamless looping
+        function resetPosition() {
+            // Instantly reset the position for a seamless effect
             $carouselItems.css('transition', 'none');
-            $carouselItems.css('transform', `translateX(-${(100 / visibleItems) * currentIndex}%)`);
+            $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
         }
 
         // Move Right (Next)
@@ -212,12 +207,12 @@ $(document).ready(function() {
             currentIndex++;
             updateCarousel();
 
-            // Reset to beginning clone immediately after transition if at end
+            // If at the end clone, reset to the start clone
             if (currentIndex >= totalClonedItems - visibleItems) {
                 setTimeout(() => {
                     currentIndex = visibleItems;
-                    resetTransition();
-                }, 500); // Wait for transition to complete
+                    resetPosition();
+                }, 500); // Wait for the transition to finish
             }
         });
 
@@ -226,22 +221,23 @@ $(document).ready(function() {
             currentIndex--;
             updateCarousel();
 
-            // Reset to end clone immediately after transition if at start
+            // If at the start clone, reset to the end clone
             if (currentIndex < visibleItems) {
                 setTimeout(() => {
                     currentIndex = totalClonedItems - (visibleItems * 2);
-                    resetTransition();
-                }, 500); // Wait for transition to complete
+                    resetPosition();
+                }, 500); // Wait for the transition to finish
             }
         });
 
-        // Remove transition after "jump" for smooth animations
+        // Reset the transition to ensure smoothness after the reset "jump"
         $carouselItems.on('transitionend', function() {
             $carouselItems.css('transition', '');
         });
     });
 });
 </script>
+
 
 
 </body>
