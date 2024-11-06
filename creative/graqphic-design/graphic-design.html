@@ -165,68 +165,73 @@
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
 
+    
 <script>
 $(document).ready(function() {
     $('.carousel-container').each(function() {
         const $carouselContainer = $(this);
         const $carouselItems = $carouselContainer.find('.carousel-items');
         const $images = $carouselItems.children('img');
-        const visibleItems = 3; // Number of items visible at once
+        const visibleItems = 3; // Number of items visible at a time
         const totalItems = $images.length;
         const itemWidth = 100 / visibleItems;
-
-        // Clone all items to create an "infinite" effect by doubling content
+        
+        // Step 1: Clone all items for infinite loop effect
         $images.clone().appendTo($carouselItems);
+        $images.clone().prependTo($carouselItems);
 
-        // Calculate the new total number of items after cloning
+        // Step 2: Calculate the total number of items after cloning
         const totalClonedItems = $carouselItems.children('img').length;
-        let currentIndex = 0;
+        let currentIndex = totalItems; // Start at the beginning of original items
 
-        // Function to update carousel position smoothly
+        // Set the initial position to center the original set among clones
+        $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
+
+        // Function to update the carousel position smoothly
         function updateCarouselPosition() {
             const offset = -(itemWidth * currentIndex);
             $carouselItems.css('transform', `translateX(${offset}%)`);
         }
 
-        // Function to reset carousel position instantly
+        // Function to reset the position seamlessly after reaching the end or beginning
         function resetPosition(newIndex) {
-            $carouselItems.css('transition', 'none'); // Disable transition
+            $carouselItems.css('transition', 'none'); // Temporarily disable transition
             currentIndex = newIndex;
             updateCarouselPosition();
             setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50); // Re-enable transition
         }
 
-        // Right button click handler
+        // Step 3: Button Event Handlers for Looping
+
+        // Right button - move next
         $carouselContainer.find('.carousel-control.right').on("click", function() {
             currentIndex++;
             updateCarouselPosition();
 
-            // If reaching the end of the original set, reset seamlessly
-            if (currentIndex >= totalItems) {
+            // Reset seamlessly if reaching the end clone
+            if (currentIndex >= totalItems * 2) {
                 setTimeout(() => {
-                    resetPosition(0); // Reset back to the start of original items
+                    resetPosition(totalItems); // Reset to the start of original items
                 }, 500);
             }
         });
 
-        // Left button click handler
+        // Left button - move previous
         $carouselContainer.find('.carousel-control.left').on("click", function() {
             currentIndex--;
-            if (currentIndex < 0) {
-                currentIndex = totalItems - 1; // Reset back to the last original item
-            }
             updateCarouselPosition();
 
-            // If reaching the start, reset to the end seamlessly
-            if (currentIndex < 0) {
+            // Reset seamlessly if reaching the beginning clone
+            if (currentIndex < totalItems) {
                 setTimeout(() => {
-                    resetPosition(totalItems - 1);
+                    resetPosition(totalItems * 2 - visibleItems); // Reset to end of original items
                 }, 500);
             }
         });
     });
 });
 </script>
+
 
 
 
