@@ -323,6 +323,7 @@ $(document).ready(function() {
 
     function updateImageCarousel() {
         const offset = -(100 * imageIndex); // Move by 100% each time
+        console.log("Updating carousel position. Index:", imageIndex, "Offset:", offset); // Debug log
         imageCarousel.style.transition = 'transform 0.5s ease';
         imageCarousel.style.transform = `translateX(${offset}%)`;
     }
@@ -348,6 +349,7 @@ $(document).ready(function() {
 
     function updateVideoCarousel() {
         const offset = -(100 * videoIndex); // Move by 100% each time
+        console.log("Updating video carousel position. Index:", videoIndex, "Offset:", offset); // Debug log
         videoCarousel.style.transition = 'transform 0.5s ease';
         videoCarousel.style.transform = `translateX(${offset}%)`;
     }
