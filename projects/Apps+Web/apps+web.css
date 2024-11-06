@@ -292,6 +292,11 @@ header nav ul li a:hover {
     border-radius: 8px;
 }
 
+.project-block-videos p {
+    padding-top: 5px; 
+    font-weight: bold; 
+}
+
 /* Carousel Control Buttons */
 .carousel-control-videos {
     position: absolute;
