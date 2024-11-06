@@ -176,65 +176,70 @@ $(document).ready(function() {
         $('.nav-links').toggleClass('open');
     });
 
-
-    // Initialize each carousel
+// Initialize each carousel
     $('.carousel-container').each(function() {
         const $carouselContainer = $(this);
         const $carouselItems = $carouselContainer.find('.carousel-items');
         const $images = $carouselItems.children('img');
         const visibleItems = 3; // Show three images at a time
         const totalItems = $images.length;
-        
-        // Clone the first and last few images for looping
+
+        // Clone the first and last items for a looping effect
         $images.slice(0, visibleItems).clone().appendTo($carouselItems);
         $images.slice(-visibleItems).clone().prependTo($carouselItems);
 
-        // Update the total items after cloning
+        // Recalculate the total items including clones
         const totalClonedItems = $carouselItems.children('img').length;
-        let currentIndex = visibleItems; // Start at the actual first item (offset by clones)
+        let currentIndex = visibleItems;
 
-        // Set initial position to show the first real item
+        // Set initial position to show the first actual item
         $carouselItems.css('transform', `translateX(-${(100 / totalClonedItems) * currentIndex}%)`);
 
         function updateCarousel() {
+            // Smooth transition to the next set of items
             $carouselItems.css('transition', 'transform 0.5s ease');
+            $carouselItems.css('transform', `translateX(-${(100 / totalClonedItems) * currentIndex}%)`);
+        }
+
+        function resetTransition() {
+            // Reset the transition to create a continuous effect
+            $carouselItems.css('transition', 'none');
             $carouselItems.css('transform', `translateX(-${(100 / totalClonedItems) * currentIndex}%)`);
         }
 
         // Move Right (Next)
         $carouselContainer.find('.carousel-control.right').on("click", function() {
-            currentIndex += visibleItems; // Move by three items
+            currentIndex += visibleItems;
             updateCarousel();
 
             if (currentIndex >= totalClonedItems - visibleItems) {
+                // Reset to the beginning clone immediately after transition
                 setTimeout(() => {
-                    $carouselItems.css('transition', 'none');
                     currentIndex = visibleItems;
-                    $carouselItems.css('transform', `translateX(-${(100 / totalClonedItems) * currentIndex}%)`);
+                    resetTransition();
                 }, 500); // Wait for the transition to complete
             }
         });
 
         // Move Left (Previous)
         $carouselContainer.find('.carousel-control.left').on("click", function() {
-            currentIndex -= visibleItems; // Move by three items
+            currentIndex -= visibleItems;
             updateCarousel();
 
             if (currentIndex < visibleItems) {
+                // Reset to the end clone immediately after transition
                 setTimeout(() => {
-                    $carouselItems.css('transition', 'none');
                     currentIndex = totalClonedItems - (visibleItems * 2);
-                    $carouselItems.css('transform', `translateX(-${(100 / totalClonedItems) * currentIndex}%)`);
+                    resetTransition();
                 }, 500); // Wait for the transition to complete
             }
         });
 
-        // Remove transition after reset for smooth animations
+        // Remove the transition after a jump to keep the animation smooth
         $carouselItems.on('transitionend', function() {
             $carouselItems.css('transition', '');
         });
     });
-});
 </script>
 
 
