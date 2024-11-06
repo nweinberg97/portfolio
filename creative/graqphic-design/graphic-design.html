@@ -171,43 +171,42 @@ $(document).ready(function() {
     $('.carousel-container').each(function() {
         const $carouselContainer = $(this);
         const $carouselItems = $carouselContainer.find('.carousel-items');
-        const visibleItems = 3; // Number of items visible at once
-        const totalItems = $carouselItems.children('img').length;
-        const itemWidth = 100 / visibleItems;
-        
-        // Set initial offset for smooth scrolling
         let currentOffset = 0;
 
-        // Function to move to the next image
+        // Function to move to the next image, considering variable widths
         function moveNext() {
-            currentOffset -= itemWidth; // Move left
-            $carouselItems.css('transition', 'transform 0.5s ease'); // Smooth transition
-            $carouselItems.css('transform', `translateX(${currentOffset}%)`);
+            const $firstImage = $carouselItems.children('img').first();
+            const firstImageWidth = $firstImage.outerWidth(true); // Get exact width with margin
 
-            // Temporarily remove the transition after movement to reorder without jump
+            currentOffset -= firstImageWidth; // Move left by the width of the first image
+            $carouselItems.css('transition', 'transform 0.5s ease');
+            $carouselItems.css('transform', `translateX(${currentOffset}px)`);
+
+            // Move first image to the end after transition
             $carouselItems.one('transitionend', function() {
-                const $firstImage = $carouselItems.children('img').first();
                 $carouselItems.append($firstImage); // Move first image to end
-                currentOffset += itemWidth; // Adjust offset to maintain position
-                $carouselItems.css('transition', 'none'); // Disable transition temporarily
-                $carouselItems.css('transform', `translateX(${currentOffset}%)`);
+                currentOffset += firstImageWidth; // Adjust offset
+                $carouselItems.css('transition', 'none'); // Temporarily disable transition
+                $carouselItems.css('transform', `translateX(${currentOffset}px)`);
                 setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50);
             });
         }
 
-        // Function to move to the previous image
+        // Function to move to the previous image, considering variable widths
         function movePrev() {
-            currentOffset += itemWidth; // Move right
-            $carouselItems.css('transition', 'transform 0.5s ease'); // Smooth transition
-            $carouselItems.css('transform', `translateX(${currentOffset}%)`);
+            const $lastImage = $carouselItems.children('img').last();
+            const lastImageWidth = $lastImage.outerWidth(true); // Get exact width with margin
 
-            // Temporarily remove the transition after movement to reorder without jump
+            currentOffset += lastImageWidth; // Move right by the width of the last image
+            $carouselItems.css('transition', 'transform 0.5s ease');
+            $carouselItems.css('transform', `translateX(${currentOffset}px)`);
+
+            // Move last image to the beginning after transition
             $carouselItems.one('transitionend', function() {
-                const $lastImage = $carouselItems.children('img').last();
                 $carouselItems.prepend($lastImage); // Move last image to start
-                currentOffset -= itemWidth; // Adjust offset to maintain position
-                $carouselItems.css('transition', 'none'); // Disable transition temporarily
-                $carouselItems.css('transform', `translateX(${currentOffset}%)`);
+                currentOffset -= lastImageWidth; // Adjust offset
+                $carouselItems.css('transition', 'none'); // Temporarily disable transition
+                $carouselItems.css('transform', `translateX(${currentOffset}px)`);
                 setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50);
             });
         }
