@@ -232,6 +232,75 @@ header nav ul li a:hover {
     transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
+/* Carousel Container Styling */
+.carousel-container2 {
+    position: relative;
+    overflow: hidden; /* Hides overflow for seamless rotation */
+    width: 100%;
+    max-width: 1000px; /* Maximum width of the carousel */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px; /* Adjust as needed to fit shadow */
+}
+
+/* Carousel Items Styling */
+.carousel-items2 {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease; /* Smooth scrolling effect */
+    width: 100%;
+}
+
+/* Individual Image Styling within Carousel */
+.carousel-items2 img {
+    width: calc((100% - 40px) / 3);
+    height: 350px;
+    object-fit: cover; /* Ensures images fill the area without stretching */
+    border-radius: 8px; /* Optional: rounds the corners */
+}
+
+/* Carousel Control Buttons */
+.carousel-control2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    cursor: pointer;
+    width: 40px; /* Fixed width for circle */
+    height: 40px; /* Fixed height for circle */
+    border-radius: 50%; /* True circle shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Refined hover transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Left Control Button */
+.carousel-control2.left {
+    left: 1px;
+}
+
+/* Right Control Button */
+.carousel-control2.right {
+    right: 1px;
+}
+
+/* Subtle Hover Effect */
+.carousel-control2:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+    transform: translateY(-50%) scale(1.05); /* Adds translateY(-50%) to maintain vertical alignment */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+
+
+
 /* Footer Styling */
 footer {
     margin-top: auto;
