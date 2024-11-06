@@ -326,12 +326,16 @@ $(document).ready(function() {
         imageCarousel.style.transform = `translateX(${offset}%)`;
     }
 
+    // Right button event for image carousel
     document.querySelector(".carousel-container-images .carousel-control.right").addEventListener("click", () => {
+        console.log("Right button clicked"); // Log for testing
         imageIndex = (imageIndex + 1) % imageItems.length; // Loop back to start if at the end
         updateImageCarousel();
     });
 
+    // Left button event for image carousel
     document.querySelector(".carousel-container-images .carousel-control.left").addEventListener("click", () => {
+        console.log("Left button clicked"); // Log for testing
         imageIndex = (imageIndex - 1 + imageItems.length) % imageItems.length; // Loop to end if at the start
         updateImageCarousel();
     });
@@ -347,12 +351,16 @@ $(document).ready(function() {
         videoCarousel.style.transform = `translateX(${offset}%)`;
     }
 
+    // Right button event for video carousel
     document.querySelector(".carousel-container-videos .carousel-control.right").addEventListener("click", () => {
+        console.log("Video carousel right button clicked"); // Log for testing
         videoIndex = (videoIndex + 1) % videoItems.length; // Loop back to start if at the end
         updateVideoCarousel();
     });
 
+    // Left button event for video carousel
     document.querySelector(".carousel-container-videos .carousel-control.left").addEventListener("click", () => {
+        console.log("Video carousel left button clicked"); // Log for testing
         videoIndex = (videoIndex - 1 + videoItems.length) % videoItems.length; // Loop to end if at the start
         updateVideoCarousel();
     });
