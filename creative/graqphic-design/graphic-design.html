@@ -176,68 +176,65 @@ $(document).ready(function() {
         const $carouselItems = $carouselContainer.find('.carousel-items');
         const $images = $carouselItems.children('img');
         const visibleItems = 3; // Number of items visible at a time
-        const itemWidth = 100 / visibleItems; // Width of each item as a percentage
-        const totalItems = $images.length;
-
-        // Clone the first and last few images for smooth looping
-        $images.slice(0, visibleItems).clone().appendTo($carouselItems);
-        $images.slice(-visibleItems).clone().prependTo($carouselItems);
-
-        // Update total items after cloning
-        const totalClonedItems = $carouselItems.children('img').length;
+        const itemWidth = 100 / visibleItems;
         let currentIndex = visibleItems;
 
-        // Set initial position to start with actual first item
-        $carouselItems.css('transform', `translateX(-${(itemWidth) * currentIndex}%)`);
+        // Clone all items for a seamless loop
+        $images.clone().appendTo($carouselItems);
+        $images.clone().prependTo($carouselItems);
 
+        // Calculate total number of items after cloning
+        const totalItems = $carouselItems.children('img').length;
+
+        // Set initial position
+        $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
+
+        // Function to update carousel position
         function updateCarousel() {
-            // Apply transition for smooth scrolling
             $carouselItems.css('transition', 'transform 0.5s ease');
             $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
         }
 
-        function resetPosition() {
-            // Instantly reset the position for a seamless effect
+        // Function to reset position instantly after a loop
+        function resetPosition(newIndex) {
             $carouselItems.css('transition', 'none');
+            currentIndex = newIndex;
             $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
         }
 
-        // Move Right (Next)
+        // Right Button Click
         $carouselContainer.find('.carousel-control.right').on("click", function() {
             currentIndex++;
             updateCarousel();
 
-            // If at the end clone, reset to the start clone
-            if (currentIndex >= totalClonedItems - visibleItems) {
+            if (currentIndex >= totalItems - visibleItems) {
+                // Reset to the first clone after the transition
                 setTimeout(() => {
-                    currentIndex = visibleItems;
-                    resetPosition();
-                }, 500); // Wait for the transition to finish
+                    resetPosition(visibleItems);
+                }, 500);
             }
         });
 
-        // Move Left (Previous)
+        // Left Button Click
         $carouselContainer.find('.carousel-control.left').on("click", function() {
             currentIndex--;
             updateCarousel();
 
-            // If at the start clone, reset to the end clone
             if (currentIndex < visibleItems) {
+                // Reset to the last clone after the transition
                 setTimeout(() => {
-                    currentIndex = totalClonedItems - (visibleItems * 2);
-                    resetPosition();
-                }, 500); // Wait for the transition to finish
+                    resetPosition(totalItems - (visibleItems * 2));
+                }, 500);
             }
         });
 
-        // Reset the transition to ensure smoothness after the reset "jump"
+        // Remove the transition to make the reset invisible after each loop
         $carouselItems.on('transitionend', function() {
             $carouselItems.css('transition', '');
         });
     });
 });
 </script>
-
 
 </body>
 </html>
