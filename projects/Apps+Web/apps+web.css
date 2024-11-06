@@ -211,6 +211,24 @@ header nav ul li a:hover {
     color: #E0E0E0;
 }
 
+
+.carousel-background {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    margin: 20px auto; /* Centers the container horizontally */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    max-width: 600px; /* Matches the max-width of your other sections */
+}
+
+/* Optional Hover Effect */
+.carousel-background:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+
 /* Carousel Container Styling */
 .carousel-container-images {
     position: relative;
