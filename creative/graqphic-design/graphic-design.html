@@ -166,41 +166,56 @@
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
 
-    <script>
-$(document).ready(function() {
+    <script> 
+    $(document).ready(function() {
     $('.carousel-container').each(function() {
         const $carouselContainer = $(this);
         const $carouselItems = $carouselContainer.find('.carousel-items');
-        const $images = $carouselItems.children('img');
         const visibleItems = 3; // Number of items visible at once
-        const totalItems = $images.length;
+        const totalItems = $carouselItems.children('img').length;
         const itemWidth = 100 / visibleItems;
         
-        // Set initial position
-        let currentIndex = 0;
-        $carouselItems.css('transform', `translateX(0%)`);
+        // Set the initial offset for smooth scrolling
+        let currentOffset = 0;
 
-        // Function to update carousel position with circular logic
-        function updateCarouselPosition() {
-            const offset = -(itemWidth * (currentIndex % totalItems));
-            $carouselItems.css('transform', `translateX(${offset}%)`);
-            $carouselItems.css('transition', 'transform 0.5s ease');
+        // Function to move to the next image
+        function moveNext() {
+            currentOffset -= itemWidth; // Move left
+            $carouselItems.css('transform', `translateX(${currentOffset}%)`);
+
+            // After transition, move the first item to the end for continuous loop
+            setTimeout(() => {
+                const $firstImage = $carouselItems.children('img').first();
+                $carouselItems.append($firstImage); // Move first image to the end
+                currentOffset += itemWidth; // Adjust offset to maintain position
+                $carouselItems.css('transition', 'none'); // Temporarily remove transition
+                $carouselItems.css('transform', `translateX(${currentOffset}%)`);
+                setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50);
+            }, 500); // Wait for the transition to complete
         }
 
-        // Right button - move next
-        $carouselContainer.find('.carousel-control.right').on("click", function() {
-            currentIndex = (currentIndex + 1) % totalItems; // Circular increment
-            updateCarouselPosition();
-        });
+        // Function to move to the previous image
+        function movePrev() {
+            currentOffset += itemWidth; // Move right
+            $carouselItems.css('transform', `translateX(${currentOffset}%)`);
 
-        // Left button - move previous
-        $carouselContainer.find('.carousel-control.left').on("click", function() {
-            currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Circular decrement
-            updateCarouselPosition();
-        });
+            // After transition, move the last item to the beginning
+            setTimeout(() => {
+                const $lastImage = $carouselItems.children('img').last();
+                $carouselItems.prepend($lastImage); // Move last image to the start
+                currentOffset -= itemWidth; // Adjust offset to maintain position
+                $carouselItems.css('transition', 'none'); // Temporarily remove transition
+                $carouselItems.css('transform', `translateX(${currentOffset}%)`);
+                setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50);
+            }, 500); // Wait for the transition to complete
+        }
+
+        // Attach click events to control buttons
+        $carouselContainer.find('.carousel-control.right').on("click", moveNext);
+        $carouselContainer.find('.carousel-control.left').on("click", movePrev);
     });
 });
-</script>
+</script> 
 
 
 
