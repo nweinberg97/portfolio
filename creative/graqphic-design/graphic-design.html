@@ -168,20 +168,19 @@
     </footer>
 
        <!-- JavaScript (hamburger menu and carousel functionality) -->
-    <script>
+<script>
 $(document).ready(function() {
     // Hamburger menu toggle
     $('.hamburger').on('click', function() {
         $('.nav-links').toggleClass('open');
     });
 
-$(document).ready(function() {
     // Loop through each carousel on the community page
     $('.carousel-container').each(function() {
         const carouselContainer = $(this).find('.carousel-items')[0];
         const images = Array.from($(this).find('.carousel-items img'));
-        const visibleItems = 3; // Number of items visible at once
-        let currentIndex = visibleItems; // Start at the duplicated first item
+        const visibleItems = 1; // Adjust this based on how many items you want visible at once
+        let currentIndex = visibleItems;
         let totalItems = images.length;
 
         // Clone first and last few elements for continuous loop
@@ -197,10 +196,9 @@ $(document).ready(function() {
         // Update total items after cloning
         totalItems = carouselContainer.children.length;
 
-        // Set initial position to start from the actual first item (offset by clone count)
+        // Set initial position
         carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
 
-        // Function to update the carousel display
         function updateCarousel() {
             const offset = -(100 / visibleItems) * currentIndex;
             carouselContainer.style.transition = 'transform 0.5s ease';
@@ -212,13 +210,12 @@ $(document).ready(function() {
             currentIndex++;
             updateCarousel();
 
-            // Reset to real start after last clone
             if (currentIndex >= totalItems - visibleItems) {
                 setTimeout(() => {
                     carouselContainer.style.transition = 'none';
                     currentIndex = visibleItems;
                     carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
-                }, 500); // Wait for transition to complete
+                }, 500);
             }
         });
 
@@ -227,22 +224,23 @@ $(document).ready(function() {
             currentIndex--;
             updateCarousel();
 
-            // Reset to real end after first clone
             if (currentIndex < visibleItems) {
                 setTimeout(() => {
                     carouselContainer.style.transition = 'none';
                     currentIndex = totalItems - visibleItems * 2;
                     carouselContainer.style.transform = `translateX(-${(100 / visibleItems) * currentIndex}%)`;
-                }, 500); // Wait for transition to complete
+                }, 500);
             }
         });
 
-        // Reset transition after the "jump" to make it smooth for subsequent animations
+        // Reset transition after the "jump" for smooth animations
         carouselContainer.addEventListener('transitionend', () => {
             carouselContainer.style.transition = '';
         });
     });
 });
+</script>
+
 
 </body>
 </html>
