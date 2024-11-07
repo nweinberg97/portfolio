@@ -21,8 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white; /* Charcoal Gray instead of Black */
-    padding-top: 1rem;
-    padding-bottom: 1rem; 
+    padding: 1rem 2rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -37,7 +36,6 @@ header .logo a {
     font-weight: 700;
     text-decoration: none;
     transition: color 0.3s, font-size 0.3s, transform 0.3s;
-    margin-right: auto; /* Ensures logo stays on the left and pushes nav right */
 }
 
 header .logo a:hover {
@@ -45,17 +43,10 @@ header .logo a:hover {
     transform: scale(1.3); /* Grows on hover */
 }
 
-header nav {
-    display: flex;
-    justify-content: flex-end; /* Pushes nav links to the right */
-    align-items: center;
-    width: auto; /* Adjusted */
-}
-
 header nav ul {
-    list-style: none;
+    list-style: none; /* Removes bullet points */
     display: flex;
-    /* Removed margin-right: 0; */
+    margin-right: 0; /* Adjust spacing for right alignment */
 }
 
 header nav ul li {
