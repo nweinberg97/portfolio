@@ -265,20 +265,18 @@
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
 
-<!-- JavaScript for Hamburger Menu and Carousel -->
 <script>
 const swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 1,
     navigation: {
-        nextEl: '#customNextButton',
-        prevEl: '#customPrevButton',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-    speed: 500, // Adjust speed for smooth transitions
-    watchOverflow: true, // Ensures buttons don't disappear if there's enough content
+    speed: 500,
+    watchOverflow: true,
 });
 </script>
-
 
 </body>
 </html>
