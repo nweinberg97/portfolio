@@ -228,6 +228,11 @@ h3 {
     width: 100%; 
 }
 
+.swiper-container, .swiper-wrapper {
+    width: 100%;
+    overflow: hidden; /* Ensures that only one slide is visible if set */
+}
+
 .swiper-wrapper {
     display: flex;
 }
@@ -244,7 +249,7 @@ h3 {
 
 .swiper-slide img {
     width: 100%;
-    max-width: 200px;
+    max-width: 300px;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -253,10 +258,12 @@ h3 {
     font-size: 0.9rem;
     color: #555;
     margin: 0;
-    max-width: 200px;
+    max-width: 250px;
     padding: 10px; 
     width: 100%;
     text-align: left; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -285,18 +292,6 @@ h3 {
 
 .swiper-button-next {
     right: 10px;
-}
-
-.swiper-button-prev:hover, .swiper-button-next:hover {
-    background-color: #0056b3; /* Slightly darker blue on hover */
-    transform: translateY(-50%) scale(1.05); /* Adds translateY(-50%) to maintain vertical alignment */
-    transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.swiper-button-prev:active, .swiper-button-next:active {
-    background-color: #0056b3; /* Slightly darker blue on hover */
-    transform: translateY(-50%) scale(1.05); /* Adds translateY(-50%) to maintain vertical alignment */
-    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 /* Footer Styling */
