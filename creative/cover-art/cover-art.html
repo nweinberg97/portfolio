@@ -271,14 +271,16 @@
 
 <!-- JavaScript for Hamburger Menu and Carousel -->
 <script>
-    const swiper = new Swiper('.swiper-container', {
-        loop: true,               // Enables continuous looping
-        speed: 500,               // Fast transition speed for smooth effect
-        navigation: {
-            nextEl: '.swiper-button-next',  // Assigns next button
-            prevEl: '.swiper-button-prev',  // Assigns previous button
-        },
-    });
+const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    speed: 500, // Adjust speed for smooth transitions
+});
+
 </script>
 
 
