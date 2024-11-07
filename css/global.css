@@ -3,44 +3,39 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: white; /* Charcoal Gray instead of Black */
     padding: 1rem 2rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border to define the edge */
 }
 
-/* Logo Styling */
 header .logo a {
     color: #333333;
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+    transition: color 0.3s, font-size 0.3s, transform 0.3s;
 }
 
 header .logo a:hover {
-    color: #5A9BD5;
-    transform: scale(1.3);
+    color: #5A9BD5; /* Softer blue */
+    transform: scale(1.3); /* Grows on hover */
 }
 
-/* Navigation List */
 header nav ul {
-    list-style: none;
+    list-style: none; /* Removes bullet points */
     display: flex;
-    margin-right: 0;
-    padding: 0; /* Ensures no extra spacing */
+    margin-right: 0; /* Adjust spacing for right alignment */
 }
 
-/* Link Spacing */
 header nav ul li {
-    margin-left: 2rem;
+    margin-left: 2rem; /* Adjusted for consistent spacing */
 }
 
-/* Link Styling */
 header nav ul li a {
     color: #333333;
     text-decoration: none;
@@ -49,8 +44,8 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #5A9BD5;
-    transform: scale(1.1);
+    color: #5A9BD5; /* Softer blue */
+    transform: scale(1.1); /* Grows slightly on hover */
 }
 
 /* Mobile Responsiveness */
