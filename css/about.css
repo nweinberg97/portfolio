@@ -240,7 +240,7 @@ footer .footer-links a {
 
 footer .footer-links a:hover {
     transform: scale(1.1); /* Grows slightly on hover */
-    background-color: #99c7ff; /* Slightly darker pastel blue on hover */
+    background-color: #5A9BD5; /* Slightly darker pastel blue on hover */
     border: 1px solid #5A9BD5; /* Add border on hover */
 }
 
