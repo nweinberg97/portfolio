@@ -280,11 +280,11 @@ h3 {
 }
 
 .swiper-button-prev {
-    left: 1px;
+    left: 10px;
 }
 
 .swiper-button-next {
-    right: 1px;
+    right: 10px;
 }
 
 .swiper-button-prev:hover, .swiper-button-next:hover {
