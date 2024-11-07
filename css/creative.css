@@ -1,4 +1,3 @@
-
 /* General Reset */
 * {
     margin: 0;
@@ -19,17 +18,22 @@ body {
 /* Navbar */
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: white; /* Charcoal Gray instead of Black */
-    padding-top: 1rem;
-    padding-bottom: 1rem; 
+    background-color: white;
+    padding: 1rem 2rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border to define the edge */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Remove `justify-content: space-between;` */
+    /* This will be replaced by margin auto on the logo and nav */
+}
+
+/* Logo Styling */
+header .logo {
+    margin-right: auto; /* Pushes the logo to the far left */
 }
 
 header .logo a {
@@ -38,31 +42,23 @@ header .logo a {
     font-weight: 700;
     text-decoration: none;
     transition: color 0.3s, font-size 0.3s, transform 0.3s;
-    margin-right: auto; /* Ensures logo stays on the left and pushes nav right */
 }
 
 header .logo a:hover {
-    color: #5A9BD5; /* Softer blue */
-    transform: scale(1.3); /* Grows on hover */
+    color: #5A9BD5;
+    transform: scale(1.3);
 }
 
-header nav {
-    display: flex;
-    justify-content: flex-end; /* Pushes nav links to the right */
-    align-items: center;
-    width: auto; /* Adjusted */
-}
-
+/* Navigation List */
 header nav ul {
     list-style: none;
     display: flex;
-    /* Removed margin-right: 0; */
+    gap: 2rem; /* Use `gap` to control spacing between links */
+    padding: 0;
+    margin: 0;
 }
 
-header nav ul li {
-    margin-left: 2rem; /* Adjusted for consistent spacing */
-}
-
+/* Nav Links */
 header nav ul li a {
     color: #333333;
     text-decoration: none;
@@ -70,9 +66,45 @@ header nav ul li a {
     transition: color 0.3s, transform 0.3s;
 }
 
+/* Nav Links Hover */
 header nav ul li a:hover {
-    color: #5A9BD5; /* Softer blue */
-    transform: scale(1.1); /* Grows slightly on hover */
+    color: #5A9BD5;
+    transform: scale(1.1);
+}
+
+header nav {
+    margin-left: auto; /* Pushes the nav links to the far right */
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Stack logo and hamburger vertically */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    header nav ul {
+        display: none; /* Hide links initially */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Show nav links when hamburger is clicked (JS toggle required) */
+    .show-nav nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        width: 100%;
+        left: 0;
+        padding: 1rem;
+    }
 }
 
 .main-project-header {
