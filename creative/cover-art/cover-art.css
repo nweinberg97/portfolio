@@ -189,31 +189,28 @@ h3 {
     font-weight: bold;
 }
 
-/* Container for the carousel items */
-.carousel-inner {
+
+.swiper-wrapper {
     display: flex;
-    overflow: hidden;
 }
 
-/* Each carousel slide */
-.carousel-block {
+.swiper-slide {
     flex: 0 0 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     padding: 10px;
-    margin: 20px 400px;
 }
 
-/* Styling the image within each carousel block */
-.carousel-block img {
+.swiper-slide img {
     width: 100%;
     max-width: 300px;
     border-radius: 8px;
     margin-bottom: 10px;
-    align-items: center;
-    justify-content: center; 
 }
+
 
 /* Container for text in each carousel block */
 .carousel-item {
@@ -228,9 +225,7 @@ h3 {
     margin: 0;
 }
 
-/* Carousel Controls Styling */
-.carousel-control-prev,
-.carousel-control-next {
+.swiper-button-prev, .swiper-button-next {
     font-size: 18px;
     color: #fff;
     background-color: #333;
@@ -249,23 +244,20 @@ h3 {
     transform: translateY(-50%);
 }
 
-.carousel-control-prev {
+.swiper-button-prev {
     left: 10px;
 }
 
-.carousel-control-next {
+.swiper-button-next {
     right: 10px;
 }
 
-/* Hover Effect for Carousel Buttons */
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
+.swiper-button-prev:hover, .swiper-button-next:hover {
     background-color: #5A9BD5;
     transform: scale(1.1);
 }
 
-.carousel-control-prev:active,
-.carousel-control-next:active {
+.swiper-button-prev:active, .swiper-button-next:active {
     transform: scale(0.95);
 }
 
@@ -329,19 +321,18 @@ footer p {
     .caption {
         font-size: 14px;
     }
-
-    .carousel-inner {
+    
+   .swiper-wrapper {
         width: 95%;
     }
 
-    .carousel-inner img {
+    .swiper-slide img {
         max-width: 250px;
     }
 
-    button.carousel-control-prev,
-    button.carousel-control-next {
+    .swiper-button-prev,
+    .swiper-button-next {
         font-size: 20px;
-        left: 10px;  /* Adjust buttons closer for smaller screens */
+        left: 10px;
         right: 10px;
     }
-}
