@@ -12,6 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Swiper JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -103,11 +107,11 @@
         <div class="project-carousel"> 
             <h3 class="bookh3b">Chapters:</h3>
                 
-                <div class="carousel-inner">
+                <div class="swiper-wrapper">
 
-                <button id="prev-slide" class="carousel-control-prev">‹</button>
+                <button id="prev-slide" class="swiper-button-prev">‹</button>
 
-                        <div class="carousel-block">
+                        <div class="swiper-slide">
                             <img src="creative-book-ch1.png" alt="Chapter 1 Cover">
                             <div class="carousel-item">
                              <p class="caption">
@@ -120,7 +124,7 @@
                         </div>
                         </div>
                         
-                        <div class="carousel-block">
+                        <div class="swiper-slide">
                             <img src="creative-book-ch2.png" alt="Chapter 2 Cover">
                             <div class="carousel-item">
                             <p class="caption">
@@ -133,7 +137,7 @@
                         </div>
                         </div>
 
-                        <div class="carousel-block">
+                        <div class="swiper-slide">
                             <img src="creative-book-ch3.png" alt="Chapter 3 Cover">
                             <div class="carousel-item">
                              <p class="caption">
@@ -145,7 +149,7 @@
                         </div>
                         </div>
 
-                        <div class="carousel-block">
+                        <div class="swiper-slide">
                             <img src="creative-book-ch4.png" alt="Chapter 4 Cover">
                             <div class="carousel-item">
                             <p class="caption">
@@ -157,7 +161,7 @@
                         </div>
                         </div>
 
-                        <div class="carousel-block">
+                        <div class="swiper-slide">
                             <img src="creative-book-ch5.png" alt="Chapter 5 Cover">
                             <div class="carousel-item">
                              <p class="caption">
@@ -169,7 +173,7 @@
                         </div>
                         </div>
 
-                        <div class="carousel-block">
+                        <div class="swiper-slide">
                             <img src="creative-book-ch6.png" alt="Chapter 6 Cover">
                             <div class="carousel-item">
                             <p class="caption">
@@ -181,7 +185,7 @@
                         </div>
                         </div>
                
-                        <div class="carousel-block">
+                        <div class="swiper-slide">
                             <img src="creative-book-ch7.png" alt="Chapter 7 Cover">
                             <div class="carousel-item">
                             <p class="caption">
@@ -193,7 +197,7 @@
                         </div>
                         </div>
                 
-                <div class="carousel-block">
+                <div class="swiper-slide">
                     <img src="creative-book-ch8.png" alt="Chapter 8 Cover">
                     <div class="carousel-item">
                     <p class="caption">
@@ -205,7 +209,7 @@
                         </div>
                         </div>
                     
-                 <div class="carousel-block">
+                 <div class="swiper-slide">
                      <img src="creative-book-ch9.png" alt="Chapter 9 Cover">
                      <div class="carousel-item">
                       <p class="caption">
@@ -218,7 +222,7 @@
                         </div>
                  </div>
                     
-                <div class="carousel-block">
+                <div class="swiper-slide">
                     <img src="creative-book-ch10.png" alt="Chapter 10 Cover">
                     <div class="carousel-item">
                     <p class="caption">
@@ -231,7 +235,7 @@
                         </div>
                 </div>
                     
-                <div class="carousel-block">
+                <div class="swiper-slide">
                     <img src="creative-book-ch11.png" alt="Chapter 11 Cover">
                     <div class="carousel-item">
                      <p class="caption">
@@ -242,10 +246,8 @@
                             </p>
                         </div>
                     </div>
-                <button id="next-slide" class="carousel-control-next">›</button>
-                    
-                <div class="carousel-controls">
-                </div>
+                <button id="next-slide" class="swiper-button-next">›</button>
+                
                 </div>
                 </div>
                 </div>
@@ -265,68 +267,16 @@
 
 <!-- JavaScript for Hamburger Menu and Carousel -->
 <script>
- $(document).ready(function() {
-    $('.carousel-container').each(function() {
-        const $carouselContainer = $(this);
-        const $carouselItems = $carouselContainer.find('.carousel-items');
-        const $images = $carouselItems.children('img');
-        const visibleItems = 3; // Number of items visible at once
-        const totalItems = $images.length;
-        const itemWidth = 100 / visibleItems;
-
-        // Step 1: Clone items on both ends for seamless looping
-        $images.clone().prependTo($carouselItems);
-        $images.clone().appendTo($carouselItems);
-
-        // Step 2: Calculate total items after cloning and set initial offset
-        const totalClonedItems = $carouselItems.children('img').length;
-        let currentIndex = totalItems; // Start at the first of the original set
-
-        // Position carousel to start at the original set (centered among clones)
-        $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
-
-        function updateCarouselPosition() {
-            // Smooth scroll to the current index
-            $carouselItems.css('transition', 'transform 0.5s ease');
-            $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
-        }
-
-        function resetPosition(newIndex) {
-            // Instantly reset the carousel position to avoid visual jumps
-            $carouselItems.css('transition', 'none');
-            currentIndex = newIndex;
-            $carouselItems.css('transform', `translateX(-${itemWidth * currentIndex}%)`);
-            setTimeout(() => $carouselItems.css('transition', 'transform 0.5s ease'), 50);
-        }
-
-        // Right Button Click
-        $carouselContainer.find('.carousel-control.right').on("click", function() {
-            currentIndex++;
-            updateCarouselPosition();
-
-            // Reset to start seamlessly if reaching the end clone
-            if (currentIndex >= totalClonedItems - visibleItems) {
-                setTimeout(() => {
-                    resetPosition(totalItems); // Reset to the original start position
-                }, 500);
-            }
-        });
-
-        // Left Button Click
-        $carouselContainer.find('.carousel-control.left').on("click", function() {
-            currentIndex--;
-            updateCarouselPosition();
-
-            // Reset to end seamlessly if reaching the start clone
-            if (currentIndex < visibleItems) {
-                setTimeout(() => {
-                    resetPosition(totalItems * 2 - visibleItems); // Reset to original end position
-                }, 500);
-            }
-        });
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,               // Enables continuous looping
+        speed: 500,               // Fast transition speed for smooth effect
+        navigation: {
+            nextEl: '.swiper-button-next',  // Assigns next button
+            prevEl: '.swiper-button-prev',  // Assigns previous button
+        },
     });
-});
 </script>
+
 
 </body>
 </html>
