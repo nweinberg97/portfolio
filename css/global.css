@@ -27,21 +27,14 @@ header .logo a:hover {
     transform: scale(1.1); /* Slightly grows on hover */
 }
 
-/* Navigation Links */
-header nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 header nav ul {
-    list-style: none;
+    list-style: none; /* Removes bullet points */
     display: flex;
+    margin-right: 0; /* Adjust spacing for right alignment */
 }
 
-/* Spacing Between Links */
 header nav ul li {
-    margin-left: 2rem; /* Consistent spacing between links */
+    margin-left: 2rem; /* Adjusted for consistent spacing */
 }
 
 header nav ul li a {
