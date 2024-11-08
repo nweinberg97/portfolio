@@ -291,11 +291,6 @@ h3 {
     right: 10px;
 }
 
-/* Remove Swiper's default icon content */
-.swiper-button-prev::after, .swiper-button-next::after {
-    content: ''; /* Clears Swiper's default arrow icon */
-}
-
 /* Footer Styling */
 footer {
     margin-top: auto;
