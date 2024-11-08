@@ -267,13 +267,22 @@
 const swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 1,
+    loopAdditionalSlides: 2, // Adds extra slides for smoother looping
+    centeredSlides: true,
+    spaceBetween: 10, // Adjust as needed
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     speed: 500,
-    watchOverflow: true,
+    watchOverflow: true, // Ensures Swiper doesn’t initialize with only one slide
 });
+
+// Console logging for debugging
+swiper.on('slideChange', () => {
+    console.log('Slide changed:', swiper.activeIndex);
+});
+
 </script>
 
 </body>
