@@ -230,7 +230,7 @@ h3 {
 
 .carousel-container, .carousel-wrapper {
     width: 100%;
-    overflow: hidden; /* Ensures that only one slide is visible if set */
+    overflow: visible; /* Ensures that only one slide is visible if set */
 }
 
 .carousel-wrapper {
