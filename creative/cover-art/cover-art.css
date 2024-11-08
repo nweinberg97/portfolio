@@ -216,7 +216,7 @@ h3 {
 }
 
 /* Styling for the overall carousel container */
-.swiper-container {
+.carousel-container {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -228,16 +228,16 @@ h3 {
     width: 100%; 
 }
 
-.swiper-container, .swiper-wrapper {
+.carousel-container, .carousel-wrapper {
     width: 100%;
     overflow: hidden; /* Ensures that only one slide is visible if set */
 }
 
-.swiper-wrapper {
+.carousel-wrapper {
     display: flex;
 }
 
-.swiper-slide {
+.carousel-slide {
     flex: 0 0 100%;
     text-align: center;
     display: flex;
@@ -256,13 +256,13 @@ h3 {
     padding: 10px; 
 }
 
-.swiper-slide img {
+.carousel-slide img {
     max-width: 80%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.control-button-prev, .control-button-next {
     position: absolute;
     top: 45%; /* Adjust this value to position higher than the center */
     transform: translateY(-50%); /* Keeps vertical alignment within the top position */
@@ -282,16 +282,16 @@ h3 {
     z-index: 10;
 }
 
-.swiper-button-prev {
+.control-button-prev {
     left: 10px;
 }
 
-.swiper-button-next {
+.control-button-next {
     right: 10px;
 }
 
 /* Hover effect for custom Swiper buttons */
-.swiper-button-prev:hover, .swiper-button-next:hover {
+.control-button-prev:hover, .swiper-button-next:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
@@ -357,16 +357,16 @@ footer p {
         font-size: 14px;
     }
     
-   .swiper-wrapper {
+   .carousel-wrapper {
         width: 95%;
     }
 
-    .swiper-slide img {
+    .carousel-slide img {
         max-width: 250px;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
+    .control-button-prev,
+    .control-button-next {
         font-size: 20px;
         left: 10px;
         right: 10px;
