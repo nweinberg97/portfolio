@@ -102,10 +102,13 @@
             
             <h3 class="bookh3b">Chapters:</h3>
 
-            <div class="swiper-container">  
-                <div class="swiper-wrapper">
+            <div class="carousel-container">  
 
-                        <div class="swiper-slide">
+            <button class="control-button-prev">‹</button>
+
+                <div class="carousel-wrapper">
+
+                        <div class="carousel-slide">
                             <img src="creative-book-ch1.png" alt="Chapter 1 Cover">
                             <div class="carousel-item">
                              <p class="caption">
@@ -118,7 +121,7 @@
                         </div>
                         </div>
                         
-                        <div class="swiper-slide">
+                        <div class="carousel-slide">
                             <img src="creative-book-ch2.png" alt="Chapter 2 Cover">
                             <div class="carousel-item">
                             <p class="caption">
@@ -131,7 +134,7 @@
                         </div>
                         </div>
 
-                        <div class="swiper-slide">
+                        <div class="carousel-slide">
                             <img src="creative-book-ch3.png" alt="Chapter 3 Cover">
                             <div class="carousel-item">
                              <p class="caption">
@@ -143,7 +146,7 @@
                         </div>
                         </div>
 
-                        <div class="swiper-slide">
+                        <div class="carousel-slide">
                             <img src="creative-book-ch4.png" alt="Chapter 4 Cover">
                             <div class="carousel-item">
                             <p class="caption">
@@ -155,7 +158,7 @@
                         </div>
                         </div>
 
-                        <div class="swiper-slide">
+                        <div class="carousel-slide">
                             <img src="creative-book-ch5.png" alt="Chapter 5 Cover">
                             <div class="carousel-item">
                              <p class="caption">
@@ -167,7 +170,7 @@
                         </div>
                         </div>
 
-                        <div class="swiper-slide">
+                        <div class="carousel-slide">
                             <img src="creative-book-ch6.png" alt="Chapter 6 Cover">
                             <div class="carousel-item">
                             <p class="caption">
@@ -179,7 +182,7 @@
                         </div>
                         </div>
                
-                        <div class="swiper-slide">
+                        <div class="carousel-slide">
                             <img src="creative-book-ch7.png" alt="Chapter 7 Cover">
                             <div class="carousel-item">
                             <p class="caption">
@@ -191,7 +194,7 @@
                         </div>
                         </div>
                 
-                <div class="swiper-slide">
+                <div class="carousel-slide">
                     <img src="creative-book-ch8.png" alt="Chapter 8 Cover">
                     <div class="carousel-item">
                     <p class="caption">
@@ -203,7 +206,7 @@
                         </div>
                         </div>
                     
-                 <div class="swiper-slide">
+                 <div class="carousel-slide">
                      <img src="creative-book-ch9.png" alt="Chapter 9 Cover">
                      <div class="carousel-item">
                       <p class="caption">
@@ -216,7 +219,7 @@
                         </div>
                  </div>
                     
-                <div class="swiper-slide">
+                <div class="carousel-slide">
                     <img src="creative-book-ch10.png" alt="Chapter 10 Cover">
                     <div class="carousel-item">
                     <p class="caption">
@@ -229,7 +232,7 @@
                         </div>
                 </div>
                     
-                <div class="swiper-slide">
+                <div class="carousel-slide">
                     <img src="creative-book-ch11.png" alt="Chapter 11 Cover">
                     <div class="carousel-item">
                      <p class="caption">
@@ -240,9 +243,9 @@
                             </p>
                         </div>
                     </div>
-                    <button class="swiper-button-next">›</button>
-                    <button class="swiper-button-prev">‹</button>
-                </div>                
+                </div>  
+                <button class="control-button-next">›</button>
+
                 </div>
 
     </section>
@@ -261,8 +264,8 @@
 <script>
 $(document).ready(function() {
     // Selectors and initial setup
-    const carouselContainer = document.querySelector(".swiper-wrapper");
-    const slides = Array.from(document.querySelectorAll(".swiper-slide"));
+    const carouselContainer = document.querySelector(".carousel-wrapper"); // Changed to carousel-wrapper
+    const slides = Array.from(document.querySelectorAll(".carousel-slide")); // Changed to carousel-slide
     const visibleItems = 1; // Set to 1 to show only one slide at a time
     let currentIndex = visibleItems; // Start at the first real item after clones
     let totalItems = slides.length;
@@ -291,7 +294,7 @@ $(document).ready(function() {
     }
 
     // Next button functionality
-    document.querySelector(".swiper-button-next").addEventListener("click", () => {
+    document.querySelector(".control-button-next").addEventListener("click", () => { // Updated class
         currentIndex++;
         updateCarousel();
 
@@ -306,7 +309,7 @@ $(document).ready(function() {
     });
 
     // Previous button functionality
-    document.querySelector(".swiper-button-prev").addEventListener("click", () => {
+    document.querySelector(".control-button-prev").addEventListener("click", () => { // Updated class
         currentIndex--;
         updateCarousel();
 
@@ -320,7 +323,8 @@ $(document).ready(function() {
         }
     });
 });
-        </script> 
+</script>
+
 
 
 </body>
