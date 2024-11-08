@@ -264,25 +264,17 @@
     </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        speed: 300, // Adjust the transition speed as needed
-        loop: true, // Optional, depending on if you want looping
-    });
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  initialSlide: 0, // Explicit starting slide
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  speed: 300,
+});
 
-    document.querySelector('.swiper-button-next').addEventListener('click', () => {
-        console.log("Next button clicked");
-    });
-
-    document.querySelector('.swiper-button-prev').addEventListener('click', () => {
-        console.log("Previous button clicked");
-    });
-}); // Close the DOMContentLoaded function
 </script>
 
 
