@@ -245,6 +245,7 @@ h3 {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    z-index: 1; 
 }
 
 .carousel-item p {
@@ -264,7 +265,7 @@ h3 {
 
 .control-button-prev, .control-button-next {
     position: absolute;
-    top: 45%; /* Adjust this value to position higher than the center */
+    top: 50%;
     transform: translateY(-50%); /* Keeps vertical alignment within the top position */
     font-size: 1.5rem;
     color: white;
@@ -279,7 +280,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 2;
 }
 
 .control-button-prev {
