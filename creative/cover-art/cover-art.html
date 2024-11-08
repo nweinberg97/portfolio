@@ -245,8 +245,8 @@
                             </p>
                         </div>
                     </div>
-                    <button class="swiper-button-prev">‹</button>
                     <button class="swiper-button-next">›</button>
+                    <button class="swiper-button-prev">‹</button>
                 </div>                
                 </div>
 
@@ -267,10 +267,19 @@
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     navigation: {
-        prevEl: '.swiper-button-prev',
         nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     speed: 300, // Adjust the transition speed as needed
+    loop: true, // Optional, depending on if you want looping
+});
+
+    document.querySelector('.swiper-button-next').addEventListener('click', () => {
+    console.log("Next button clicked");
+});
+
+document.querySelector('.swiper-button-prev').addEventListener('click', () => {
+    console.log("Previous button clicked");
 });
 </script>
 
