@@ -269,6 +269,7 @@ h3 {
     font-size: 1.5rem;
     color: white;
     background-color: #007BFF;
+    padding: 10px; 
     border: none;
     cursor: pointer;
     width: 40px;
