@@ -257,17 +257,17 @@
             </div>
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
-
+    
 <script>
 $(document).ready(function() {
     // Selectors and initial setup
     const carouselContainer = document.querySelector(".swiper-wrapper");
     const slides = Array.from(document.querySelectorAll(".swiper-slide"));
-    const visibleItems = 1; // Only 1 item visible at a time
-    let currentIndex = visibleItems; // Start at the first real item
+    const visibleItems = 1; // Set to 1 to show only one slide at a time
+    let currentIndex = visibleItems; // Start at the first real item after clones
     let totalItems = slides.length;
 
-    // Clone first and last slides for continuous loop
+    // Clone first and last slide for continuous loop
     slides.slice(0, visibleItems).forEach(item => {
         let clone = item.cloneNode(true);
         carouselContainer.appendChild(clone);
@@ -280,7 +280,7 @@ $(document).ready(function() {
     // Update total items after cloning
     totalItems = carouselContainer.children.length;
 
-    // Set initial position to start from the first real item (offset by clone count)
+    // Set initial position to the first real item
     carouselContainer.style.transform = `translateX(-${100 * currentIndex}%)`;
 
     // Function to update carousel display
@@ -320,7 +320,7 @@ $(document).ready(function() {
         }
     });
 });
-</script>
+        </script> 
 
 
 </body>
