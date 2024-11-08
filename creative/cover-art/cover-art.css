@@ -257,6 +257,11 @@ h3 {
     width: 100%;
 }
 
+.carousel-item {
+    align-items: center; 
+    justify-content: center; 
+}
+
 .swiper-slide img {
     width: 100%;
     max-width: 300px;
@@ -271,7 +276,7 @@ h3 {
 
 .swiper-button-prev, .swiper-button-next {
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     font-size: 1.5rem;
     color: white;
@@ -290,11 +295,11 @@ h3 {
 }
 
 .swiper-button-prev {
-    left: 10px;
+    left: 25px;
 }
 
 .swiper-button-next {
-    right: 10px;
+    right: 25px;
 }
 
 /* Footer Styling */
