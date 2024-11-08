@@ -12,13 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- jQuery CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"></script>
-        <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- Swiper JavaScript -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -264,17 +259,67 @@
     </footer>
 
 <script>
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  initialSlide: 0, // Explicit starting slide
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  speed: 300,
-});
+$(document).ready(function() {
+    // Selectors and initial setup
+    const carouselContainer = document.querySelector(".swiper-wrapper");
+    const slides = Array.from(document.querySelectorAll(".swiper-slide"));
+    const visibleItems = 1; // Only 1 item visible at a time
+    let currentIndex = visibleItems; // Start at the first real item
+    let totalItems = slides.length;
 
+    // Clone first and last slides for continuous loop
+    slides.slice(0, visibleItems).forEach(item => {
+        let clone = item.cloneNode(true);
+        carouselContainer.appendChild(clone);
+    });
+    slides.slice(-visibleItems).forEach(item => {
+        let clone = item.cloneNode(true);
+        carouselContainer.insertBefore(clone, carouselContainer.firstChild);
+    });
+
+    // Update total items after cloning
+    totalItems = carouselContainer.children.length;
+
+    // Set initial position to start from the first real item (offset by clone count)
+    carouselContainer.style.transform = `translateX(-${100 * currentIndex}%)`;
+
+    // Function to update carousel display
+    function updateCarousel() {
+        const offset = -(100 * currentIndex);
+        carouselContainer.style.transition = 'transform 0.5s ease';
+        carouselContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Next button functionality
+    document.querySelector(".swiper-button-next").addEventListener("click", () => {
+        currentIndex++;
+        updateCarousel();
+
+        // Reset to real start after reaching cloned end
+        if (currentIndex >= totalItems - visibleItems) {
+            setTimeout(() => {
+                carouselContainer.style.transition = 'none';
+                currentIndex = visibleItems;
+                carouselContainer.style.transform = `translateX(-${100 * currentIndex}%)`;
+            }, 500);
+        }
+    });
+
+    // Previous button functionality
+    document.querySelector(".swiper-button-prev").addEventListener("click", () => {
+        currentIndex--;
+        updateCarousel();
+
+        // Reset to real end after reaching cloned start
+        if (currentIndex < visibleItems) {
+            setTimeout(() => {
+                carouselContainer.style.transition = 'none';
+                currentIndex = totalItems - visibleItems * 2;
+                carouselContainer.style.transform = `translateX(-${100 * currentIndex}%)`;
+            }, 500);
+        }
+    });
+});
 </script>
 
 
