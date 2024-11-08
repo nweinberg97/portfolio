@@ -268,8 +268,7 @@ h3 {
     transform: translateY(-50%); /* Keeps vertical alignment within the top position */
     font-size: 1.5rem;
     color: white;
-    background-color: #007BFF;
-    padding: 10px; 
+    background-color: #007BFF; /* Your custom blue */    
     border: none;
     cursor: pointer;
     width: 40px;
@@ -289,6 +288,12 @@ h3 {
 
 .swiper-button-next {
     right: 10px;
+}
+
+/* Hover effect for custom Swiper buttons */
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Footer Styling */
