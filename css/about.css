@@ -113,10 +113,6 @@ header nav {
     margin: 20px 250px; 
 }
 
-.about-section.alternate .about-chunk {
-    flex-direction: row-reverse; 
-}
-
 .about-page {
     padding: 10px;
     margin: 70px 20px 10px 20px;
