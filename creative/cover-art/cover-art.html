@@ -275,9 +275,10 @@ $(document).ready(function() {
 
     // Function to update carousel display
     function updateCarousel() {
-        const offset = -(100 * currentIndex);
+        const offset = -(100 * currentIndex); // Calculate offset to show the current slide
+        carouselContainer.style.transition = 'transform 0.5s ease';
         carouselContainer.style.transform = `translateX(${offset}%)`;
-        console.log(`Showing slide: ${currentIndex + 1}`);
+        console.log(`Current slide index: ${currentIndex}`);
     }
 
     // Initialize carousel to show the first slide
@@ -285,7 +286,7 @@ $(document).ready(function() {
 
     // Next button functionality
     document.querySelector(".control-button-next").addEventListener("click", () => {
-        if (currentIndex < totalItems - 1) {
+        if (currentIndex < totalItems - 1) { // Only move if not at the last slide
             currentIndex++;
             updateCarousel();
         } else {
@@ -295,7 +296,7 @@ $(document).ready(function() {
 
     // Previous button functionality
     document.querySelector(".control-button-prev").addEventListener("click", () => {
-        if (currentIndex > 0) {
+        if (currentIndex > 0) { // Only move if not at the first slide
             currentIndex--;
             updateCarousel();
         } else {
