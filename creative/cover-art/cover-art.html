@@ -262,43 +262,52 @@
 
     <script> 
 document.addEventListener("DOMContentLoaded", function() {
+    // Selectors and setup
     const carouselContainer = document.querySelector(".carousel-wrapper");
     const slides = Array.from(document.querySelectorAll(".carousel-slide"));
-    const totalSlides = slides.length;
+    const totalSlides = 11; // explicitly define total slides
+    
+    let currentIndex = 0; // Start at first slide (index 0)
 
-    // Ensure there are exactly 11 slides
-    if (totalSlides !== 11) {
-        console.error("Error: Carousel requires exactly 11 slides.");
-        return; // Stop execution if slide count is not 11
-    }
-
-    let currentIndex = 0; // Start at the actual first slide
-
-    // Set initial position explicitly to 0% (first slide)
-    carouselContainer.style.transform = `translateX(0%)`;
-    carouselContainer.style.transition = "none"; // No transition on load
-
-    // Function to update carousel display based on the current index
+    // Function to update the display to show the current slide
     function updateCarousel() {
-        const offset = -(100 * currentIndex); // Calculate the offset
-        carouselContainer.style.transition = 'transform 0.5s ease'; // Smooth transition
-        carouselContainer.style.transform = `translateX(${offset}%)`; // Apply transform
-        console.log(`Showing slide ${currentIndex + 1} of ${totalSlides}`);
+        const offset = -(100 * currentIndex);
+        carouselContainer.style.transition = 'transform 0.5s ease';
+        carouselContainer.style.transform = `translateX(${offset}%)`;
     }
 
-    // Next button functionality
+    // Next button functionality - only functional at start
     document.querySelector(".control-button-next").addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % totalSlides; // Go to next slide, loop to start if at last slide
-        updateCarousel();
+        if (currentIndex < totalSlides - 1) { // Allow up to last slide
+            currentIndex++;
+            updateCarousel();
+        }
+        // Enable previous button functionality after the first click
+        document.querySelector(".control-button-prev").disabled = false;
+
+        // Disable next button if on the last slide
+        if (currentIndex === totalSlides - 1) {
+            document.querySelector(".control-button-next").disabled = true;
+        }
     });
 
-    // Previous button functionality
-    document.querySelector(".control-button-prev").addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Go to previous slide, loop to last if at first slide
-        updateCarousel();
+    // Previous button functionality - disabled initially
+    const prevButton = document.querySelector(".control-button-prev");
+    prevButton.disabled = true; // Disable until user clicks Next
+    prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) { // Prevent going before first slide
+            currentIndex--;
+            updateCarousel();
+        }
+        // Disable previous button if back at the start
+        if (currentIndex === 0) {
+            prevButton.disabled = true;
+        }
+        // Re-enable next button if not on the last slide
+        document.querySelector(".control-button-next").disabled = false;
     });
 
-    // Initial display without transition
+    // Initial display position at slide 1
     updateCarousel();
 });
 </script>
