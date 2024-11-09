@@ -265,27 +265,31 @@
 
 
     <script> 
-console.log("Carousel script initialized");
 $(document).ready(function() {
-    // Selectors and initial setup
+    console.log("Carousel script initialized");
+
     const carouselContainer = document.querySelector(".carousel-wrapper");
     const slides = Array.from(document.querySelectorAll(".carousel-slide"));
-    const visibleItems = 1; // Only 1 item visible at a time
     let currentIndex = 0; // Start at the first slide
     const totalItems = slides.length;
 
     // Function to update carousel display
     function updateCarousel() {
         const offset = -(100 * currentIndex);
-        carouselContainer.style.transition = 'transform 0.5s ease';
         carouselContainer.style.transform = `translateX(${offset}%)`;
+        console.log(`Showing slide: ${currentIndex + 1}`);
     }
+
+    // Initialize carousel to show the first slide
+    updateCarousel();
 
     // Next button functionality
     document.querySelector(".control-button-next").addEventListener("click", () => {
         if (currentIndex < totalItems - 1) {
             currentIndex++;
             updateCarousel();
+        } else {
+            console.log("Reached the last slide.");
         }
     });
 
@@ -294,6 +298,8 @@ $(document).ready(function() {
         if (currentIndex > 0) {
             currentIndex--;
             updateCarousel();
+        } else {
+            console.log("Reached the first slide.");
         }
     });
 });
