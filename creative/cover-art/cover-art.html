@@ -260,46 +260,44 @@
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
 
-   <script> 
+    <script> 
 document.addEventListener("DOMContentLoaded", function() {
-    // Selectors and initial setup
-    const carouselContainer = document.querySelector(".carousel-wrapper"); 
+    const carouselContainer = document.querySelector(".carousel-wrapper");
     const slides = document.querySelectorAll(".carousel-slide");
-    let currentIndex = 0; // Start at the first slide
-    const totalItems = slides.length;
+    const totalSlides = slides.length;
 
-    // Log total slides and initial state
-    console.log("Total slides:", totalItems);
-    slides.forEach((slide, index) => {
-        console.log(`Slide ${index} - Source: ${slide.querySelector("img").src}`);
-    });
-
-    function updateCarousel() {
-        const offset = -(100 * currentIndex); // Offset calculation
-        carouselContainer.style.transition = 'transform 0.5s ease';
-        carouselContainer.style.transform = `translateX(${offset}%)`;
-        console.log(`Updating carousel - Current Index: ${currentIndex}, Offset: ${offset}%`);
+    // Ensure there are exactly 11 slides
+    if (totalSlides !== 11) {
+        console.error("Error: Carousel requires exactly 11 slides to function correctly.");
+        return; // Stop execution if slide count is not 11
     }
 
+    let currentIndex = 0; // Start at the first slide
+
+    // Function to update the carousel display based on the current index
+    function updateCarousel() {
+        const offset = -(100 * currentIndex); // Calculate the offset
+        carouselContainer.style.transition = 'transform 0.5s ease'; // Smooth transition
+        carouselContainer.style.transform = `translateX(${offset}%)`; // Apply transform
+        console.log(`Showing slide ${currentIndex + 1} of ${totalSlides}`);
+    }
+
+    // Next button functionality
     document.querySelector(".control-button-next").addEventListener("click", () => {
-        if (currentIndex < totalItems - 1) { 
-            currentIndex++;
-            console.log("Next button clicked - New Index:", currentIndex);
-            updateCarousel();
-        }
+        currentIndex = (currentIndex + 1) % totalSlides; // Go to next slide, loop to first if at last slide
+        updateCarousel();
     });
 
+    // Previous button functionality
     document.querySelector(".control-button-prev").addEventListener("click", () => {
-        if (currentIndex > 0) { 
-            currentIndex--;
-            console.log("Previous button clicked - New Index:", currentIndex);
-            updateCarousel();
-        }
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Go to previous slide, loop to last if at first slide
+        updateCarousel();
     });
 
-    updateCarousel(); // Initial display
+    // Initial display, set to show the first slide
+    updateCarousel();
 });
-        </script> 
+</script> 
 
 
 
