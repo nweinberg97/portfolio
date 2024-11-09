@@ -262,76 +262,42 @@
             </div>
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
-    
-<script>
-    console.log("Carousel script initialized");
-    $(document).ready(function() {
-        // Selectors and initial setup
-        const carouselContainer = document.querySelector(".carousel-wrapper");
-        const slides = Array.from(document.querySelectorAll(".carousel-slide"));
-        const visibleItems = 1; // Set to 1 to show only one slide at a time
-        let currentIndex = visibleItems; // Start at the first real item after clones
-        let totalItems = slides.length;
 
-        // Clone first and last slides for continuous loop
-        slides.slice(0, visibleItems).forEach(item => {
-            let clone = item.cloneNode(true);
-            carouselContainer.appendChild(clone);
-        });
-        slides.slice(-visibleItems).forEach(item => {
-            let clone = item.cloneNode(true);
-            carouselContainer.insertBefore(clone, carouselContainer.firstChild);
-        });
 
-        // Update total items after cloning
-        totalItems = carouselContainer.children.length;
+    <script> 
+console.log("Carousel script initialized");
+$(document).ready(function() {
+    // Selectors and initial setup
+    const carouselContainer = document.querySelector(".carousel-wrapper");
+    const slides = Array.from(document.querySelectorAll(".carousel-slide"));
+    const visibleItems = 1; // Only 1 item visible at a time
+    let currentIndex = 0; // Start at the first slide
+    const totalItems = slides.length;
 
-        // Set initial position to the first real item
-        carouselContainer.style.transform = `translateX(-${100 * currentIndex}%)`;
+    // Function to update carousel display
+    function updateCarousel() {
+        const offset = -(100 * currentIndex);
+        carouselContainer.style.transition = 'transform 0.5s ease';
+        carouselContainer.style.transform = `translateX(${offset}%)`;
+    }
 
-        // Function to update carousel display
-        function updateCarousel() {
-            const offset = -(100 * currentIndex);
-            carouselContainer.style.transition = 'transform 0.5s ease';
-            carouselContainer.style.transform = `translateX(${offset}%)`;
-        }
-
-        // Previous button functionality
-        document.querySelector(".control-button-prev").addEventListener("click", () => {
-            currentIndex--;
-            updateCarousel();
-
-            // Reset to real end after reaching cloned start
-            if (currentIndex === 0) {
-                setTimeout(() => {
-                    carouselContainer.style.transition = 'none';
-                    currentIndex = totalItems - visibleItems * 2;
-                    carouselContainer.style.transform = `translateX(-${100 * currentIndex}%)`;
-                }, 500);
-            }
-        });
-
-        // Next button functionality
-        document.querySelector(".control-button-next").addEventListener("click", () => {
+    // Next button functionality
+    document.querySelector(".control-button-next").addEventListener("click", () => {
+        if (currentIndex < totalItems - 1) {
             currentIndex++;
             updateCarousel();
-
-            // Reset to real start after reaching cloned end
-            if (currentIndex === totalItems - visibleItems) {
-                setTimeout(() => {
-                    carouselContainer.style.transition = 'none';
-                    currentIndex = visibleItems;
-                    carouselContainer.style.transform = `translateX(-${100 * currentIndex}%)`;
-                }, 500);
-            }
-        });
-
-        // Remove transition for instantaneous movement after cloning reset
-        carouselContainer.addEventListener("transitionend", () => {
-            carouselContainer.style.transition = '';
-        });
+        }
     });
-</script>
+
+    // Previous button functionality
+    document.querySelector(".control-button-prev").addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+});
+        </script> 
 
 
 
