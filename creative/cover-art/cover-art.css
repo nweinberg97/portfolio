@@ -225,8 +225,6 @@ h3 {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
-    align-items: center;
-    justify-content: center;
     width: 100%; 
     position: relative; /* Ensure buttons are positioned relative to this container */
     overflow: hidden; 
@@ -235,8 +233,7 @@ h3 {
 .carousel-wrapper {
     display: flex;
     width: 100%; 
-    align-items: center;
-    justify-content: center;
+    flex-direction: row; /* Ensure slides line up horizontally */
 }
 
 .carousel-slide {
