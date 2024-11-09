@@ -263,33 +263,37 @@
             <p>&copy; 2024 Nitai Weinberg. All rights reserved.</p>
     </footer>
 
-
-<script>
-   $(document).ready(function() {
-    const carouselContainer = document.querySelector(".carousel-wrapper");
-    const slides = Array.from(document.querySelectorAll(".carousel-slide"));
-    let currentIndex = 0; 
+   
+    <script> 
+    // Initial setup
+    updateCarousel(); // Start at the first slide
+    
+document.addEventListener("DOMContentLoaded", function() {
+    const carouselContainer = document.querySelector(".carousel-wrapper"); 
+    const slides = document.querySelectorAll(".carousel-slide");
+    let currentIndex = 0; // Start at the first slide
     const totalItems = slides.length;
 
-    // Basic carousel movement without looping
     function updateCarousel() {
-        const offset = -(100 * currentIndex);
-        carouselContainer.style.transition = 'transform 0.5s ease';
+        const offset = -(100 * currentIndex); // Offset calculation
         carouselContainer.style.transform = `translateX(${offset}%)`;
-        console.log("Slide change - Current Index:", currentIndex, "Offset:", offset);
+        console.log(`Current Index: ${currentIndex}, Offset: ${offset}%`);
     }
 
-    // Move to the next slide
     document.querySelector(".control-button-next").addEventListener("click", () => {
-        if (currentIndex < totalItems - 1) currentIndex++;
-        updateCarousel();
+        if (currentIndex < totalItems - 1) { // Only move if there are more slides ahead
+            currentIndex++;
+            updateCarousel();
+        }
     });
 
-    // Move to the previous slide
     document.querySelector(".control-button-prev").addEventListener("click", () => {
-        if (currentIndex > 0) currentIndex--;
-        updateCarousel();
+        if (currentIndex > 0) { // Only move if there are slides behind
+            currentIndex--;
+            updateCarousel();
+        }
     });
+
 });
 </script>
 
