@@ -263,18 +263,22 @@
     <script> 
 document.addEventListener("DOMContentLoaded", function() {
     const carouselContainer = document.querySelector(".carousel-wrapper");
-    const slides = document.querySelectorAll(".carousel-slide");
+    const slides = Array.from(document.querySelectorAll(".carousel-slide"));
     const totalSlides = slides.length;
 
     // Ensure there are exactly 11 slides
     if (totalSlides !== 11) {
-        console.error("Error: Carousel requires exactly 11 slides to function correctly.");
+        console.error("Error: Carousel requires exactly 11 slides.");
         return; // Stop execution if slide count is not 11
     }
 
-    let currentIndex = 0; // Start at the first slide
+    let currentIndex = 0; // Start at the actual first slide
 
-    // Function to update the carousel display based on the current index
+    // Set initial position explicitly to 0% (first slide)
+    carouselContainer.style.transform = `translateX(0%)`;
+    carouselContainer.style.transition = "none"; // No transition on load
+
+    // Function to update carousel display based on the current index
     function updateCarousel() {
         const offset = -(100 * currentIndex); // Calculate the offset
         carouselContainer.style.transition = 'transform 0.5s ease'; // Smooth transition
@@ -284,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Next button functionality
     document.querySelector(".control-button-next").addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % totalSlides; // Go to next slide, loop to first if at last slide
+        currentIndex = (currentIndex + 1) % totalSlides; // Go to next slide, loop to start if at last slide
         updateCarousel();
     });
 
@@ -294,11 +298,10 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCarousel();
     });
 
-    // Initial display, set to show the first slide
+    // Initial display without transition
     updateCarousel();
 });
-</script> 
-
+</script>
 
 
 
