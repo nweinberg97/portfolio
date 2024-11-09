@@ -265,45 +265,38 @@
 
 
     <script> 
-$(document).ready(function() {
-    console.log("Carousel script initialized");
+    $(document).ready(function() {
+        // Selectors and initial setup
+        const carouselContainer = document.querySelector(".carousel-wrapper"); 
+        const slides = Array.from(document.querySelectorAll(".carousel-slide"));
+        let currentIndex = 0; // Start from the actual first slide
+        const totalItems = slides.length;
 
-    const carouselContainer = document.querySelector(".carousel-wrapper");
-    const slides = Array.from(document.querySelectorAll(".carousel-slide"));
-    let currentIndex = 0; // Start at the first slide
-    const totalItems = slides.length;
-
-    // Function to update carousel display
-    function updateCarousel() {
-        const offset = -(100 * currentIndex); // Calculate offset to show the current slide
-        carouselContainer.style.transition = 'transform 0.5s ease';
-        carouselContainer.style.transform = `translateX(${offset}%)`;
-        console.log(`Current slide index: ${currentIndex}`);
-    }
-
-    // Initialize carousel to show the first slide
-    updateCarousel();
-
-    // Next button functionality
-    document.querySelector(".control-button-next").addEventListener("click", () => {
-        if (currentIndex < totalItems - 1) { // Only move if not at the last slide
-            currentIndex++;
-            updateCarousel();
-        } else {
-            console.log("Reached the last slide.");
+        // Function to update carousel display based on current index
+        function updateCarousel() {
+            const offset = -(100 * currentIndex);
+            carouselContainer.style.transition = 'transform 0.5s ease';
+            carouselContainer.style.transform = `translateX(${offset}%)`;
         }
-    });
 
-    // Previous button functionality
-    document.querySelector(".control-button-prev").addEventListener("click", () => {
-        if (currentIndex > 0) { // Only move if not at the first slide
-            currentIndex--;
+        // Next button functionality
+        document.querySelector(".control-button-next").addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % totalItems; // Loop back to start after last slide
             updateCarousel();
-        } else {
-            console.log("Reached the first slide.");
-        }
+        });
+
+        // Previous button functionality
+        document.querySelector(".control-button-prev").addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems; // Loop back to last slide after first slide
+            updateCarousel();
+        });
+
+        // Set initial position without any transform to start at slide 0
+        carouselContainer.style.transform = `translateX(0%)`; // Start from the very first slide
+
+        // Optional: Log current index on each update for debugging
+        console.log("Current Index:", currentIndex);
     });
-});
         </script> 
 
 
