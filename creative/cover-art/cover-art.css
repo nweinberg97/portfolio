@@ -229,6 +229,7 @@ h3 {
     justify-content: center;
     width: 100%; 
     position: relative; /* Ensure buttons are positioned relative to this container */
+    overflow: hidden; 
 }
 
 .carousel-wrapper {
@@ -286,7 +287,7 @@ h3 {
 }
 
 .control-button-prev {
-    
+   left: 10px; 
 }
 
 .control-button-next {
