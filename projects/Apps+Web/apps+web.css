@@ -191,6 +191,7 @@ header nav {
     border-radius: 8px;
     object-fit: cover;
     justify-content: center;
+    overflow: hidden;
 }
 
 .project-content:hover {
