@@ -97,6 +97,7 @@ footer {
     text-align: center;
     z-index: 10;
     position: relative; 
+    border: none; 
 }
 
 /* Correct class name updated to match HTML */
