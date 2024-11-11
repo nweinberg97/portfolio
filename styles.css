@@ -76,6 +76,7 @@ header nav ul li a:hover {
     text-align: center;
     padding-top: 28px;
     margin-bottom: -60px;
+    pointer-events: none; 
 }
 
 
@@ -95,6 +96,8 @@ footer {
     padding: 1.5rem 0;
     text-align: center;
     border-top: 1px solid #ddd;
+    z-index: 10;
+    position: relative; 
 }
 
 /* Correct class name updated to match HTML */
