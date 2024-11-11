@@ -105,13 +105,14 @@ footer .footer-links a {
     padding: 0.5rem 1rem;
     margin: 0 4px;
     border-radius: 5px; /* Rounded corners to make it more button-like */
-    transition: background-color 0.2s ease, font-size 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+    will-change: transform, background-color;
     border: 1px solid white; /* Smooth hover effect */
     text-decoration: none;
 }
 
 footer .footer-links a:hover {
-    transform: scale(1.1); /* Grows slightly on hover */
+    transform: scale(1.1) translateZ(0);
     background-color: #5A9BD5; /* Slightly darker pastel blue on hover */
     border: 1px solid #5A9BD5; /* Add border on hover */
 }
