@@ -433,12 +433,12 @@ footer p {
         flex: 0 0 calc(33.333% - 8px); /* Maintains 3-column layout */
     }
     .project-text {
-        font-size: 0.8rem; /* Smaller font for project descriptions */
+        font-size: 0.7rem; /* Smaller font for project descriptions */
     }
 
     /* Hover Text Overlay */
     .hover-text {
-        font-size: 0.9rem; /* Slightly smaller */
+        font-size: 0.6rem; /* Slightly smaller */
         padding: 0px 15px 15px 15px;
     }
 
@@ -452,7 +452,7 @@ footer p {
     .carousel-control {
         width: 30px; /* Smaller buttons */
         height: 30px;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     /* Footer adjustments */
