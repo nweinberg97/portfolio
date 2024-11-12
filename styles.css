@@ -126,30 +126,101 @@ footer p {
     margin-top: 20px;
 }
 
-
-/* Mobile Responsiveness */
+/* Responsive Design for Tablets and Mobile (up to 768px) */
 @media (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        padding: 1rem; /* Reduces padding for smaller screens */
+    }
     header .logo a {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Smaller logo text */
     }
 
+    /* Navigation adjustments */
+    header nav ul {
+        flex-direction: column; /* Stacks navigation items vertically */
+        gap: 0.5rem; /* Adds spacing between items */
+        padding-top: 1rem;
+    }
     header nav ul li {
-        margin-left: 1rem; /* Reduced for smaller screens */
+        margin-left: 0; /* Removes extra left margin */
     }
-
     header nav ul li a {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Reduces font size for smaller screens */
     }
 
+    /* Home section adjustments */
+    #home {
+        padding: 4vh 2vw; /* Reduces padding for smaller screens */
+        flex-direction: column; /* Stacks content vertically */
+        text-align: center;
+        height: 100vh; /* Ensures full height for home section */
+    }
+
+    /* Hero text adjustments */
     .hero-text {
         font-size: 1.8rem;
+        text-align: center;
+        padding: 0 1rem; /* Adds padding for text readability */
     }
-
     .hero-text p {
         font-size: 1.1rem;
+        padding: 0 1rem;
     }
 
+    /* Image adjustments */
     .section-image {
-        max-width: 90%;
+        width: 100vw;
+        height: 100vh; /* Full height on tablets */
+        object-fit: cover; /* Ensures image covers the container */
+        object-position: center;
+    }
+
+    /* Footer adjustments */
+    footer .footer-links a {
+        padding: 0.4rem 0.8rem; /* Compact padding */
+        font-size: 0.8rem; /* Smaller font size */
+    }
+    footer p {
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+}
+
+/* Extra Small Screens (up to 480px) */
+@media (max-width: 480px) {
+    /* Additional Header adjustments */
+    header {
+        padding: 0.5rem; /* Further reduce padding */
+    }
+    header .logo a {
+        font-size: 1.2rem; /* Reduce logo font size */
+    }
+    header nav ul {
+        display: none; /* Hide navigation links */
+    }
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    /* Home section adjustments */
+    #home {
+        height: 100vh; /* Full height on smaller screens */
+        padding: 3vh 1vw; /* Compact padding */
+    }
+
+    /* Footer and Link adjustments */
+    footer .footer-links a {
+        font-size: 0.75rem; /* Smaller font size for footer links */
+        padding: 0.3rem 0.6rem; /* Further compact padding */
+    }
+    footer p {
+        font-size: 0.75rem;
+    }
+
+    /* Image adjustments */
+    .section-image {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
     }
 }
