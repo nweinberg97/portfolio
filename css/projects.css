@@ -77,36 +77,27 @@ header nav {
 }
 
 
-/* Mobile Responsiveness */
+/* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
-    /* Stack logo and hamburger vertically */
+    /* Adjust navbar padding for smaller screens */
     header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem;
+        padding: 0.8rem 1.5rem;
     }
 
+    /* Reduce logo font size */
+    header .logo a {
+        font-size: 1.3rem;
+    }
+
+    /* Reduce font size and gap for navigation links */
     header nav ul {
-        display: none; /* Hide links initially */
+        gap: 1.5rem; /* Reduce spacing between links */
     }
 
-    .hamburger {
-        display: flex;
-    }
-
-    /* Show nav links when hamburger is clicked (JS toggle required) */
-    .show-nav nav ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        background-color: white;
-        width: 100%;
-        left: 0;
-        padding: 1rem;
+    header nav ul li a {
+        font-size: 0.9rem; /* Smaller font size */
     }
 }
-
 
 .main-project-header {
     text-align: center;
@@ -318,18 +309,6 @@ footer p {
 /* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
     /* Navbar adjustments */
-    header {
-        padding: 1rem; /* Reduces padding */
-    }
-    header .logo a {
-        font-size: 1.3rem; /* Smaller logo text */
-    }
-    header nav ul {
-        gap: 1rem; /* Reduces spacing between nav items */
-    }
-    header nav ul li a {
-        font-size: 0.9rem; /* Smaller nav font */
-    }
 
     /* Main Project Header */
     .main-project-header {
@@ -356,12 +335,12 @@ footer p {
         flex: 0 0 calc(33.333% - 10px); /* Adjusted to fit three columns with reduced gap */
     }
     .project-text {
-        font-size: 0.9rem; /* Scaled-down text for project descriptions */
+        font-size: 0.8rem; /* Scaled-down text for project descriptions */
     }
 
     /* Hover Text Overlay */
     .hover-text {
-        font-size: 1rem; /* Scaled down slightly */
+        font-size: 0.7rem; /* Scaled down slightly */
         padding: 0px 20px 20px 20px;
     }
 
@@ -394,20 +373,24 @@ footer p {
 
 /* Small Mobile Screens (up to 480px) */
 @media (max-width: 480px) {
-    /* Navbar adjustment */
+ /* Further reduce navbar padding for mobile */
     header {
-        padding: 0.5rem; /* Further reduce padding */
-    }
-    header .logo a {
-        font-size: 1.2rem; /* Smaller logo font */
-    }
-    header nav ul {
-        gap: 0.5rem;
-    }
-    header nav ul li a {
-        font-size: 0.8rem; /* Further reduced nav font */
+        padding: 0.5rem 1rem;
     }
 
+    /* Further reduce logo font size */
+    header .logo a {
+        font-size: 1.1rem;
+    }
+
+    /* Reduce font size and gap for navigation links */
+    header nav ul {
+        gap: 1rem; /* Smaller gap for mobile */
+    }
+
+    header nav ul li a {
+        font-size: 0.8rem; /* Even smaller font size */
+    }
     /* Main Project Header */
     .main-project-header {
         font-size: 1.5rem; /* Scales down further */
