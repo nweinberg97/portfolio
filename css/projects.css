@@ -345,7 +345,7 @@ footer p {
     /* Hover Text Overlay */
     .hover-text {
         font-size: 0.7rem; /* Scaled down slightly */
-        padding: 10px 20px 20px 20px;
+        padding: 0px 20px 40px 20px;
         align-items: center; 
     }
 
@@ -431,7 +431,7 @@ footer p {
     /* Hover Text Overlay */
     .hover-text {
         font-size: 0.6rem; /* Slightly smaller */
-        padding: 5px 15px 15px 15px;
+        padding: 0px 15px 30px 15px;
         align-items: center;
     }
 
