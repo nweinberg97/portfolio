@@ -434,17 +434,29 @@ footer p {
         height: auto;
     }
 
-    /* Non-carousel videos */
+  /* Non-carousel videos (project content) */
     .project-content iframe {
-        height: 35vh; /* Adjusted height to avoid black space on tablet screens */
+        width: 100%;
+        height: auto; /* Allows natural scaling to avoid zooming */
     }
 
     /* Video items, prototype embeds, and slide decks */
     .video-item,
     .prototype-embed,
     .slide-deck {
-        height: 35vh; /* Consistent height for all video types on tablets */
+        width: 100%;
+        height: auto; /* Ensures proportional scaling without zoom */
+        max-width: 600px; /* Optional max width for tablet screens */
     }
+
+        /* Tablet - max-width: 768px */
+    .prototype-embed {
+        width: 100%;
+        height: auto; /* Allows height to adjust based on content */
+        max-width: 600px; /* Sets a reasonable maximum width */
+        overflow: hidden; /* Prevents content overflow */
+    }
+
 
     /* Footer adjustments */
     footer {
@@ -504,11 +516,12 @@ footer p {
         height: 30vh; /* Ensure consistent height for embedded content on mobile */
     }
 
-        /* Mobile - max-width: 480px */
+      /* Mobile - max-width: 480px */
     .prototype-embed {
         width: 100%;
-        aspect-ratio: 9 / 16; /* Keeps the same aspect ratio on mobile */
-        max-width: 100%; /* Ensures it doesn't exceed the container */
+        height: auto; /* Maintains proportion without forcing a height */
+        max-width: 100%; /* Ensures it fits within the container */
+        overflow: hidden;
     }
     
     /* Footer adjustments */
