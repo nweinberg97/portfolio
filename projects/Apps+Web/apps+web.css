@@ -422,9 +422,16 @@ footer p {
         padding-bottom: 15px;
     }
 
-    /* Adjust video height within carousel */
+            /* Tablet - max-width: 768px */
+    .carousel-container-videos .project-block-videos iframe {
+        width: 100%;
+        height: auto;
+        max-width: 600px; /* Optional max width for tablet view */
+    }
+    
     .project-block-videos iframe {
-        height: 35vh; /* Slightly reduced height for better fit on tablets */
+        width: 100%;
+        height: auto;
     }
 
     /* Non-carousel videos */
@@ -480,11 +487,18 @@ footer p {
         max-width: 100%; /* Full width on mobile */
         padding-bottom: 10px;
     }
+
+        /* Mobile - max-width: 480px */
+    .carousel-container-videos .project-block-videos iframe {
+        width: 100%;
+        height: 25vh;
+    }
     
     .project-block-videos iframe {
-        height: 25vh; /* Reduced height for smaller mobile screens */
+        width: 100%;
+        height: 25vh;
     }
-
+        
     /* Non-carousel videos */
     .project-content iframe {
         height: 30vh; /* Further reduced height for mobile */
