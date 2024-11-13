@@ -76,37 +76,6 @@ header nav {
     margin-left: auto; /* Pushes the nav links to the far right */
 }
 
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    /* Stack logo and hamburger vertically */
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem;
-    }
-
-    header nav ul {
-        display: none; /* Hide links initially */
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    /* Show nav links when hamburger is clicked (JS toggle required) */
-    .show-nav nav ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        background-color: white;
-        width: 100%;
-        left: 0;
-        padding: 1rem;
-    }
-}
-
 /* Main Content Section */
 .apps-web-page {
     margin-top: 70px;
@@ -450,10 +419,76 @@ footer p {
     .video-item,
     .prototype-embed,
     .slide-deck {
-        height: 300px; /* Adjust height for smaller devices */
+        height: 35vh; /* Adjust height to be responsive on tablets */
     }
 
-    .video-carousel {
-        flex-direction: column; /* Stacks videos vertically */
+     .carousel-container-videos {
+        max-width: 500px; /* Slightly reduce carousel container width */
+    }
+    
+     .project-block-videos iframe {
+        height: 35vh; /* Reduce height for tablets */
+     }
+    /* Footer adjustments */
+    footer {
+        padding: 1rem 0; /* Reduced padding for footer */
+    }
+    
+    footer .footer-links a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+        margin: 0 2px; /* Compact margin for links */
+    }
+    footer p {
+        font-size: 0.8rem;
     }
 }
+
+/* Small Mobile Screens (up to 480px) */
+@media (max-width: 480px) {
+ /* Further reduce navbar padding for mobile */
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Further reduce logo font size */
+    header .logo a {
+        font-size: 0.9rem;
+    }
+
+    /* Reduce font size and gap for navigation links */
+    header nav ul {
+        gap: 1rem; /* Smaller gap for mobile */
+    }
+
+    header nav ul li a {
+        font-size: 0.7rem; /* Even smaller font size */
+    }
+    
+    .project-block-videos iframe {
+        height: 25vh; /* Further reduce height for mobile */
+    }
+
+    .project-content iframe {
+        height: 45vh; /* Further reduce height for mobile screens */
+    }
+
+    .carousel-container-videos {
+        max-width: 100%; /* Full width for smaller screens */
+        padding-bottom: 15px; /* Adjust padding for mobile */
+    }
+    
+    /* Footer adjustments */
+    footer {
+        padding: 0.8rem 0;
+    }
+    footer .footer-links a {
+        font-size: 0.7rem; /* Smaller font for links */
+        padding: 0.2rem 0.5rem;
+        margin: 0 1px; /* Compact margin */
+    }
+    footer p {
+        font-size: 0.7rem;
+    }
+}
+
