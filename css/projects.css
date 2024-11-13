@@ -385,7 +385,7 @@ footer p {
 
     /* Further reduce logo font size */
     header .logo a {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     /* Reduce font size and gap for navigation links */
@@ -394,7 +394,7 @@ footer p {
     }
 
     header nav ul li a {
-        font-size: 0.8rem; /* Even smaller font size */
+        font-size: 0.7rem; /* Even smaller font size */
     }
     /* Main Project Header */
     .main-project-header {
