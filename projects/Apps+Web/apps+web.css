@@ -416,19 +416,29 @@ footer p {
         padding: 15px; /* Reduces padding on smaller screens */
     }
 
+     /* Adjust carousel container width */
+    .carousel-container-videos {
+        max-width: 500px;
+        padding-bottom: 15px;
+    }
+
+    /* Adjust video height within carousel */
+    .project-block-videos iframe {
+        height: 35vh; /* Slightly reduced height for better fit on tablets */
+    }
+
+    /* Non-carousel videos */
+    .project-content iframe {
+        height: 35vh; /* Adjusted height to avoid black space on tablet screens */
+    }
+
+    /* Video items, prototype embeds, and slide decks */
     .video-item,
     .prototype-embed,
     .slide-deck {
-        height: 35vh; /* Adjust height to be responsive on tablets */
+        height: 35vh; /* Consistent height for all video types on tablets */
     }
 
-     .carousel-container-videos {
-        max-width: 500px; /* Slightly reduce carousel container width */
-    }
-    
-     .project-block-videos iframe {
-        height: 35vh; /* Reduce height for tablets */
-     }
     /* Footer adjustments */
     footer {
         padding: 1rem 0; /* Reduced padding for footer */
@@ -465,17 +475,26 @@ footer p {
         font-size: 0.7rem; /* Even smaller font size */
     }
     
-    .project-block-videos iframe {
-        height: 25vh; /* Further reduce height for mobile */
-    }
-
-    .project-content iframe {
-        height: 45vh; /* Further reduce height for mobile screens */
-    }
-
+     /* Video Carousel */
     .carousel-container-videos {
-        max-width: 100%; /* Full width for smaller screens */
-        padding-bottom: 15px; /* Adjust padding for mobile */
+        max-width: 100%; /* Full width on mobile */
+        padding-bottom: 10px;
+    }
+    
+    .project-block-videos iframe {
+        height: 25vh; /* Reduced height for smaller mobile screens */
+    }
+
+    /* Non-carousel videos */
+    .project-content iframe {
+        height: 30vh; /* Further reduced height for mobile */
+    }
+
+    /* Video items, prototype embeds, and slide decks */
+    .video-item,
+    .prototype-embed,
+    .slide-deck {
+        height: 30vh; /* Ensure consistent height for embedded content on mobile */
     }
     
     /* Footer adjustments */
