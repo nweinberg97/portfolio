@@ -76,37 +76,6 @@ header nav {
     margin-left: auto; /* Pushes the nav links to the far right */
 }
 
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    /* Stack logo and hamburger vertically */
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem;
-    }
-
-    header nav ul {
-        display: none; /* Hide links initially */
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    /* Show nav links when hamburger is clicked (JS toggle required) */
-    .show-nav nav ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        background-color: white;
-        width: 100%;
-        left: 0;
-        padding: 1rem;
-    }
-}
-
 .about-section {
     display: flex;
     justify-content: center;
@@ -200,16 +169,6 @@ header nav {
     background-color: #005983; /* Darker blue on hover */
 }
 
-/* Optional: Responsive adjustments for smaller screens */
-@media (max-width: 600px) {
-    .linkedin-button {
-        padding: 8px 16px;
-        font-size: 15px;
-    }
-}
-
-
-
 /* Footer Styling */
 footer {
     margin-top: auto; /* Pushes the footer to the bottom */
@@ -247,50 +206,119 @@ footer p {
 }
 
 
-/* Mobile Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
-    header .logo a {
-        font-size: 1.3rem;
+
+    .main-project-header {
+        font-size: 2rem; /* Adjusts for smaller screens */
     }
 
-    header nav ul li {
-        margin-left: 1rem; /* Reduced for smaller screens */
+    .section-content {
+        padding: 15px; /* Reduces padding on smaller screens */
     }
 
-    header nav ul li a {
-        font-size: 0.9rem;
-    }
-
+    /* About Section */
     .about-section {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row; /* Keep the row layout on tablets */
+        margin: 10px 40px; /* Reduce side margins to fit better */
+        align-items: center;
     }
 
-    .about-section:nth-child(even) {
-        flex-direction: column;
-    }
-
+    /* Centered Image */
     .centered-image {
-        margin: 20px 0;
-        max-width: 100%;
+        width: 100%; /* Full width within the flex container */
+        max-width: 300px; /* Smaller max-width to maintain proportion */
+        margin-right: 20px; /* Space between image and text */
     }
 
-    .about-section p {
-        margin: 0;
+    /* About Text */
+    .about-text p {
+        font-size: 1rem; /* Slightly smaller font */
+        line-height: 1.4; /* Maintain good readability */
+        padding: 0 10px; /* Compact padding on text */
     }
 
-    .about-section {
-        flex-direction: column;
-        text-align: center;
+    .linkedin-button {
+        padding: 8px 16px;
+        font-size: 15px;
     }
 
-    .about-section.alternate .about-chunk {
-        flex-direction: column;
+    /* Footer adjustments */
+    footer {
+        padding: 1rem 0; /* Reduced padding for footer */
     }
-
-    .centered-image {
-        margin: 20px 0; /* Adds space around images on small screens */
-        max-width: 100%; /* Ensures full width on mobile */
+    
+    footer .footer-links a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+        margin: 0 2px; /* Compact margin for links */
+    }
+    
+    footer p {
+        font-size: 0.8rem;
     }
 }
 
+/* Small Mobile Screens (up to 480px) */
+@media (max-width: 480px) {
+ /* Further reduce navbar padding for mobile */
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Further reduce logo font size */
+    header .logo a {
+        font-size: 0.9rem;
+    }
+
+    /* Reduce font size and gap for navigation links */
+    header nav ul {
+        gap: 1rem; /* Smaller gap for mobile */
+    }
+
+    header nav ul li a {
+        font-size: 0.7rem; /* Even smaller font size */
+    }
+    
+     /* About Section - Stack vertically for mobile */
+    .about-section {
+        flex-direction: column;
+        margin: 5px 20px; /* Smaller margin for mobile */
+    }
+
+    /* Centered Image */
+    .centered-image {
+        width: 90%; /* Reduce width slightly to fit within mobile screens */
+        max-width: 250px; /* Ensures the image doesn’t overwhelm the screen */
+        margin: 10px 0; /* Space above and below image */
+    }
+
+    /* About Text */
+    .about-text p {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+        line-height: 1.4; /* Maintain readability */
+        padding: 0 10px; /* Compact padding */
+        text-align: center; /* Center-align for a balanced look */
+    }
+
+    /* About Header */
+    .about-header {
+        font-size: 1.2rem; /* Slightly smaller header size for mobile */
+        margin-bottom: 10px;
+    }
+    
+    /* Footer adjustments */
+    footer {
+        padding: 0.8rem 0;
+    }
+    
+    footer .footer-links a {
+        font-size: 0.7rem; /* Smaller font for links */
+        padding: 0.2rem 0.5rem;
+        margin: 0 1px; /* Compact margin */
+    }
+    
+    footer p {
+        font-size: 0.7rem;
+    }
+}
