@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Projects</title>
+    <title>Community</title>
     <link rel="icon" href="../../favicon.ico">
     <link rel="stylesheet" href="community.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <script src="../../scripts.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -28,11 +27,6 @@
                 <li><a href="../../contact/contact.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
     </header>
 
 
@@ -201,10 +195,6 @@
     <!-- JavaScript (hamburger menu and carousel functionality) -->
     <script>
 $(document).ready(function() {
-    // Hamburger menu toggle
-    $('.hamburger').on('click', function() {
-        $('.nav-links').toggleClass('open');
-    });
 
     // Loop through each carousel on the community page
     $('.carousel-container').each(function() {
