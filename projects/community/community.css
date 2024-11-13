@@ -321,23 +321,91 @@ footer p {
     margin-top: 20px;
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .main-project-header {
+
+      .main-project-header {
         font-size: 2rem; /* Adjusts for smaller screens */
     }
 
     .section-content {
         padding: 15px; /* Reduces padding on smaller screens */
     }
-
-    .video-item,
-    .prototype-embed,
-    .slide-deck {
-        height: 300px; /* Adjust height for smaller devices */
+    
+     /* Videos in Project Section and Content */
+    .project-content iframe,
+    .project-section img {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Auto height to keep natural aspect ratio */
+        max-width: 600px; /* Optional max-width to control image size on tablet */
     }
 
-    .video-carousel {
-        flex-direction: column; /* Stacks videos vertically */
+    /* Carousel Images */
+    .carousel-items img {
+        width: calc((100% - 20px) / 2); /* Two images per row on tablet */
+        height: auto; /* Keep natural aspect ratio */
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 1rem 0; /* Reduced padding for footer */
+    }
+    
+    footer .footer-links a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+        margin: 0 2px; /* Compact margin for links */
+    }
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Mobile Screens (up to 480px) */
+@media (max-width: 480px) {
+ /* Further reduce navbar padding for mobile */
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Further reduce logo font size */
+    header .logo a {
+        font-size: 0.9rem;
+    }
+
+    /* Reduce font size and gap for navigation links */
+    header nav ul {
+        gap: 1rem; /* Smaller gap for mobile */
+    }
+
+    header nav ul li a {
+        font-size: 0.7rem; /* Even smaller font size */
+    }
+
+     /* Videos in Project Section and Content */
+    .project-content iframe,
+    .project-section img {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Carousel Images */
+    .carousel-items img {
+        width: 100%; /* Stack images vertically on mobile */
+        height: auto; /* Natural scaling */
+    }
+    
+    /* Footer adjustments */
+    footer {
+        padding: 0.8rem 0;
+    }
+    footer .footer-links a {
+        font-size: 0.7rem; /* Smaller font for links */
+        padding: 0.2rem 0.5rem;
+        margin: 0 1px; /* Compact margin */
+    }
+    footer p {
+        font-size: 0.7rem;
     }
 }
