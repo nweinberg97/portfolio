@@ -498,17 +498,17 @@ footer p {
         width: 100%;
         height: 25vh;
     }
-        
-    /* Non-carousel videos */
-    .project-content iframe {
-        height: 30vh; /* Further reduced height for mobile */
-    }
 
     /* Video items, prototype embeds, and slide decks */
-    .video-item,
-    .prototype-embed,
     .slide-deck {
         height: 30vh; /* Ensure consistent height for embedded content on mobile */
+    }
+
+        /* Mobile - max-width: 480px */
+    .prototype-embed {
+        width: 100%;
+        aspect-ratio: 9 / 16; /* Keeps the same aspect ratio on mobile */
+        max-width: 100%; /* Ensures it doesn't exceed the container */
     }
     
     /* Footer adjustments */
