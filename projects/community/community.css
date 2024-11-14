@@ -359,8 +359,11 @@ footer p {
     }
 
     /* Carousel Images */
+    .carousel-items {
+        gap: 0; /* Remove gap to prevent spacing between images */
+    }
     .carousel-items img {
-        width: calc((100% - 20px) / 2); /* Two images per row on tablet */
+        width: 100%; /* Display one image per view on mobile */
         height: auto; /* Keep natural aspect ratio */
     }
     
