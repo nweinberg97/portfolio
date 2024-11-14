@@ -174,7 +174,7 @@ footer p {
 
     /* Further reduce logo font size */
     header .logo a {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     /* Reduce font size and gap for navigation links */
@@ -184,17 +184,6 @@ footer p {
 
     header nav ul li a {
         font-size: 0.65rem; /* Even smaller font size */
-    }
-
-     #home {
-        height: 100vh;
-    }
-
-    .section-image {
-        width: 100vw;
-        height: 100vh; /* Keeps full height on small screens */
-        object-fit: cover;
-        object-position: center;
     }
     
     /* Footer adjustments */
