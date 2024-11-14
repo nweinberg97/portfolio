@@ -217,25 +217,25 @@ footer p {
         padding: 15px; /* Reduces padding on smaller screens */
     }
 
-    /* About Section */
-    .about-section {
-        flex-direction: row; /* Keep the row layout on tablets */
-        margin: 10px 40px; /* Reduce side margins to fit better */
-        align-items: center;
+    .about-header {
+        font-size: 1.6rem;
+        margin: 15px 0;
     }
 
-    /* Centered Image */
+    .about-text {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
     .centered-image {
-        width: 100%; /* Full width within the flex container */
-        max-width: 300px; /* Smaller max-width to maintain proportion */
-        margin-right: 20px; /* Space between image and text */
+        width: 60%;  /* Reduces image width for tablets */
+        max-width: 200px;  /* Caps the size for tablet view */
+        margin: 15px 0;
     }
 
-    /* About Text */
-    .about-text p {
-        font-size: 1rem; /* Slightly smaller font */
-        line-height: 1.4; /* Maintain good readability */
-        padding: 0 10px; /* Compact padding on text */
+    .about-section {
+        padding: 15px;
+        margin: 20px 10px;
     }
 
     .linkedin-button {
@@ -280,31 +280,28 @@ footer p {
         font-size: 0.7rem; /* Even smaller font size */
     }
     
-     /* About Section - Stack vertically for mobile */
-    .about-section {
-        flex-direction: column;
-        margin: 5px 20px; /* Smaller margin for mobile */
-    }
-
-    /* Centered Image */
-    .centered-image {
-        width: 90%; /* Reduce width slightly to fit within mobile screens */
-        max-width: 250px; /* Ensures the image doesn’t overwhelm the screen */
-        margin: 10px 0; /* Space above and below image */
-    }
-
-    /* About Text */
-    .about-text p {
-        font-size: 0.9rem; /* Smaller font size for mobile */
-        line-height: 1.4; /* Maintain readability */
-        padding: 0 10px; /* Compact padding */
-        text-align: center; /* Center-align for a balanced look */
-    }
-
-    /* About Header */
     .about-header {
-        font-size: 1.2rem; /* Slightly smaller header size for mobile */
-        margin-bottom: 10px;
+        font-size: 1.4rem;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .about-text {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        padding: 0 5px;
+    }
+
+    .centered-image {
+        width: 50%;  /* Further reduces the image width for mobile */
+        max-width: 150px;  /* Ensures it’s compact on small screens */
+        margin: 10px 0;
+    }
+
+    .about-section {
+        padding: 10px;
+        margin: 15px 5px;
+        width: 95%;
     }
     
     /* Footer adjustments */
