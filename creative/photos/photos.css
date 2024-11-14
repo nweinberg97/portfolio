@@ -330,8 +330,14 @@ footer p {
         text-align: center;
     }
     
-    h1, h3 {
+    h1 {
         font-size: 1.3rem;
+        margin: 5px 10px; /* Reduced margin */
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 0.9rem;
         margin: 5px 10px; /* Reduced margin */
         text-align: center;
     }
