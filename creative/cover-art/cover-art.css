@@ -76,37 +76,6 @@ header nav {
     margin-left: auto; /* Pushes the nav links to the far right */
 }
 
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    /* Stack logo and hamburger vertically */
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem;
-    }
-
-    header nav ul {
-        display: none; /* Hide links initially */
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    /* Show nav links when hamburger is clicked (JS toggle required) */
-    .show-nav nav ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        background-color: white;
-        width: 100%;
-        left: 0;
-        padding: 1rem;
-    }
-}
-
 /* Styling for Cover Art Section */
 #cover-art-projects {
     padding: 20px;
@@ -331,43 +300,127 @@ footer p {
     margin-top: 20px;
 }
 
-/* Responsive Design */
+/* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
+
+    /* Main Project Header */
+    .main-project-header {
+        font-size: 1.8rem; /* Scales down for tablets */
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+     /* Main container adjustments */
+    .project-header, .project-content, .carousel-container {
+        margin: 0 20px; /* Reduced side margins */
+        padding: 15px; /* Slightly smaller padding */
+        max-width: 100%; /* Full width to avoid narrowing */
+    }
+
+    /* Text adjustments */
+    h2, .creative-header {
+        font-size: 1.8rem; /* Scale down header text */
+    }
+
+    p, .carousel-item p {
+        font-size: 1rem; /* Adjust font size for readability */
+        line-height: 1.4; /* Increase line height for readability */
+    }
+
+    /* Image adjustments within carousel or content */
+    .carousel-slide img, .project-content img {
+        max-width: 90%; /* Slightly smaller image size */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Carousel control button adjustments */
+    .control-button-prev, .control-button-next {
+        font-size: 1.2rem; /* Reduce button size */
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* Footer adjustments */
+    footer {
+        padding: 1rem 0; /* Reduced padding for footer */
+    }
+    footer .footer-links a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+        margin: 0 2px; /* Compact margin for links */
+    }
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Mobile Screens (up to 480px) */
+@media (max-width: 480px) {
+ /* Further reduce navbar padding for mobile */
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Further reduce logo font size */
     header .logo a {
-        font-size: 1.3rem;
-    }
-
-    header nav ul li {
-        margin-left: 1rem;
-    }
-
-    header nav ul li a {
         font-size: 0.9rem;
     }
 
-    h2 {
-        font-size: 20px;
+    /* Reduce font size and gap for navigation links */
+    header nav ul {
+        gap: 1rem; /* Smaller gap for mobile */
     }
 
-    h3 {
-        font-size: 18px;
+    header nav ul li a {
+        font-size: 0.7rem; /* Even smaller font size */
+    }
+    /* Main Project Header */
+    .main-project-header {
+        font-size: 1.5rem; /* Scales down further */
+        margin-top: 8px;
+        margin-bottom: 15px;
     }
 
-    .caption {
-        font-size: 14px;
-    }
-    
-   .carousel-wrapper {
-        width: 95%;
-    }
-
-    .carousel-slide img {
-        max-width: 250px;
+     /* Full-width layout for smaller screens */
+    .project-header, .project-content, .carousel-container {
+        margin: 0 10px; /* Minimal side margins */
+        padding: 10px; /* Further reduced padding */
+        max-width: 100%; /* Full width on mobile */
     }
 
-    .control-button-prev,
-    .control-button-next {
-        font-size: 20px;
-        left: 10px;
-        right: 10px;
+    /* Further text scaling */
+    h2, .creative-header {
+        font-size: 1.5rem; /* Smaller header font size */
     }
+
+    p, .carousel-item p {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+        line-height: 1.3;
+    }
+
+    /* Image adjustments for mobile */
+    .carousel-slide img, .project-content img {
+        max-width: 85%; /* Scale down images slightly more */
+        height: auto;
+    }
+
+    /* Carousel control buttons */
+    .control-button-prev, .control-button-next {
+        font-size: 1rem; /* Even smaller button size */
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 0.8rem 0;
+    }
+    footer .footer-links a {
+        font-size: 0.7rem; /* Smaller font for links */
+        padding: 0.2rem 0.5rem;
+        margin: 0 1px; /* Compact margin */
+    }
+    footer p {
+        font-size: 0.7rem;
+    }
+}
