@@ -360,8 +360,8 @@ footer p {
 
     /* Carousel Images */
     .carousel-items img {
-        width: 100%; /* Stack images vertically on mobile */
-        height: auto; /* Natural scaling */
+        width: calc((100% - 20px) / 2); /* Two images per row on tablet */
+        height: auto; /* Keep natural aspect ratio */
     }
     
     /* Footer adjustments */
