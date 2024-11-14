@@ -358,10 +358,28 @@ footer p {
         height: auto; /* Maintain aspect ratio */
     }
 
-   /* For mobile, scale down to show all images with a smaller width */
+    /* Carousel container setup */
+    .carousel-container {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    /* Ensure carousel items line up correctly */
+    .carousel-items {
+        display: flex;
+        transition: transform 0.5s ease;
+        transform: translateX(0); /* Reset any offset on mobile */
+        width: 100%;
+        gap: 0; /* Remove any gaps to avoid unintended spaces */
+    }
+
+    /* Set each image to take up the full width of the container */
     .carousel-items img {
-        width: calc((100% - 5px) / 3); /* Adjust as needed for mobile */
-        height: auto;
+        flex: 0 0 100%; /* Each image takes full width */
+        width: 100%;
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
     }
     
     /* Footer adjustments */
