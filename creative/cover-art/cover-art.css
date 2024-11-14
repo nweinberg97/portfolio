@@ -303,43 +303,42 @@ footer p {
 /* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
 
-    /* Main Project Header */
+ /* Main Project Header */
     .main-project-header {
-        font-size: 1.8rem; /* Scales down for tablets */
-        margin-top: 10px;
-        margin-bottom: 20px;
+        font-size: 1.5rem; /* Scales down further */
+        margin-top: 8px;
+        margin-bottom: 15px;
     }
 
-     /* Main container adjustments */
+     /* Full-width layout for smaller screens */
     .project-header, .project-content, .carousel-container {
-        margin: 0 20px; /* Reduced side margins */
-        padding: 15px; /* Slightly smaller padding */
-        max-width: 100%; /* Full width to avoid narrowing */
+        margin: 0 10px; /* Minimal side margins */
+        padding: 10px; /* Further reduced padding */
+        max-width: 100%; /* Full width on mobile */
     }
 
-    /* Text adjustments */
+    /* Further text scaling */
     h2, .creative-header {
-        font-size: 1.8rem; /* Scale down header text */
+        font-size: 1.5rem; /* Smaller header font size */
     }
 
     p, .carousel-item p {
-        font-size: 1rem; /* Adjust font size for readability */
-        line-height: 1.4; /* Increase line height for readability */
+        font-size: 0.9rem; /* Smaller font size for mobile */
+        line-height: 1.3;
     }
 
-    /* Image adjustments within carousel or content */
+    /* Image adjustments for mobile */
     .carousel-slide img, .project-content img {
-        max-width: 90%; /* Slightly smaller image size */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 85%; /* Scale down images slightly more */
+        height: auto;
     }
 
-    /* Carousel control button adjustments */
+    /* Carousel control buttons */
     .control-button-prev, .control-button-next {
-        font-size: 1.2rem; /* Reduce button size */
-        width: 35px;
-        height: 35px;
+        font-size: 1rem; /* Even smaller button size */
+        width: 30px;
+        height: 30px;
     }
-    
     /* Footer adjustments */
     footer {
         padding: 1rem 0; /* Reduced padding for footer */
@@ -394,7 +393,7 @@ footer p {
     }
 
     p, .carousel-item p {
-        font-size: 0.9rem; /* Smaller font size for mobile */
+        font-size: 0.7rem; /* Smaller font size for mobile */
         line-height: 1.3;
     }
 
