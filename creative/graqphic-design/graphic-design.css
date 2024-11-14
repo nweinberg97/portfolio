@@ -76,37 +76,6 @@ header nav {
     margin-left: auto; /* Pushes the nav links to the far right */
 }
 
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    /* Stack logo and hamburger vertically */
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem;
-    }
-
-    header nav ul {
-        display: none; /* Hide links initially */
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    /* Show nav links when hamburger is clicked (JS toggle required) */
-    .show-nav nav ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        background-color: white;
-        width: 100%;
-        left: 0;
-        padding: 1rem;
-    }
-}
-
 /* Main Content Section */
 .graphic-design-page {
     margin-top: 62px;
