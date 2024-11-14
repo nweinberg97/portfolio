@@ -76,38 +76,6 @@ header nav {
     margin-left: auto; /* Pushes the nav links to the far right */
 }
 
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    /* Stack logo and hamburger vertically */
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem;
-    }
-
-    header nav ul {
-        display: none; /* Hide links initially */
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    /* Show nav links when hamburger is clicked (JS toggle required) */
-    .show-nav nav ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        background-color: white;
-        width: 100%;
-        left: 0;
-        padding: 1rem;
-    }
-}
-
-
 #photos {
     margin-top: 80px;
     margin-bottom: 40px; 
@@ -260,28 +228,133 @@ footer p {
     margin-top: 20px;
 }
 
-/* Responsive Design */
+/* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
+
+    /* Main Project Header */
+    .main-project-header {
+        font-size: 1.8rem; /* Scales down for tablets */
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+        /* Photo Container adjustments for Tablet */
+    .photo-container {
+        grid-template-columns: repeat(3, 1fr); /* Keep 3 columns on tablet */
+        gap: 15px; /* Slightly reduce gap */
+    }
+
+    /* Scale down image size for tablet */
+    .photo-container img {
+        height: 200px; /* Slightly reduce height for better fit */
+    }
+
+    /* Centering and scaling down header and subheader text */
+    .photoheader {
+        font-size: 28px;
+        margin: 10px;
+        text-align: center;
+    }
+    
+    h1, h3 {
+        font-size: 1.5rem;
+        margin: 10px 20px; /* Centered with reduced margins */
+        text-align: center;
+    }
+
+    /* Adjust overlay text alignment */
+    .overlay {
+        font-size: 18px; /* Slightly smaller text for overlay */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center; /* Keeps text centered */
+    }
+    
+    /* Footer adjustments */
+    footer {
+        padding: 1rem 0; /* Reduced padding for footer */
+    }
+    
+    footer .footer-links a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+        margin: 0 2px; /* Compact margin for links */
+    }
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Mobile Screens (up to 480px) */
+@media (max-width: 480px) {
+ /* Further reduce navbar padding for mobile */
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Further reduce logo font size */
     header .logo a {
-        font-size: 1.3rem;
-    }
-
-    header nav ul li {
-        margin-left: 1rem;
-    }
-
-    header nav ul li a {
         font-size: 0.9rem;
     }
 
-    /* Adjust Photo Container for Smaller Screens */
-    .photo-container {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for tablets */
+    /* Reduce font size and gap for navigation links */
+    header nav ul {
+        gap: 1rem; /* Smaller gap for mobile */
     }
 
-    /* Adjust Gallery Header on Mobile */
+    header nav ul li a {
+        font-size: 0.7rem; /* Even smaller font size */
+    }
+    /* Main Project Header */
+    .main-project-header {
+        font-size: 1.5rem; /* Scales down further */
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+
+    /* Photo Container adjustments for Mobile */
+    .photo-container {
+        grid-template-columns: repeat(3, 1fr); /* Keep 3 columns on mobile */
+        gap: 10px; /* Reduce gap further for compact layout */
+    }
+
+    /* Further scale down image size for mobile */
+    .photo-container img {
+        height: 150px; /* Smaller height to fit mobile view */
+    }
+
+    /* Further scaling down header and subheader text */
     .photoheader {
-        font-size: 32px;
-        margin-bottom: 20px;
+        font-size: 24px;
+        margin: 5px;
+        text-align: center;
+    }
+    
+    h1, h3 {
+        font-size: 1.3rem;
+        margin: 5px 10px; /* Reduced margin */
+        text-align: center;
+    }
+
+    /* Further adjust overlay text alignment */
+    .overlay {
+        font-size: 16px; /* Smaller overlay text for mobile */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 0.8rem 0;
+    }
+    footer .footer-links a {
+        font-size: 0.7rem; /* Smaller font for links */
+        padding: 0.2rem 0.5rem;
+        margin: 0 1px; /* Compact margin */
+    }
+    footer p {
+        font-size: 0.7rem;
     }
 }
