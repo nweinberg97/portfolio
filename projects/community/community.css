@@ -360,7 +360,7 @@ footer p {
 
    /* For mobile, scale down to show all images with a smaller width */
     .carousel-items img {
-        width: calc((100% - 10px) / 2); /* Adjust as needed for mobile */
+        width: calc((100% - 5px) / 3); /* Adjust as needed for mobile */
         height: auto;
     }
     
