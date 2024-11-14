@@ -358,13 +358,10 @@ footer p {
         height: auto; /* Maintain aspect ratio */
     }
 
-    /* Carousel Images */
-    .carousel-items {
-        gap: 0; /* Remove gap to prevent spacing between images */
-    }
+   /* For mobile, scale down to show all images with a smaller width */
     .carousel-items img {
-        width: 100%; /* Display one image per view on mobile */
-        height: auto; /* Keep natural aspect ratio */
+        width: calc((100% - 10px) / 2); /* Adjust as needed for mobile */
+        height: auto;
     }
     
     /* Footer adjustments */
