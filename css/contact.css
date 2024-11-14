@@ -113,11 +113,14 @@ body {
 
     #contact .contact-container {
         max-width: 90%; /* Wider container on tablet */
-        width: 90%;
-        padding: 30px; /* Slightly reduced padding */
+        padding: 30px;
         margin: 60px auto; /* Adjust margin for tablet */
     }
 
+    .about-chunk p {
+    font-size: 0.8rem; /* Adjust as needed */
+    }
+    
     .contactheader {
         font-size: 1.8rem; /* Slightly smaller font for header */
     }
@@ -167,11 +170,14 @@ body {
         font-size: 0.7rem; /* Even smaller font size */
     }
 
-     #contact .contact-container {
-        max-width: 95%; /* Almost full-width on mobile */
-        width: 95%;
-        padding: 20px; /* Compact padding for mobile */
+   #contact .contact-container {
+        max-width: 95%;
+        padding: 20px;
         margin: 40px auto;
+    }
+
+    .about-chunk p {
+    font-size: 0.6rem; /* Adjust as needed */
     }
 
     .contactheader {
