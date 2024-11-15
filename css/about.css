@@ -116,16 +116,19 @@ header nav {
     line-height: 1.4;
     padding: 0px 20px; 
     margin-bottom: 10px; /* Adds space between stacked paragraphs */
+    max-width: 600px;
 }
 
 .centered-image {
     width: 100%; /* Ensures image fills available space */
     max-width: 600px;
+    height: auto; 
     aspect-ratio: 4 / 3; /* Sets a 4:3 aspect ratio */
     object-fit: cover; /* Ensures the image covers the container */
     object-position: 50% 20%; /* Centers horizontally, moves slightly up vertically */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
 }
 
 .about-content {
@@ -241,6 +244,7 @@ footer p {
     .centered-image {
         width: 100%; /* Full width of container */
         max-width: 400px; /* Maximum width to prevent overly large images */
+        margin-bottom: 15px; 
     }
 
     .about-text p {
@@ -248,6 +252,7 @@ footer p {
         padding: 0 10px;
         text-align: left;
         margin-bottom: 7px;
+        max-width: 400px; /* Maximum width to prevent overly large images */
     }
 
     .linkedin-button {
@@ -315,6 +320,7 @@ footer p {
     .centered-image {
         width: 100%; /* Full width of container */
         max-width: 250px; /* Maximum width to prevent overly large images */
+        margin-bottom: 10px; 
     }
 
     .about-text p {
@@ -322,6 +328,7 @@ footer p {
         padding: 0 5px;
         text-align: left;
         margin-bottom: 5px; 
+        max-width: 250px; /* Maximum width to prevent overly large images */
     }
 
     /* Footer adjustments */
