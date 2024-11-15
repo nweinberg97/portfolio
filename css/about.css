@@ -339,13 +339,8 @@ footer p {
         max-width: 250px; /* Maximum width to prevent overly large images */
     }
 
-    .contact-text p {
+    .about-content {
         font-size: 0.7rem; 
-    }
-
-    .linkedin-button {
-        padding: 6px 12px;
-        font-size: 10px;
     }
         
     /* Footer adjustments */
