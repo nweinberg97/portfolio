@@ -77,7 +77,7 @@ header nav {
 }
 
 .about-section {
-    margin: 20px auto; /* Center the section horizontally */
+    margin: 0px auto; /* Center the section horizontally */
     padding: 20px; /* Add padding for better spacing */
     width: 100%; /* Full width for smaller screens */
     max-width: 800px; /* Restrict maximum width for readability */
@@ -99,7 +99,7 @@ header nav {
 .about-chunk {
     display: flex;
     flex-direction: column; /* Stacks items vertically */
-    margin: 20px auto; /* Centers the chunk on the page */
+    margin: 0px auto; /* Centers the chunk on the page */
     align-items: center;
     background: #fff;
     border-radius: 10px;
