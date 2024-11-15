@@ -255,7 +255,7 @@ footer p {
         max-width: 400px; /* Maximum width to prevent overly large images */
     }
 
-    .contact-text p {
+    .contact-text {
         font-size: 0.9rem; 
     }
 
@@ -339,7 +339,7 @@ footer p {
         max-width: 250px; /* Maximum width to prevent overly large images */
     }
 
-    .about-content {
+    .contact-text {
         font-size: 0.7rem; 
     }
         
