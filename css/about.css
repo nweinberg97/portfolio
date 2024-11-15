@@ -92,7 +92,7 @@ header nav {
 /* About Section */
 .about-header {
     padding: 10px 20px;
-    margin: 10px auto;
+    margin: 0px auto;
     font-size: 1.6rem; 
 }
 
@@ -225,11 +225,11 @@ footer p {
 
     .about-header {
         font-size: 1.6rem;
-        margin: 15px 0;
+        margin: 0px auto;
     }
 
     .about-section {
-        margin: 15px auto; /* Center the section horizontally */
+        margin: 0px auto; /* Center the section horizontally */
         padding: 15px; /* Add padding for better spacing */
         width: 100%; /* Full width for smaller screens */
         max-width: 600px; /* Restrict maximum width for readability */
@@ -238,7 +238,7 @@ footer p {
     .about-chunk {
         align-items: center; /* Center align content */
         padding: 15px;
-        margin: 20px auto;
+        margin: 0px auto;
     }
 
     .centered-image {
@@ -253,6 +253,10 @@ footer p {
         text-align: left;
         margin-bottom: 7px;
         max-width: 400px; /* Maximum width to prevent overly large images */
+    }
+
+    .contact-text p {
+        font-size: 0.9rem; 
     }
 
     .linkedin-button {
@@ -299,12 +303,12 @@ footer p {
     
     .about-header {
         font-size: 1.3rem;
-        margin: 10px 0;
+        margin: 0px auto;
         text-align: center;
     }
 
     .about-section {
-        margin: 10px auto; /* Center the section horizontally */
+        margin: 0px auto; /* Center the section horizontally */
         padding: 10px; /* Add padding for better spacing */
         width: 100%; /* Full width for smaller screens */
         max-width: 400px; /* Restrict maximum width for readability */
@@ -331,6 +335,10 @@ footer p {
         max-width: 250px; /* Maximum width to prevent overly large images */
     }
 
+    .contact-text p {
+        font-size: 0.7rem; 
+    }
+        
     /* Footer adjustments */
     footer {
         padding: 0.8rem 0;
