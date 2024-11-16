@@ -342,6 +342,11 @@ footer p {
     .contact-text {
         font-size: 0.7rem; 
     }
+
+    .linkedin-button {
+        padding: 6px 12px;
+        font-size: 0.7rem; 
+    }
         
     /* Footer adjustments */
     footer {
