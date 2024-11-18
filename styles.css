@@ -68,43 +68,37 @@ header nav ul li a:hover {
 
 /* Full-page hero section */
 #home {
-    height: 100vh; /* Full viewport height */
+    height: calc(100vh - 60px); /* Full height minus header/footer height */
     width: 100vw; /* Full viewport width */
-    background-image: url('homepage.png'); /* Add your background image */
+    background-image: url('homepage2.png'); /* Add your background image */
     background-size: cover; /* Ensures image fills the section */
     background-position: center; /* Keeps image focal point centered */
+    background-repeat: no-repeat; /* Prevent tiling */
     position: relative; /* Allows positioning of child elements */
     display: flex;
     justify-content: flex-end; /* Pushes content to the right */
     align-items: center; /* Vertically centers the content */
-    padding-right: 2rem; /* Adds space between text and right edge */
 }
 
 /* Right-aligned text block */
 .hero-content {
     text-align: right; /* Aligns text inside the block to the right */
     color: white; /* Ensure text is visible over background */
+    margin-right: 2rem; /* Adds space between the text and the right edge */
     font-family: 'Manrope', sans-serif; /* Your chosen font */
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3rem; /* Large text for desktop */
+    font-weight: 800;
     margin-bottom: 0.5rem;
+    letter-spacing: -0.05em; /* Slightly reduce space between letters */
 }
 
 .hero-content p {
     font-size: 1.5rem;
     font-weight: 300;
-}
-
-/* Image Styling */
-.section-image {
-    width: 100vw;
-    height: auto;
-    object-fit: fill;
-    max-height: 80vh; /* Ensures the image doesn't overwhelm the screen */
-    object-fit: cover; /* Ensures the image covers the entire container */
+    letter-spacing: -0.05em; /* Slightly reduce space between letters */
 }
 
 /* Footer Styling */
@@ -150,24 +144,19 @@ footer p {
     /* Navbar adjustments */
     
     #home {
-        height: 100vh;
+        background-position: center; /* Keep the focal point centered */
     }
 
-    .section-image {
-        width: 100vw;
-        height: 100vh; /* Keeps full height on tablets */
-        object-fit: cover;
-        object-position: center;
+    .hero-content {
+        margin-right: 1.5rem; /* Reduce right margin */
     }
-    /* Hero text adjustments */
-    .hero-text {
-        font-size: 1.8rem;
-        text-align: center;
-        padding: 0 1rem; /* Adds padding for text readability */
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Scale heading size down */
     }
-    .hero-text p {
-        font-size: 1.1rem;
-        padding: 0 1rem;
+
+    .hero-content p {
+        font-size: 1.2rem; /* Scale paragraph size down */
     }
 
     /* Footer adjustments */
@@ -203,6 +192,22 @@ footer p {
 
     header nav ul li a {
         font-size: 0.65rem; /* Even smaller font size */
+    }
+
+     #home {
+        background-position: center; /* Keeps image centered */
+    }
+
+    .hero-content {
+        margin-right: 1rem; /* Reduce margin further for mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Smaller paragraph for mobile */
     }
     
     /* Footer adjustments */
