@@ -66,17 +66,36 @@ header nav ul li a:hover {
     transform: scale(1.1); /* Grows slightly on hover */
 }
 
+/* Full-page hero section */
 #home {
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-image: url('homepage.png'); /* Add your background image */
+    background-size: cover; /* Ensures image fills the section */
+    background-position: center; /* Keeps image focal point centered */
+    position: relative; /* Allows positioning of child elements */
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: calc(100vh - 60px); /* Adjusted to account for navbar height */
-    width: 100vw; /* Full width */
-    position: relative;
-    text-align: center;
-    padding-top: 28px;
-    margin-bottom: -60px;
-    pointer-events: none; 
+    justify-content: flex-end; /* Pushes content to the right */
+    align-items: center; /* Vertically centers the content */
+    padding-right: 2rem; /* Adds space between text and right edge */
+}
+
+/* Right-aligned text block */
+.hero-content {
+    text-align: right; /* Aligns text inside the block to the right */
+    color: white; /* Ensure text is visible over background */
+    font-family: 'Manrope', sans-serif; /* Your chosen font */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 /* Image Styling */
@@ -122,7 +141,7 @@ footer .footer-links a:hover {
 footer p {
     color: white;
     font-size: 0.9rem;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
     
