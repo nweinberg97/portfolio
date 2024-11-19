@@ -68,37 +68,19 @@ header nav ul li a:hover {
 
 /* Full-page hero section */
 #home {
-    height: calc(100vh - 60px); /* Full height minus header/footer height */
+    height: calc(100vh - 60px); /* Full viewport height minus header/footer */
     width: 100vw; /* Full viewport width */
-    background-image: url('homepage2.png'); /* Add your background image */
-    background-size: cover; /* Ensures image fills the section */
-    background-position: center; /* Keeps image focal point centered */
-    background-repeat: no-repeat; /* Prevent tiling */
-    position: relative; /* Allows positioning of child elements */
-    display: flex;
-    justify-content: flex-end; /* Pushes content to the right */
-    align-items: center; /* Vertically centers the content */
+    display: flex; /* Optional, if you plan to add content later */
+    justify-content: center; /* Align center horizontally (no effect if no text) */
+    align-items: center; /* Align center vertically (no effect if no text) */
+    overflow: hidden; /* Prevent scrolling due to image overflow */
 }
 
-/* Right-aligned text block */
-.hero-content {
-    text-align: right; /* Aligns text inside the block to the right */
-    color: white; /* Ensure text is visible over background */
-    margin-right: 2rem; /* Adds space between the text and the right edge */
-    font-family: 'Manrope', sans-serif; /* Your chosen font */
-}
-
-.hero-content h1 {
-    font-size: 3rem; /* Large text for desktop */
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.05em; /* Slightly reduce space between letters */
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    font-weight: 300;
-    letter-spacing: -0.05em; /* Slightly reduce space between letters */
+picture img {
+    width: 100%; /* Image stretches to fit container width */
+    height: 100%; /* Image stretches to fit container height */
+    object-fit: cover; /* Ensures the image fills without distortion */
+    object-position: center; /* Keeps the focal point centered */
 }
 
 /* Footer Styling */
