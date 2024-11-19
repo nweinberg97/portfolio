@@ -29,10 +29,15 @@
 
     <!-- Hero Section with image and overlay text -->
     <section id="home">
-        <div class="hero-content">
-            <h1>Hi I'm Nitai</h1>
-            <p>A web developer, designer, writer, community-builder, and creative</p> 
-        </div>
+        <picture>
+            <!-- Default (desktop) image -->
+            <img src="homepage3.png" alt="Hi, I'm Nitai, a web developer, designer, writer, community-builder, and creative." />
+            <!-- Mobile image -->
+            <source srcset="homepage-mobile.png" media="(max-width: 480px)">
+            <!-- Tablet image -->
+            <source srcset="homepage-tablet.png" media="(max-width: 768px)">
+            
+        </picture>
     </section>
 
   <!-- Footer Section -->
