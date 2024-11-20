@@ -79,7 +79,7 @@ header nav {
 
 /* Full-page hero section */
 #home {
-    height: calc(100vh - 60px); /* Full viewport height minus header/footer */
+    height: calc(100vh - 61px); /* Full viewport height minus header/footer */
     width: 100vw; /* Full viewport width */
     display: flex; /* Optional, if you plan to add content later */
     justify-content: center; /* Align center horizontally (no effect if no text) */
