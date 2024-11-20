@@ -124,6 +124,21 @@ footer p {
 /* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
     /* Navbar adjustments */
+    header {
+        padding: 1rem; /* Compact padding */
+    }
+
+    header .logo a {
+        font-size: 1.2rem; /* Slightly smaller logo */
+    }
+
+    header nav ul {
+        gap: 1.5rem; /* Reduce gap between links */
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem; /* Slightly smaller links */
+    }
     
     #home {
         background-position: center; /* Keep the focal point centered */
@@ -164,7 +179,7 @@ footer p {
 
     /* Further reduce logo font size */
     header .logo a {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     /* Reduce font size and gap for navigation links */
