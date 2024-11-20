@@ -157,23 +157,25 @@ footer p {
         font-size: 0.9rem; /* Smaller font size */
     }
     
-     #home {
-        height: calc(100vh - 61px); /* Subtract header height */
-        display: flex; /* Ensure image alignment */
-        justify-content: center; /* Center image horizontally */
-        align-items: center; /* Center image vertically */
-        padding: 0; /* Remove unnecessary padding */
-        margin: 0; /* Remove any default margin */
-        overflow: hidden; /* Prevent extra scrolling or gaps */
+    #home {
+        height: 100vh; /* Use full viewport height */
+        padding: 0; /* Remove padding to avoid extra space */
+        margin: 0; /* Ensure no margins */
+        overflow: hidden; /* Prevent scrolling or gaps */
     }
 
     picture img {
-        width: 100%; /* Ensure full width */
-        height: 100%; /* Ensure full height */
-        object-fit: cover; /* Stretch without distortion */
-        display: block; /* Remove inline gaps */
-        margin: 0; /* Remove any unwanted margins */
-        padding: 0; /* Ensure no padding affects the layout */
+        width: 100%;
+        height: 100%; /* Ensure full stretch */
+        object-fit: cover; /* Fill without distortion */
+        display: block; /* Avoid inline gaps */
+    }
+
+    header {
+        position: absolute; /* Take header out of flow for simplicity */
+        top: 0;
+        width: 100%;
+        height: 61px;
     }
     
     /* Footer adjustments */
