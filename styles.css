@@ -133,7 +133,7 @@ footer p {
     }
 
     header nav ul {
-        gap: 1.5rem; /* Reduce gap between links */
+        gap: 0rem; /* Reduce gap between links */
     }
 
     header nav ul li a {
@@ -184,7 +184,7 @@ footer p {
 
     /* Reduce font size and gap for navigation links */
     header nav ul {
-        gap: 1rem; /* Smaller gap for mobile */
+        gap: 0rem; /* Smaller gap for mobile */
     }
 
     header nav ul li a {
