@@ -28,6 +28,7 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 61px; 
     /* Remove `justify-content: space-between;` */
     /* This will be replaced by margin auto on the logo and nav */
 }
@@ -79,8 +80,8 @@ header nav {
 
 /* Full-page hero section */
 #home {
-    height: calc(100vh - 61px); /* Full viewport height minus header/footer */
-    width: 100vw; /* Full viewport width */
+    flex: 1;
+    width: 100%; /* Full viewport width */
     display: flex; /* Optional, if you plan to add content later */
     justify-content: center; /* Align center horizontally (no effect if no text) */
     align-items: center; /* Align center vertically (no effect if no text) */
@@ -103,6 +104,7 @@ footer {
     z-index: 10;
     position: relative; 
     border: none; 
+    height: auto; 
 }
 
 /* Correct class name updated to match HTML */
