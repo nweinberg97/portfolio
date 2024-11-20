@@ -94,6 +94,7 @@ picture img {
     height: 100%; /* Image stretches to fit container height */
     object-fit: cover; /* Ensures the image fills without distortion */
     object-position: center; /* Keeps the focal point centered */
+    display: block; 
 }
 
 /* Footer Styling */
