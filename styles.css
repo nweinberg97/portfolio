@@ -158,13 +158,13 @@ footer p {
 /* Small Mobile Screens (up to 480px) */
 @media (max-width: 480px) {
  /* Further reduce navbar padding for mobile */
-    header {
+  header {
         padding: 0.5rem 1rem;
     }
 
     /* Further reduce logo font size */
     header .logo a {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     /* Reduce font size and gap for navigation links */
@@ -173,7 +173,7 @@ footer p {
     }
 
     header nav ul li a {
-        font-size: 0.65rem; /* Even smaller font size */
+        font-size: 0.7rem; /* Even smaller font size */
     }
 
      #home {
