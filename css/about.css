@@ -131,6 +131,15 @@ header nav {
     margin-bottom: 20px; 
 }
 
+.centered-image img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.centered-image img.loaded {
+  opacity: 1;
+}
+
 .about-content {
     display: flex;
     flex-direction: column; /* Stacks items vertically */
