@@ -82,6 +82,7 @@ header nav {
 #home {
     flex: 1;
     width: 100%; /* Full viewport width */
+    padding-top: 61px; /* Push the content down to account for the header */
     display: flex; /* Optional, if you plan to add content later */
     justify-content: center; /* Align center horizontally (no effect if no text) */
     align-items: center; /* Align center vertically (no effect if no text) */
