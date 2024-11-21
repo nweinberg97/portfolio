@@ -120,6 +120,10 @@ header nav {
     max-width: 100%;
 }
 
+.project-header:hover {
+    transform: scale(1.05);
+}
+
 .project-content p {
     font-size: 0.9rem;
     color: #666;
@@ -152,6 +156,10 @@ header nav {
     transition: box-shadow 0.3s ease; /* Smooth hover effect */
     text-align: left;
     margin: 20px 400px; 
+}
+
+.project-content:hover {
+    transform: scale(1.05);
 }
 
 /* Add subtle space around divider */
