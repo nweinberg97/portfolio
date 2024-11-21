@@ -78,15 +78,14 @@ header nav {
     margin-left: auto; /* Pushes the nav links to the far right */
 }
 
-/* Full-page hero section */
 #home {
-    flex: 1;
+    height: calc(100vh - 61px - 50px); /* Adjust for header and footer */
     width: 100%; /* Full viewport width */
-    padding-top: 61px; /* Push the content down to account for the header */
-    display: flex; /* Optional, if you plan to add content later */
-    justify-content: center; /* Align center horizontally (no effect if no text) */
-    align-items: center; /* Align center vertically (no effect if no text) */
-    overflow: hidden; /* Prevent scrolling due to image overflow */
+    display: flex; /* Enables content alignment */
+    justify-content: center; /* Horizontally align content */
+    align-items: center; /* Vertically align content */
+    overflow: hidden; /* Prevent scrolling */
+    margin: 0; /* Ensure no gaps */
 }
 
 picture img {
