@@ -212,21 +212,13 @@ footer p {
     header nav ul li a {
         font-size: 0.7rem; /* Even smaller font size */
     }
-    
-     #home {
-        background-position: center; /* Keeps image centered */
-    }
 
-    .hero-content {
-        margin-right: 1rem; /* Reduce margin further for mobile */
-    }
-
-    .hero-content h1 {
-        font-size: 2rem; /* Smaller heading for mobile */
-    }
-
-    .hero-content p {
-        font-size: 1rem; /* Smaller paragraph for mobile */
+   picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 10%; /* Center horizontally, crop 10% from the top */
+        display: block;
     }
     
     /* Footer adjustments */
