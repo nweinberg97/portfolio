@@ -368,7 +368,7 @@ footer p {
         flex: 0 0 calc(33.333% - 8px); /* Maintains 3-column layout */
     }
     .project-text {
-        font-size: 0.7rem; /* Smaller font for project descriptions */
+        font-size: 0.4rem; /* Smaller font for project descriptions */
     }
 
     .arrow-link {
@@ -377,8 +377,8 @@ footer p {
 
     /* Hover Text Overlay */
     .hover-text {
-        font-size: 0.6rem; /* Slightly smaller */
-        padding: 0px 15px 30px 15px;
+        font-size: 0.5rem; /* Slightly smaller */
+        padding: 0px 15px 40px 15px;
         align-items: center;
     }
 
