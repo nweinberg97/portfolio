@@ -108,9 +108,8 @@ header nav {
 
 /* Main Content Section */
 .projects-page {
-    margin-top: 70px;
     margin-bottom: 10px;
-    padding: 0px 20px;
+    padding: 62px 20px 0px 20px; 
     background-color: #f9f9f9;
 }
 
