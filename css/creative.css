@@ -85,10 +85,9 @@ header nav {
 
 /* Main Content Section */
 .projects-page {
-    margin-top: 62px;
     margin-bottom: 10px;
-    padding: 0px 20px; /* Adds space around the main content */
-    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 62px 20px 0px 20px; 
+    background-color: #f9f9f9;
 }
 
 /* Section Titles (Apps + Web, Concepts, Community) */
