@@ -78,9 +78,9 @@ header nav {
 
 /* Styling for Cover Art Section */
 #cover-art-projects {
-    padding: 20px;
-    text-align: center;
-    margin-top: 80px; /* Adjust this value as needed */
+    margin-bottom: 10px;
+    padding: 62px 20px 0px 20px; 
+    background-color: #f9f9f9;
 }
 
 .creative-header {
@@ -395,13 +395,13 @@ footer p {
 
      /* Full-width layout for smaller screens */
     .project-header, .project-content, .carousel-container {
-        margin: 0 10px; /* Minimal side margins */
+        margin: 5px 10px; /* Minimal side margins */
         padding: 10px; /* Further reduced padding */
         max-width: 100%; /* Full width on mobile */
     }
 
     .project-content {
-        margin: 0px 2% 10px; /* Minimal margin for very small screens */
+        margin: 5px 2% 10px; /* Minimal margin for very small screens */
     }
     
     /* Further text scaling */
@@ -422,9 +422,9 @@ footer p {
 
     /* Carousel control buttons */
     .control-button-prev, .control-button-next {
-        font-size: 1rem; /* Even smaller button size */
-        width: 25px;
-        height: 25px;
+        font-size: 0.8rem; /* Even smaller button size */
+        width: 20px;
+        height: 20px;
         padding-bottom: 80px; 
     }
 
