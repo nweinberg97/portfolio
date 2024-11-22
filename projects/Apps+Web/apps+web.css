@@ -533,17 +533,17 @@ footer p {
     .prototype-embed,
     .slide-deck {
         width: 100%;
-        max-width: 600px; /* Optional max width for tablet screens */
+        max-width: 100%; /* Optional max width for tablet screens */
         height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
 
         /* Tablet - max-width: 768px */
     .prototype-embed {
         width: 100%;
-        max-width: 600px; /* Sets a reasonable maximum width */
+        max-width: 100% ; /* Sets a reasonable maximum width */
         height: auto !important; /* Maintain aspect ratio and override fixed height */
+        aspect-ratio: 16 / 9 !important; /* Adjust to a responsive ratio */
     }
-
 
     /* Footer adjustments */
     footer {
@@ -587,33 +587,20 @@ footer p {
         padding-bottom: 10px;
     }
 
-        /* Mobile - max-width: 480px */
-    .carousel-container-videos .project-block-videos iframe {
-        width: 100%;
-        height: auto !important; /* Maintain aspect ratio and override fixed height */
-    }
-    
+    .project-content .video-item,
+    .carousel-container-videos .project-block-videos iframe,
     .project-block-videos iframe {
-        width: 100%;
-        height: auto !important; /* Maintain aspect ratio and override fixed height */
+        width: 100% !important;
+        height: auto !important; /* Maintain aspect ratio */
     }
 
-     .project-content .video-item {
-    /* Your styles here */
-       width: 100% !important; /* Ensure it spans the full container width */
-       height: auto !important; /* Maintain aspect ratio and override fixed height */
-    }
-
-    .slide-deck {
-        width: 100%;
-        max-width: 100%; /* Ensures it fits within the container */
-        height: auto !important; /* Maintain aspect ratio and override fixed height */
-    }
-      /* Mobile - max-width: 480px */
+    /* Slide Deck and Prototype Embeds */
+    .slide-deck,
     .prototype-embed {
-        width: 100%;
-        max-width: 100%; /* Ensures it fits within the container */
-        height: auto !important; /* Maintain aspect ratio and override fixed height */
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%; /* Ensure it fits within the container */
+        aspect-ratio: 16 / 9; /* Maintain consistent ratio */
     }
     
     /* Footer adjustments */
