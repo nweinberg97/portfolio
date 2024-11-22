@@ -416,15 +416,15 @@ footer p {
 
     /* Image adjustments for mobile */
     .carousel-slide img, .project-content img {
-        max-width: 85%; /* Scale down images slightly more */
+        max-width: 70%; /* Scale down images slightly more */
         height: auto;
     }
 
     /* Carousel control buttons */
     .control-button-prev, .control-button-next {
-        font-size: 0.8rem; /* Even smaller button size */
-        width: 20px;
-        height: 20px;
+        font-size: 0.7rem; /* Even smaller button size */
+        width: 15px;
+        height: 15px;
         padding-bottom: 80px; 
     }
 
