@@ -325,6 +325,29 @@
 <script>
 $(document).ready(function() {
 
+        // Quick Navigation Box Logic
+    const quickNav = document.getElementById('quick-nav');
+    const closeNav = document.getElementById('close-nav');
+    const openNav = document.getElementById('open-nav');
+
+    // Close Quick Navigation Box
+    closeNav.addEventListener('click', () => {
+        quickNav.style.transform = 'translateX(350px)'; // Slide out to the right
+        setTimeout(() => {
+            quickNav.style.display = 'none'; // Hide after transition
+            openNav.style.display = 'block'; // Show open button
+        }, 300);
+    });
+
+    // Open Quick Navigation Box
+    openNav.addEventListener('click', () => {
+        quickNav.style.display = 'block'; // Show box
+        setTimeout(() => {
+            quickNav.style.transform = 'translateX(0)'; // Slide back in
+            openNav.style.display = 'none'; // Hide open button
+        }, 10);
+    });
+
     // Carousel logic for images
     const imageCarousel = document.querySelector(".carousel-items-images");
     const imageItems = Array.from(imageCarousel.children);
