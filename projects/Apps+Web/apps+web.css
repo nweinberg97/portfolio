@@ -510,22 +510,13 @@ footer p {
         padding-bottom: 15px;
     }
 
-            /* Tablet - max-width: 768px */
-    .carousel-container-videos .project-block-videos iframe {
-        width: 100%;
-        max-width: 600px; /* Optional max width for tablet view */
-        height: auto !important; /* Maintain aspect ratio and override fixed height */
-    }
-    
     .project-block-videos iframe {
         width: 100%;
-        height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
 
   /* Non-carousel videos (project content) */
     .project-content iframe {
         width: 100%;
-        height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
 
     /* Video items, prototype embeds, and slide decks */
@@ -533,16 +524,14 @@ footer p {
     .prototype-embed,
     .slide-deck {
         width: 100%;
-        max-width: 100%; /* Optional max width for tablet screens */
-        height: auto !important; /* Maintain aspect ratio and override fixed height */
+        max-width: 600px; /* Optional max width for tablet screens */
     }
 
         /* Tablet - max-width: 768px */
     .prototype-embed {
         width: 100%;
-        max-width: 100% ; /* Sets a reasonable maximum width */
-        height: auto !important; /* Maintain aspect ratio and override fixed height */
-        aspect-ratio: 16 / 9 !important; /* Adjust to a responsive ratio */
+        max-width: 600px; /* Sets a reasonable maximum width */
+        overflow: hidden; /* Prevents content overflow */
     }
 
     /* Footer adjustments */
@@ -587,20 +576,26 @@ footer p {
         padding-bottom: 10px;
     }
 
-    .project-content .video-item,
-    .carousel-container-videos .project-block-videos iframe,
+       /* Mobile - max-width: 480px */
+    .carousel-container-videos .project-block-videos iframe {
+        width: 100%;
+    }
+    
     .project-block-videos iframe {
-        width: 100% !important;
-        height: auto !important; /* Maintain aspect ratio */
+        width: 100%;
     }
 
-    /* Slide Deck and Prototype Embeds */
-    .slide-deck,
+     .project-content .video-item {
+    /* Your styles here */
+       width: 100% !important; /* Ensure it spans the full container width */
+       height: auto !important; /* Maintain aspect ratio and override fixed height */
+    }
+
+      /* Mobile - max-width: 480px */
     .prototype-embed {
-        width: 100% !important;
-        height: auto !important;
-        max-width: 100%; /* Ensure it fits within the container */
-        aspect-ratio: 16 / 9; /* Maintain consistent ratio */
+        width: 100%;
+        max-width: 100%; /* Ensures it fits within the container */
+        overflow: hidden;
     }
     
     /* Footer adjustments */
