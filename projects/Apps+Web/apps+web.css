@@ -592,6 +592,11 @@ footer p {
         width: 100%;
     }
 
+     .project-content .video-item {
+    /* Your styles here */
+       width: 100% !important; /* Ensure it spans the full container width */
+       height: auto !important; /* Maintain aspect ratio and override fixed height */
+    }
 
       /* Mobile - max-width: 480px */
     .prototype-embed {
