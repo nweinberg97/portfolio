@@ -76,6 +76,94 @@ header nav {
     margin-left: auto; /* Pushes the nav links to the far right */
 }
 
+/* Quick Navigation Box */
+.quick-nav-box {
+    position: fixed;
+    top: 80px; /* Adjust for navbar height */
+    right: 20px;
+    width: 300px;
+    background: rgba(0, 95, 153, 0.8); /* Glossy transparent blue */
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* High z-index to sit above all content but below the navbar */
+    transition: transform 0.3s ease-in-out;
+    backdrop-filter: blur(10px); /* Glossy effect */
+}
+
+/* Quick Navigation Title */
+.quick-nav-box h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff6961; /* Red hover */
+}
+
+/* Links in Quick Navigation */
+.quick-nav-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.quick-nav-box ul li {
+    margin: 10px 0;
+}
+
+.quick-nav-box ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.quick-nav-box ul li a:hover {
+    color: #ffcc00; /* Gold hover effect */
+}
+
+/* Open Button */
+.open-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 95, 153, 0.8); /* Glossy blue */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.open-btn:hover {
+    background: #005f99; /* Slightly darker blue */
+}
+
+
+
+
 /* Main Content Section */
 .apps-web-page {
     margin-top: 70px;
