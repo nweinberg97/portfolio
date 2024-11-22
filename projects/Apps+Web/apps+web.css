@@ -514,15 +514,18 @@ footer p {
     .carousel-container-videos .project-block-videos iframe {
         width: 100%;
         max-width: 600px; /* Optional max width for tablet view */
+        height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
     
     .project-block-videos iframe {
         width: 100%;
+        height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
 
   /* Non-carousel videos (project content) */
     .project-content iframe {
         width: 100%;
+        height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
 
     /* Video items, prototype embeds, and slide decks */
@@ -531,13 +534,14 @@ footer p {
     .slide-deck {
         width: 100%;
         max-width: 600px; /* Optional max width for tablet screens */
+        height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
 
         /* Tablet - max-width: 768px */
     .prototype-embed {
         width: 100%;
         max-width: 600px; /* Sets a reasonable maximum width */
-        overflow: hidden; /* Prevents content overflow */
+        height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
 
 
@@ -610,7 +614,6 @@ footer p {
         width: 100%;
         max-width: 100%; /* Ensures it fits within the container */
         height: auto !important; /* Maintain aspect ratio and override fixed height */
-        overflow: hidden;
     }
     
     /* Footer adjustments */
