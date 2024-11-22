@@ -305,6 +305,10 @@ footer p {
     header nav ul li a {
         font-size: 0.7rem; /* Even smaller font size */
     }
+
+    #photos {
+        margin-top: 60px;
+}
     /* Main Project Header */
     .main-project-header {
         font-size: 1.5rem; /* Scales down further */
