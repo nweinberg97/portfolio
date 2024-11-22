@@ -231,5 +231,6 @@ footer p {
     }
     footer p {
         font-size: 0.7rem;
+        margin-top: 15px; 
     }
 }
