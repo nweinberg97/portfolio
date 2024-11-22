@@ -586,10 +586,12 @@ footer p {
         /* Mobile - max-width: 480px */
     .carousel-container-videos .project-block-videos iframe {
         width: 100%;
+        height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
     
     .project-block-videos iframe {
         width: 100%;
+        height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
 
      .project-content .video-item {
@@ -598,10 +600,16 @@ footer p {
        height: auto !important; /* Maintain aspect ratio and override fixed height */
     }
 
+    .slide-deck {
+        width: 100%;
+        max-width: 100%; /* Ensures it fits within the container */
+        height: auto !important; /* Maintain aspect ratio and override fixed height */
+    }
       /* Mobile - max-width: 480px */
     .prototype-embed {
         width: 100%;
         max-width: 100%; /* Ensures it fits within the container */
+        height: auto !important; /* Maintain aspect ratio and override fixed height */
         overflow: hidden;
     }
     
