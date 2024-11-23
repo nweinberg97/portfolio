@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -25,6 +26,22 @@
             </ul>
         </nav>
     </header>
+
+    <div id="quick-nav" class="quick-nav-box">
+    <button id="close-nav" class="close-btn">x</button>
+        <h3>
+             <a href="../projects.html">← Back to Projects</a>
+        </h3>
+    <ul>
+        <li><a href="apps+web.html">Apps + Web</a></li> <!-- Already in this folder -->
+        <li><a href="../concepts/concepts.html">Concepts</a></li>
+        <li><a href="../community/community.html">Community</a></li>
+    </ul>
+
+    </div>
+
+    <!-- Toggle button to reopen the navigation box -->
+    <button id="open-nav" class="open-btn" style="display: none;">☰</button>
 
     <section id="photos">
 
@@ -181,6 +198,43 @@
                     </a>
                     </p>
     </footer>
+
+     <script> 
+$(document).ready(function() {
+
+        const currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
+    const allNavLinks = document.querySelectorAll(".nav-links a, .quick-nav-box a"); // Select links from both navbar and nav box
+
+    allNavLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active"); // Add the 'active' class to the current page link
+        }
+    });
+
+        // Quick Navigation Box Logic
+    const quickNav = document.getElementById('quick-nav');
+    const closeNav = document.getElementById('close-nav');
+    const openNav = document.getElementById('open-nav');
+
+    // Close Quick Navigation Box
+    closeNav.addEventListener('click', () => {
+        quickNav.style.transform = 'translateX(350px)'; // Slide out to the right
+        setTimeout(() => {
+            quickNav.style.display = 'none'; // Hide after transition
+            openNav.style.display = 'block'; // Show open button
+        }, 300);
+    });
+
+    // Open Quick Navigation Box
+    openNav.addEventListener('click', () => {
+        quickNav.style.display = 'block'; // Show box
+        setTimeout(() => {
+            quickNav.style.transform = 'translateX(0)'; // Slide back in
+            openNav.style.display = 'none'; // Hide open button
+        }, 10);
+    });
+});
+     </script> 
 
 </body>
 </html>
