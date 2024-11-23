@@ -134,10 +134,40 @@ footer p {
     margin-top: 25px;
 }
 
-    
-/* Tablet Screens (up to 768px) */
-@media (max-width: 1024px) {
 
+/* Ultra-Wide Screens (1441px and up) */
+@media (min-width: 1441px) {
+    #home {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    picture img {
+        object-position: center; /* Maintain central focus */
+    }
+}
+
+
+/* Laptops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    #home {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    picture img {
+        object-position: center; /* Perfectly center for laptops */
+    }
+}
+
+
+/* Tablet Screens (481px - 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    
    header {
         padding: 0.8rem 1.5rem;
     }
@@ -157,17 +187,14 @@ footer p {
     }
     
     #home {
-        height: 100vh; /* Use full viewport height */
-        padding: 0; /* Remove padding to avoid extra space */
-        margin: 0; /* Ensure no margins */
-        overflow: hidden; /* Prevent scrolling or gaps */
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
     }
 
     picture img {
-        width: 100%;
-        height: 100%; /* Ensure full stretch */
-        object-fit: cover; /* Fill without distortion */
-        display: block; /* Avoid inline gaps */
+        object-position: center; /* Center image for tablets */
     }
 
     header {
@@ -191,6 +218,15 @@ footer p {
     }
 }
 
+    picture img {
+        width: 100%;
+        height: 100%; /* Ensure full stretch */
+        object-fit: cover; /* Fill without distortion */
+        display: block; /* Avoid inline gaps */
+    }
+}
+
+
 /* Small Mobile Screens (up to 480px) */
 @media (max-width: 480px) {
 /* Further reduce navbar padding for mobile */
@@ -212,12 +248,15 @@ footer p {
         font-size: 0.7rem; /* Even smaller font size */
     }
 
-   picture img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 30%; /* Center horizontally, crop 10% from the top */
-        display: block;
+    #home {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    picture img {
+        object-position: 50% 30%; /* Center horizontally, crop 30% from the top */
     }
     
     /* Footer adjustments */
