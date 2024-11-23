@@ -72,6 +72,116 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
+/* Quick Navigation Box */
+.quick-nav-box {
+    position: fixed;
+    top: 100px; /* Adjust for navbar height */
+    right: 40px;
+    width: 185px;
+    background: linear-gradient(
+        145deg,
+        rgba(0, 123, 255, 0.4), /* Lighter transparent blue */
+        rgba(0, 95, 153, 0.6) /* Darker transparent blue */
+    ); /* Creates a subtle gradient */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Light border for depth */
+    border-radius: 15px; /* Rounded corners for the "bubbly" look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), /* Soft shadow */
+                inset 0 -2px 8px rgba(255, 255, 255, 0.5); /* Inner glossy highlight */
+    color: white;
+    backdrop-filter: blur(10px); /* Glossy effect */
+    padding: 10px;
+    border-radius: 15px;
+    z-index: 9999; /* High z-index to sit above all content but below the navbar */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff6961; /* Red hover */
+}
+
+/* Links in Quick Navigation */
+.quick-nav-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.quick-nav-box ul li {
+    margin: 10px 0;
+}
+
+.quick-nav-box ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: normal;
+    display: block;
+    text-align: left;
+    transition: color 0.3s ease;
+    padding-left: 20px; 
+}
+
+.quick-nav-box h3 a {
+    font-size: 1rem;
+    font-weight: normal; 
+    text-decoration: none;
+    color: white;
+    text-align: left;
+    transition: color 0.3s ease;
+    display: block;
+    padding-top: 10px; 
+}
+
+.quick-nav-box ul li a:hover {
+    color: #ffcc00; /* Gold hover effect */
+    text-decoration: none;
+}
+
+.quick-nav-box h3 a:hover {
+    color: #ffcc00; /* Gold hover effect */
+    text-decoration: none;
+}
+
+/* Active link styling for both nav bar and nav box */
+.quick-nav-box a.active {
+    font-weight: bold; /* Make all active links bold */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+/* Open Button */
+.open-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 95, 153, 0.8); /* Glossy blue */
+    color: white;
+    border: none;
+    padding: 15px;
+    height: 52px;
+    width: 52px; 
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.open-btn:hover {
+    background: #005f99; /* Slightly darker blue */
+}
+
 /* Styling for Cover Art Section */
 #cover-art-projects {
     margin-bottom: 10px;
