@@ -200,15 +200,13 @@ h1 {
 
 }
 
-h3 { 
+.subheader { 
     text-align: center;
     text-wrap: wrap;
     margin: 10px 100px; 
     color: #333333;
 }
     
-
-
 /* Photo Gallery Header */
 .photoheader {
     font-size: 40px;
