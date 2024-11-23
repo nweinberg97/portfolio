@@ -80,11 +80,11 @@ header nav {
 
 /* General Hero Section Styling (Applies to All Devices) */
 #home {
-    flex: 1; /* Fills the remaining space between header and footer */
+    height: calc(100vh - 61px - 111.5px); /* Subtract header and footer heights */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden; /* Prevents scrollbars from appearing */
 }
 
 picture img {
