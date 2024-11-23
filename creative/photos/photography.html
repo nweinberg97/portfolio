@@ -30,12 +30,12 @@
     <div id="quick-nav" class="quick-nav-box">
     <button id="close-nav" class="close-btn">x</button>
         <h3>
-             <a href="../creative.html">← Back to Creative</a>
+            <a href="../creative.html">← Back to Creative</a>
         </h3>
     <ul>
         <li><a href="../cover-art/cover-art.html">Cover Art</a></li> <!-- Already in this folder -->
         <li><a href="../graqphic-design/graphic-design.html">Graphic Design</a></li>
-        <li><a href="photography.html">Community</a></li>
+        <li><a href="photography.html">Photography</a></li>
     </ul>
 
     </div>
@@ -202,7 +202,7 @@
      <script> 
 $(document).ready(function() {
 
-        const currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
+    const currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
     const allNavLinks = document.querySelectorAll(".nav-links a, .quick-nav-box a"); // Select links from both navbar and nav box
 
     allNavLinks.forEach(link => {
