@@ -69,7 +69,7 @@
 $(document).ready(function() {
 
     const currentPage = window.location.pathname.split("/").pop(); // Get current page filename
-    $(".nav-links a").each(function () {
+    $(".nav-links a, .quick-nav-box a").each(function () {
         if ($(this).attr("href").split("/").pop() === currentPage) {
             $(this).addClass("active"); // Add the 'active' class
         }
