@@ -81,15 +81,34 @@ header nav {
     position: fixed;
     top: 100px; /* Adjust for navbar height */
     right: 40px;
-    width: 200px;
-    background: rgba(0, 95, 153, 0.8); /* Glossy transparent blue */
+    width: 185px;
+    background: linear-gradient(
+        145deg,
+        rgba(0, 123, 255, 0.4), /* Lighter transparent blue */
+        rgba(0, 95, 153, 0.6) /* Darker transparent blue */
+    ); /* Creates a subtle gradient */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Light border for depth */
+    border-radius: 15px; /* Rounded corners for the "bubbly" look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), /* Soft shadow */
+                inset 0 -2px 8px rgba(255, 255, 255, 0.5); /* Inner glossy highlight */
     color: white;
+    backdrop-filter: blur(10px); /* Glossy effect */
     padding: 10px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 9999; /* High z-index to sit above all content but below the navbar */
     transition: transform 0.3s ease-in-out;
-    backdrop-filter: blur(10px); /* Glossy effect */
+}
+
+.quick-nav-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    background: rgba(255, 255, 255, 0.2); /* Subtle white highlight */
+    border-radius: 15px;
+    pointer-events: none; /* Make sure it doesn’t interfere with interactions */
 }
 
 /* Close Button */
@@ -128,7 +147,7 @@ header nav {
     display: block;
     text-align: left;
     transition: color 0.3s ease;
-    padding-left: 15px; 
+    padding-left: 20px; 
 }
 
 .quick-nav-box h3 a {
@@ -139,6 +158,7 @@ header nav {
     text-align: left;
     transition: color 0.3s ease;
     display: block;
+    padding-top: 10px; 
 }
 
 .quick-nav-box ul li a:hover {
