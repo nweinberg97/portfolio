@@ -133,7 +133,7 @@
 $(document).ready(function() {
 
     const currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
-    const allNavLinks = document.querySelectorAll(".nav-links a, .quick-nav-box a"); // Select links from both navbar and nav box
+    const allNavLinks = document.querySelectorAll(".nav-links a"); // Select links from both navbar and nav box
 
     allNavLinks.forEach(link => {
         if (link.getAttribute("href") === currentPage) {
