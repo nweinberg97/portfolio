@@ -81,10 +81,6 @@ header nav {
 /* General Hero Section Styling (Applies to All Devices) */
 #home {
     height: calc(100vh - 61px - 111.5px); /* Subtract header height and approximate footer height */
-    width: 100vw; /* Full width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     margin: 0;
     padding: 0;
