@@ -29,6 +29,21 @@
         </nav>
     </header>
 
+     <div id="quick-nav" class="quick-nav-box">
+    <button id="close-nav" class="close-btn">x</button>
+        <h3>
+             <a href="../projects.html">← Back to Projects</a>
+        </h3>
+    <ul>
+        <li><a href="../Apps+Web/apps+web.html">Apps + Web</a></li> <!-- Already in this folder -->
+        <li><a href="../concepts/concepts.html">Concepts</a></li>
+        <li><a href="community.html">Community</a></li>
+    </ul>
+    </div>
+
+    <!-- Toggle button to reopen the navigation box -->
+    <button id="open-nav" class="open-btn" style="display: none;">☰</button>
+
 
     <main class="community-page"> 
 
@@ -199,6 +214,14 @@
     <script>
 $(document).ready(function() {
 
+    const currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
+    const allNavLinks = document.querySelectorAll(".nav-links a, .quick-nav-box a"); // Select links from both navbar and nav box
+
+    allNavLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active"); // Add the 'active' class to the current page link
+        }
+    });
     // Loop through each carousel on the community page
     $('.carousel-container').each(function() {
         const carouselContainer = $(this).find('.carousel-items')[0];
