@@ -128,7 +128,7 @@ header nav {
     display: block;
     text-align: left;
     transition: color 0.3s ease;
-    padding-left: 7px; 
+    padding-left: 15px; 
 }
 
 .quick-nav-box h3 {
@@ -141,8 +141,14 @@ header nav {
     display: block;
 }
 
-.quick-nav-box h3 ul li a:hover {
+.quick-nav-box ul li a:hover {
     color: #ffcc00; /* Gold hover effect */
+    text-decoration: none;
+}
+
+.quick-nav-box h3 a:hover {
+    color: #ffcc00; /* Gold hover effect */
+    text-decoration: none;
 }
 
 /* Active link styling for both nav bar and nav box */
