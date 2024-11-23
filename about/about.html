@@ -93,5 +93,17 @@
 
     </footer>
 
+    <script>
+    
+$(document).ready(function() {
+
+    const currentPage = window.location.pathname.split("/").pop(); // Get current page filename
+    $(".nav-links a").each(function () {
+        if ($(this).attr("href").split("/").pop() === currentPage) {
+            $(this).addClass("active"); // Add the 'active' class
+        }
+    });
+    </script> 
+
 </body>
 </html>
