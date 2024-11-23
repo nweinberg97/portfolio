@@ -81,23 +81,15 @@ header nav {
     position: fixed;
     top: 80px; /* Adjust for navbar height */
     right: 20px;
-    width: 300px;
+    width: 150px;
     background: rgba(0, 95, 153, 0.8); /* Glossy transparent blue */
     color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 9999; /* High z-index to sit above all content but below the navbar */
     transition: transform 0.3s ease-in-out;
     backdrop-filter: blur(10px); /* Glossy effect */
-}
-
-/* Quick Navigation Title */
-.quick-nav-box h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
 }
 
 /* Close Button */
@@ -108,7 +100,7 @@ header nav {
     background: none;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
 }
@@ -131,15 +123,22 @@ header nav {
 .quick-nav-box ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 0.8rem;
+    font-weight: normal;
     display: block;
-    text-align: center;
+    text-align: left;
     transition: color 0.3s ease;
 }
 
 .quick-nav-box ul li a:hover {
     color: #ffcc00; /* Gold hover effect */
+}
+
+/* Active link styling for both nav bar and nav box */
+.nav-links a.active,
+.quick-nav-box a.active {
+    font-weight: bold; /* Make all active links bold */
+    text-decoration: none; /* Optional: Remove underline */
 }
 
 /* Open Button */
