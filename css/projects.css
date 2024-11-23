@@ -99,6 +99,13 @@ header nav {
     }
 }
 
+/* Active link styling for both nav bar and nav box */
+.nav-links a.active,
+.quick-nav-box a.active {
+    font-weight: bold; /* Make all active links bold */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
 .main-project-header {
     text-align: center;
     margin-top: 15px;
