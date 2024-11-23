@@ -216,7 +216,7 @@ footer p {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 50% 10%; /* Center horizontally, crop 10% from the top */
+        object-position: 50% 30%; /* Center horizontally, crop 10% from the top */
         display: block;
     }
     
