@@ -72,10 +72,6 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
-header nav {
-    margin-left: auto; /* Pushes the nav links to the far right */
-}
-
 /* Styling for Cover Art Section */
 #cover-art-projects {
     margin-bottom: 10px;
@@ -181,6 +177,7 @@ h3 {
     font-size: 20px;
     margin: 15px 0;
     color: #666;
+    text-align: center; 
 }
 
 
@@ -423,9 +420,15 @@ footer p {
     /* Carousel control buttons */
     .control-button-prev, .control-button-next {
         font-size: 0.7rem; /* Even smaller button size */
-        width: 15px;
-        height: 15px;
-        padding-bottom: 80px; 
+        width: 20px;
+        height: 20px;
+    }
+
+    .control-button-prev {
+        left: 5px;
+    }
+    .control-button-next {
+        right: 5px;
     }
 
     /* Footer adjustments */
