@@ -131,7 +131,7 @@ header nav {
     padding-left: 15px; 
 }
 
-.quick-nav-box h3 {
+.quick-nav-box h3 a {
     font-size: 1rem;
     font-weight: normal; 
     text-decoration: none;
