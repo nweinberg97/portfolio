@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -62,6 +63,18 @@
                     </a>
                     </p>
     </footer>
+
+        <script>
+    
+$(document).ready(function() {
+
+    const currentPage = window.location.pathname.split("/").pop(); // Get current page filename
+    $(".nav-links a").each(function () {
+        if ($(this).attr("href").split("/").pop() === currentPage) {
+            $(this).addClass("active"); // Add the 'active' class
+        }
+    });
+    </script> 
 
 </body>
 </html>
