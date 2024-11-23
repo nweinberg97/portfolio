@@ -78,22 +78,24 @@ header nav {
     margin-left: auto; /* Pushes the nav links to the far right */
 }
 
+/* General Hero Section Styling (Applies to All Devices) */
 #home {
-    height: calc(100vh - 61px - 5px); /* Adjust for header and footer */
-    width: 100%; /* Full viewport width */
-    display: flex; /* Enables content alignment */
-    justify-content: center; /* Horizontally align content */
-    align-items: center; /* Vertically align content */
-    overflow: hidden; /* Prevent scrolling */
-    margin: 0; /* Ensure no gaps */
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrollbars */
+    margin: 0;
+    padding: 0;
 }
 
 picture img {
-    width: 100%; /* Image stretches to fit container width */
-    height: 100%; /* Image stretches to fit container height */
-    object-fit: cover; /* Ensures the image fills without distortion */
-    object-position: center; /* Keeps the focal point centered */
-    display: block; 
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Scale image while keeping aspect ratio */
+    object-position: center; /* Default to center alignment */
+    display: block; /* Remove inline gaps */
 }
 
 /* Footer Styling */
@@ -137,12 +139,6 @@ footer p {
 
 /* Ultra-Wide Screens (1441px and up) */
 @media (min-width: 1441px) {
-    #home {
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
 
     picture img {
         object-position: center; /* Maintain central focus */
@@ -152,13 +148,6 @@ footer p {
 
 /* Laptops (1025px - 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
-    #home {
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
     picture img {
         object-position: center; /* Perfectly center for laptops */
     }
@@ -248,17 +237,10 @@ footer p {
         font-size: 0.7rem; /* Even smaller font size */
     }
 
-    #home {
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
+    picture img {
+        object-position: center 30%; /* Focus on the top for small screens */
     }
 
-    picture img {
-        object-position: 50% 30%; /* Center horizontally, crop 30% from the top */
-    }
-    
     /* Footer adjustments */
     footer {
         padding: 0.8rem 0;
