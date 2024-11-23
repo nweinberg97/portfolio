@@ -15,6 +15,11 @@ body {
     min-height: 100vh;
 }
 
+/* Active link styling for both nav bar and nav box */
+.nav-links a.active {
+    font-weight: bold; /* Make all active links bold */
+    text-decoration: none; /* Optional: Remove underline */
+}
 
 #contact .contact-container {
     max-width: 600px;
