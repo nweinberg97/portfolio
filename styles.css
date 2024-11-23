@@ -80,7 +80,7 @@ header nav {
 
 /* General Hero Section Styling (Applies to All Devices) */
 #home {
-    height: 100hv
+    height: 100hv;
     margin-top: 61px; 
     display: flex;
     justify-content: center;
