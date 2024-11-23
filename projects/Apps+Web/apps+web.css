@@ -549,10 +549,6 @@ footer p {
     font-size: 16px;
 }
 
-    .main-project-header {
-        font-size: 2rem; /* Adjusts for smaller screens */
-    }
-
     .section-content {
         padding: 15px; /* Reduces padding on smaller screens */
     }
