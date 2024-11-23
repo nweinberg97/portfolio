@@ -120,6 +120,10 @@ header nav ul li a:hover {
     transform: scale(1.05);
 }
 
+.project-content {
+    text-align: left;
+}
+
 .project-content p {
     font-size: 0.9rem;
     color: #666;
@@ -305,6 +309,15 @@ footer p {
     margin-top: 20px;
 }
 
+@media (max-width: 1439px) {
+
+    
+.project-content {
+    margin: auto; 
+}
+    
+    
+
 /* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
 
@@ -315,6 +328,15 @@ footer p {
         margin-bottom: 15px;
     }
 
+    .project-content iframe {
+        border-radius: 8px; /* Rounded corners for images */
+        width: 100%
+        max-width: 100%;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
      /* Full-width layout for smaller screens */
     .project-header, .project-content, .carousel-container {
         margin: 0 10px; /* Minimal side margins */
@@ -323,8 +345,7 @@ footer p {
     }
 
     .project-content {
-        margin: 20px 5%; /* Uses a smaller margin on both sides */
-        padding: 15px; /* Optionally reduce padding for more space */
+        margin: auto;
     }
 
     /* Further text scaling */
@@ -390,6 +411,14 @@ footer p {
         margin-bottom: 15px;
     }
 
+    .project-content iframe {
+        border-radius: 8px; /* Rounded corners for images */
+        max-width: 100%;
+        margin: auto; 
+        align-items: center;
+        justify-content: center;
+    }
+
      /* Full-width layout for smaller screens */
     .project-header, .project-content, .carousel-container {
         margin: 5px 10px; /* Minimal side margins */
@@ -398,7 +427,7 @@ footer p {
     }
 
     .project-content {
-        margin: 5px 2% 10px; /* Minimal margin for very small screens */
+        margin: auto;
     }
     
     /* Further text scaling */
@@ -435,6 +464,7 @@ footer p {
     footer {
         padding: 0.8rem 0;
     }
+    
     footer .footer-links a {
         font-size: 0.7rem; /* Smaller font for links */
         padding: 0.2rem 0.5rem;
