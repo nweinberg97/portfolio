@@ -79,9 +79,9 @@ header nav {
 /* Quick Navigation Box */
 .quick-nav-box {
     position: fixed;
-    top: 80px; /* Adjust for navbar height */
-    right: 20px;
-    width: 150px;
+    top: 100px; /* Adjust for navbar height */
+    right: 40px;
+    width: 200px;
     background: rgba(0, 95, 153, 0.8); /* Glossy transparent blue */
     color: white;
     padding: 10px;
@@ -128,9 +128,20 @@ header nav {
     display: block;
     text-align: left;
     transition: color 0.3s ease;
+    padding-left: 7px; 
 }
 
-.quick-nav-box ul li a:hover {
+.quick-nav-box h3 {
+    font-size: 1rem;
+    font-weight: normal; 
+    text-decoration: none;
+    color: white;
+    text-align: left;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.quick-nav-box h3 ul li a:hover {
     color: #ffcc00; /* Gold hover effect */
 }
 
@@ -150,6 +161,8 @@ header nav {
     color: white;
     border: none;
     padding: 15px;
+    height: 52px;
+    width: 52px; 
     border-radius: 50%;
     font-size: 18px;
     cursor: pointer;
@@ -159,9 +172,6 @@ header nav {
 .open-btn:hover {
     background: #005f99; /* Slightly darker blue */
 }
-
-
-
 
 /* Main Content Section */
 .apps-web-page {
@@ -494,6 +504,37 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    /* Quick Navigation Box */
+.quick-nav-box {
+    width: 175px;
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 0.7rem;
+}
+
+.quick-nav-box ul li {
+    margin: 7px 0;
+}
+
+.quick-nav-box ul li a {
+    font-size: 0.7rem;
+    padding-left: 6px; 
+}
+
+.quick-nav-box h3 {
+    font-size: 0.9rem;
+}
+
+/* Open Button */
+.open-btn {
+    height: 48px;
+    width: 48px; 
+    font-size: 16px;
+}
+
     .main-project-header {
         font-size: 2rem; /* Adjusts for smaller screens */
     }
@@ -549,6 +590,37 @@ footer p {
 
 /* Small Mobile Screens (up to 480px) */
 @media (max-width: 480px) {
+
+    /* Quick Navigation Box */
+.quick-nav-box {
+    width: 150px;
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 0.6rem;
+}
+
+.quick-nav-box ul li {
+    margin: 5px 0;
+}
+
+.quick-nav-box ul li a {
+    font-size: 0.6rem;
+    padding-left: 5px; 
+}
+
+.quick-nav-box h3 {
+    font-size: 0.8rem;
+}
+
+/* Open Button */
+.open-btn {
+    height: 40px;
+    width: 40px; 
+    font-size: 12px;
+}
+    
  /* Further reduce navbar padding for mobile */
     header {
         padding: 0.5rem 1rem;
