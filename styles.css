@@ -138,16 +138,40 @@ footer p {
 /* Ultra-Wide Screens (1441px and up) */
 @media (min-width: 1441px) {
 
-    picture img {
-        object-position: center; /* Maintain central focus */
+  #home {
+        height: 100vh;
+        margin-top: 61px; 
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
     }
+
+       picture img {
+        width: 100%;
+        height: 100%; /* Ensure full stretch */
+        object-fit: cover; /* Fill without distortion */
+        display: block; /* Avoid inline gaps */
+    }
+    
 }
 
 
 /* Laptops (1025px - 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
-    picture img {
-        object-position: center; /* Perfectly center for laptops */
+    
+     #home {
+        height: 100vh;
+        margin-top: 61px; 
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+       picture img {
+        width: 100%;
+        height: 100%; /* Ensure full stretch */
+        object-fit: cover; /* Fill without distortion */
+        display: block; /* Avoid inline gaps */
     }
 }
 
