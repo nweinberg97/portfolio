@@ -79,7 +79,7 @@ header nav {
 }
 
 #home {
-    height: calc(100vh - 61px - 25px); /* Adjust for header and footer */
+    height: calc(100vh - 61px - 5px); /* Adjust for header and footer */
     width: 100%; /* Full viewport width */
     display: flex; /* Enables content alignment */
     justify-content: center; /* Horizontally align content */
