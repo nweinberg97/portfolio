@@ -76,6 +76,12 @@ header nav {
     margin-left: auto; /* Pushes the nav links to the far right */
 }
 
+/* Active link styling for both nav bar and nav box */
+.nav-links a.active {
+    font-weight: bold; /* Make all active links bold */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
 .about-section {
     margin: 0px auto; /* Center the section horizontally */
     padding: 20px; /* Add padding for better spacing */
