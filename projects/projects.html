@@ -168,12 +168,10 @@
     
 $(document).ready(function() {
 
-    const currentPage = window.location.pathname.split("/").pop(); // Get the current page filename
-    const allNavLinks = document.querySelectorAll(".nav-links a, .quick-nav-box a"); // Select links from both navbar and nav box
-
-    allNavLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("active"); // Add the 'active' class to the current page link
+    const currentPage = window.location.pathname.split("/").pop(); // Get current page filename
+    $(".nav-links a, .quick-nav-box a").each(function () {
+        if ($(this).attr("href").split("/").pop() === currentPage) {
+            $(this).addClass("active"); // Add the 'active' class
         }
     });
     // Selectors and initial setup
