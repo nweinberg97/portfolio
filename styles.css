@@ -81,7 +81,7 @@ header nav {
 /* General Hero Section Styling (Applies to All Devices) */
 #home {
     height: 100hv;
-    margin-top: 61px; 
+    padding-top: 61px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,11 +138,10 @@ footer p {
 /* Ultra-Wide Screens (1441px and up) */
 @media (min-width: 1441px) {
 
-  #home {
+    #home {
         height: 100vh;
-        margin-top: 61px; 
-        margin: 0;
-        padding: 0;
+        padding-top: 61px; 
+        margin: 0; 
         overflow: hidden;
     }
 
@@ -186,8 +185,8 @@ footer p {
     
     #home {
         height: 100vh;
-        margin-top: 61px; 
-        padding: 0;
+        padding-top: 61px; 
+        margin: 0; 
         overflow: hidden;
     }
 
@@ -247,6 +246,21 @@ footer p {
     picture img {
         object-position: center 30%; /* Focus on the top for small screens */
     }
+
+    #home {
+        height: 100vh;
+        padding-top: 61px; 
+        margin: 0; 
+        overflow: hidden;
+    }
+
+    picture img {
+        width: 100%;
+        height: 100%; /* Ensure full stretch */
+        object-fit: cover; /* Fill without distortion */
+        display: block; /* Avoid inline gaps */
+    }
+
 
     /* Footer adjustments */
     footer {
