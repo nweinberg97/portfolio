@@ -184,9 +184,10 @@ footer p {
     }
     
     #home {
+        display: block; /* Use block for simpler layout */
         height: 100vh;
         padding-top: 61px; 
-        margin: 0; 
+        margin: 0;
         overflow: hidden;
     }
 
@@ -248,9 +249,10 @@ footer p {
     }
 
     #home {
+        display: block; /* Use block for simpler layout */
         height: 100vh;
         padding-top: 61px; 
-        margin: 0; 
+        margin: 0;
         overflow: hidden;
     }
 
