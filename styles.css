@@ -155,27 +155,6 @@ footer p {
     
 }
 
-
-/* Laptops (1025px - 1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
-    
-     #home {
-        height: 100vh;
-        margin-top: 61px; 
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
-       picture img {
-        width: 100%;
-        height: 100%; /* Ensure full stretch */
-        object-fit: cover; /* Fill without distortion */
-        display: block; /* Avoid inline gaps */
-    }
-}
-
-
 /* Tablet Screens (481px - 1024px) */
 @media (min-width: 481px) and (max-width: 1024px) {
     
