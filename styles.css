@@ -155,6 +155,14 @@ footer p {
     
 }
 
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+  picture img {
+        object-position: center; /* Focus on the top for small screens */
+    }
+
+}
+
 /* Tablet Screens (481px - 1024px) */
 @media (min-width: 481px) and (max-width: 1024px) {
     
@@ -203,10 +211,10 @@ footer p {
         padding: 0.3rem 0.7rem;
         margin: 0 2px; /* Compact margin for links */
     }
+    
     footer p {
         font-size: 0.8rem;
     }
-}
 
     picture img {
         width: 100%;
