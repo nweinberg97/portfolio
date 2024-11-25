@@ -516,6 +516,42 @@ footer p {
     margin-top: 20px;
 }
 
+/* Small Mobile Screens (up to 480px) */
+@media (max-width: 1441px) {
+
+    /* Quick Navigation Box */
+.quick-nav-box {
+    width: 300px;
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 1rem;
+}
+
+.quick-nav-box ul li {
+    margin: 10px 0;
+}
+
+.quick-nav-box ul li a {
+    font-size: 1rem;
+    padding-left: 25px; 
+}
+
+.quick-nav-box h3 {
+    font-size: 1.2rem;
+}
+
+/* Open Button */
+.open-btn {
+    height: 75px;
+    width: 75px; 
+    font-size: 20px;
+    padding: 20px;
+}
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
 
@@ -547,15 +583,20 @@ footer p {
     height: 48px;
     width: 48px; 
     font-size: 16px;
+    padding: 10px;
 }
 
     .section-content {
         padding: 15px; /* Reduces padding on smaller screens */
     }
 
+    .project-content iframe {
+        width: 100%; 
+    } 
       /* Adjust carousel container width */
     .carousel-container-videos {
-        max-width: 500px;
+        max-width: 100%;
+        height: auto; 
         padding-bottom: 15px;
     }
            /* Mobile - max-width: 480px */
@@ -629,6 +670,7 @@ footer p {
     height: 40px;
     width: 40px; 
     font-size: 12px;
+    padding: 7px;
 }
     
  /* Further reduce navbar padding for mobile */
@@ -656,6 +698,10 @@ footer p {
         padding-bottom: 10px;
     }
 
+    .project-content iframe {
+        width: 100%; 
+    } 
+    
        /* Mobile - max-width: 480px */
     .project-block-videos iframe {
         width: 100% !important;
