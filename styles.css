@@ -160,7 +160,7 @@ footer p {
 @media (min-width: 1281px) and (max-width: 1440px) {
 
         picture img {
-        object-position: center 30%; /* Focus on the top for small screens */
+        object-position: center; 
     }
 }
 
