@@ -555,7 +555,7 @@ footer p {
 
       /* Adjust carousel container width */
     .carousel-container-videos {
-        max-width: 100%;
+        max-width: 500px;
         padding-bottom: 15px;
     }
            /* Mobile - max-width: 480px */
