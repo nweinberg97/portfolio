@@ -591,40 +591,25 @@ footer p {
         padding: 15px; /* Reduces padding on smaller screens */
     }
 
-    .project-content iframe {
-        width: 100%; 
-    } 
-      /* Adjust carousel container width */
+    /* Video Carousel Container */
     .carousel-container-videos {
-        max-width: 100%;
-        height: auto; 
-        padding-bottom: 15px;
+        max-width: 100%; /* Full width on mobile */
+        padding-bottom: 15px; /* Space below carousel */
     }
-           /* Mobile - max-width: 480px */
+
+    /* Video Embed: Maintain Aspect Ratio */
     .project-block-videos iframe {
-        width: 100% !important;
-        height: auto !important; 
+        width: 100%; /* Full width of container */
+        height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
+        border-radius: 8px; /* Optional: keep rounded corners */
     }
 
-    .project-content .video-item {
-    /* Your styles here */
-       width: 100% !important; /* Ensure it spans the full container width */
-       height: auto !important; /* Maintain aspect ratio and override fixed height */
+    /* General Project Content */
+    .project-content iframe {
+        width: 100%; /* Ensure iframe spans full width */
+        height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
+        border-radius: 8px; /* Optional: keep rounded corners */
     }
-
-    /* Video items, prototype embeds, and slide decks */
-    .slide-deck {
-        width: 100%;
-        max-width: 600px; /* Optional max width for tablet screens */
-    }
-
-        /* Tablet - max-width: 768px */
-    .prototype-embed {
-        width: 100%;
-        max-width: 600px; /* Sets a reasonable maximum width */
-        overflow: hidden; /* Prevents content overflow */
-    }
-
     /* Footer adjustments */
     footer {
         padding: 1rem 0; /* Reduced padding for footer */
@@ -709,6 +694,8 @@ footer p {
     /* General Project Content */
     .project-content iframe {
         width: 100%; /* Ensure iframe spans full width */
+        height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
+        border-radius: 8px; /* Optional: keep rounded corners */
     }
         
     /* Footer adjustments */
