@@ -159,8 +159,22 @@ footer p {
 
 @media (min-width: 1025px) and (max-width: 1440px) {
 
-  picture img {
-        object-position: center; /* Focus on the top for small screens */
+        #home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Ensure full viewport height */
+        padding-top: 61px; /* Account for the navbar height */
+        margin: 0;
+        overflow: hidden;
+    }
+
+    picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center; /* Center image for better alignment */
+        display: block;
     }
 }
 
