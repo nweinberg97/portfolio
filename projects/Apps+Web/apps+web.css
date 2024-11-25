@@ -559,13 +559,15 @@ footer p {
         padding-bottom: 15px;
     }
 
-    .project-block-videos iframe {
-        width: 100%;
-    }
-
   /* Non-carousel videos (project content) */
     .project-content iframe {
         width: 100%;
+    }
+
+           /* Mobile - max-width: 480px */
+    .project-block-videos iframe {
+        width: 100% !important;
+        height: auto !important; 
     }
 
     /* Video items, prototype embeds, and slide decks */
@@ -657,12 +659,9 @@ footer p {
     }
 
        /* Mobile - max-width: 480px */
-    .carousel-container-videos .project-block-videos iframe {
-        width: 100%;
-    }
-    
     .project-block-videos iframe {
-        width: 100%;
+        width: 100% !important;
+        height: auto !important; 
     }
 
      .project-content .video-item {
