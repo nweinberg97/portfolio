@@ -597,24 +597,17 @@ footer p {
         padding-bottom: 15px; /* Space below carousel */
     }
 
-    /* Video Embed: Maintain Aspect Ratio */
+       /* General Rule: Apply to All Video Embeds */
     .project-block-videos iframe {
         width: 100%; /* Full width of container */
         height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
-        border-radius: 8px; /* Optional: keep rounded corners */
-    }
-
-    /* General Project Content */
-    .project-content iframe:nth-of-type(1){
-        width: 100%; /* Ensure iframe spans full width */
-        height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
-        border-radius: 8px; /* Optional: keep rounded corners */
+        border-radius: 8px; /* Optional: rounded corners */
     }
 
     /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
         width: 100% !important;
-        height: 100% !important; /* 40% of the viewport height */
+        height: 40vh !important; /* 40% of the viewport height */
     }
     
     /* Footer adjustments */
@@ -691,24 +684,18 @@ footer p {
         padding-bottom: 10px; /* Space below carousel */
     }
 
-    /* Video Embed: Maintain Aspect Ratio */
+    /* General Rule: Apply to All Video Embeds */
     .project-block-videos iframe {
         width: 100%; /* Full width of container */
         height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
-        border-radius: 8px; /* Optional: keep rounded corners */
-    }
-
-    /* General Project Content */
-    .project-content iframe:nth-of-type(1){
-        width: 100%; /* Ensure iframe spans full width */
-        height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
-        border-radius: 8px; /* Optional: keep rounded corners */
+        border-radius: 8px; /* Optional: rounded corners */
     }
 
     /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
         width: 100% !important;
-        height: 100% !important; /* 40% of the viewport height */
+        height: 40vh !important; /* 40% of the viewport height */
+        
     }
         
     /* Footer adjustments */
