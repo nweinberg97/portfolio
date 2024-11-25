@@ -614,7 +614,7 @@ footer p {
     /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
         width: 100% !important;
-        height: 40vh !important; /* 40% of the viewport height */
+        height: 100% !important; /* 40% of the viewport height */
     }
     
     /* Footer adjustments */
@@ -708,7 +708,7 @@ footer p {
     /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
         width: 100% !important;
-        height: 40vh !important; /* 40% of the viewport height */
+        height: 100% !important; /* 40% of the viewport height */
     }
         
     /* Footer adjustments */
