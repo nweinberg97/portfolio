@@ -553,26 +553,24 @@ footer p {
         padding: 15px; /* Reduces padding on smaller screens */
     }
 
-     /* Adjust carousel container width */
+      /* Adjust carousel container width */
     .carousel-container-videos {
-        max-width: 500px;
+        max-width: 100%;
         padding-bottom: 15px;
     }
-
-  /* Non-carousel videos (project content) */
-    .project-content iframe {
-        width: 100%;
-    }
-
            /* Mobile - max-width: 480px */
     .project-block-videos iframe {
         width: 100% !important;
         height: auto !important; 
     }
 
+    .project-content .video-item {
+    /* Your styles here */
+       width: 100% !important; /* Ensure it spans the full container width */
+       height: auto !important; /* Maintain aspect ratio and override fixed height */
+    }
+
     /* Video items, prototype embeds, and slide decks */
-    .video-item,
-    .prototype-embed,
     .slide-deck {
         width: 100%;
         max-width: 600px; /* Optional max width for tablet screens */
