@@ -162,17 +162,6 @@ footer p {
   picture img {
         object-position: center; /* Focus on the top for small screens */
     }
-
-        #home {
-        height: 100vh;
-        padding-top: 61px; 
-        margin: 0; 
-        overflow: hidden;
-        display: flex; /* Use flex for centering content */
-        justify-content: center;
-        align-items: center;
-    }
-
 }
 
 /* Tablet Screens (481px - 1024px) */
