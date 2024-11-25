@@ -176,6 +176,7 @@ header nav ul li a:hover {
     font-size: 18px;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* High z-index to sit above all content but below the navbar */
 }
 
 .open-btn:hover {
@@ -221,6 +222,7 @@ header nav ul li a:hover {
     font-size: 1.2rem;
     color: #333;
     padding: 20px 0 10px;
+    margin-bottom: 5px; 
     font-weight: bold;
     text-align: left; 
 }
@@ -412,8 +414,9 @@ footer p {
     margin-top: 20px;
 }
 
-@media (max-width: 1439px) {
 
+@media (min-width: 1441px) {
+    
      /* Full-width layout for smaller screens */
     .carousel-container {
         margin: 0 10px; /* Minimal side margins */
@@ -438,9 +441,74 @@ footer p {
         width: 100%
         max-width: 100%;
         margin: 0; 
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
+        /* Further text scaling */
+     .creative-header {
+        font-size: 2.2rem; /* Smaller header font size */
+    }
+
+       h2 {
+           font-size: 1.4rem
+       }
+
+        h3 {
+           font-size: 1.2rem
+       }
+
+    .project-content p {
+        font-size: 1rem
+    }
+        
+
+    .carousel-item p {
+        font-size: 1rem; 
+        line-height: 1.3;
+    }
+
+    .carousel-slide img, .project-content img {
+        max-width: 100%; 
+        height: auto;
+    }
+
+    /* Carousel control buttons */
+    .control-button-prev, .control-button-next {
+        font-size: 1rem; /* Even smaller button size */
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+
+@media (max-width: 1439px) {
+
+     /* Full-width layout for smaller screens */
+    .carousel-container {
+        margin: 0 10px; /* Minimal side margins */
+        padding: 10px; /* Further reduced padding */
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .project-header{
+        margin: 20px 5%; /* Uses a smaller margin on both sides */
+        padding: 10px; /* Further reduced padding */
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .project-content {
+        margin: 20px 5%; /* Uses a smaller margin on both sides */
+        padding: 15px; /* Optionally reduce padding for more space */
+        max-width: 100%; /* Full width on mobile */
+    }
+    
+    .project-content iframe {
+        border-radius: 8px; /* Rounded corners for images */
+        max-width: 100%;
+        margin: 0; 
+        margin-bottom: 10px; 
+    }
         /* Further text scaling */
      .creative-header {
         font-size: 1.5rem; /* Smaller header font size */
