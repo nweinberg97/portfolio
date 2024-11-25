@@ -613,7 +613,10 @@ footer p {
 
     /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
+        width: 100%; /* Full width of container */
         height: calc(100vw * 9 / 16) !important; /* Maintain 16:9 aspect ratio */
+        border-radius: 8px; /* Optional: rounded corners */
+        display: block; /* Force block-level behavior */    
     }
     
     /* Footer adjustments */
@@ -707,7 +710,10 @@ footer p {
     
     /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
+        width: 100%; /* Full width of container */
         height: calc(100vw * 9 / 16) !important; /* Maintain 16:9 aspect ratio */
+        border-radius: 8px; /* Optional: rounded corners */
+        display: block; /* Force block-level behavior */    
     }
         
     /* Footer adjustments */
