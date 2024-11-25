@@ -181,6 +181,7 @@ header nav {
     font-size: 18px;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999; /* High z-index to sit above all content but below the navbar */
 }
 
 .open-btn:hover {
@@ -516,8 +517,8 @@ footer p {
     margin-top: 20px;
 }
 
-/* Small Mobile Screens (up to 480px) */
-@media (max-width: 1441px) {
+
+@media (min-width: 1441px) {
 
     /* Quick Navigation Box */
 .quick-nav-box {
@@ -692,35 +693,24 @@ footer p {
         font-size: 0.7rem; /* Even smaller font size */
     }
     
-     /* Video Carousel */
+/* Video Carousel Container */
     .carousel-container-videos {
         max-width: 100%; /* Full width on mobile */
-        padding-bottom: 10px;
+        padding-bottom: 10px; /* Space below carousel */
     }
 
-    .project-content iframe {
-        width: 100%; 
-    } 
-    
-       /* Mobile - max-width: 480px */
+    /* Video Embed: Maintain Aspect Ratio */
     .project-block-videos iframe {
-        width: 100% !important;
-        height: auto !important; 
+        width: 100%; /* Full width of container */
+        height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
+        border-radius: 8px; /* Optional: keep rounded corners */
     }
 
-     .project-content .video-item {
-    /* Your styles here */
-       width: 100% !important; /* Ensure it spans the full container width */
-       height: auto !important; /* Maintain aspect ratio and override fixed height */
+    /* General Project Content */
+    .project-content iframe {
+        width: 100%; /* Ensure iframe spans full width */
     }
-
-      /* Mobile - max-width: 480px */
-    .prototype-embed {
-        width: 100%;
-        max-width: 100%; /* Ensures it fits within the container */
-        overflow: hidden;
-    }
-    
+        
     /* Footer adjustments */
     footer {
         padding: 0.8rem 0;
