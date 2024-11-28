@@ -267,11 +267,6 @@ header nav ul li a:hover {
     margin-bottom: 10px; 
 }
 
-.video-wrapper {
-    width: 100%; 
-    height: auto; 
-}
-
 .project-content {
     background-color: #fff; /* White container */
     padding: 20px;
@@ -696,13 +691,6 @@ footer p {
     padding: 7px;
 }
 
-    .project-content iframe {
-        border-radius: 8px; /* Rounded corners for images */
-        width: 100%;
-        max-width: 100%; 
-        margin: 0;
-    }
-
      /* Full-width layout for smaller screens */
     .carousel-container {
         margin: 5px 10px; /* Minimal side margins */
@@ -710,7 +698,7 @@ footer p {
         max-width: 100%; /* Full width on mobile */
     }
 
-    .project-header{
+    .project-header {
         margin: 5px 2%; /* Uses a smaller margin on both sides */
         padding: 10px; /* Further reduced padding */
         max-width: 100%; /* Full width on mobile */
@@ -720,6 +708,14 @@ footer p {
         margin: 5px 2%; /* Uses a smaller margin on both sides */
         padding: 10px; /* Optionally reduce padding for more space */
         max-width: 100%; /* Full width on mobile */
+    }
+
+    .project-content iframe {
+        border-radius: 8px; /* Rounded corners for images */
+        width: 100%;
+        max-width: 100%; 
+        height: 0; 
+        margin: 0 auto 10px;
     }
 
     .project-content p {
