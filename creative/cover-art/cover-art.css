@@ -416,7 +416,19 @@ footer p {
 
 
 @media (min-width: 1441px) {
+
     
+    header nav ul li a {
+        font-size: 1.2rem; /* Even smaller font size */
+    }
+
+    
+    header .logo a {
+    font-size: 1.7rem;
+    }
+
+    
+
      /* Full-width layout for smaller screens */
     .carousel-container {
         margin: 0 10px; /* Minimal side margins */
