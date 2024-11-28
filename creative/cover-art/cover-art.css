@@ -313,6 +313,10 @@ header nav ul li a:hover {
     overflow: hidden; 
 }
 
+.carousel-container:hover {
+    transform: scale(1.05);
+}
+
 .carousel-wrapper {
     display: flex;
     width: 100%; 
@@ -659,7 +663,8 @@ footer p {
 .quick-nav-box {
     top: 45px; /* Adjust for navbar height */
     right: 10px;
-    width: 90px;
+    width: 100px;
+    padding: 7px; 
 }
 
 /* Close Button */
@@ -674,12 +679,12 @@ footer p {
 }
 
 .quick-nav-box ul li a {
-    font-size: 0.4rem;
-    padding-left: 3px; 
+    font-size: 0.5rem;
+    padding-left: 5px; 
 }
     
 .quick-nav-box h3 a {
-    font-size: 0.45rem !important;
+    font-size: 0.55rem !important;
     padding: 5px 0px 0px !important;
 }
 
@@ -693,27 +698,27 @@ footer p {
 
      /* Full-width layout for smaller screens */
     .carousel-container {
-        margin: 5px 10px; /* Minimal side margins */
+        margin: 10px 2%; /* Uses a smaller margin on both sides */
         padding: 10px; /* Further reduced padding */
-        max-width: 100%; /* Full width on mobile */
+        max-width: 100%; 
     }
 
     .project-header {
-        margin: 5px 2%; /* Uses a smaller margin on both sides */
+        margin: 10px 2%; /* Uses a smaller margin on both sides */
         padding: 10px; /* Further reduced padding */
         max-width: 100%; /* Full width on mobile */
     }
 
     .project-content {
-        margin: 5px 2%; /* Uses a smaller margin on both sides */
+        margin: 10px 2%; /* Uses a smaller margin on both sides */
         padding: 10px; /* Optionally reduce padding for more space */
         max-width: 100%; /* Full width on mobile */
     }
 
     .project-content iframe {
-        border-radius: 8px; /* Rounded corners for images */
-        width: 100%;
-        max-width: 100%; 
+        width: 100%; /* Full width of container */
+        height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
+        border-radius: 8px; /* Optional: rounded corners */
         margin: 0 auto 10px;
     }
 
@@ -725,11 +730,13 @@ footer p {
     /* Further text scaling */
     .creative-header {
         font-size: 1.2rem; /* Smaller header font size */
+        padding-bottom: 5px; 
     }
 
         /* Header for the carousel section */
     .bookh3b {
         font-size: 1.2rem;
+        margin-bottom: 7px; 
     }
     
     h2 {
@@ -739,6 +746,10 @@ footer p {
         h3 {
            font-size: 0.9rem
        }
+
+    .divider {
+        margin: 15px; 
+    }
 
     .project-content p {
         font-size: 0.7rem
