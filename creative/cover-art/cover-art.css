@@ -694,10 +694,11 @@ footer p {
     
     .project-content iframe {
         border-radius: 8px; /* Rounded corners for images */
-        max-width: 100%;
+        width: 100%;
+        height: auto; 
         margin: 0;
     }
-
+    
      /* Full-width layout for smaller screens */
     .carousel-container {
         margin: 5px 10px; /* Minimal side margins */
