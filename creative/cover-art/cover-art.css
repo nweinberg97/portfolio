@@ -658,7 +658,7 @@ footer p {
 
     /* Quick Navigation Box */
 .quick-nav-box {
-    top: 70px; /* Adjust for navbar height */
+    top: 45px; /* Adjust for navbar height */
     right: 10px;
     width: 75px;
 }
@@ -666,6 +666,8 @@ footer p {
 /* Close Button */
 .close-btn {
     font-size: 0.5rem;
+    top: 7px;
+    right: 8px;
 }
 
 .quick-nav-box ul li {
@@ -677,7 +679,7 @@ footer p {
     padding-left: 3px; 
 }
     
-.quick-nav-box h3 {
+.quick-nav-box h3 a {
     font-size: 0.5rem;
 }
 
