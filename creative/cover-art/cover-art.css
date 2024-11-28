@@ -666,7 +666,7 @@ footer p {
 /* Close Button */
 .close-btn {
     font-size: 0.5rem;
-    top: 7px;
+    top: 5px;
     right: 8px;
 }
 
@@ -675,12 +675,13 @@ footer p {
 }
 
 .quick-nav-box ul li a {
-    font-size: 0.4rem;
+    font-size: 0.3rem;
     padding-left: 3px; 
 }
     
 .quick-nav-box h3 a {
-    font-size: 0.5rem !important;
+    font-size: 0.4rem !important;
+    padding: 5px 0px 0px !important;
 }
 
 /* Open Button */
