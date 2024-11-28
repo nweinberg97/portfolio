@@ -261,11 +261,15 @@ header nav ul li a:hover {
 }
 
 .video-wrapper {
-    position: relative; 
-    padding-bottom: 56.25%;
     width: 100%; 
-    height: 0; 
+    height: auto; 
 }
+
+.project-content iframe {
+    display: block; 
+    margin: 0 auto; 
+}
+    
 
 .project-content {
     background-color: #fff; /* White container */
@@ -680,7 +684,7 @@ footer p {
 }
     
 .quick-nav-box h3 a {
-    font-size: 0.4rem !important;
+    font-size: 0.35rem !important;
     padding: 5px 0px 0px !important;
 }
 
@@ -691,6 +695,8 @@ footer p {
     font-size: 12px;
     padding: 7px;
 }
+
+    
     
      /* Full-width layout for smaller screens */
     .carousel-container {
