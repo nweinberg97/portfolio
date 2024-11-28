@@ -192,7 +192,7 @@ header nav ul li a:hover {
 
 .creative-header {
     text-align: center;
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     font-size: 2.2rem;
 }
 
@@ -222,7 +222,7 @@ header nav ul li a:hover {
     font-size: 1.2rem;
     color: #333;
     padding: 20px 0 10px;
-    margin-bottom: 5px; 
+    margin-bottom: 10px; 
     font-weight: bold;
     text-align: left; 
 }
@@ -247,7 +247,7 @@ header nav ul li a:hover {
 .project-content p {
     font-size: 0.9rem;
     color: #666;
-    margin: 0 0 10px;
+    margin: 5px 0px 10px;
     text-align: left;
 }
 
