@@ -419,15 +419,12 @@ footer p {
 
     
     header nav ul li a {
-        font-size: 1.2rem; /* Even smaller font size */
+        font-size: 1.6rem; /* Even smaller font size */
     }
 
-    
     header .logo a {
-    font-size: 1.7rem;
+    font-size: 2rem;
     }
-
-    
 
      /* Full-width layout for smaller screens */
     .carousel-container {
