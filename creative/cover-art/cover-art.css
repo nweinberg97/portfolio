@@ -659,7 +659,7 @@ footer p {
 .quick-nav-box {
     top: 45px; /* Adjust for navbar height */
     right: 10px;
-    width: 75px;
+    width: 90px;
 }
 
 /* Close Button */
@@ -674,12 +674,12 @@ footer p {
 }
 
 .quick-nav-box ul li a {
-    font-size: 0.3rem;
+    font-size: 0.4rem;
     padding-left: 3px; 
 }
     
 .quick-nav-box h3 a {
-    font-size: 0.35rem !important;
+    font-size: 0.45rem !important;
     padding: 5px 0px 0px !important;
 }
 
@@ -714,7 +714,6 @@ footer p {
         border-radius: 8px; /* Rounded corners for images */
         width: 100%;
         max-width: 100%; 
-        height: 0; 
         margin: 0 auto 10px;
     }
 
@@ -723,12 +722,15 @@ footer p {
         line-height: 1.3;
     }
         
-    
     /* Further text scaling */
     .creative-header {
         font-size: 1.2rem; /* Smaller header font size */
     }
 
+        /* Header for the carousel section */
+    .bookh3b {
+        font-size: 1.2rem;
+    }
     
     h2 {
            font-size: 1rem
@@ -742,6 +744,11 @@ footer p {
         font-size: 0.7rem
     }
 
+        /* Styling for the overall carousel container */
+    .carousel-container {
+        padding: 20px 0px;
+    }
+    
     .carousel-item p {
         font-size: 0.5rem; /* Smaller font size for mobile */
         line-height: 1.3;
