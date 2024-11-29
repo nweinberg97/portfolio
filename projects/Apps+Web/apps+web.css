@@ -76,11 +76,12 @@ header nav {
     margin-left: auto; /* Pushes the nav links to the far right */
 }
 
+
 /* Quick Navigation Box */
 .quick-nav-box {
     position: fixed;
-    top: 100px; /* Adjust for navbar height */
-    right: 40px;
+    top: 85px; /* Adjust for navbar height */
+    right: 25px;
     width: 185px;
     background: linear-gradient(
         145deg,
@@ -160,7 +161,6 @@ header nav {
 }
 
 /* Active link styling for both nav bar and nav box */
-.nav-links a.active,
 .quick-nav-box a.active {
     font-weight: bold; /* Make all active links bold */
     text-decoration: none; /* Optional: Remove underline */
@@ -198,7 +198,7 @@ header nav {
 /*Apps+Web Page Header */
 .apps-web-header h1 {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 25px;
     font-size: 1.8rem;
     color: #333;
@@ -520,9 +520,16 @@ footer p {
 
 @media (min-width: 1441px) {
 
+  
+/*Apps+Web Page Header */
+.apps-web-header h1 {
+    margin-top: 25px;
+    margin-bottom: 25px; 
+    font-size: 2.2rem; 
+}    
     /* Quick Navigation Box */
 .quick-nav-box {
-    width: 300px;
+    width: 225px;
 }
 
 /* Close Button */
@@ -536,19 +543,34 @@ footer p {
 
 .quick-nav-box ul li a {
     font-size: 1rem;
-    padding-left: 25px; 
+    padding-left: 15px; 
 }
-
-.quick-nav-box h3 {
-    font-size: 1.2rem;
+    
+.quick-nav-box h3 a {
+    font-size: 1.2rem !important;
+    padding: 10px 0px 0px !important;
 }
 
 /* Open Button */
 .open-btn {
-    height: 75px;
-    width: 75px; 
-    font-size: 20px;
-    padding: 20px;
+    bottom: 25px;
+    right: 25px;
+}
+
+    /* Individual Video Styling within Video Carousel */
+.project-block-videos {
+    min-width: 100%; /* Each video takes up 100% of the container width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-block-videos iframe {
+    width: 100%;
+    height: 45vh; /* Slightly shorter for better balance */
+    object-fit: cover; /* Ensures image fills the area */
+    border-radius: 8px;
 }
 }
 
@@ -557,36 +579,11 @@ footer p {
 @media (max-width: 768px) {
 
     /* Quick Navigation Box */
-.quick-nav-box {
-    width: 175px;
-}
-
-/* Close Button */
-.close-btn {
-    font-size: 0.7rem;
-}
-
-.quick-nav-box ul li {
-    margin: 7px 0;
-}
-
-.quick-nav-box ul li a {
-    font-size: 0.7rem;
-    padding-left: 6px; 
-}
-
-.quick-nav-box h3 {
-    font-size: 0.9rem;
-}
-
-/* Open Button */
-.open-btn {
-    height: 48px;
-    width: 48px; 
-    font-size: 16px;
-    padding: 10px;
-}
-
+    .quick-nav-box {
+        top: 85px; /* Adjust for navbar height */
+        right: 25px;
+    }
+    
     .section-content {
         padding: 15px; /* Reduces padding on smaller screens */
     }
@@ -597,11 +594,19 @@ footer p {
         padding-bottom: 15px; /* Space below carousel */
     }
 
-       /* General Rule: Apply to All Video Embeds */
     .project-block-videos iframe {
-        width: 100%; /* Full width of container */
-        height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
-        border-radius: 8px; /* Optional: rounded corners */
+        width: 100%;
+        height: 45vh; /* Slightly shorter for better balance */
+        object-fit: cover; /* Ensures image fills the area */
+        border-radius: 8px;
+    }
+        /* Individual Video Styling within Video Carousel */
+    .project-block-videos {
+        min-width: 100%; /* Each video takes up 100% of the container width */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
      /* Target the second Figma embed */
@@ -610,7 +615,7 @@ footer p {
         height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
         border-radius: 8px; /* Optional: rounded corners */
     }
-
+    
          /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
         width: 100%;
@@ -638,25 +643,31 @@ footer p {
 
     /* Quick Navigation Box */
 .quick-nav-box {
-    width: 150px;
+    top: 40px; /* Adjust for navbar height */
+    right: 10px;
+    width: 100px;
+    padding: 7px; 
 }
 
 /* Close Button */
 .close-btn {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
+    top: 5px;
+    right: 8px;
 }
 
 .quick-nav-box ul li {
-    margin: 5px 0;
+    margin: 3px 0;
 }
 
 .quick-nav-box ul li a {
-    font-size: 0.6rem;
-    padding-left: 5px; 
+    font-size: 0.45rem;
+    padding-left: 10px; 
 }
-
-.quick-nav-box h3 {
-    font-size: 0.8rem;
+    
+.quick-nav-box h3 a {
+    font-size: 0.55rem !important;
+    padding: 8px 0px 0px !important;
 }
 
 /* Open Button */
@@ -699,7 +710,6 @@ footer p {
         border-radius: 8px; /* Optional: rounded corners */
     }
 
-
      /* Target the second Figma embed */
     .project-content iframe:nth-of-type(1) {
         width: 100%;
@@ -710,8 +720,10 @@ footer p {
      /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
         width: 100%;
-        height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
-        border-radius: 8px; /* Optional: rounded corners */
+        border-radius: 8px;
+        object-fit: cover;
+        justify-content: center;
+        overflow: hidden;
     }
     
     /* Footer adjustments */
