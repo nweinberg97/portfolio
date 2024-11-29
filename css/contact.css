@@ -23,7 +23,7 @@ body {
 
 #contact .contact-container {
     max-width: 600px;
-    margin: 100px auto 15px auto; /* Increased top margin to push the container down */
+    margin: auto; /* Increased top margin to push the container down */
     padding: 40px 40px;
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -111,17 +111,15 @@ body {
 }
 
 
+@media (min-width: 1441px) {
+    #contact .contact-container {
+    margin: auto; 
+}
+
+}
+
 /* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
-
-    #contact .contact-container {
-        max-width: 100%; /* Wider container on tablet */
-        margin-top: 40px;
-        margin-left: auto;
-        margin-right: auto; 
-        margin-bottom: 0px; 
-        padding: 30px;
-    }
 
     .about-chunk p {
     font-size: 0.8rem; /* Adjust as needed */
@@ -140,7 +138,6 @@ body {
         font-size: 1rem;
         padding: 10px;
     }
-    
     /* Footer adjustments */
     footer {
         padding: 1rem 0; /* Reduced padding for footer */
@@ -177,12 +174,8 @@ body {
     }
 
    #contact .contact-container {
-        max-width: 94%;
-        padding: 20px;
-        margin-top: 70px;
-        margin-left: auto;
-        margin-right: auto; 
-        margin-bottom: 10px; 
+        max-width: 85%;
+        margin: auto; 
     }
 
     .about-chunk p {
