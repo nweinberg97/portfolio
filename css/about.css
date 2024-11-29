@@ -97,7 +97,7 @@ header nav {
 
 /* About Section */
 .about-header {
-    padding: 10px 20px;
+    padding: 10px 20px 0px;
     margin: 0px auto;
     font-size: 1.6rem; 
 }
@@ -218,6 +218,13 @@ footer p {
 }
 
 
+@media (min-width: 1441px) {
+
+    .about-header {
+        padding-top: 20px;
+        padding-bottom: 0px; 
+    }
+
 /* Responsive Design */
 @media (max-width: 768px) {
 
@@ -231,7 +238,7 @@ footer p {
 
     .about-header {
         font-size: 1.6rem;
-        margin: 20px auto;
+        margin: 10px auto;
     }
 
     .about-section {
@@ -308,12 +315,12 @@ footer p {
     }
 
     .about-page {
-        margin: 70px 10px 10px 10px;
+        margin: 45px 10px 10px 10px;
     }
     
     .about-header {
         font-size: 1.1rem;
-        margin: 12px auto;
+        margin: 0px auto;
         text-align: center;
     }
 
