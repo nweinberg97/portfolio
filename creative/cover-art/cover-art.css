@@ -691,6 +691,10 @@ footer p {
         font-size: 0.7rem; /* Even smaller font size */
     }
 
+    /* Styling for Cover Art Section */
+#cover-art-projects {
+    padding: 45px 20px 0px 20px; 
+}
     /* Quick Navigation Box */
 .quick-nav-box {
     top: 40px; /* Adjust for navbar height */
