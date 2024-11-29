@@ -75,8 +75,8 @@ header nav ul li a:hover {
 /* Quick Navigation Box */
 .quick-nav-box {
     position: fixed;
-    top: 100px; /* Adjust for navbar height */
-    right: 40px;
+    top: 85px; /* Adjust for navbar height */
+    right: 25px;
     width: 185px;
     background: linear-gradient(
         145deg,
@@ -194,6 +194,7 @@ header nav ul li a:hover {
     text-align: center;
     padding: 20px 20px 10px 20px;
     font-size: 2.2rem;
+    margin-top: 10px; 
 }
 
 /* Styling for each project tile */
@@ -531,23 +532,23 @@ footer p {
 
 @media (max-width: 1439px) {
 
-     /* Full-width layout for smaller screens */
+    /* Full-width layout for smaller screens */
     .carousel-container {
-        margin: 0 10px; /* Minimal side margins */
+        margin: 0 auto; /* Minimal side margins */
         padding: 10px; /* Further reduced padding */
-        max-width: 100%; /* Full width on mobile */
+        max-width: 600px; /* Full width on mobile */
     }
 
     .project-header{
-        margin: 20px 5%; /* Uses a smaller margin on both sides */
+        margin: 20px auto; /* Uses a smaller margin on both sides */
         padding: 10px; /* Further reduced padding */
-        max-width: 100%; /* Full width on mobile */
+        max-width: 600px; /* Full width on mobile */
     }
 
     .project-content {
-        margin: 20px 5%; /* Uses a smaller margin on both sides */
+        margin: 20px auto; /* Uses a smaller margin on both sides */
         padding: 15px; /* Optionally reduce padding for more space */
-        max-width: 100%; /* Full width on mobile */
+        max-width: 600px; /* Full width on mobile */
     }
 
     .project-content iframe {
@@ -558,27 +559,9 @@ footer p {
     }
         /* Further text scaling */
      .creative-header {
-        font-size: 1.5rem; /* Smaller header font size */
+        font-size: 1.8rem; /* Smaller header font size */
     }
-
-       h2 {
-           font-size: 1.1rem
-       }
-
-        h3 {
-           font-size: 1rem
-       }
-
-    .project-content p {
-        font-size: 0.8rem
-    }
-        
-
-    .carousel-item p {
-        font-size: 0.9rem; /* Smaller font size for mobile */
-        line-height: 1.3;
-    }
-
+    
     /* Image adjustments for mobile */
     .carousel-slide img, .project-content img {
         max-width: 85%; /* Scale down images slightly more */
@@ -597,54 +580,56 @@ footer p {
 /* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
 
-     /* Full-width layout for smaller screens */
-    .carousel-container {
-        margin: 0 10px; /* Minimal side margins */
-        padding: 10px; /* Further reduced padding */
-        max-width: 100%; /* Full width on mobile */
+            /* Quick Navigation Box */
+.quick-nav-box {
+    top: 85px; /* Adjust for navbar height */
+    right: 25px;
+}
+
+   .creative-header {
+    font-size: 1.8rem;
+    margin-top: 10px; 
+}
+    
+/* Styling for each project tile */
+.project-header {
+    max-width: 600px;
+    margin: auto; 
+}
+
+    .bookh3b {
+        font-size: 1.2rem 
     }
 
-    .project-header{
-        margin: 20px 5%; /* Uses a smaller margin on both sides */
-        padding: 10px; /* Further reduced padding */
-        max-width: 100%; /* Full width on mobile */
-    }
+/* Styling for titles and descriptions */
+.project-header h2 {
+    font-size: 1.2rem;
+}
 
-    .project-content {
-        margin: 20px 5%; /* Uses a smaller margin on both sides */
-        padding: 15px; /* Optionally reduce padding for more space */
-        max-width: 100%; /* Full width on mobile */
-    }
+.project-content h2 {
+    font-size: 1rem;
+}
+
+.project-content p {
+    font-size: 0.9rem;
+}
+
+.project-content {
+    max-width: 600px;
+    margin: 10px auto; 
+}
 
     .project-content iframe {
         border-radius: 8px; /* Rounded corners for images */
-        width: 100%
         max-width: 100%;
         margin: 0; 
-        margin-bottom: 10px;
+        margin-bottom: 10px; 
     }
-
-    /* Further text scaling */
-     .creative-header {
-        font-size: 1.5rem; /* Smaller header font size */
-    }
-
-       h2 {
-           font-size: 1.1rem
-       }
-
-        h3 {
-           font-size: 1rem
-       }
-
-    .project-content p {
-        font-size: 0.8rem
-    }
-        
 
     .carousel-item p {
         font-size: 0.9rem; /* Smaller font size for mobile */
         line-height: 1.3;
+        margin-top: 0px; 
     }
 
     /* Image adjustments for mobile */
@@ -659,6 +644,14 @@ footer p {
         width: 30px;
         height: 30px;
     }
+
+     .control-button-prev {
+        left: 20px;
+    }
+    .control-button-next {
+        right: 20px;
+    }
+
     /* Footer adjustments */
     footer {
         padding: 1rem 0; /* Reduced padding for footer */
@@ -696,7 +689,7 @@ footer p {
 
     /* Quick Navigation Box */
 .quick-nav-box {
-    top: 45px; /* Adjust for navbar height */
+    top: 40px; /* Adjust for navbar height */
     right: 10px;
     width: 100px;
     padding: 7px; 
@@ -714,13 +707,13 @@ footer p {
 }
 
 .quick-nav-box ul li a {
-    font-size: 0.5rem;
-    padding-left: 5px; 
+    font-size: 0.45rem;
+    padding-left: 10px; 
 }
     
 .quick-nav-box h3 a {
     font-size: 0.55rem !important;
-    padding: 5px 0px 0px !important;
+    padding: 8px 0px 0px !important;
 }
 
 /* Open Button */
@@ -766,6 +759,7 @@ footer p {
     .creative-header {
         font-size: 1.2rem; /* Smaller header font size */
         padding-bottom: 5px; 
+        padding-top: 15px; 
     }
 
         /* Header for the carousel section */
