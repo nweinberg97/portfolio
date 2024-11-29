@@ -84,7 +84,7 @@ header nav {
 
 .main-project-header {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 25px;
     font-size: 2.2rem;
 }
@@ -272,6 +272,13 @@ footer p {
 }
 
 
+@media (min-width: 1441px) {
+
+    .main-project-header {
+    margin-top: 25px;
+    }
+}
+
 /* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
     /* Navbar adjustments */
@@ -279,7 +286,7 @@ footer p {
     /* Main Project Header */
     .main-project-header {
         font-size: 1.8rem; /* Scales down for tablets */
-        margin-top: 10px;
+        margin-top: 15px;
         margin-bottom: 20px;
     }
 
@@ -355,6 +362,11 @@ footer p {
         margin-bottom: 15px;
     }
 
+    /* Project Section Titles */
+    .project-section {
+        margin-bottom: 35px;
+    }
+    
     /* Project Section Titles */
     .project-section h2 {
         font-size: 1.3rem; /* Smaller title */
