@@ -450,11 +450,15 @@ footer p {
     bottom: 25px;
     right: 25px;
 }
-
+    
+.carousel-container:hover {
+    transform: scale(1.03);
+}
+    
 .creative-header {
     font-size: 2.5rem;
     margin-top: 20px; 
-    marging-bottom: 10px; 
+    marging-bottom: 20px; 
 }
 
 /* Styling for each project tile */
