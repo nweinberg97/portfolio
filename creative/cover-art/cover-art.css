@@ -430,8 +430,42 @@ footer p {
     font-size: 2rem;
     }
 
+        /* Quick Navigation Box */
+.quick-nav-box {
+    width: 225px;
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 1rem;
+}
+
+.quick-nav-box ul li {
+    margin: 10px 0;
+}
+
+.quick-nav-box ul li a {
+    font-size: 1rem;
+    padding-left: 8px; 
+}
+    
+.quick-nav-box h3 a {
+    font-size: 1.2rem !important;
+    padding: 5px 0px 0px !important;
+}
+
+/* Open Button */
+.open-btn {
+    bottom: 25px;
+    right: 25px;
+}
+
+
+    
 .creative-header {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    margin-top: 20px; 
+    marging-bottom: 10px; 
 }
 
 /* Styling for each project tile */
@@ -440,24 +474,40 @@ footer p {
     margin: auto; 
 }
 
+    .bookh3b {
+        font-size: 1.5rem 
+    }
+
 /* Styling for titles and descriptions */
 .project-header h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 .project-content h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .project-content p {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .project-content {
     max-width: 1000px;
-    margin: auto; 
+    margin: 10px auto; 
 }
 
+.project-content iframe {
+        width: 100%; /* Full width of container */
+        height: calc(100vw * 9 / 16); /* Maintain 16:9 aspect ratio */
+        border-radius: 8px; /* Optional: rounded corners */
+        margin: 0 auto 10px;
+}
+
+   .project-content img {
+        width: 100%; 
+        height: auto;
+    }
+    
 /* Styling for the overall carousel container */
 .carousel-container {
     max-width: 1000px;
@@ -465,28 +515,28 @@ footer p {
 }
 
 .carousel-item p {
-    max-width: 85%;
+    max-width: 75%;
     font-size: 1rem;
 }
 
 .control-button-prev {
-   left: 20px; 
+   left: 35px; 
 }
 
 .control-button-next {
-    right: 20px;
+    right: 35px;
 }
 
-    .carousel-slide img, .project-content img {
-        max-width: 100%; 
+    .carousel-slide img {
+        width: 100%; 
         height: auto;
     }
 
     /* Carousel control buttons */
     .control-button-prev, .control-button-next {
-        font-size: 1rem; /* Even smaller button size */
-        width: 30px;
-        height: 30px;
+        font-size: 1.1rem; 
+        width: 45px;
+        height: 45px;
     }
 
 }
@@ -696,7 +746,7 @@ footer p {
 
      /* Full-width layout for smaller screens */
     .carousel-container {
-        margin: 10px 2%; /* Uses a smaller margin on both sides */
+        margin: 10px auto; /* Uses a smaller margin on both sides */
         padding: 10px; /* Further reduced padding */
         max-width: 100%; 
     }
