@@ -31,7 +31,7 @@ body {
 .contact-container {
     max-width: 600px;
     margin: auto;
-    padding: 40px 40px;
+    padding: 61px 40px 40px 40px;
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -211,7 +211,7 @@ body {
 }
 
     .contactheader {
-        padding-top: 35px; 
+        padding-top: 50px; 
         font-size: 1.4rem; /* Smaller font for mobile */
     }
 
