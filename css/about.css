@@ -296,25 +296,25 @@ footer p {
 @media (max-width: 480px) {
  /* Further reduce navbar padding for mobile */
     header {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 1rem !important;
     }
 
     /* Further reduce logo font size */
     header .logo a {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
     }
 
     /* Reduce font size and gap for navigation links */
     header nav ul {
-        gap: 1rem; /* Smaller gap for mobile */
+        gap: 1rem !important; /* Smaller gap for mobile */
     }
 
     header nav ul li a {
-        font-size: 0.7rem; /* Even smaller font size */
+        font-size: 0.7rem !important; /* Even smaller font size */
     }
 
     .about-page {
-        padding-top: 110px !important;
+        padding-top: 100px !important;
     }
     
     .about-header {
@@ -369,16 +369,16 @@ footer p {
         
     /* Footer adjustments */
     footer {
-        padding: 0.8rem 0;
+        padding: 0.8rem 0 !important;
     }
     
     footer .footer-links a {
-        font-size: 0.7rem; /* Smaller font for links */
-        padding: 0.2rem 0.5rem;
-        margin: 0 1px; /* Compact margin */
+        font-size: 0.7rem !important; /* Smaller font for links */
+        padding: 0.2rem 0.5rem !important;
+        margin: 0 1px !important; /* Compact margin */
     }
     
     footer p {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
     }
 }
