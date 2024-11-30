@@ -644,7 +644,7 @@ footer p {
     /* Quick Navigation Box */
 .quick-nav-box {
     top: 40px; /* Adjust for navbar height */
-    right: 10px;
+    right: 5px;
     width: 100px;
     padding: 7px; 
 }
