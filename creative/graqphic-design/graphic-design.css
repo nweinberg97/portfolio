@@ -564,8 +564,8 @@ footer p {
 
        /* Quick Navigation Box */
 .quick-nav-box {
-    top: 40px; /* Adjust for navbar height */
-    right: 10px;
+    top: 45px; /* Adjust for navbar height */
+    right: 5px;
     width: 100px;
     padding: 7px; 
 }
@@ -600,19 +600,19 @@ footer p {
 }
     
      .graphic-design-header {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     
     .project-section h2 {
-        font-size: 1.2rem;
-    }
-
-    .project-chunk h3 {
         font-size: 1rem;
     }
 
+    .project-chunk h3 {
+        font-size: 0.9rem;
+    }
+
     .caption {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
       /* Keep three images in a row, but reduce height further */
