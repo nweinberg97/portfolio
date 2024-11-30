@@ -641,9 +641,34 @@ footer p {
 /* Small Mobile Screens (up to 480px) */
 @media (max-width: 480px) {
 
+/*Apps+Web Page Header */
+.apps-web-header h1 {
+    margin-top: 15px;
+    margin-bottom: 20px; 
+    font-size: 1.2rem; 
+}    
+
+.project-section h2 {
+    font-size: 1rem;
+}
+
+    .project-section h2 {
+    font-size: 1rem;
+}
+
+    /* Community Page Singular Paragraph Headers */
+.project-text h3 {
+    font-size: 0.9rem;
+}
+
+/* Community Page Singular Paragraph Headers */
+.project-text p {
+    font-size: 0.7rem;
+}
+    
     /* Quick Navigation Box */
 .quick-nav-box {
-    top: 40px; /* Adjust for navbar height */
+    top: 45px; /* Adjust for navbar height */
     right: 5px;
     width: 100px;
     padding: 7px; 
@@ -719,6 +744,7 @@ footer p {
 
      /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
+        height: 100%; 
         width: 100%;
         border-radius: 8px;
         object-fit: cover;
