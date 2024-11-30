@@ -21,9 +21,15 @@ body {
     text-decoration: none; /* Optional: Remove underline */
 }
 
-#contact .contact-container {
+#contact {
+     margin-top: 61px; 
+     margin-right: auto; 
+     margin-left: auto; 
+}
+
+.contact-container {
     max-width: 600px;
-    margin: auto; /* Increased top margin to push the container down */
+    margin: auto;
     padding: 40px 40px;
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -110,16 +116,35 @@ body {
     color: red;
 }
 
-
+/* Tablet Screens (up to 768px) */
 @media (min-width: 1441px) {
-    #contact .contact-container {
-    margin: auto; 
+
+    #contact {
+     margin-top: 61px; 
+     margin-right: auto; 
+     margin-left: auto; 
 }
 
+.contact-container {
+    margin: auto;
+}
 }
 
 /* Tablet Screens (up to 768px) */
 @media (max-width: 768px) {
+
+#contact {
+     margin-top: 61px; 
+     margin-right: auto; 
+     margin-left: auto; 
+}
+
+.contact-container {
+    margin: auto;
+    max-width: 100%;
+    padding: 30px;
+    margin-bottom: 10px; 
+}
 
     .about-chunk p {
     font-size: 0.8rem; /* Adjust as needed */
@@ -138,6 +163,7 @@ body {
         font-size: 1rem;
         padding: 10px;
     }
+    
     /* Footer adjustments */
     footer {
         padding: 1rem 0; /* Reduced padding for footer */
@@ -173,10 +199,18 @@ body {
         font-size: 0.7rem; /* Even smaller font size */
     }
 
-   #contact .contact-container {
-        max-width: 85%;
-        margin: auto; 
-    }
+#contact {
+     margin-top: 35.5px; 
+     margin-right: auto; 
+     margin-left: auto; 
+}
+
+.contact-container {
+    margin: auto;
+    max-width: 75%;
+    padding: 20px;
+    margin-bottom: 10px; 
+}
 
     .about-chunk p {
     font-size: 0.6rem; /* Adjust as needed */
