@@ -133,6 +133,10 @@ body {
         font-size: 1.3rem; /* Maintain readability */
     }
 
+    #contact form label {
+        font-size: 1.4rem; /* Maintain readability */
+}
+
     #contact form button {
         font-size: 1.3rem;
         padding: 15px;
@@ -150,6 +154,9 @@ body {
         font-size: 1.8rem; /* Slightly smaller font for header */
     }
 
+        #contact form label {
+        font-size: 1.1rem; /* Maintain readability */
+}
     #contact form input,
     #contact form textarea {
         font-size: 1rem; /* Maintain readability */
@@ -208,6 +215,9 @@ body {
         font-size: 1.4rem; /* Smaller font for mobile */
     }
 
+       #contact form label {
+        font-size: 0.8rem; /* Maintain readability */
+}
     .contact-text {
         font-size: 0.7rem; /* Adjusted font size for smaller screens */
     }
