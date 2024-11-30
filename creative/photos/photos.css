@@ -441,6 +441,42 @@ footer p {
     header nav ul li a {
         font-size: 0.7rem; /* Even smaller font size */
     }
+        /* Quick Navigation Box */
+.quick-nav-box {
+    top: 40px; /* Adjust for navbar height */
+    right: 5px;
+    width: 100px;
+    padding: 7px; 
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 0.5rem;
+    top: 5px;
+    right: 8px;
+}
+
+.quick-nav-box ul li {
+    margin: 3px 0;
+}
+
+.quick-nav-box ul li a {
+    font-size: 0.45rem;
+    padding-left: 10px; 
+}
+    
+.quick-nav-box h3 a {
+    font-size: 0.55rem !important;
+    padding: 8px 0px 0px !important;
+}
+
+/* Open Button */
+.open-btn {
+    height: 40px;
+    width: 40px; 
+    font-size: 12px;
+    padding: 7px;
+}
 
     #photos {
         margin-top: 60px;
