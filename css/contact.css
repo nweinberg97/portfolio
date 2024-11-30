@@ -25,6 +25,7 @@ body {
      margin-top: 61px; 
      margin-right: auto; 
      margin-left: auto; 
+     height: 100vh
 }
 
 .contact-container {
@@ -212,25 +213,21 @@ body {
     margin-bottom: 10px; 
 }
 
-    .about-chunk p {
-    font-size: 0.6rem; /* Adjust as needed */
-    }
-
     .contactheader {
-        font-size: 1.6rem; /* Smaller font for mobile */
+        font-size: 1.4rem; /* Smaller font for mobile */
     }
 
     .contact-text {
-        font-size: 0.9rem; /* Adjusted font size for smaller screens */
+        font-size: 0.7rem; /* Adjusted font size for smaller screens */
     }
 
     #contact form input,
     #contact form textarea {
-        font-size: 0.9rem; /* Slightly smaller font size */
+        font-size: 0.7rem; /* Slightly smaller font size */
     }
 
     #contact form button {
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding: 8px;
     }
 
