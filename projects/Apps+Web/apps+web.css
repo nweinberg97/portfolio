@@ -748,14 +748,14 @@ footer p {
 
      /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
-        width: 50%;
+        width: 85%;
         border-radius: 8px;
-        object-fit: cover;
         justify-content: center;
+        align-content: center; 
     }
 
     .project-content:nth-of-type(2) {
-        max-width: 335px; 
+        max-width: 335px !important; 
     }
     
     /* Footer adjustments */
