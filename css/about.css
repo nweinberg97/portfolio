@@ -320,7 +320,7 @@ footer p {
     
     .about-header {
         font-size: 1.2rem;
-        margin: 12px auto;
+        margin: 5px auto 0px;
         text-align: center;
     }
 
@@ -339,7 +339,7 @@ footer p {
 
     .centered-image {
         width: 100%; /* Full width of container */
-        max-width: 250px; /* Maximum width to prevent overly large images */
+        max-width: 265px; /* Maximum width to prevent overly large images */
         margin-bottom: 10px; 
     }
 
@@ -348,7 +348,7 @@ footer p {
         padding: 0 5px;
         text-align: left;
         margin-bottom: 5px; 
-        max-width: 250px; /* Maximum width to prevent overly large images */
+        max-width: 265px; /* Maximum width to prevent overly large images */
     }
 
     .about-chunk p {
@@ -356,11 +356,11 @@ footer p {
         padding: 0 5px;
         text-align: left;
         margin-bottom: 5px; 
-        max-width: 250px; /* Maximum width to prevent overly large images */
+        max-width: 265px; /* Maximum width to prevent overly large images */
     }
 
     .contact-text {
-        font-size: 0.6rem !important; 
+        font-size: 0.7rem !important; 
     }
 
     .linkedin-button {
