@@ -26,12 +26,13 @@ body {
      justify-content: center;
      align-items: center;
      height: calc(100vh - 61px - 107.5px); /* Adjusted for header and footer */
+     padding-top: 61px; 
 }
 
 .contact-container {
     max-width: 600px;
     margin: auto;
-    padding: 100px 40px 40px 40px;
+    padding: 40px 40px 40px 40px;
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
