@@ -550,25 +550,25 @@ footer p {
          /*Community Page Header */
     .community-header {
         margin-top: 15px;
-        margin-bottom: 10px; 
-        font-size: 1.2rem;
+        margin-bottom: 20px; 
+        font-size: 1.2rem !important;
     }
 
     .project-section h2 {
-        font-size: 1rem;
+        font-size: 1rem !important;
             }
 
         .project-chunk h3 {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
             }
 
         .project-chunk p {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
             }
         .project-chunk ul li {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
             }
-    
+
      /* Videos in Project Section and Content */
     .project-section img {
         width: 100%; /* Full width of the container */
@@ -577,7 +577,8 @@ footer p {
 
      /* Videos in Project Section and Content */
     .project-content iframe {
-        width: 75%; 
+        width: 100%; 
+        border-radius: 8px;
     }
 
     /* Carousel container setup */
