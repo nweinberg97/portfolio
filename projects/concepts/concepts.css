@@ -495,24 +495,24 @@ footer p {
 }
         /*Community Page Header */
     .concepts-header {
-        margin-top: 15px;
+        margin-top: 25px;
         margin-bottom: 10px; 
         font-size: 1.2rem;
     }
 
     .project-section h2 {
-        font-size: 1rem;
+        font-size: 1rem !important;
             }
 
         .project-content h3 {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
             }
 
         .project-text p {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
             }
         .project-text ul li {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
             }
     
     /* Footer adjustments */
