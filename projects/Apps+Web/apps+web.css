@@ -665,6 +665,10 @@ footer p {
 .project-text p {
     font-size: 0.7rem;
 }
+
+.project-text ul li {
+    font-size: 0.7rem;
+}
     
     /* Quick Navigation Box */
 .quick-nav-box {
@@ -744,11 +748,14 @@ footer p {
 
      /* Target the second Figma embed */
     .project-content iframe:nth-of-type(2) {
-        width: 75%;
+        width: 50%;
         border-radius: 8px;
         object-fit: cover;
         justify-content: center;
-        overflow: hidden;
+    }
+
+    .project-content:nth-of-type(2) {
+        max-width: 335px; 
     }
     
     /* Footer adjustments */
