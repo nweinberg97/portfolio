@@ -600,19 +600,19 @@ footer p {
 }
     
      .graphic-design-header {
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
     }
     
     .project-section h2 {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 
     .project-chunk h3 {
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
     }
 
     .caption {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
     }
 
       /* Keep three images in a row, but reduce height further */
