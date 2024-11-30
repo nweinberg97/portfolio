@@ -207,16 +207,16 @@ body {
     
 .contact-container {
     max-width: 85%;
-    padding: 20px;
-    margin-bottom: 10px; 
+    padding: 20px; 
 }
 
     .contactheader {
+        padding-top: 10px; 
         font-size: 1.4rem; /* Smaller font for mobile */
     }
 
-       #contact form label {
-        font-size: 0.8rem; /* Maintain readability */
+    .form-container label {
+        font-size: 0.7rem; /* Maintain readability */
 }
     .contact-text {
         font-size: 0.7rem; /* Adjusted font size for smaller screens */
