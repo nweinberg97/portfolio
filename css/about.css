@@ -223,6 +223,7 @@ footer p {
         padding-top: 20px;
         padding-bottom: 0px; 
     }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
