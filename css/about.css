@@ -326,7 +326,7 @@ footer p {
     .about-section {
         margin: 0px auto; /* Center the section horizontally */
         width: 100%; /* Full width for smaller screens */
-        max-width: 325px; /* Restrict maximum width for readability */
+        max-width: 350px; /* Restrict maximum width for readability */
     }
 
     .about-chunk {
